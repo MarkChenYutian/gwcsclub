@@ -8,38 +8,42 @@ title: {{ site.name }}
 <div class="card-box">
   <div class="card">
     <img src="{{ site.baseurl }}/assets/aboutUs.svg" height="50%" width="50%"/>
-    <p>About Us</p>
+    <p><strong>About Us</strong></p>
   </div>
   <div class="card">
     <img src="{{ site.baseurl }}/assets/toBeginners.svg" height="50%" width="50%"/>
-    <p>For Beginners</p>
+    <p><strong>For Beginners</strong></p>
   </div>
   <div class="card">
     <img src="{{ site.baseurl }}/assets/competition.svg" height="50%" width="50%"/>
-    <p>Competition</p>
+    <p><strong>Competition</strong></p>
   </div>
   <div class="card">
     <img src="{{ site.baseurl }}/assets/bookSharing.svg" height="50%" width="50%"/>
-    <p>Book Sharing</p>
+    <p><strong>Book Sharing</strong></p>
   </div>
   <div class="card">
     <img src="{{ site.baseurl }}/assets/notes.svg" height="50%" width="50%"/>
-    <p>Notes</p>
+    <p><strong>Notes</strong></p>
   </div>
   <div class="card">
     <img src="{{ site.baseurl }}/assets/meetTA.svg" height="50%" width="50%"/>
-    <p>Schedule Meeting</p>
+    <p><strong>Schedule Meeting</strong></p>
   </div>
   <div class="card">
     <img src="{{ site.baseurl }}/assets/column.svg" height="50%" width="50%"/>
-    <p>Posts</p>
+    <p><strong>Posts</strong></p>
   </div>
 
   <div class="card">
     <img src="{{ site.baseurl }}/assets/more.svg" height="50%" width="50%"/>
-    <p>More ...</p>
+    <p><strong>More</strong></p>
   </div>
 </div>
+
+---
+
+## Posts
 
 <ul class="posts">
     {% for post in site.posts %}

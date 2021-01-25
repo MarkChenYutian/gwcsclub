@@ -15,10 +15,9 @@
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     transition: 0.5s;
-    background-color: #159995;
-    color: rgba(255, 255, 255, 0.8);
+    background-color: #027bd8;
+    color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-    text-decoration: none;
 }
 
 /* A Flex Container */
