@@ -11,6 +11,10 @@ title: {{ site.name }}
     <p>About Us</p>
   </div>
   <div class="card">
+    <img src="{{ site.baseurl }}/assets/toBeginners.svg" height="50%" width="50%"/>
+    <p>For Beginners</p>
+  </div>
+  <div class="card">
     <img src="{{ site.baseurl }}/assets/competition.svg" height="50%" width="50%"/>
     <p>Competition</p>
   </div>
@@ -30,10 +34,7 @@ title: {{ site.name }}
     <img src="{{ site.baseurl }}/assets/column.svg" height="50%" width="50%"/>
     <p>Posts</p>
   </div>
-  <div class="card">
-    <img src="{{ site.baseurl }}/assets/link.svg" height="50%" width="50%"/>
-    <p>Link to Other's Blogs</p>
-  </div>
+
   <div class="card">
     <img src="{{ site.baseurl }}/assets/more.svg" height="50%" width="50%"/>
     <p>More ...</p>
