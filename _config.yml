@@ -1,13 +1,13 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        CHGZFLS Computer Science Club
+tagline:      We Learn, We Create, We Share
 baseurl:      "/CHGZFLS-CS-CLUB"
 paginate:     1
 locale:       "en"
 
 # About/contact
 author:
-  name:       Author name
+  name:       Yutian Chen, Qingzi Shi
   url:        http://yourhomepage.com 
 
 # Gems
