@@ -1,7 +1,7 @@
 # Setup
 title:        CHGZFLS Computer Science Club
 tagline:      We Learn, We Create, We Share
-baseurl:      "/CHGZFLS-CS-CLUB"
+baseurl:      "/chgzfls-cs-club"
 paginate:     1
 locale:       "en"
 
