@@ -4,17 +4,18 @@
     padding: 10px;
     cursor:pointer;
     text-align: center;
-    transition: 1s;
+    transition: 0.5s;
+    color: #13227a;
     /* flex properties */
     flex-grow: 0;
     flex-basis: 200px;
-    min-height: 125px;
+    /*min-height: 125px;*/
   }
   
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     transition: 0.5s;
-    background-color: #2c4fc3;
+    background-color: #5676df;
     color: #fffffff1;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
@@ -40,16 +41,17 @@
   /* Orange Bar on the Left */
   border-left-style: solid;
   border-left-width: 8px;
-  border-left-color:rgb(255, 216, 109);
+  border-left-color:orange;
 }
 
 /* Info Block CSS */
 .info{
-  background-color: rgb(212, 246, 255);
+  background-color: rgb(224, 240, 253);
   padding: 8px 16px 8px 16px;
   margin: 16px 0px 16px 0px;
   /* Blue Bar on the Left */
   border-left-style: solid;
   border-left-width: 8px;
-  border-left-color:rgb(109, 223, 255)
+  /*border-left-color:rgb(109, 167, 255)*/
+  border-left-color: #2c3c99;
 }

@@ -3,6 +3,11 @@ layout: default
 title: {{ site.name }}
 ---
 
+<div class="info">
+  <h3>🛠 这个网站正在建设</h3>
+  <p>这个网站正在建设，所以有些按钮 / 超链接 是点不开的，如果你发现哪里有bug，可以和 Mark 反映</p>
+</div>
+
 <div class="card-box">
   <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/About-Us.html'">
     <img src="{{ site.baseurl }}/assets/aboutUs.svg" height="50%" width="50%"/>
@@ -14,7 +19,7 @@ title: {{ site.name }}
     <p><strong>For Beginners</strong></p>
   </div>
 
-  <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2016/01/26/Competitions.html'">
+  <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Competitions.html'">
     <img src="{{ site.baseurl }}/assets/competition.svg" height="50%" width="50%"/>
     <p><strong>Competition</strong></p>
   </div>
@@ -47,9 +52,3 @@ title: {{ site.name }}
 
 ---
 
-## Notifications
-
-<div class="notification">
-  <h3>🛠 这个网站正在建设</h3>
-  <p>这个网站正在建设，所以有些按钮 / 超链接 是点不开的，如果你发现哪里有bug，可以和 Mark 反映</p>
-</div>

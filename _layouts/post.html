@@ -3,13 +3,17 @@ layout: default
 ---
 
 <div>
-    <h1 style="float: left">{{ page.title }}</h1>
+    <h2 style="float: left"><strong>{{ page.title }}</strong></h2>
     <img src="{{ site.baseurl }}/assets/home.svg" 
-        height="40px" 
+        height="30px" 
         style="float: right; margin: 10px"
         onclick="window.location.href='{{ site.baseurl }}/'"
     />
-    <img src="{{ site.baseurl }}/assets/back.svg" height="40px" style="float: right; margin: 10px"/>
+    <img src="{{ site.baseurl }}/assets/back.svg"
+        height="30px"
+        style="float: right; margin: 10px"
+        onclick="window.history.back();"
+    />
 </div>
 
 <p class="meta" style="clear: both">  {{ page.date | date_to_string }}</p>

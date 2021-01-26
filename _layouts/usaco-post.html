@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div>
     <h2 style="float: left"><strong>{{ page.title }}</strong></h2>
     <img src="{{ site.baseurl }}/assets/home.svg" 
@@ -14,5 +15,7 @@ layout: default
         onclick="window.history.back();"
     />
 </div>
-<div style="clear: both"></div>
+
+<p class="meta" style="clear: both">By: {{ page.author }},  {{ page.date | date_to_string }}</p>
+
 {{ content }}
