@@ -1,5 +1,18 @@
 ---
 layout: default
 ---
-
+<div>
+    <h1 style="float: left">{{ page.title }}</h1>
+    <img src="{{ site.baseurl }}/assets/home.svg" 
+        height="40px" 
+        style="float: right; margin: 10px"
+        onclick="window.location.href='{{ site.baseurl }}/'"
+    />
+    <img src="{{ site.baseurl }}/assets/back.svg"
+        height="40px"
+        style="float: right; margin: 10px"
+        onclick="window.history.back();"
+    />
+</div>
+<div style="clear: both"></div>
 {{ content }}

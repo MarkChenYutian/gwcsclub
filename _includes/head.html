@@ -7,4 +7,16 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ site.baseurl }}/css/cayman.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/personalize.css">
+
+  <!-- Script Header Enable MathJax display -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          }
+      });
+  </script>
 </head>
