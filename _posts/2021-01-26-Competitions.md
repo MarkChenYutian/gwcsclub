@@ -5,8 +5,8 @@ categories: secondary-pages
 tags: page
 ---
 
-<div class="card">
-        <img src="{{ site.baseurl }}/assets/usaco_logo.png" height="100px" onClick="window.location.href='{{ site.baseurl }}//tertiary-pages/2021/01/26/USACO.html'"/>
+<div class="card" onClick="window.location.href='{{ site.baseurl }}//tertiary-pages/2021/01/26/USACO.html'">
+        <img src="{{ site.baseurl }}/assets/usaco_logo.png" height="100px"/>
         <!--<p><strong>USACO</strong></p>-->
 </div>
 <div class="card">

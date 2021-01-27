@@ -34,9 +34,9 @@ title: {{ site.name }}
     <p><strong>Notes</strong></p>
   </div>
 
-  <div class="card">
+  <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Schedule.html'">
     <img src="{{ site.baseurl }}/assets/meetTA.svg" height="50%" width="50%"/>
-    <p><strong>Schedule Meeting</strong></p>
+    <p><strong>Schedule</strong></p>
   </div>
 
   <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html'">

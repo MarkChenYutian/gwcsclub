@@ -6,7 +6,7 @@ author: 李若谷
 tags: USACO-analysis
 time: 2020
 group: Silver
-question: Jan 3
+question: Feb 3
 ---
 ##### 题目大意：
 n个点n-1条边的联通图，每个点上都有一个时钟。每经过一个点，这个点的时间就会+1。求总共有多少个点能从此开始最终全部时间调为12。
