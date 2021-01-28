@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: false
 ---
 
 <div>
@@ -19,3 +20,17 @@ layout: default
 <p class="meta" style="clear: both">  {{ page.date | date_to_string }}</p>
 
 {{ content }}
+
+{% if page.comments != false %}
+    <hr/>
+    <h3>评论区</h3>
+    <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: '8fKQHmL2KKgtJSxGo7d3SfGV-gzGzoHsz',
+                appKey: 'YWf5Di35XGX8gboR1cSLKafj',
+                placeholder: '欢迎在这里分享自己的独到见解 : )'
+            })
+    </script>
+{% endif %}

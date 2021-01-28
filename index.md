@@ -44,9 +44,9 @@ title: {{ site.name }}
     <p><strong>Posts</strong></p>
   </div>
   
-  <div class="card">
-    <img src="{{ site.baseurl }}/assets/more.svg" height="50%" width="50%"/>
-    <p><strong>More</strong></p>
+  <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Discussion.html'">
+    <img src="{{ site.baseurl }}/assets/discuss.svg" height="50%" width="50%"/>
+    <p><strong>Feedback & Discuss</strong></p>
   </div>
 </div>
 

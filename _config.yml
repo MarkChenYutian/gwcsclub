@@ -16,3 +16,10 @@ gems:
 
 #Others
 markdown: kramdown
+
+usaco-post:
+  -
+    scope:
+      path: ""
+      values:
+        comments: true

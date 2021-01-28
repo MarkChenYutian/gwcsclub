@@ -1,0 +1,92 @@
+---
+layout: usaco-post
+title: USACO 2020 Open Gold P1
+tags: USACO-analysis
+status: OK
+author: lrg
+time: 2020
+group: Gold
+question: Open 1
+---
+### 题目大意：
+
+>一个长度为n, 元素0到n的数列A。如果$A_i > k$ 则 $A_i = k$。求 $k = 0...n-1$ 的A数组逆序对。
+
+### 思路：
+
+考虑$k$的变化对于答案的贡献。
+设$k=m$时拥有的逆序对数量为$ans$，此时$A_i的最大值为m$
+$k=m+1$时$A_i$的最大值为$m+1$。
+若存在$A_i = m$ ，这个$i$会跟它前面大小等于$m+1$的构成新的逆序对。
+
+设$nxd_i$为$i$前面与i构成逆序对的数量，$f_i$为$k=i$时的总逆序对数量。
+$f_i = f_{i-1} + n\times d_j$ 其中$A_j = i-1$
+
+$nxd$ 可以用树状数组求逆序对的方法求。
+$A_j = i-1$ 可以用一个vector来反向记录，减少时间复杂度。
+
+### 代码：
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+const int N = 1e5+5;
+long long f[N],nxd[N];
+int tree[N];
+int n;
+vector <int> rev[N];
+struct Element{
+	int val;
+	int no;
+}a[N];
+int lowbit(int x)
+{
+	return x & -x;
+}
+void add(int x,int k)
+{
+	while(x<=n+1)
+	{
+		tree[x]+=k;
+		x += lowbit(x);
+	}
+}
+int query(int x)
+{
+	int ans = 0;
+	while(x){
+		ans += tree[x];
+		x -= lowbit(x);
+	}
+	return ans;
+}
+int main()
+{
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cin>>a[i].val;
+		add(a[i].val+1,1);
+		nxd[i] = query(n+1)-query(a[i].val+1);
+		a[i].no = i;
+		rev[a[i].val+1].push_back(i);
+	}
+	f[0] = 0;
+	for(int t=1;t<n;t++)
+	{
+		f[t] = f[t-1];
+		for(int i=0;i<rev[t].size();i++){
+			f[t] += nxd[rev[t][i]];
+		}
+	}
+	for(int i=0;i<n;i++){
+		cout<<f[i]<<endl;
+	}
+	return 0;
+}
+```
+
+### 时间复杂度：
+$n\times d$数组需要时间 $O(n\log{n})$
+$f$数组求解需要 $O(n)$
+所以总时间复杂度为 $O(n\log{n})$
