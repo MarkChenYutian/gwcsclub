@@ -7,7 +7,6 @@ author: yff
 time: 2016
 group: Silver
 question: Dec 3
-
 ---
 ## 题目
 

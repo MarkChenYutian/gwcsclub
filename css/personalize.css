@@ -8,7 +8,7 @@
     color: #13227a;
     /* flex properties */
     flex-grow: 0;
-    flex-basis: 200px;
+    flex-basis: 225px;
     /*min-height: 125px;*/
   }
   
@@ -20,10 +20,31 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
+
+.lite-card {
+  /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+  padding: 10px;
+  cursor:pointer;
+  text-align: center;
+  transition: 0.5s;
+  color: #13227a;
+  /* flex properties */
+  flex-grow: 0;
+  flex-basis: 200px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.lite-card:hover {
+  transition: 0.5s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+
 /* A Flex Container */
 .card-box{
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 
   display: flex;
   flex-direction: row;
@@ -54,4 +75,19 @@
   border-left-width: 8px;
   /*border-left-color:rgb(109, 167, 255)*/
   border-left-color: #2c3c99;
+}
+
+.simple-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding:10px;
+  margin:20px 0;
+  border-radius:3px;
+  cursor:pointer;
+  animation: fadeIn 1s ease;
+}
+.simple-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  text-decoration: none;
 }
