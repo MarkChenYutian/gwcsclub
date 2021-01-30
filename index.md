@@ -49,7 +49,7 @@ title: {{ site.name }}
     <p><strong>Feedback & Discuss</strong></p>
   </div>
 
-  <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Discussion.html'">
+  <div class="card">
     <img src="{{ site.baseurl }}/assets/Links_to_others.svg" height="50%" width="50%"/>
     <p><strong>Links</strong></p>
   </div>
