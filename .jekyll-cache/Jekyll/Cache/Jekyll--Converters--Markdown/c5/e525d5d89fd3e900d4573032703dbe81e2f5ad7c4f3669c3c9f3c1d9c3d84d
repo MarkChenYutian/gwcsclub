@@ -1,0 +1,58 @@
+I"�<h1 id="usaco-2017-jan-gold-analysis">USACO 2017 Jan Gold Analysis</h1>
+
+<h2 id="problem-1-balanced-photo">Problem 1 Balanced Photo</h2>
+
+<p><a href="http://usaco.org/index.php?page=viewproblem2&amp;cpid=693">Link to Problem</a></p>
+
+<h3 id="problem-summary">Problem Summary</h3>
+
+<p>John want to arrange his $N$ , $1\leq N \leq 100,000$ cows to take a photo. The height of $i$th cow is $h_i$. the heights of all cows are distinct. In a line, a cow is called “unbalanced” if the number of cow that is higher than it on the left is two time (or half of) the number of cow that is lower than it. Given the line of cow, give out the number of unbalanced cows in the photo.</p>
+
+<h3 id="proposed-solution">Proposed Solution</h3>
+
+<p>First, we can range all the cows from high to low, and fill the array with the cow’s height.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cows</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cows</span><span class="p">))]</span>
+<span class="n">arr</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cows</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>After doing this, we can initialize a new list that used to store whether a cow has been counted. The new list will be filled with 0.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">cows</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>After this, we will apply following steps, suppose we are dealing with the $k$th highest cow, where <code class="language-plaintext highlighter-rouge">cows[k] = n</code></p>
+
+<p>To decrease the time complexity of solution, we will use a data structure called <strong>Binary Index Tree (BIT)</strong> on $l$. Using BIT, we can calculate $L$, $R$, and update $l$ with time complexity of $O(\log{n})$.</p>
+
+<ol>
+  <li>
+    <p>Calculate  $L = \sum_{i = 0}^n l[i]$. Since we will process all the cows from highest to the shortest, the result of formula will be the number of cow that is higher than current cow and stands on its left.</p>
+  </li>
+  <li>
+    <p>Calculate $R = k - 1 - \sum_{i = 0}^n l[i]$. Since the current cow we are dealing with is the $k$th highest cow, there are $k-1$ cows that are higher than current one. The cow that is higher than current cow and NOT on its left must stand on its right.</p>
+  </li>
+  <li>
+    <p>Calculate
+\(\frac{\min{(L, R)}}{\max{(L, R)}}\)
+If the result is greater than 2, add the number of unbalanced cow by 1.</p>
+  </li>
+  <li>
+    <p>Set the value of $l[n] = 1$.</p>
+  </li>
+</ol>
+
+<h3 id="time-complexity-analysis">Time Complexity Analysis</h3>
+
+<ul>
+  <li>Time complexity of sorting - $O(n\log{n})$</li>
+  <li>Travel through all the cows - $O(n)$
+    <ul>
+      <li>Calculate L, R, and update $l[n]$ - $O(\log{n})$</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Therefore, the total time complexity will be $O(n\log{n})$.</p>
+:ET

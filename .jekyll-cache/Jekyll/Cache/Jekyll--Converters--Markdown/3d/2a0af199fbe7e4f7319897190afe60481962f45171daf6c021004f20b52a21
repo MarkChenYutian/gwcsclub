@@ -1,0 +1,53 @@
+I"�)<h3 id="problem1-sleepy-cow-herding">Problem1 <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=918">sleepy cow herding</a></h3>
+
+<h4 id="描述">描述</h4>
+<p>农场有一列N头(3&lt;=N&lt;=10^5^)正在睡觉的牛，我们会得到每个奶牛的初始位置。现在农夫需要移动奶牛使奶牛群的位置是连续的(e.g. Positions 3,4,5,6,7)。规则是：农夫只能移动处在边缘位置的奶牛以及奶牛不能从一个边缘位置到另一个边缘位置。
+求农夫至少跟至多需要多少个这样的操作能使这个队列所有奶牛位置连续。</p>
+
+<h4 id="思路">思路</h4>
+<p>最小：把奶牛的位置排序好后，找到size最小的empty space，就是答案
+** 这里有个特殊情况，当只有一头奶牛处在队列外时(e.g. 2,3,4,5,10)答案为2，可是我们正常使用的判断会出现错误。所以我在函数最前面加了个判断的补丁。</p>
+
+<p>最大：由于每次只能移动边缘位置的奶牛，而且这个奶牛不能到另一个边缘位置，所以当我们移动一个side的奶牛时。为了使总体步骤最大而且保证结果是连续的，我们要将这个奶牛放在离他最近的奶牛旁边，以此往复。因此我们有两种可能，以右极点为心和以左极点为心的结果。所以当我们要取cows[n-1]-cows[1]跟cows[n-2]-cows[0]中最大的(操作空间)。并且，由于极点的操作空间中会有n-1个点占了位置，我们最终结果要减去n-2</p>
+
+<h4 id="复杂度分析">复杂度分析</h4>
+<p>排序一次O(nlogn), 遍历一次O(n), 总复杂度为O(nlogn)</p>
+
+<h4 id="代码实现">代码实现</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">herding</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getMin</span><span class="o">(){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">cows</span><span class="o">[</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">cows</span><span class="o">[</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span><span class="o">]&gt;</span><span class="mi">2</span><span class="o">)</span> <span class="k">return</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">cows</span><span class="o">[</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">cows</span><span class="o">[</span><span class="mi">1</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="mi">0</span><span class="o">]&gt;</span><span class="mi">2</span><span class="o">)</span> <span class="k">return</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="k">while</span><span class="o">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">cows</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="n">i</span><span class="o">]&lt;=</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="n">j</span><span class="o">++;</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">ret</span><span class="o">,</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+        <span class="o">}</span> 
+        <span class="k">return</span> <span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="n">ret</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getMax</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">cows</span><span class="o">[</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span><span class="n">cows</span><span class="o">[</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]-</span><span class="n">cows</span><span class="o">[</span><span class="mi">1</span><span class="o">])-(</span><span class="n">cows</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span><span class="o">);</span>
+    <span class="o">}</span>
+  	<span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">cows</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span><span class="kd">throws</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">bf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"herding.in"</span><span class="o">));</span>
+        <span class="nc">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrintWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileWriter</span><span class="o">(</span><span class="s">"herding.out"</span><span class="o">)));</span>
+
+     	<span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">bf</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+      	<span class="n">cows</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">amount</span><span class="o">];</span>
+      	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">amount</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="n">cows</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">bf</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="o">}</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">cows</span><span class="o">);</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">getMin</span><span class="o">());</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">getMax</span><span class="o">());</span>
+        <span class="n">bf</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span><span class="c1">//一定要close</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,122 @@
+I"KD<h2 id="1712s2-milk-measurement">1712s2 Milk Measurement</h2>
+
+<blockquote>
+  <p>题目大意：有很多头奶牛，农场主在某些日期（范围为(1,000,000)）记下某一头的编号、产奶量变化（和上一次记录时比较），并表彰全部产奶量最高的奶牛（们），把它（们）的照片张贴起来。已知一些乱序的记录，请求出农场主需要改变张贴的照片的次数。</p>
+</blockquote>
+
+<h4 id="思路">思路：</h4>
+
+<p>将记录全部装入数组changes中，因为是乱序的，首先需要排序。节省时间起见，使用计数排序。用一个数组now记录现在每头牛的产奶量，然后遍历数组changes，每次使now的某个值变化，并得到now的全部最大值的index，并和上一次得到的indexes比较，最后输出index的变化次数即可。</p>
+
+<h4 id="复杂度">复杂度：</h4>
+
+<p>计数排序为O(n)
+每次得到最大值，执行一下逻辑：
+1、如果新变化的值比上次最大的值更大，更新最大值的indexes为新变化的index，并返回；
+2、如果新变化的index不在原最大值的indexes中，且新变化的值等于原最大值，新变化的index扩充进最大值的indexes中，并返回；
+3、如果新变化的index在原indexes中，（既然不是更大，那么是更小）：
+	3.1、如果indexes的数量大于1，移除新变化的index，并返回；
+	3.2、否则，重新遍历数组，并返回得到的最大值的indexes
+4、以上均不符合，则最大值没有任何变化，返回原indexes。
+其中，3的复杂度为O(n)，其余为O(1)。最坏情况是n次O(n)，即O(n^2)
+总的为O(n^2)
+tips: 实际情况不会全部都是最坏情况，因此还是比一律遍历快很多很多的，并不会白优化。</p>
+
+<h4 id="实现">实现：</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sorting</span><span class="p">(</span><span class="n">before</span><span class="p">):</span><span class="c1">#计数排序
+</span>    <span class="k">global</span> <span class="n">count</span>
+    <span class="nb">dict</span><span class="o">=</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">temp</span><span class="o">=</span><span class="n">changes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">temp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="nb">dict</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span><span class="o">=</span><span class="n">count</span>
+            <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">change</span> <span class="ow">in</span> <span class="n">changes</span><span class="p">:</span>
+        <span class="n">change</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="nb">dict</span><span class="p">[</span><span class="n">change</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="n">temp</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000000</span><span class="p">):</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">change</span> <span class="ow">in</span> <span class="n">before</span><span class="p">:</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">change</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">change</span>
+    <span class="n">after</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">value</span><span class="o">!=-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">after</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">after</span>
+<span class="k">def</span> <span class="nf">isSame</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">!=</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+<span class="k">def</span> <span class="nf">getMax</span><span class="p">(</span><span class="n">to</span><span class="p">):</span>
+    <span class="n">temp</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">to</span><span class="p">)):</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">value</span><span class="o">&gt;</span><span class="n">to</span><span class="p">[</span><span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]]):</span>
+            <span class="n">temp</span><span class="o">=</span><span class="p">[]</span>
+            <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">value</span><span class="o">==</span><span class="n">to</span><span class="p">[</span><span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]]):</span>
+            <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">temp</span>
+<span class="k">def</span> <span class="nf">delvalue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">to</span><span class="p">):</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="n">temp</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">temp</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">to</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">temp</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">to</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">temp</span>
+<span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="n">to</span><span class="p">):</span>
+    <span class="n">temp</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">to</span><span class="p">:</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">temp</span>
+<span class="k">def</span> <span class="nf">getChange</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">max</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">now</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">now</span><span class="p">[</span><span class="nb">max</span><span class="p">[</span><span class="mi">0</span><span class="p">]]):</span>
+        <span class="k">return</span> <span class="n">copy</span><span class="p">([</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">c</span><span class="o">=</span><span class="nb">max</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">now</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">now</span><span class="p">[</span><span class="nb">max</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="ow">and</span> <span class="n">c</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">temp</span><span class="o">=</span><span class="n">copy</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">temp</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">c</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">delvalue</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">getMax</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">max</span>
+<span class="n">inp</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"measurement.in"</span><span class="p">)</span>
+<span class="n">st</span><span class="o">=</span><span class="n">inp</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+<span class="n">n</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">g</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">changes</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">=</span><span class="n">inp</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">st</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
+    <span class="n">changes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+<span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">changes</span><span class="o">=</span><span class="n">sorting</span><span class="p">(</span><span class="n">changes</span><span class="p">)</span>
+<span class="n">out</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"measurement.out"</span><span class="p">,</span><span class="s">"w"</span><span class="p">)</span>
+<span class="n">now</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">count</span><span class="p">):</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="nb">max</span><span class="o">=</span><span class="n">getMax</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+<span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">change</span> <span class="ow">in</span> <span class="n">changes</span><span class="p">:</span>
+    <span class="n">now</span><span class="p">[</span><span class="n">change</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">+=</span><span class="n">change</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">temp</span><span class="o">=</span><span class="n">getChange</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="nb">max</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">isSame</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span><span class="nb">max</span><span class="p">)):</span>
+        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="nb">max</span><span class="o">=</span><span class="n">temp</span>
+<span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">out</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="o">%</span><span class="n">count</span><span class="p">)</span>
+<span class="n">out</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">l</span><span class="o">=</span><span class="p">[]</span>
+</code></pre></div></div>
+
+:ET

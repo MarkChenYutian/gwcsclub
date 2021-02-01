@@ -1,0 +1,72 @@
+I"W&<h3 id="problem2-painting-the-barn">Problem2 <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=919">Painting the Barn</a></h3>
+
+<h4 id="题目描述">题目描述</h4>
+<p>农夫要在农场的一个二维平面涂漆，每次农夫会涂出来一个矩阵，他一共会涂N(1&lt;=N&lt;=10^5^)个矩阵。我们会获得这个矩阵的左下跟右上坐标，这些矩阵可能有地方是重叠的。给定k(k&lt;=N)，求当农夫将所有的油漆矩阵完成后，平面上有k层油漆的总面积</p>
+
+<h4 id="思路">思路</h4>
+<p>我们可以跟踪每一个点又多少的油漆层，但这时我们复杂度最大为10^5^ * 10^6^ = 10^11^ 必然会超。但是转换一下思路，我们只记录每一个矩阵的左右两边的竖线记录这个地方的层数，在最后计算总面积的时候再进行操作。</p>
+
+<blockquote>
+  <p>e.g. 下面的图形中有两片油漆，分别是[(1,0),(3,2)]跟[(2,0),(4,2)]
+我们标记处在x=1跟x=3的竖边上所有点都为1，另外两条竖边上的点为-1 。在最后记录的时候，假设我们想要层数为2的面积。</p>
+
+  <p>我们只需要遍历整一个数组，并在每一个点做如下操作:</p>
+
+  <ul>
+    <li>
+      <p>if <code class="language-plaintext highlighter-rouge">map[i][j]</code>==2 : ret++</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">map[i][j+1]</code>+=<code class="language-plaintext highlighter-rouge">map[i][j]</code></p>
+    </li>
+  </ul>
+
+  <p>我们就会发现只有在x=2跟x=3的六个点满足2的值，答案为6</p>
+
+  <p><img src="/Users/bblzuiqiang/Library/Application Support/typora-user-images/截屏2020-12-09 下午6.59.14.png" alt="截屏2020-12-09 下午6.59.14" /></p>
+</blockquote>
+
+<p>复杂度分析：每次标记竖边最多遍历2,000个点，复杂度为O(2,000*N)-&gt;O(N), 计算总面积复杂度为O(1,000^2^)。总复杂度为O(N)</p>
+
+<h4 id="代码实现">代码实现</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">paintbarn</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span><span class="kd">throws</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">bf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"paintbarn.in"</span><span class="o">));</span>
+        <span class="nc">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrintWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileWriter</span><span class="o">(</span><span class="s">"paintbarn.out"</span><span class="o">)));</span>
+        <span class="nc">String</span><span class="o">[]</span> <span class="n">items</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">1000</span><span class="o">][</span><span class="mi">1000</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">amount</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="n">items</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+            <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+            <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+            <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
+            <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">3</span><span class="o">]);</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">c</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+                <span class="n">map</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">b</span><span class="o">]+=</span><span class="mi">1</span><span class="o">;</span>
+                <span class="n">map</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">d</span><span class="o">]-=</span><span class="mi">1</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">map</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">map</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">map</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="n">k</span><span class="o">)</span> <span class="n">ret</span><span class="o">++;</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">j</span><span class="o">!=</span><span class="n">map</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span><span class="n">map</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]+=</span><span class="n">map</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ret</span><span class="o">);</span>
+
+        <span class="n">bf</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+:ET

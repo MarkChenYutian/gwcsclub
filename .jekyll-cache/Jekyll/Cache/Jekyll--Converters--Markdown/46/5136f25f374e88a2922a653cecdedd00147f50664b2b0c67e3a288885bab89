@@ -1,0 +1,40 @@
+I"/<div class="info">
+    <h3>⚠ 2021年编程题变化</h3>
+    ACSL今年编程题使用线上赛模式，选手需要在72小时内在 Hackerrank 上完成指定题目，可以多次运行测试。
+</div>
+
+<div class="card-box">
+    <div class="lite-card" onclick="window.location.href='/chgzfls-cs-club/2020/12/15/ACSL-Round1.html'">
+        <h3>ACSL Round 1</h3>
+        <p>
+            Number System <br />
+            Recurssive Function<br />
+            Pseudocode
+        </p>
+    </div>
+    <div class="lite-card">
+        <h3>ACSL Round 2</h3>
+        <p>
+            Pre/in/post-fix<br />
+            Bit Operation<br />
+            LISP
+        </p>
+    </div>
+    <div class="lite-card">
+        <h3>ACSL Round 3</h3>
+        <p>
+            Data Structure<br />
+            Boolean Algebra<br />
+            Regular Expression
+        </p>
+    </div>
+    <div class="lite-card">
+        <h3>ACSL Round 4</h3>
+        <p>
+            Assembly Language<br />
+            Graph Theory<br />
+            Digital Electronics<br />
+        </p>
+    </div>
+</div>
+:ET

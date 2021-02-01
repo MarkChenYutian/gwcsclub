@@ -1,0 +1,20 @@
+I"‹<h2 id="problem-2-barn-painting">Problem 2. Barn Painting</h2>
+
+<h3 id="problem-description">Problem Description</h3>
+
+<p>Farmer John has $N$ barns connected together. (<strong>It is guaranteed that the connected graph does NOT contain a cycle</strong>) and three different paints. He has already painted $K$ of $N$ barns. Find out the number of valid ways he can paint the remaining barns.</p>
+
+<h3 id="proposed-solution">Proposed Solution</h3>
+
+<p>We can solve this problem recursively. Let $f(n, c)$ represent the number of possible valid solutions of painting on a subtree with root $n$ and color $c$ on root, we can represent this function recursively.</p>
+
+<p>\(\begin{aligned}
+&amp;U = \left\{n' \mid n' \text{ is child of }n\right\}\\
+&amp;f(n, c) = \prod_{u\in U}\left({\sum_{c'\in C}{f(u, c')}}\right)
+\end{aligned}\)
+When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$ is not the color that is painted.</p>
+
+<h3 id="time-complexity-analysis">Time Complexity Analysis</h3>
+
+<p>For each node, we will calculate $f(n, c)$ for at most three times (with three different $c$). Therefore, the time complexity will be $O(3N)$.</p>
+:ET

@@ -1,0 +1,61 @@
+I"�#<h2 id="1712s3-the-bovine-shuffle">1712s3 The Bovine Shuffle</h2>
+
+<blockquote>
+  <p>题目大意：一群牛按以下规则跳舞：每一次移动，位置i上的牛移动到位置next(i)，如果有多头牛移动到同一个位置，下一次移动时这些牛一起移动。已知所有的f(i)，请求出无论怎么移动都有牛的位置的数量。</p>
+</blockquote>
+
+<h4 id="思路">思路：</h4>
+
+<p>用一个数组记录下次会移动到每一个i的位置数量count(i)，如果没有位置将移动到这个位置(也就是count(i)=0)，那么下次移动后这里将没有牛。特殊标记这个位置，并使next(i)的count数-1（因为从下次起，会移动到这里的位置数量少了1），并检查这个位置的count是否为0，如果为0，重复这句话的操作。每次遍历数组，找出count(i)为0的i就可以了，直到没有为0的i就可以了。
+为了更快地找出count(i)为0的i，可以先将所有count(i)为0的i装进一个栈，每次从中pop出一个值即可。</p>
+
+<h4 id="复杂度">复杂度：</h4>
+
+<p>遍历数组，找出count(i)为0的点，并装进栈里，为O(n)
+每次pop出一个i，如果count(i)没有被特殊标记，则使count(next(i))–，并push进next(i)，为O(1)，最多n次。
+总的为O(n)</p>
+
+<h4 id="实现">实现：</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TheBovineShuffle1712s3</span><span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span><span class="n">counts</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">count</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span><span class="n">nexts</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span><span class="n">args</span><span class="o">)</span><span class="kd">throws</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"shuffle.in"</span><span class="o">));</span>
+        <span class="nc">PrintWriter</span> <span class="n">out</span><span class="o">=</span><span class="k">new</span> <span class="nc">PrintWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileWriter</span><span class="o">(</span><span class="s">"shuffle.out"</span><span class="o">)));</span>
+        <span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="o">;</span>
+        <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">=</span><span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="n">nexts</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="n">nexts</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">())-</span><span class="mi">1</span><span class="o">;</span>
+        <span class="n">counts</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="n">counts</span><span class="o">[</span><span class="n">nexts</span><span class="o">[</span><span class="n">i</span><span class="o">]]++;</span>
+        <span class="nc">Stack</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span><span class="n">to</span><span class="o">=</span><span class="k">new</span> <span class="nc">Stack</span><span class="o">&lt;&gt;();</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="k">if</span><span class="o">(</span><span class="n">counts</span><span class="o">[</span><span class="n">i</span><span class="o">]==</span><span class="mi">0</span><span class="o">)</span> <span class="n">to</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(!</span><span class="n">to</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()){</span>
+            <span class="kt">int</span> <span class="n">ind</span><span class="o">=</span><span class="n">to</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+            <span class="k">while</span><span class="o">(</span><span class="n">ind</span><span class="o">!=-</span><span class="mi">2</span><span class="o">){</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">counts</span><span class="o">[</span><span class="n">ind</span><span class="o">]==</span><span class="mi">0</span><span class="o">){</span>
+                    <span class="n">counts</span><span class="o">[</span><span class="n">ind</span><span class="o">]=-</span><span class="mi">1</span><span class="o">;</span>
+                    <span class="n">count</span><span class="o">--;</span>
+                    <span class="n">counts</span><span class="o">[</span><span class="n">nexts</span><span class="o">[</span><span class="n">ind</span><span class="o">]]--;</span>
+                    <span class="k">if</span><span class="o">(</span><span class="n">counts</span><span class="o">[</span><span class="n">nexts</span><span class="o">[</span><span class="n">ind</span><span class="o">]]==</span><span class="mi">0</span><span class="o">){</span>
+                        <span class="n">ind</span><span class="o">=</span><span class="n">nexts</span><span class="o">[</span><span class="n">ind</span><span class="o">];</span>
+                        <span class="k">continue</span><span class="o">;</span>
+                    <span class="o">}</span>
+                    <span class="k">if</span><span class="o">(</span><span class="n">to</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="k">break</span><span class="o">;</span>
+                    <span class="n">ind</span><span class="o">=</span><span class="n">to</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+:ET

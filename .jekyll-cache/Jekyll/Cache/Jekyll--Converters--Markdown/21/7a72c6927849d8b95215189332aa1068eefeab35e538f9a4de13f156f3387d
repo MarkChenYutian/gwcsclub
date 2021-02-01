@@ -1,0 +1,51 @@
+I"�<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+
+<h2 id="timeline-and-important-events-">Timeline and Important Events 📅</h2>
+
+<div class="notification">
+<h3>⚠ Canadian Computing Competition (CCC) 报名即将截止</h3>
+<p>注册截止时间：<strong>2021 / 02 / 09</strong><br />
+比赛时间：<strong>2021 / 02 /18</strong></p>
+</div>
+
+<div class="info">
+<h4>USACO 二月月赛</h4>
+<p>下一场USACO - 2021 Feb 26 - Mar 1</p>
+</div>
+
+<div class="info">
+<h4>ACSL Round 2</h4>
+<p>Now - 2021 Mar 6</p>
+</div>
+
+<div class="info">
+<h4>ACSL Round 3</h4>
+<p>2021 Jan 29 - 2021 Apr 10</p>
+</div>
+
+<hr />
+
+<h2 id="meet-tas">Meet TAs!</h2>
+
+<p>如果你在计算机学习 / 竞赛 方面有任何问题，欢迎找助教们预约时间见面答疑！</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://s3.ax1x.com/2020/11/22/D3sNBn.jpg" alt="D3sNBn.jpg" border="0" width="150px" /></td>
+      <td>Mark 陈昱天<br />S3 AP6<br />Wechat: MarkChen2003<br /><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/markchenyutian/apmidterm10min'});return false;">点击预约一对一</a></td>
+      <td><img src="https://s3.ax1x.com/2020/11/22/D3soge.png" alt="D3soge.png" border="0" width="150px" /></td>
+      <td>Kayla 王嘉仪 <br />S3 AP6<br />Wechat: k531531_<br /><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kayla0531/10min'});return false;">点击预约一对一</a></td>
+    </tr>
+    <tr>
+      <td><img src="https://s3.ax1x.com/2020/11/22/D36PzD.jpg" alt="D36PzD.jpg" border="0" width="150px" /></td>
+      <td>Jenny 廖芷婧<br />S3 AP6<br />Wechat: lzj13632210235<br /><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jenny-jing/mid-term'});return false;">点击预约一对一</a></td>
+      <td><img src="https://s3.ax1x.com/2020/11/22/D3yHRU.jpg" alt="D3yHRU.jpg" border="0" width="150px" /></td>
+      <td>Clara 曾嫱<br />S3 AP6<br />Wechat: 2198690029<br /><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/clarazq/mid-term-interview'});return false;">点击预约一对一 </a></td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

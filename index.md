@@ -14,7 +14,7 @@ title: {{ site.name }}
     <p><strong>About Us</strong></p>
   </div>
 
-  <div class="card">
+  <div class="card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/31/To-Beginners.html'">
     <img src="{{ site.baseurl }}/assets/toBeginners.svg" height="50%" width="50%"/>
     <p><strong>For Beginners</strong></p>
   </div>

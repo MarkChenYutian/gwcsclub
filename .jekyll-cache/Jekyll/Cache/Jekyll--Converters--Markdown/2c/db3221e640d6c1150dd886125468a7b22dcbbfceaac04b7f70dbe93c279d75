@@ -1,0 +1,39 @@
+I";<h2 id="problem-1-a-pie-for-a-pie">Problem 1. A Pie For A Pie</h2>
+
+<h3 id="problem-description">Problem Description</h3>
+
+<p>Bessie and Elsie have each baked $N$ pies and each pie has two tasty value - one from Bessie and one from Elsie. In the begining, Bessie gave a pie to Elsie.</p>
+
+<p>If Elsie receive a pie that she think has a tasty value of $n$, she will try to give back Bessie one of her pie that has a tasty value that is in range $n \leq n’ \leq n + D$. If such a pie does not exist, she will ‘exile’ herself.</p>
+
+<p>If Bessie receive a pie from Elsie, the same thing will happen.</p>
+
+<p>Such a cycle will continue, until one of the cow exile herself or they receive a pie that has a tasty value of 0 for them. For each input case, we will solve the <strong>minimum number of pies that could be gifted in a happy gift exchange started with Bessie’s pie $i$</strong>. If no gift exchange with pie $i$ is happy, then we should print out a single integer $-1$ instead.</p>
+
+<blockquote>
+  <p>:warning: Notice that a pie can only be sent once and the cow can’t send back the pie the other cow sent.</p>
+</blockquote>
+
+<h3 id="proposed-solution">Proposed Solution</h3>
+
+<p>In this question, we can use the bottom-to-up method. Instead of checking how many pies will be exchanged for a given beginning pie, we can search reversely from the end point to the start point. In this way, we can only apply one search on all the pie and get the result with time complexity of $O(1)$ for each query.</p>
+
+<p>The actual program will work like this</p>
+
+<ol>
+  <li>Sort all the pies</li>
+  <li>Search from pies that have a taste value of 0 both for Bessie and Elsie.</li>
+  <li>While searching, store the number of pies exchanged from 0 of Bessie and Elsie.</li>
+  <li>For each query, find the number stored in the corresponding index.</li>
+</ol>
+
+<h3 id="time-complexity-analysis">Time Complexity Analysis</h3>
+
+<p>The time complexity for steps above will be -</p>
+
+<ol>
+  <li>$O(n\log{n})$</li>
+  <li>$O(n)$</li>
+  <li>$O(1)$ for each query and total time complexity will be $O(n)$.</li>
+</ol>
+:ET

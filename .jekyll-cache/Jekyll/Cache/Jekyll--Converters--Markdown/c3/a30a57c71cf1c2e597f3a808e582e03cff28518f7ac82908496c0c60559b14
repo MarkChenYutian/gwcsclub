@@ -1,0 +1,48 @@
+I"<h3 id="题目大意">题目大意</h3>
+
+<p>一共有 N（1 ≤ N ≤ 10<sup>5</sup>）头牛，每头牛都有到达时间，自己吃草的时间，以及吃草的优先级（input 的输入顺序即优先级）。现在，这些牛要吃草，但是只有一个草地，每次只能一头牛吃。所以，每头牛只能按顺序吃，因此，肯定有牛需要等待一定的时间才能吃到草，找出所有牛中等待的最长时间。吃草的顺序：</p>
+
+<ol>
+  <li>如果一头牛在到达草地的时候没有牛在吃草，那么它就可以直接吃</li>
+  <li>如果有多头牛到达草地，优先级高的先吃</li>
+</ol>
+
+<h4 id="思路">思路</h4>
+
+<p>根据题意，牛吃草的顺序有两种：到达的时间 &amp; 优先级。用一个 <code class="language-plaintext highlighter-rouge">Cow</code> 类来代表一头牛，类里面的属性分别是牛的优先级、到达时间和吃草的时间，然后用一个 <code class="language-plaintext highlighter-rouge">ArrayList&lt;Cow&gt;</code>  来装所有的牛。用 <code class="language-plaintext highlighter-rouge">time</code> 表示当前的时间；用<code class="language-plaintext highlighter-rouge">waitTime </code> 表示当前最大的等待时间；<code class="language-plaintext highlighter-rouge">wait</code> 表示 priority queue</p>
+
+<ol>
+  <li>
+    <p><strong>到达时间</strong>可以用<strong>排序</strong>来实现。在排序的时候，如果多头牛的到达时间相同，那么优先级高的排在前面。</p>
+  </li>
+  <li>
+    <p><strong>优先级</strong>可以用 <strong>priority queue</strong>，<strong>每次弹出优先级最高的那头牛</strong>。</p>
+  </li>
+</ol>
+
+<p>循环整个 ArrayList，每次判断 <code class="language-plaintext highlighter-rouge">time</code> 是否比当前牛的到达时间要大：</p>
+
+<ol>
+  <li>
+    <p>是：把这头牛加到 <code class="language-plaintext highlighter-rouge">wait</code> 中，循环的 index 加一。</p>
+  </li>
+  <li>
+    <p>否：</p>
+
+    <p>​	a. <code class="language-plaintext highlighter-rouge">wait</code> 的长度等于 0（即没有牛在等待）：如果<code class="language-plaintext highlighter-rouge">time</code> - 当前牛的到达时间的差小于 0，<code class="language-plaintext highlighter-rouge">time</code> = 当前牛的到达时间；否则，取 		<code class="language-plaintext highlighter-rouge">time</code> - 当前牛的到达时间的差和 <code class="language-plaintext highlighter-rouge">waitTime</code> 中较大的值作为新的<code class="language-plaintext highlighter-rouge">waitTime</code>。更新 <code class="language-plaintext highlighter-rouge">time</code>： <code class="language-plaintext highlighter-rouge">time</code> = <code class="language-plaintext highlighter-rouge">time</code> + 当前这头牛的吃草时		间；循环的 index 加一。</p>
+
+    <p>​	b. <code class="language-plaintext highlighter-rouge">wait</code> 的长度不等于 0：从 <code class="language-plaintext highlighter-rouge">wait</code> 中弹出一头牛，如果<code class="language-plaintext highlighter-rouge">time</code> - 当前牛的到达时间的差小于 0，<code class="language-plaintext highlighter-rouge">time</code> = 当前牛的到达时间；否		则，取这头牛的到达时间的差和 <code class="language-plaintext highlighter-rouge">waitTime</code> 中较大的值作为新的<code class="language-plaintext highlighter-rouge">waitTime</code>。更新 <code class="language-plaintext highlighter-rouge">time</code>： <code class="language-plaintext highlighter-rouge">time</code> = <code class="language-plaintext highlighter-rouge">time</code> + 当前这头牛的吃草时		间。</p>
+  </li>
+</ol>
+
+<p>直到 index = ArrayList 的长度 &amp;&amp; <code class="language-plaintext highlighter-rouge">wait</code> 的长度等于 0，循环结束</p>
+
+<h4 id="复杂度">复杂度</h4>
+
+<ol>
+  <li>排序可以用 Collections.sort()，复杂度为 O(NlogN)</li>
+  <li>因为循环内部只是 if 判断，而且 priority queue 每次也只是加一个数，或者弹出一个数，所以每次都是 O(log N)，循环 N 次，那么就是 O(NlogN)。</li>
+</ol>
+
+<p>因为排序是在循环外面，所以是 O(2NlogN)。因为系数可以忽略，总的复杂度为 <strong>O(NlogN)</strong>。</p>
+:ET

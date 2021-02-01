@@ -1,0 +1,55 @@
+I"<h3 id="题目">题目</h3>
+
+<p>给出一个长度为N的乱序数组,要求求出按照题目给出的代码排序的循环次数</p>
+
+<h3 id="分析">分析</h3>
+
+<p>因为数组长度为N(N&lt;=10^5^)而题目算法的复杂度是O(N^2^)所以不能直接进行模拟,观察题目排序方法,是一个双向的冒泡排序,每次循环会把一个i之前大于i的数移到i的后方小于i的数移到前方对于每个位置 i ,所以我们可以看在1到i之间有多少个数比当前的i大的数</p>
+
+<h3 id="复杂度">复杂度</h3>
+
+<p>排序耗费的复杂度O(NlogN),然后遍历每个位置进行计算复杂度O(N);</p>
+
+<h3 id="代码">代码</h3>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;algorithm&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="nc">number</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">index</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">temp</span><span class="p">[</span><span class="mi">200000</span><span class="p">];</span>
+<span class="n">number</span> <span class="n">num</span><span class="p">[</span><span class="mi">200000</span><span class="p">];</span>
+<span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">number</span> <span class="n">a</span><span class="p">,</span><span class="n">number</span> <span class="n">b</span><span class="p">){</span>
+	<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">data</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>	
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="kt">FILE</span> <span class="o">*</span><span class="n">in</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"sort.in"</span><span class="p">,</span><span class="s">"r"</span><span class="p">);</span>
+	<span class="kt">FILE</span> <span class="o">*</span><span class="n">out</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"sort.out"</span><span class="p">,</span><span class="s">"w"</span><span class="p">);</span>
+	<span class="n">fscanf</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">fscanf</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">data</span><span class="p">);</span>
+		<span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">index</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">sort</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">num</span><span class="o">+</span><span class="n">N</span><span class="p">,</span><span class="n">cmp</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">index</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">)</span> <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">count</span><span class="o">--</span><span class="p">;</span>
+		<span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+		<span class="n">temp</span><span class="p">[</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">fprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">"%d"</span><span class="p">,</span><span class="n">ans</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

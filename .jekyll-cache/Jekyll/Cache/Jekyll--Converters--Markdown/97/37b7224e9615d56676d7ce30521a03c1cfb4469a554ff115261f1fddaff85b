@@ -1,0 +1,45 @@
+I"<h2 id="1703s3-secret-cow-code">1703s3 Secret Cow Code</h2>
+
+<blockquote>
+  <p>题目大意：有一种“牛密码”，这种密码是一个无限长度的字符串，这个字符串由一个最初的字符串key，然后每后半部分，是由前半部分的最后一个字符挪到第一个得到的。例子：key为”cow“，得到”cowwco“、”cowwcoocowwc“。请求出某个特定key的第某个字符</p>
+</blockquote>
+
+<h4 id="分析">分析：</h4>
+
+<p>这种密码的后一半由前一半得到，前一半由前一半的前一半得到，显而易见是递归的方法得到的。因此，可以从其定义出发，后一半的第一个=前一半的最后一个，后一半第n个为前一半第n-1个，一半一半地分割，直到求回最开始的key，然后输出对应字符即可</p>
+
+<h4 id="复杂度">复杂度：</h4>
+
+<p>每次递归小一半，为O(log(n))</p>
+
+<h4 id="实现">实现：</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SecretCowCode1701s3</span><span class="o">{</span>
+    <span class="kd">static</span> <span class="nc">String</span> <span class="n">s</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">char</span> <span class="nf">get</span><span class="o">(</span><span class="kt">long</span> <span class="n">i</span><span class="o">,</span><span class="kt">long</span> <span class="n">l</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">())</span> <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="o">&gt;=</span><span class="n">i</span><span class="o">)</span> <span class="n">l</span><span class="o">/=</span><span class="mi">2</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">==</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">get</span><span class="o">(</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="o">,</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">==</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">())</span> <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="k">return</span> <span class="nf">get</span><span class="o">(</span><span class="n">i</span><span class="o">-</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span><span class="n">args</span><span class="o">)</span><span class="kd">throws</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"cowcode.in"</span><span class="o">));</span>
+        <span class="nc">PrintWriter</span> <span class="n">out</span><span class="o">=</span><span class="k">new</span> <span class="nc">PrintWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileWriter</span><span class="o">(</span><span class="s">"cowcode.out"</span><span class="o">)));</span>
+        <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">=</span><span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">s</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">();</span>
+        <span class="kt">long</span> <span class="n">n</span><span class="o">=</span><span class="nc">Long</span><span class="o">.</span><span class="na">parseLong</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="kt">long</span> <span class="n">l</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">l</span><span class="o">&lt;</span><span class="n">n</span><span class="o">){</span>
+            <span class="n">l</span><span class="o">*=</span><span class="mi">2</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">get</span><span class="o">(</span><span class="n">n</span><span class="o">,</span><span class="n">l</span><span class="o">));</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+:ET

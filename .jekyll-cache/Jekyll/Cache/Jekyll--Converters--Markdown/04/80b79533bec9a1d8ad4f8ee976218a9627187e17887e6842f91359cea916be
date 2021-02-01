@@ -1,0 +1,68 @@
+I"<h5 id="题目大意">题目大意：</h5>
+<p>n个点n-1条边的联通图，每个点上都有一个时钟。每经过一个点，这个点的时间就会+1。求总共有多少个点能从此开始最终全部时间调为12。</p>
+<h5 id="思路">思路：</h5>
+<p>由于是n个点n-1条边的连通图，那么肯定是一颗树。
+固定一个根节点。
+考虑叶子节点。叶子节点只能到它的父节点。所以想要将叶子节点调为12，必须要在叶子节点和父节点中来回移动。事实上，如果叶子节点要调为12，那么父节点中的时钟肯定也会调叶子节点的变化量，或者变化量-1（如果最后一次留在叶子节点不回到父节点）。</p>
+
+<p>设$dp[i]$ 代表以i为根节点的树将所有子节点都调为12后再回到i跟节点上所指的数。
+$dp[i]  = (12-\Sigma dp[j])$ $mod$ $12$
+其中j是i的子节点。
+ 设root为根节点。</p>
+
+<p>如果最后$dp[root] = 0$ 也就是12，那么肯定这个根节点是可以的。
+ 但是不一定最后会回到root，可能会在中间停。
+ 对于这种情况，设j为停在的点，i为j的父节点。
+ 那么对于i这颗树来说，最终不用回到i，$dp[i]$肯定会比不停在i的+1
+ 那么从i在推回root，发现root也会+1</p>
+
+<p>所以如果最后$dp[root] = 1$也是可行的。</p>
+<h5 id="代码">代码：</h5>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;vector&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">2500</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="n">vector</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">dp</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">root</span><span class="p">,</span><span class="kt">int</span> <span class="n">fa</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">dp</span><span class="p">[</span><span class="n">root</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">root</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">p</span><span class="p">[</span><span class="n">root</span><span class="p">].</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">son</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">son</span><span class="o">!=</span><span class="n">fa</span><span class="p">)</span>
+			<span class="n">dp</span><span class="p">[</span><span class="n">root</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">12</span><span class="o">-</span><span class="n">dfs</span><span class="p">(</span><span class="n">son</span><span class="p">,</span><span class="n">root</span><span class="p">))</span> <span class="o">%</span> <span class="mi">12</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">root</span><span class="p">]</span><span class="o">%</span><span class="mi">12</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">x</span><span class="o">&gt;&gt;</span><span class="n">y</span><span class="p">;</span>
+		<span class="n">p</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+		<span class="n">p</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// for(int j=1;j&lt;=n;j++) dp[j] = a[j];</span>
+		<span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="o">||</span><span class="n">k</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">cnt</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="时间复杂度">时间复杂度：</h5>
+<p>$O(n^2)$</p>
+:ET

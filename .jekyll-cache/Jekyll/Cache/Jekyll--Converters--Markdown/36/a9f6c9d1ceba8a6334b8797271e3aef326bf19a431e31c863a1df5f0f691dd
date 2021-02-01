@@ -1,0 +1,68 @@
+I"$.<h3 id="problem1-social-distance">Problem1 <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=1038">social distance</a></h3>
+
+<p>由于新冠疫情爆发，奶牛们需要相互隔离(相同的距离)。现在农场里有$n$ ($2\leq n\leq 10^5$)头奶牛，农场里有$M$ ($1\leq M \leq 10^5$)个互不相交的草地，奶牛们只能待在草地上。求出奶牛们之间的能够到达的最大距离D。</p>
+
+<p>思路：由于答案是处在一个连续区间的，所以我们使用二分搜索来找到最优解。初始最大值high为有效区间中最大值，初始最小值low为1。每次以(low+high)/2的值将奶牛进行隔离，当奶牛的位置超出了current的区间，current区间变为下一个区间。如果奶牛超出了区间范围那么mid为新的high值，反之为新的low值。直到high-low == 1</p>
+
+<p>复杂度分析：二分搜索O(logC,C为区间最大值), 每次验证需要O(n)，总复杂度为O(nlogC), 可行</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">socdist</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">(</span><span class="kt">int</span> <span class="n">dist</span><span class="o">){</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">is</span><span class="o">[</span><span class="n">index</span><span class="o">].</span><span class="na">u</span><span class="o">;</span><span class="c1">//cow position</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="n">cur</span><span class="o">+=</span><span class="n">dist</span><span class="o">;</span>
+            <span class="k">while</span><span class="o">(</span><span class="n">cur</span><span class="o">&gt;</span><span class="n">is</span><span class="o">[</span><span class="n">index</span><span class="o">].</span><span class="na">v</span><span class="o">){</span>
+                <span class="n">index</span><span class="o">++;</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">index</span><span class="o">&gt;=</span><span class="n">is</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">cur</span><span class="o">&lt;</span><span class="n">is</span><span class="o">[</span><span class="n">index</span><span class="o">].</span><span class="na">u</span><span class="o">)</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">is</span><span class="o">[</span><span class="n">index</span><span class="o">].</span><span class="na">u</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dfs</span><span class="o">(</span><span class="kt">int</span> <span class="n">low</span><span class="o">,</span><span class="kt">int</span> <span class="n">high</span><span class="o">){</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">high</span><span class="o">-</span><span class="n">low</span><span class="o">!=</span><span class="mi">1</span><span class="o">){</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="o">(</span><span class="n">high</span><span class="o">+</span><span class="n">low</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">isValid</span><span class="o">(</span><span class="n">mid</span><span class="o">))</span> <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span><span class="o">;</span>
+            <span class="k">else</span> <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">low</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">n</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="n">interval</span><span class="o">[]</span> <span class="n">is</span><span class="o">;</span><span class="c1">//intervals</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span><span class="kd">throws</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">bf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"socdist.in"</span><span class="o">));</span>
+        <span class="nc">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrintWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileWriter</span><span class="o">(</span><span class="s">"socdist.out"</span><span class="o">)));</span>
+        <span class="nc">String</span><span class="o">[]</span> <span class="n">items</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+        <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+        <span class="n">is</span> <span class="o">=</span> <span class="k">new</span> <span class="n">interval</span><span class="o">[</span><span class="n">amount</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">amount</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="n">items</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+            <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+            <span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">items</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+            <span class="n">is</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">interval</span><span class="o">(</span><span class="n">start</span><span class="o">,</span><span class="n">end</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">is</span><span class="o">);</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dfs</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="n">is</span><span class="o">[</span><span class="n">amount</span><span class="o">-</span><span class="mi">1</span><span class="o">].</span><span class="na">v</span><span class="o">));</span>
+        <span class="n">bf</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">interval</span> <span class="kd">implements</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="n">interval</span><span class="o">&gt;{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">u</span><span class="o">,</span><span class="n">v</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">interval</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span><span class="kt">int</span> <span class="n">b</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">u</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="n">interval</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// TODO Auto-generated method stub</span>
+        <span class="k">return</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">compare</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">u</span><span class="o">,</span><span class="n">o</span><span class="o">.</span><span class="na">u</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+:ET

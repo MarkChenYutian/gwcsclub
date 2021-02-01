@@ -15,7 +15,7 @@ tags: page
         <p><strong>American Computer Science League</strong></p>
 </div>
 
-<div class="lite-card">
+<div class="lite-card" onClick="window.location.href='{{ site.baseurl }}/tertiary-pages/2021/02/01/About-Our-VEX-Robotics-Team.html'">
         <img src="{{ site.baseurl }}/assets/vex_logo.png" height="50px"/>
         <p><strong>VEX Robotics Competition</strong></p>
 </div>
