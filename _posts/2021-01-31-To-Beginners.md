@@ -11,7 +11,7 @@ tags: page
 <h4>我有不懂的地方该怎么办？</h4>
 </div>
 
-<div class="window.location.href='{{ site.baseurl }}/2021/02/01/How-to-read-Exception.html">
+<div class="simple-card" onClic="window.location.href='{{ site.baseurl }}/2021/02/01/How-to-read-Exception.html">
 <h4>我的程序报错了，我可以做什么？</h4>
 </div>
 
