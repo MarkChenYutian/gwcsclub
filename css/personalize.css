@@ -54,6 +54,7 @@
   align-content: flex-start;
 }
 
+
 /* Notification Block CSS */
 .notification{
   background-color: rgb(250, 247, 194);
@@ -90,4 +91,114 @@
 .simple-card:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   text-decoration: none;
+}
+
+/* Below Define the style for top Navigation Bar */
+/* A Flex Container for Top Nav Box */
+
+.top-nav-box{
+  /*background-color: rgb(224, 240, 253);*/
+  background-color: hsl(0deg 0% 100% / 90%);
+  position:sticky;
+  position: -webkit-sticky;
+  top: 0;
+  /*padding-left: 30px;
+  padding-right: 30px;*/
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+
+@media screen and (max-width: 600px){.nav-button{ padding:8px 24px; }}
+@media screen and (min-width: 600px){.nav-button{ padding:16px 48px; }}
+
+.nav-button {
+  /* Add shadows to create the "card" effect */
+  /* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1); */
+  transition: 0.3s;
+  background: transparent;
+  margin:0;
+  text-align: center;
+  cursor:pointer;
+  flex-grow: 1;
+  font-size: 1.15rem;
+  animation: fadeIn 1s ease;
+}
+.nav-button:hover {
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);*/
+  background: #2c3c99;
+  color: ghostwhite;
+  text-decoration: none;
+}
+
+/* Image Style with Padding */
+.mainPage-img{
+  padding: 16px;
+}
+
+/* Main Button */
+.main-button{
+  cursor:pointer;
+  background-color: rgb(243, 247, 255);
+  color: black;
+  border-radius: 24px;
+  padding: 12px 24px;
+  margin: 16px;
+  transition: 0.5s;
+  max-width: fit-content;
+}
+.main-button:hover{
+  transition: 0.5s;
+  background-color: #2c3c99;
+  color: ghostwhite;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.warn-button{
+  cursor:pointer;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(255, 163, 43);
+  color: black;
+  border-radius: 24px;
+  padding: 12px 24px;
+  margin: 3%;
+  max-width: fit-content;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.warn-button:hover{
+  transition: 0.5s;
+  background-color: #ff643d;
+  color: ghostwhite;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+/* Table Of Content on the left sider */
+@media (max-width: 1550px){
+  #category{
+    display: none;
+  }
+}
+#category {
+  /* 绝对定位 */
+  position: sticky;
+  /* left: 20px; */
+  /* 目录显示的位置 */
+  float: left;
+  left: 0px;
+  top: 80px;
+  margin-top: 32px;
+  margin-left: 32px;
+  /* 目录栏的高度,这里设置为60%主要是为了不挡住返回顶部和折叠按钮 */
+  height: 20rem;
+  /* 开启垂直滚动条 */
+  overflow-y: scroll;            
 }

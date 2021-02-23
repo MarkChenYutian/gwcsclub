@@ -1,0 +1,22 @@
+.popup-black-background{
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-warn-window{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 247, 220);
+    z-index: 1001;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px){.warn-image{display: none;}}

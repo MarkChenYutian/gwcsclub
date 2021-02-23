@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div>
-    <h2 style="float: left"><strong>{{ page.title }}</strong></h2>
+    <h2><strong>{{ page.title }}</strong></h2>
     <img src="{{ site.baseurl }}/assets/home.svg" 
         height="30px" 
         style="float: right; margin: 10px; cursor:pointer;"
@@ -16,12 +16,14 @@ layout: default
     />
 </div>
 
-<p class="meta" style="clear: both">By: {{ page.author }},  {{ page.date | date_to_string }}</p>
+<p class="meta" style="clear: right">By: {{ page.author }},  {{ page.date | date_to_string }}</p>
 
 {{ content }}
 
+<hr/>
+<div class="warn-button">报告错误</div>
+
 {% if page.comments != false %}
-    <hr/>
     <h3>评论区</h3>
     <div id="vcomments"></div>
         <script>

@@ -2,9 +2,19 @@
 layout: default
 comments: false
 ---
-
+<div class="popup-black-background" id="popup_01" onclick="hideErrorReport()" style="display: none;"></div>
+<div class="popup-warn-window" id="popup_02" style="display: none;">
+    <img class="warn-image" src="{{ site.baseurl }}\assets\warning.svg" style="float: left; padding-right: 10px; padding-bottom: 100px" height="250px" width="175px"/>
+    <h3>报告错误</h3>
+    <p>如果你发现该网页中存在错误/显示异常，可以从以下两种方式向我们报告错误，我们会尽快修复。</p>
+    <ol>
+        <li>使用 <strong>CS Club 网站错误</strong> 为主题，附上错误截图或描述及网址后发送邮件到 286988023@qq.com </li>
+        <li>在我们的网站代码仓库中创建一个 issue 并在 issue 中描述问题 <a href="https://gitee.com/MarkYutianChen/CHGZFLS-CS-CLUB">点击链接前往Gitee仓库</a></li>
+    </ol>
+    <em>（点击弹窗外的背景关闭弹窗）</em>
+</div>
 <div>
-    <h2 style="float: left"><strong>{{ page.title }}</strong></h2>
+    <h2><strong>{{ page.title }}</strong></h2>
     <img src="{{ site.baseurl }}/assets/home.svg" 
         height="30px" 
         style="float: right; margin: 10px; cursor:pointer;"
@@ -16,13 +26,14 @@ comments: false
         onclick="window.history.back();"
     />
 </div>
-
-<p class="meta" style="clear: both">  {{ page.date | date_to_string }}</p>
+<p class="meta">  {{ page.date | date_to_string }}</p>
 
 {{ content }}
 
+<hr/>
+<div class="warn-button" onclick="showErrorReport()">报告错误</div>
 {% if page.comments != false %}
-    <hr/>
+    
     <h3>评论区</h3>
     <div id="vcomments"></div>
         <script>
@@ -30,7 +41,7 @@ comments: false
                 el: '#vcomments',
                 appId: '8fKQHmL2KKgtJSxGo7d3SfGV-gzGzoHsz',
                 appKey: 'YWf5Di35XGX8gboR1cSLKafj',
-                placeholder: '欢迎在这里分享自己的独到见解 : )'
+                placeholder: '欢迎在这里分享自己的独到见解 : ) 评论区支持 Markdown 语法'
             })
     </script>
 {% endif %}
