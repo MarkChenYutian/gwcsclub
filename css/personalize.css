@@ -181,6 +181,16 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 
+/* Button Box Using Flex */
+.button-box{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: baseline;
+}
+
 /* Table Of Content on the left sider */
 @media (max-width: 1550px){
   #category{

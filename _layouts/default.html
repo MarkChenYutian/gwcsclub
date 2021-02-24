@@ -1,3 +1,6 @@
+---
+useTOC: true
+---
 <!DOCTYPE html>
 <html lang="{{ site.locale }}">
   
@@ -7,7 +10,7 @@
     {% include page-header.html %}
     {% include nav-bar.html %}
 
-    <!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> -->
+    {% if page.useTOC != false %}
     <script>hljs.initHighlightingOnLoad();</script>
     <!--侧栏目录生成代码-->
     <script>
@@ -37,6 +40,7 @@
     <div class="book-summary" id="category" style="width:20%;">
       <strong>目录</strong> <br/>
     </div>
+    {% endif %}
     <section class="main-content">
           
       {{ content }}

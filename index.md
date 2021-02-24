@@ -37,15 +37,16 @@ title: {{ site.name }}
 
 <hr style="clear: both"/>
 
-## 竞赛信息
-<div style="clear: both"></div>
-
-<p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder</p>
+## 竞赛
+<img class="mainPage-img" src="{{ site.baseurl }}/assets/competition.svg" height="20%" width="20%" style="float: left; padding-right: 25px"/>
+<p>计算机有许多相关的竞赛，我们收集整理了其中比较有含金量的部分的比赛简介，赛制和时间以及一些准备建议</p>
+<p>目前，我们提供 USACO 的历年真题解析与 ACSL 讲义</p>
+<div class="main-button" style="float: right" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Competitions.html'">More Detail</div>
 <hr style="clear: both"/>
 
 ## Computer Science +
 <div style="clear: both"></div>
-
+<div class="main-button" style="float: right">More Detail</div>
 <p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder</p>
 
 
