@@ -78,6 +78,18 @@
   border-left-color: #2c3c99;
 }
 
+/* Error Block CSS */
+.error{
+  background-color: rgb(253, 230, 224);
+  padding: 8px 16px 8px 16px;
+  margin: 16px 0px 16px 0px;
+  /* Blue Bar on the Left */
+  border-left-style: solid;
+  border-left-width: 8px;
+  /*border-left-color:rgb(109, 167, 255)*/
+  border-left-color: #c21a1a;
+}
+
 .simple-card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
@@ -210,5 +222,24 @@
   /* 目录栏的高度,这里设置为60%主要是为了不挡住返回顶部和折叠按钮 */
   height: 20rem;
   /* 开启垂直滚动条 */
-  overflow-y: scroll;            
+  overflow-y: auto;            
+}
+
+/* Chage Scroll Bar Style*/
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #6b7280;
+  border: 2px solid #e5e7eb;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
 }
