@@ -32,7 +32,7 @@ title: {{ site.name }}
 <div style="clear: both"></div>
 
 ### CS188: Artificial Intelligence 笔记
-<div class="main-button" style="float: right" onClick="window.location.href='{{ site.baseurl }}/2021/02/25/CS188-Home.html'">打开CS188笔记</div>
+<div class="main-button" style="float: right" onClick="window.location.href='{{ site.baseurl }}/2021/02/24/CS188-Home.html'">打开CS188笔记</div>
 <p>这里记录了2019-2020学年的 CS2 课程笔记。这门课参照 UC Berkeley 的 CS188: Artificial Intelligence 的课程大纲与大作业，介绍了许多经典的机器学习方法 - 包括 搜索，强化学习，Q-Learning，贝叶斯网络 和 向量支持机 etc.</p>
 
 <hr style="clear: both"/>
