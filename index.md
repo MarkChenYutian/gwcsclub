@@ -1,6 +1,7 @@
 ---
 layout: default
 title: {{ site.name }}
+useTOC: false
 ---
 
 <div class="info">
@@ -13,7 +14,7 @@ title: {{ site.name }}
 
 <p>如果你刚刚接触CS，看看这里吧！这里罗列了一些初学者常常遇到的问题 - 例如 “如何应对程序报错？” 等。</p>
 
-<div class="main-button" style="float: right">More Detail</div>
+<div class="main-button" style="float: right" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/31/To-Beginners.html'">More Detail</div>
 <hr style="clear: both"/>
 
 ## 笔记

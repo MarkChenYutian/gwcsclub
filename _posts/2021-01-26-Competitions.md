@@ -5,7 +5,7 @@ categories: secondary-pages
 tags: page
 ---
 
-### USA Computing Olympia (USACO)
+## **USA Computing Olympia (USACO)**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='http://usaco.org/'">官网链接</div>
@@ -30,7 +30,7 @@ USA Computing Olympia 是我们主推的三大比赛之一。无论你处于什�
 > 一般来说 US Open 的难度最高，晋级难度最大。
 
 ---
-### Canadian Computing Competition (CCC)
+## **Canadian Computing Competition (CCC)**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://cccgrader.com/ '">官网链接</div>
@@ -51,7 +51,7 @@ Canadian Computing Competition 是我们主推的三大比赛之一，认可度�
 
 ---
 
-### American Computer Science League (ACSL)
+## **American Computer Science League (ACSL)**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://www.acsl.org/'">官网链接</div>
@@ -80,7 +80,7 @@ American Computer Science League 是club主推的三大比赛之一，认可度�
 具体时间见官网 Schedule [官网ACSL Schedule](https://www.acsl.org/get-started/schedule)
 
 ---
-### VEX Robotics Competition
+## **VEX Robotics Competition**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://www.vexrobotics.com/'">官网链接</div>
@@ -118,7 +118,7 @@ AI赛也会分为45秒的自动阶段和105秒的程序运行阶段。但和常�
 
 具体的时间每年会有不同。赛季以一年为季度，通常为下半年到第二年上半年为一个赛季。
 
-### Google Code Jam
+## **Google Code Jam**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://codingcompetitions.withgoogle.com/codejam'">官网链接</div>
@@ -134,7 +134,7 @@ Google code jam 是一个由Google主办的比赛，含金量超高，难度也�
 
 USACO 银组及以上的选手可以试着参加Google Code Jam，一般可以通过前三轮
 
-### Google Code In
+## **Google Code In**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://codein.withgoogle.com/'">官网链接</div>
@@ -148,7 +148,7 @@ Google code in 是一个由Google主办的比赛。比赛方会指定一些开�
 
 这个比赛与其他CS编程竞赛不太一样，这个竞赛更多的是看你对开源社区的贡献。通过参加这个比赛，可以体验向开源社区做贡献的感觉，同时学习如何使用 Git 等程序员常用的版本管理软件。也可以用来向大学证明自己是一个喜欢对 Community 做贡献的人
 
-### Leetcode Week Contest
+## **Leetcode Week Contest**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://leetcode-cn.com/'">官网链接</div>
@@ -156,7 +156,7 @@ Google code in 是一个由Google主办的比赛。比赛方会指定一些开�
 
 leetcode 是一个CS的社区网站，想要练习编程题的同学可以注册账号。网站上可以根据知识点查找题目，针对性练习算法。leetcode会有周赛，双周赛，月赛之类的各种小比赛，可以用来练习。（如果你打的够多也可以去兑换免费T恤哦）
 
-### Kaggle
+## **Kaggle**
 
 <div class="button-box">
         <div class="main-button" onClick="window.location.href='https://www.kaggle.com/'">官网链接</div>

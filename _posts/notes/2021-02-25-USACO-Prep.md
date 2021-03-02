@@ -15,7 +15,7 @@ comments: false
     </ol>
     <div class="button-box">
         <div class="main-button">CS Club 算法讲义</div>
-        <div class="main-button">USACO Prep 网站链接</div>
+        <div class="main-button" onClick="window.location.href='https://usaco.guide/'">USACO Guide 网站链接</div>
     </div>
 </div>
 
