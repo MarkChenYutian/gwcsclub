@@ -22,8 +22,8 @@ useTOC: true
                 var tag = $(item).get(0).localName;
                 if (tag !== "h1"){
                   //为该标签设置id属性
-                  $(item).attr("id", "wow" + i);
-                  $("#category").append('<a class="new' + tag + '" href="#wow' + i + '">' + $(item).text() + '</a></br>');
+                  $(item).attr("id", "h" + i);
+                  $("#category").append('<a class="new' + tag + '" href="#h' + i + '">' + $(item).text() + '</a></br>');
                   //为每一个标题超链接的class属性设置左边距
                   $(".newh2").css("margin-left", 0);
                   $(".newh3").css("margin-left", 20);
@@ -31,7 +31,6 @@ useTOC: true
                   $(".newh5").css("margin-left", 60);
                   $(".newh6").css("margin-left", 80);
                 }
-                //$(".newh6").css("margin-left", 100);
             });
             //设置class选择器为.book-body的html内容
             $(".book-body").html($(".book-body").nextAll())

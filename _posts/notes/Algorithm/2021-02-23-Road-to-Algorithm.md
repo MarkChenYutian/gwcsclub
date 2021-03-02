@@ -2,6 +2,7 @@
 layout: post
 title: Road to Algorithm
 tags: Notes
+Author: wyn
 ---
 
 ### Level 0

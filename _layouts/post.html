@@ -5,7 +5,7 @@ comments: false
 <div class="popup-black-background" id="popup_01" onclick="hideErrorReport()" style="display: none;"></div>
 <div class="popup-warn-window" id="popup_02" style="display: none;">
     <img class="warn-image" src="{{ site.baseurl }}\assets\warning.svg" style="float: left; padding-right: 10px; padding-bottom: 100px" height="250px" width="175px"/>
-    <h3>报告错误</h3>
+    <big>报告错误</big>
     <p>如果你发现该网页中存在错误/显示异常，可以从以下两种方式向我们报告错误，我们会尽快修复。</p>
     <ol>
         <li>使用 <strong>CS Club 网站错误</strong> 为主题，附上错误截图或描述及网址后发送邮件到 286988023@qq.com </li>
@@ -27,7 +27,7 @@ comments: false
     />
 </div>
 <p class="meta">  {{ page.date | date_to_string }}, By {{ page.Author }}</p>
-
+<div style="clear:right"></div>
 {{ content }}
 
 {% if page.comments != false %}

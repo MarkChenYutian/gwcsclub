@@ -47,23 +47,3 @@ function renameHTag(item) {
         setHTagValue(item, 6)
     }
 }
-
-function showOrCloseCategory() {
-    var id = document.getElementById("category");
-    var book_body=document.getElementById("book_body");
-    //如果展开了
-    if (id.style.display == 'block') {
-        //console.log("开始展开");
-        id.style.display='none';
-        id.style.width="0%";
-        book_body.style.width="100%";
-        book_body.style.paddingleft=0;
-    }
-    //如果被折叠了
-    else if (id.style.display =='none') {
-        //console.log("开始折叠");
-        id.style.display = 'block';
-        book_body.style.width="90%";
-        id.style.width="20%"
-    }
-}
