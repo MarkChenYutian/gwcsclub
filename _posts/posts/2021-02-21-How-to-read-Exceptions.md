@@ -30,7 +30,7 @@ Author: Mark
 
 当程序的行为可能造成不可预测的后果或者收到设计功能之外的输入时，程序会报错。一个典型的例子是除0错误。当设计除法的代码时，我们明确的知道除数必须时一个非0的数字，如果程序收到“除0”的指令，它会立刻报错。通过这种机制，你的代码可以告诉你它遇到了无法执行的问题 / 继续执行会产生不确定的结果（例如从一个长度为 4 的数组中取 index 为 4 的元素如果不报错我们无法预测返回值）
 
-### 如何阅读报错
+### 报错中有什么信息
 
 当程序报错时，它会同时给出一定的信息帮助你找到错误进行 debug。下面我们用Java和Python的两个例子来举例如何阅读报错。
 
@@ -107,3 +107,19 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
    这里我们的Traceback里面有两个位置，程序具体是从哪里开始报错的呢？在这种情况下我们要从下往上阅读代码 - 我们在把变量 `integer` 与 `String`  相加时发生了错误，那么程序是从哪里执行（调用）到这一行的呢？我们往上读一层，看到了一个程序的第四行 - `addIntToString(2, "Hello")`。在执行这一行的时候调用了我们写的函数 `addIntToString` 内的代码。
 
+### 怎么 debug?
+
+有了这三个信息，你可以
+
+1 自己检查一下报错的代码附近的代码是否有明显的逻辑问题
+
+2 试着使用“小黄鸭调试法”，一步一步的解释自己的代码是在做什么 [什么是小黄鸭调试法？](https://baike.baidu.com/item/%E5%B0%8F%E9%BB%84%E9%B8%AD%E8%B0%83%E8%AF%95%E6%B3%95/16569594)
+
+3 在 Python Tutor / Java Tutor 上试着逐行可视化运行一下自己的代码，仔细检查自己的指针和变量值是否符合预期 [Python Tutor 链接](http://www.pythontutor.com/)
+
+> Python Tutor / Java Tutor 是一款可以可视化运行 Python / Java 程序的网站
+<iframe width="100%" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=def%20listSum%28numbers%29%3A%0A%20%20if%20not%20numbers%3A%0A%20%20%20%20return%200%0A%20%20else%3A%0A%20%20%20%20%28f,%20rest%29%20%3D%20numbers%0A%20%20%20%20return%20f%20%2B%20listSum%28rest%29%0A%0AmyList%20%3D%20%281,%20%282,%20%283,%20None%29%29%29%0Atotal%20%3D%20listSum%28myList%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=10&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+4 在网上搜索一下这个报错的可能原因 [如何运用互联网查找资料？]({{ site.baseurl }}/2021/03/01/How-to-find-info.html)
+
+5 如果上面的方法都解决不了这个报错，重新回到第一步，除非真的解决不掉的问题**不要找人帮忙 debug**，debug能力是编程能力的重要一环，只有自己debug才能练习这种能力
