@@ -4,5 +4,6 @@ _site
 Gemfile.lock
 .DS_Store
 .jekyll-cache
+Cache
 !/.gitignore
 Jekyll

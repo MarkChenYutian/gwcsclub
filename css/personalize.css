@@ -30,7 +30,7 @@
   transition: 0.5s;
   color: #13227a;
   /* flex properties */
-  flex-grow: 0;
+  flex-grow: 1;
   flex-basis: 200px;
 }
 
@@ -111,7 +111,7 @@
 .top-nav-box{
   /*background-color: rgb(224, 240, 253);*/
   background-color: hsl(0deg 0% 100% / 90%);
-  position:sticky;
+  position: sticky;
   position: -webkit-sticky;
   top: 0;
   /*padding-left: 30px;
@@ -120,15 +120,15 @@
   z-index: 999;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: left;
   align-items: flex-start;
   align-content: flex-start;
 }
 
 
-@media screen and (max-width: 600px){.nav-button{ padding:8px 24px; }}
-@media screen and (min-width: 600px){.nav-button{ padding:16px 48px; }}
+@media screen and (max-width: 700px){.nav-button{ padding:5px 15px; }}
+@media screen and (min-width: 700px){.nav-button{ padding:15px 45px; }}
 
 .nav-button {
   /* Add shadows to create the "card" effect */
