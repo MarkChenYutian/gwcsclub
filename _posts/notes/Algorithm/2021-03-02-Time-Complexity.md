@@ -162,7 +162,7 @@ public static void main(String[] args){
 
 USACO 和 CCC 的编程题的时间限制都是4秒左右。在这段时间内，服务器可以进行大约 $1\times 10^9$ 次基本操作。这意味着什么？下面这张表格列举出来了不同时间复杂度能在时间限制内运行完毕的数据规模
 
-| 时间复杂度                            | 数据规模             |
+| 时间复杂度                            | 在规定时间内可以完成计算的数据规模             |
 | ------------------------------------- | -------------------- |
 | $O(n!)$, $O(n^m), \text{where }m > 5$ | $n\leq 10$           |
 | $O(n\cdot 2^n)$,$O(n^5)$              | $n\leq 20$           |
@@ -179,22 +179,10 @@ USACO 和 CCC 的编程题的时间限制都是4秒左右。在这段时间内�
 
 <div class="error">
     在一些情况下，即使解答的时间复杂度是符合计算限时的也有可能导致TLE。这种情况下你应该考虑降低算法的时间复杂度常数项。
+    <div class="python">
+        例如把循环操作修改为 List Comprehension / Set Comprehension 操作，尽量使用 Generator, Iterator 而不是直接循环，或者直接考虑换用 Java （逃
+    </div>
 </div>
-这是一个例子
-
-$$
-\left[\begin{matrix}
-
-1 & 2 & 3\\
-
-4 & 5 & 6\\
-
-7 & 8 & 9\\
-
-\end{matrix}\right]\times 1
-$$
-
-例子结束
 
 ---
 

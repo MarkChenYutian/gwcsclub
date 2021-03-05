@@ -4,7 +4,7 @@ title: Computer Science +
 categories: secondary-pages
 tags: page
 ---
-
+<img src="{{ site.baseurl }}/assets/notImplement.svg" style="zoom: 70%; margin: 0px auto 0px auto; display:block">
 <div class="error">
-❌ 这个页面还没编写
+我们正在建设这个页面
 </div>

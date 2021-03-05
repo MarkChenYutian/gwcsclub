@@ -4,9 +4,9 @@ title: {{ site.name }}
 useTOC: false
 ---
 
-<div class="error">
-  <h3>🛠 这个网站正在建设</h3>
-  <p>这个网站正在建设，所以有些按钮 / 超链接 是点不开的，如果你发现哪里有bug，可以和 Mark 反映 <em>286988023@qq.com</em> </p>
+<div class="notification">
+  <h3>🛠 Alpha Version 目前网站正在内测阶段</h3>
+  <p>这个网站正在内测阶段，一部分内容尚未完成，如果你发现哪里有bug，请及时和 Mark 反映 <em>286988023@qq.com</em> </p>
 </div>
 
 ## 初学者指南
