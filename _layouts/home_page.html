@@ -21,11 +21,14 @@ useTOC: true
     }
 
     @keyframes floatUpDown{
-      25%{
-        transform: translateY(10px);
+      0%{
+        transform: translateY(0px);
+      }
+      40%{
+        transform: translateY(40px);
       }
       100%{
-        transform: translateY(20px);
+        transform: translateY(0px);
       }
     }
   </style>
@@ -37,7 +40,7 @@ useTOC: true
             A place for everyone who ❤ Computer Science | A place to learn Algorithms | A place to learn Artificial Intelligence | A place to share knowledge | A place to create Cool Stuff | A place to show your Project
         </span> 
         <span class="main-project-tagline"></span>
-        <img class="main-float-arrow" src="{{ site.baseurl }}\assets\down_arrow.svg" style="display: block; zoom: 25%; margin: 40vh auto 0 auto"></img>
+        <div class="main-flow-arrow"><img src="{{ site.baseurl }}\assets\down_arrow.svg" style="display: block; zoom: 40%; margin: 40vh auto 0 auto"></img></div>
         </div>
         <script> 
             if ($(".main-project-tagline").length == 1) { 
