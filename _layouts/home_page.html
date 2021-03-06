@@ -13,6 +13,22 @@ useTOC: true
     <!-- Add jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
+  <style>
+    /* Main Page Down Arrow Floating */
+    .main-flow-arrow{
+      animation: floatUpDown 2s infinite;
+      -webkit-animation: floatUpDown 2s infinite;
+    }
+
+    @keyframes floatUpDown{
+      25%{
+        transform: translateY(10px);
+      }
+      100%{
+        transform: translateY(20px);
+      }
+    }
+  </style>
   <body>
     <section class="main-page-header">
         <div class="main-header-container">
@@ -21,7 +37,7 @@ useTOC: true
             A place for everyone who ❤ Computer Science | A place to learn Algorithms | A place to learn Artificial Intelligence | A place to share knowledge | A place to create Cool Stuff | A place to show your Project
         </span> 
         <span class="main-project-tagline"></span>
-        <p class="project-tagline" style="margin-top: 25vh"> Scroll Down For Contents</p>
+        <img class="main-float-arrow" src="{{ site.baseurl }}\assets\down_arrow.svg" style="display: block; zoom: 25%; margin: 40vh auto 0 auto"></img>
         </div>
         <script> 
             if ($(".main-project-tagline").length == 1) { 
