@@ -1,5 +1,5 @@
 ---
-layout: home_page
+layout: default
 title: {{ site.name }}
 useTOC: false
 ---
