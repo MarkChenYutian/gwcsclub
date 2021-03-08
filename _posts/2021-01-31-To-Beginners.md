@@ -5,7 +5,9 @@ categories: secondary-pages
 tags: page
 ---
 
-哈喽，欢迎来到计算机社的网站，下面我会解答一些对初学者来说非常常见的问题
+如果你是刚刚接触CS的新人，可以在这样页面找到很多我们曾经碰到过的问题和对应的解决方法。这里还推荐了许多非常有用的网站。
+
+### **常见问题 Q&A**
 
 <div class="simple-card" onClick="window.location.href='{{ site.baseurl }}/2021/02/01/How-to-ask-Questions.html'">
 <h4>我有不懂的地方该怎么办？</h4>
@@ -23,3 +25,13 @@ tags: page
 <h4>我想做些练习，我可以在哪里做练习？</h4>
 </div>
 
+
+<div class="simple-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/27/Languages-Compare.html'">
+<h4>各种编程语言的比较</h4>
+</div>
+
+### **重要的网站推荐**
+
+<div class="card-box">
+    <div class="">
+</div>

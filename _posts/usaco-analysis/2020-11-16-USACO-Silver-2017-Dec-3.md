@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2017 Dec Silver p3
 tags: USACO-analysis
 status: OK
-author: Maucus
+Author: Marcus
 time: 2017
 group: Silver
 question: Dec 3

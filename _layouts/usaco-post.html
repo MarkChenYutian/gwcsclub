@@ -1,5 +1,6 @@
 ---
 layout: default
+Author: Anonymous
 ---
 <div class="popup-black-background" id="popup_01" onclick="hideErrorReport()" style="display: none;"></div>
 <div class="popup-warn-window" id="popup_02" style="display: none;">
@@ -26,14 +27,16 @@ layout: default
     />
 </div>
 
-<p class="meta">By: {{ page.author }},  {{ page.date | date_to_string }}</p>
+<p class="meta">By: {{ page.Author }},  {{ page.date | date_to_string }}</p>
 <div style="clear:right"></div>
 
 {{ content }}
 
 <hr/>
-<div class="warn-button" onclick="showErrorReport()">报告错误</div>
+<div class="warn-button" onclick="showErrorReport()">⚠</div>
 {% if page.comments != false %}
+    <!-- Script Header for valine comment area -->
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <h3>评论区</h3>
     <div id="vcomments"></div>
         <script>

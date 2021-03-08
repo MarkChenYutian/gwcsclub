@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2016 Dec Silver P3
 tags: USACO-analysis
 status: OK
-author: yff
+Author: yff
 time: 2016
 group: Silver
 question: Dec 3

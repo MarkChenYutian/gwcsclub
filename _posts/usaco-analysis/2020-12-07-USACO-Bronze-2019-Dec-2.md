@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2019 Bronze Dec 2
 tags: USACO-analysis
 status: OK
-author: 杨菲凡
+Author: 杨菲凡
 time: 2019
 group: Bronze
 question: Dec 2

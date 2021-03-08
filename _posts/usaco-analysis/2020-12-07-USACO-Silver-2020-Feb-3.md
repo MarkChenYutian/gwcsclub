@@ -2,7 +2,7 @@
 layout: usaco-post
 title: USACO 2020 Feb Silver T3
 status: OK
-author: 李若谷
+Author: 李若谷
 tags: USACO-analysis
 time: 2020
 group: Silver

@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2020 Jan Silver Problem 1
 tags: USACO-analysis
 status: OK
-author: Jczeng
+Author: Jczeng
 time: 2020
 group: Silver
 question: Jan 1

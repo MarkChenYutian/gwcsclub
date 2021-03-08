@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2020 Jan Bronze P2
 tags: USACO-analysis
 status: OK
-author: yff
+Author: yff
 time: 2020
 group: Bronze
 question: Jan 2

@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO Silver 2019 JAN 2
 tags: USACO-analysis
 status: OK
-author: 肖肖
+Author: 肖肖
 time: 2019
 group: Silver
 question: Jan 2

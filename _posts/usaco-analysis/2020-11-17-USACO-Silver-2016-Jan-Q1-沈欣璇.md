@@ -2,7 +2,7 @@
 title: USACO 2016 Jan Silver P1
 tags: USACO-analysis
 status: OK
-author: 沈欣璇
+Author: 沈欣璇
 time: 2016
 group: Silver
 question: Jan 1

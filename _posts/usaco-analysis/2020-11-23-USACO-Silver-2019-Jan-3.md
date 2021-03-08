@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO Silver 2019 JAN 3
 tags: USACO-analysis
 status: OK
-author: wwddddnnn
+Author: wwddddnnn
 time: 2019
 group: Silver
 question: Jan 3

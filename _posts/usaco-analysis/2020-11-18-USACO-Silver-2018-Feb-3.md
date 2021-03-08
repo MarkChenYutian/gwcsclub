@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2018 Feb 3 
 tags: USACO-analysis
 status: OK
-author: Jczeng
+Author: Jczeng
 time: 2018
 group: Silver
 question: Feb 3

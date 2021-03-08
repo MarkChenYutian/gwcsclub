@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2019 Dec Silver P1
 tags: USACO-analysis
 status: OK
-author: zys
+Author: zys
 time: 2019
 group: Silver
 question: Dec 1

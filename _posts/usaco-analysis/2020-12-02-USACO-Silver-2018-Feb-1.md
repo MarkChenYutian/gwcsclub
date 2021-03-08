@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2018 Feb Silver P1
 tags: USACO-analysis
 status: OK
-author: bbl
+Author: bbl
 time: 2018
 group: Silver
 question: Feb 1

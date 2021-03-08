@@ -50,8 +50,10 @@ Author: Anonymous
 <hr/>
 {% endif %}
 
-<div class="warn-button" onclick="showErrorReport()">报告错误</div>
+<div class="warn-button" onclick="showErrorReport()">⚠</div>
 {% if page.comments != false %}
+    <!-- Script Header for valine comment area -->
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <h3>评论区</h3>
     <div id="vcomments"></div>
         <script>

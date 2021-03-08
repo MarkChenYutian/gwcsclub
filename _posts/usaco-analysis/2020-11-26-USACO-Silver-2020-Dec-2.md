@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2016 Dec Silver P2
 tags: USACO-analysis
 status: OK
-author: 曾老城
+Author: 曾老城
 time: 2016
 group: Silver
 question: Dec 2
