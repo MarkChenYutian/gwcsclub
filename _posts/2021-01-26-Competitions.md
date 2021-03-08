@@ -2,7 +2,7 @@
 layout: page
 title: CS竞赛汇总与简介
 categories: secondary-pages
-tags: page
+tags: Page
 ---
 
 ## **USA Computing Olympia (USACO)**

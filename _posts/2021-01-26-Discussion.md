@@ -2,7 +2,7 @@
 layout: post
 title: Feedback and Discussion
 categories: secondary-pages
-tags: page
+tags: Page
 comments: true
 ---
 
