@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 算法笔记首页
-tags: page
+tags: Page
 Author: Mark
 ---
 
@@ -20,7 +20,6 @@ Author: Mark
 <ul class="time-vertical" style="margin-left: 32px;">
         <li><offline></offline><a href="">数据结构：字符串 String</a></li>
         <li><offline></offline><a href="">数据结构：列表 Array (List) and ArrayList</a></li>
-
 </ul>
 
 ## Level 1
