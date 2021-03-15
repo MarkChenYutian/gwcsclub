@@ -32,10 +32,16 @@ useTOC: false
 <div class="main-button" style="float: right" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Competitions.html'">More Detail</div>
 <hr style="clear: both"/>
 
+## 日程安排
+<img class="mainPage-img" src="{{ site.baseurl }}/assets/meetTA.svg" height="20%" width="20%" style="float: right; padding-right: 25px"/>
+<p>这里记录了最近的比赛日程。如果你想预约TA也可以在这里预约。</p>
+<div class="main-button" style="float: left" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Schedule.html'">More Detail</div>
+<hr style="clear: both"/>
+
 ## Computer Science +
 <div style="clear: both"></div>
-<img class="mainPage-img" src="{{ site.baseurl }}/assets/globe.svg" height="20%" width="20%" style="float: right"/>
+<img class="mainPage-img" src="{{ site.baseurl }}/assets/globe.svg" height="20%" width="20%" style="float: left"/>
 <p>CS当然不止有竞赛！这里罗列了一些学长学姐们自己做的一些project，例如小游戏，小工具和科研结果，有空的时候可以在这里看看，拓宽一下视野。这里还有学长学姐们博客的链接🔗，有空可以来串串门哦 ：）</p>
-<div class="main-button" style="float: left" 
+<div class="main-button" style="float: right" 
 onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Computer-Science+.html'">More Detail</div>
 <div style="clear: both"></div>

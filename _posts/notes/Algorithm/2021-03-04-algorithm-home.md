@@ -5,6 +5,9 @@ tags: Page
 Author: Mark
 ---
 
+> Note:
+> 红色的圈表示暂无页面，蓝色的圈表示有页面
+
 ## Level 0
 
 **状态**：刚接触编程，对编程十分陌生（比如说第一次成功print "Hello World"）
