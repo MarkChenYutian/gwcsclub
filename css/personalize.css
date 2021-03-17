@@ -1,3 +1,7 @@
+::selection{
+  background: #d1d5e0;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     transition: 0.3s;

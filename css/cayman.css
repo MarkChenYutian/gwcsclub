@@ -104,7 +104,7 @@
 
 .highlight .nl { color: #990000; font-weight: bold; }
 
-.highlight .nn { color: #555555; }
+.highlight .nn { color: #c86aff; }
 
 .highlight .nt { color: #000080; }
 
@@ -118,7 +118,7 @@
 
 .highlight .ow { color: #000000; font-weight: bold; }
 
-.highlight .o { color: #000000; font-weight: bold; }
+.highlight .o { color: #dddddd; font-weight: bold; }
 
 .highlight .w { color: #bbbbbb; }
 
@@ -205,8 +205,24 @@ a:hover { text-decoration: underline; }
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: #205bb3; }
 .main-content p { margin-bottom: 1em; }
 .main-content code { padding: 2px 4px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: #567482; background-color: #f3f6fa; border-radius: 0.3rem; }
-.main-content pre { padding: 0.8rem; margin-top: 0; margin-bottom: 1rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: #567482; word-wrap: normal; background-color: #f3f6fa;  border-radius: 0.3rem; }
-.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: #567482; word-break: normal; white-space: pre; background: transparent; border: 0; }
+.main-content pre { 
+  padding: 0.8rem; 
+  margin-top: 0; 
+  margin-bottom: 1rem; 
+  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; 
+  color: #d9e7eb; 
+  word-wrap: normal; 
+  background-color: #222222;  
+  border-radius: 0.3rem; }
+.main-content pre > code { 
+  padding: 0; 
+  margin: 0; 
+  font-size: 0.9rem; 
+  color: #d9e7eb; 
+  word-break: normal; 
+  white-space: pre; 
+  background: transparent;
+  border: 0; }
 .main-content .highlight { margin-bottom: 1rem; }
 .main-content .highlight pre { margin-bottom: 0; word-break: normal; }
 .main-content .highlight pre, .main-content pre { padding: 0.8rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
