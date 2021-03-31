@@ -99,6 +99,8 @@
   border-left-color:orange;
 }
 
+.notification h1,.notification h2,.notification h3,.notification h4,.notification h5{ color: rgb(184, 120, 3); }
+
 /* Info Block CSS */
 .info{
   background-color: rgb(224, 240, 253);
@@ -122,6 +124,8 @@
   /*border-left-color:rgb(109, 167, 255)*/
   border-left-color: #c21a1a;
 }
+
+.error h1,.error h2,.error h3,.error h4,.error h5{ color: #901d1d; }
 
 .simple-card {
   /* Add shadows to create the "card" effect */
@@ -210,10 +214,10 @@
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background-color: rgb(255, 163, 43);
+  background-color: rgba(255, 163, 43, 0.459);
   color: black;
   border-radius: 24px;
-  padding: 12px 24px;
+  padding: 3px 5px;
   margin: 3%;
   max-width: fit-content;
   transition: 0.5s;
@@ -221,7 +225,7 @@
 }
 .warn-button:hover{
   transition: 0.5s;
-  background-color: #ff643d;
+  background-color: #ff643d93;
   color: ghostwhite;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
@@ -277,4 +281,13 @@
   border-radius: 5px;
 }
 
+.image-horizontal-box{
+  overflow-y: auto;
+  white-space: nowrap;
+}
 
+.image-horizontal-box img{
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+}
