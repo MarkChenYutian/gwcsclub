@@ -6,3 +6,7 @@ tags: Miscellaneous
 Author: Mark
 ---
 
+<div class="error">
+    <h3>尚未编写的页面……</h3>
+    <p>这个页面暂时还没有内容。</p>
+</div>

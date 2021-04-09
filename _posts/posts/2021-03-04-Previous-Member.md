@@ -67,7 +67,7 @@ comments: false
 | 陈妍文 | Adelina7chen |   Adelina7Chen   | 程胤杰 |   5163661   |     5163661     |
 | 张蔚琦 |  zhangweiqi  |    zhangweiqi    | 韓超梵 |  HeimaHan   | woshihanchaofan |
 | 王诗玥 |  wangshiyue  |   capricieuxV    | 陳昱天 |  MarkChen   |     Markcyt     |
-|  彭琛  |  IrvingPeng  |    IrvingPeng    |        |             |                 |
+|  彭琛  |  IrvingPeng  |    IrvingPeng    | 王嘉仪 |             |                 |
 | 郭宇新 |              |    Yuxin_Guo     | 刘天宇 |             | Terry_The_Bean  |
 | 陈宇轩 |              |     Moonbear     |  闫瑾  |             |      Katz       |
 | 刘欢霆 |              |  Matina/Martina  | 梁玺成 |             |    March127     |

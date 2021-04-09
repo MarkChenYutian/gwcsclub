@@ -29,7 +29,6 @@ USA Computing Olympia 是我们主推的三大比赛之一。无论你处于什�
 
 > 一般来说 US Open 的难度最高，晋级难度最大。
 
----
 ## **Canadian Computing Competition (CCC)**
 
 <div class="button-box">
@@ -49,7 +48,7 @@ Canadian Computing Competition 是我们主推的三大比赛之一，认可度�
 **建议**：
 1. 我们建议高一学生报名 Junior Division，个别高一 USACO 就银组的人推荐报名 Senior Division。高二统一报名 Senior Division。
 
----
+
 
 ## **American Computer Science League (ACSL)**
 
@@ -79,7 +78,7 @@ American Computer Science League 是club主推的三大比赛之一，认可度�
 
 具体时间见官网 Schedule [官网ACSL Schedule](https://www.acsl.org/get-started/schedule)
 
----
+
 ## **VEX Robotics Competition**
 
 <div class="button-box">

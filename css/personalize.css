@@ -241,7 +241,13 @@
 }
 
 /* Table Of Content on the left sider */
-@media (max-width: 1550px){
+@media (max-width: 1650px) and (min-width: 1500px){
+  #category{
+    margin-right: 4px;
+    max-width: 15%;
+  }
+}
+@media (max-width: 1500px){
   #category{
     display: none;
   }
@@ -249,17 +255,16 @@
 #category {
   /* 绝对定位 */
   position: sticky;
-  /* left: 20px; */
   /* 目录显示的位置 */
   float: left;
   left: 0px;
   top: 80px;
   margin-top: 32px;
-  margin-left: 32px;
-  /* 目录栏的高度,这里设置为60%主要是为了不挡住返回顶部和折叠按钮 */
+  margin-left: 24px;
+  margin-right: 24px;
   height: 20rem;
   /* 开启垂直滚动条 */
-  overflow-y: auto;            
+  overflow-y: auto;
 }
 
 /* Chage Scroll Bar Style*/
