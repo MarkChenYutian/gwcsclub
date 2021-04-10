@@ -1,3 +1,7 @@
+::selection{
+  background: #d1d5e0;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     transition: 0.3s;
@@ -40,6 +44,35 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
+.center-card-box{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.round-card{
+    /* Add shadows to create the "card" effect */
+    transition: 0.3s;
+    padding: 10px;
+    cursor:pointer;
+    text-align: center;
+    transition: 0.5s;
+    color: #13227a;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* flex properties */
+    flex-grow: 0;
+    flex-basis: 250px;
+}
+
+.round-card:hover {
+  transition: 0.5s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
 
 /* A Flex Container */
 .card-box{
@@ -66,6 +99,8 @@
   border-left-color:orange;
 }
 
+.notification h1,.notification h2,.notification h3,.notification h4,.notification h5{ color: rgb(184, 120, 3); }
+
 /* Info Block CSS */
 .info{
   background-color: rgb(224, 240, 253);
@@ -89,6 +124,8 @@
   /*border-left-color:rgb(109, 167, 255)*/
   border-left-color: #c21a1a;
 }
+
+.error h1,.error h2,.error h3,.error h4,.error h5{ color: #901d1d; }
 
 .simple-card {
   /* Add shadows to create the "card" effect */
@@ -177,10 +214,10 @@
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background-color: rgb(255, 163, 43);
+  background-color: rgba(255, 163, 43, 0.459);
   color: black;
   border-radius: 24px;
-  padding: 12px 24px;
+  padding: 3px 5px;
   margin: 3%;
   max-width: fit-content;
   transition: 0.5s;
@@ -188,7 +225,7 @@
 }
 .warn-button:hover{
   transition: 0.5s;
-  background-color: #ff643d;
+  background-color: #ff643d93;
   color: ghostwhite;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
@@ -204,25 +241,38 @@
 }
 
 /* Table Of Content on the left sider */
-@media (max-width: 1550px){
+@media (max-width: 1650px) and (min-width: 1500px){
   #category{
-    display: none;
+    /* 绝对定位 */
+    position: sticky;
+    /* 目录显示的位置 */
+    float: left;
+    left: 0px;
+    top: 80px;
+    margin-top: 32px;
+    margin-left: 24px;
+    margin-right: 4px;
+    max-width: 15%;
+  }
+}
+@media (min-width: 1650px){
+  #category{
+    /* 绝对定位 */
+    position: sticky;
+    /* 目录显示的位置 */
+    float: left;
+    left: 0px;
+    top: 80px;
+    margin-top: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 20%;
   }
 }
 #category {
-  /* 绝对定位 */
-  position: sticky;
-  /* left: 20px; */
-  /* 目录显示的位置 */
-  float: left;
-  left: 0px;
-  top: 80px;
-  margin-top: 32px;
-  margin-left: 32px;
-  /* 目录栏的高度,这里设置为60%主要是为了不挡住返回顶部和折叠按钮 */
-  height: 20rem;
+  max-height: 20rem;
   /* 开启垂直滚动条 */
-  overflow-y: auto;            
+  overflow-y: auto;
 }
 
 /* Chage Scroll Bar Style*/
@@ -244,4 +294,13 @@
   border-radius: 5px;
 }
 
+.image-horizontal-box{
+  overflow-y: auto;
+  white-space: nowrap;
+}
 
+.image-horizontal-box img{
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+}

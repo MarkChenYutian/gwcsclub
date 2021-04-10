@@ -5,6 +5,9 @@ tags: Page
 Author: Mark
 ---
 
+> Note:
+> 红色的圈表示暂无页面，蓝色的圈表示有页面
+
 ## Level 0
 
 **状态**：刚接触编程，对编程十分陌生（比如说第一次成功print "Hello World"）
@@ -20,6 +23,7 @@ Author: Mark
 <ul class="time-vertical" style="margin-left: 32px;">
         <li><offline></offline><a href="">数据结构：字符串 String</a></li>
         <li><offline></offline><a href="">数据结构：列表 Array (List) and ArrayList</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/03/09/Sort-List.html">语言基础：列表的自定义排序</a></li>
 </ul>
 
 ## Level 1

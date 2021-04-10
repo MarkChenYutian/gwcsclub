@@ -2,7 +2,7 @@
 layout: page
 title: VEX Robotics Competition
 categories: tertiary-pages
-tags: page
+tags: Page
 ---
 
 ## About Our VEX Robotics Team 88518J(Season 2020-2021)

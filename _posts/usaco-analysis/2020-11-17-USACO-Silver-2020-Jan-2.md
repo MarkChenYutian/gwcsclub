@@ -2,7 +2,7 @@
 layout: usaco-post
 title: USACO-Silver-2020-Jan-2
 status: OK
-author: Jczeng
+Author: Jczeng
 tags: USACO-analysis
 time: 2020
 group: Silver

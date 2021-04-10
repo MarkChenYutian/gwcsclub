@@ -5,12 +5,12 @@ Author: Anonymous
 ---
 <div class="popup-black-background" id="popup_01" onclick="hideErrorReport()" style="display: none;"></div>
 <div class="popup-warn-window" id="popup_02" style="display: none;">
-    <img class="warn-image" src="{{ site.baseurl }}\assets\warning.svg" style="float: left; padding-right: 10px; padding-bottom: 100px" height="250px" width="175px"/>
+    <img class="warn-image" src="{{ site.baseurl }}\assets\warning.svg" style="display: inline; margin-bottom: -5px;" width="40px" height="40px"/>
     <big>报告错误</big>
     <p>如果你发现该网页中存在错误/显示异常，可以从以下两种方式向我们报告错误，我们会尽快修复。</p>
     <ol>
         <li>使用 <strong>CS Club 网站错误</strong> 为主题，附上错误截图或描述及网址后发送邮件到 286988023@qq.com </li>
-        <li>在我们的网站代码仓库中创建一个 issue 并在 issue 中描述问题 <a href="https://gitee.com/MarkYutianChen/CHGZFLS-CS-CLUB">点击链接前往Gitee仓库</a></li>
+        <li>在我们的网站代码仓库中创建一个 issue 并在 issue 中描述问题 <a href="https://gitee.com/gwcompsci/gwcompsci/issues">点击链接前往Gitee仓库</a></li>
     </ol>
     <em>（点击弹窗外的背景关闭弹窗）</em>
 </div>
@@ -35,8 +35,12 @@ Author: Anonymous
 <hr/>
 {% endif %}
 
-<div class="warn-button" onclick="showErrorReport()">报告错误</div>
+<div class="warn-button" onclick="showErrorReport()">
+    <img src="{{ site.baseurl }}\assets\warning.svg" style="display: inline; height: 35px; width: 35px"></img>
+</div>
 {% if page.comments != false %}
+    <!-- Script Header for valine comment area -->
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <h3>评论区</h3>
     <div id="vcomments"></div>
         <script>

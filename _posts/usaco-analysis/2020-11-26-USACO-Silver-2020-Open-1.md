@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2020 Open Contest Silver 1
 tags: USACO-analysis
 status: OK
-author: bbl
+Author: bbl
 time: 2020
 group: Silver
 question: Open 1

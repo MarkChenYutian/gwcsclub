@@ -34,6 +34,19 @@ comments: false
 | 史笑源 | [史笑源](https://dmoj.ca/user/史笑源) | 卢曦蕾 | [Lisa的妈妈](https://dmoj.ca/user/Lisa的妈妈) |
 | 陈卓然 |                                       |        |                                               |
 
+### 2019 - 2020
+
+| 姓名   | ID   | 姓名   | ID   |
+| ------ | ---- | ------ | ---- |
+| 沈欣璇 |      | 余慧婕 |      |
+| 李云澳 |      | 鲍柏霖 |      |
+| 王子逸 |      | 梁煜昊 |      |
+| 林卓衡 |      | 吴冬诺 |      |
+| 朱峻昊 |      | 肖杰中 |      |
+| 张颖珊 |      | 陈漫   |      |
+| 刘先智 |      | 曾志城 |      |
+| 是清子 |      | 杨菲凡 |      |
+| 周钰棠 |      | 李若谷 |      |
 
 ### 2018 - 2019
 
@@ -54,7 +67,7 @@ comments: false
 | 陈妍文 | Adelina7chen |   Adelina7Chen   | 程胤杰 |   5163661   |     5163661     |
 | 张蔚琦 |  zhangweiqi  |    zhangweiqi    | 韓超梵 |  HeimaHan   | woshihanchaofan |
 | 王诗玥 |  wangshiyue  |   capricieuxV    | 陳昱天 |  MarkChen   |     Markcyt     |
-|  彭琛  |  IrvingPeng  |    IrvingPeng    |        |             |                 |
+|  彭琛  |  IrvingPeng  |    IrvingPeng    | 王嘉仪 |             |                 |
 | 郭宇新 |              |    Yuxin_Guo     | 刘天宇 |             | Terry_The_Bean  |
 | 陈宇轩 |              |     Moonbear     |  闫瑾  |             |      Katz       |
 | 刘欢霆 |              |  Matina/Martina  | 梁玺成 |             |    March127     |

@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2020 Feb Silver P2
 tags: USACO-analysis
 status: OK
-author: Marcus
+Author: Marcus
 time: 2020
 group: Silver
 question: Feb 2

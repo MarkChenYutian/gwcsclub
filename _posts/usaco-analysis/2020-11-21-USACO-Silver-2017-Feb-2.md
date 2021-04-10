@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2017 Feb Silver P2
 tags: USACO-analysis
 status: OK
-author: 杨菲凡
+Author: 杨菲凡
 time: 2017
 group: Silver
 question: Feb 2

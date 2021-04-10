@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2017 Bronze Feb 1
 tags: USACO-analysis
 status: OK
-author: cm
+Author: cm
 time: 2017
 group: Bronze
 question: Feb 1

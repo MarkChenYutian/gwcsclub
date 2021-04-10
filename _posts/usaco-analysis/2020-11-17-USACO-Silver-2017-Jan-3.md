@@ -2,7 +2,7 @@
 layout: usaco-post
 title: USACO 2017 Jan 3
 status: OK
-author: Marcus
+Author: Marcus
 time: 2017
 group: Silver
 question: Jan 3

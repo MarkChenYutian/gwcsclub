@@ -9,36 +9,8 @@ useTOC: true
   <body>
     {% include page-header.html %}
     {% include nav-bar.html %}
-
     {% if page.useTOC != false %}
-    <script>hljs.initHighlightingOnLoad();</script>
-    <!--侧栏目录生成代码-->
-    <script>
-        $(document).ready(function () {
-            $("h1,h2,h3,h4,h5,h6").each(function (i, item) {
-                //给<H>类标签编号
-                renameHTag(item);
-                //获取标签的名字,h1,还是h2
-                var tag = $(item).get(0).localName;
-                if (tag !== "h1"){
-                  //为该标签设置id属性
-                  $(item).attr("id", "h" + i);
-                  $("#category").append('<a class="new' + tag + '" href="#h' + i + '">' + $(item).text() + '</a></br>');
-                  //为每一个标题超链接的class属性设置左边距
-                  $(".newh2").css("margin-left", 0);
-                  $(".newh3").css("margin-left", 20);
-                  $(".newh4").css("margin-left", 40);
-                  $(".newh5").css("margin-left", 60);
-                  $(".newh6").css("margin-left", 80);
-                }
-            });
-            //设置class选择器为.book-body的html内容
-            $(".book-body").html($(".book-body").nextAll())
-        });
-    </script>
-    <div class="book-summary" id="category" style="width:20%;">
-      <strong>目录</strong> <br/>
-    </div>
+      {% include page-toc.html %}
     {% endif %}
     <section class="main-content">
           

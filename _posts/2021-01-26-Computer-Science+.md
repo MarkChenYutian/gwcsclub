@@ -2,7 +2,7 @@
 layout: page
 title: Computer Science +
 categories: secondary-pages
-tags: page
+tags: Page
 ---
 <img src="{{ site.baseurl }}/assets/notImplement.svg" style="zoom: 70%; margin: 0px auto 0px auto; display:block">
 <div class="error">

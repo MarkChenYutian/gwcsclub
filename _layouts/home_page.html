@@ -35,23 +35,28 @@ useTOC: true
   <body>
     <section class="main-page-header">
         <div class="main-header-container">
-        <div class="main-project-name">{{ site.title }}</div>
+        <!--<div class="main-project-name">{{ site.title }}</div>-->
+        <img src="{{ site.baseurl }}\css\header-black.png" height="65%" width="65%" style="display:block; margin: 0 auto 0 auto;"/>
         <span class="text-slider-items" style="display: none;"> 
             A place for everyone who ❤ Computer Science | A place to learn Algorithms | A place to learn Artificial Intelligence | A place to share knowledge | A place to create Cool Stuff | A place to show your Project
         </span> 
-        <span class="main-project-tagline"></span>
-        <div class="main-flow-arrow"><img src="{{ site.baseurl }}\assets\down_arrow.svg" style="display: block; zoom: 40%; margin: 40vh auto 0 auto"></img></div>
+        <p><span class="main-project-tagline"></span></p>
+        <a href="https://gitee.com/gwcompsci/gwcompsci" class="btn">View on Gitee</a>
+        <div class="main-flow-arrow"><img src="{{ site.baseurl }}\assets\down_arrow.svg" style="display: block; zoom: 40%; margin: 25vh auto 0 auto"></img></div>
         </div>
         <script> 
             if ($(".main-project-tagline").length == 1) { 
-                var typed_strings =  
-                    $(".text-slider-items").text(); 
+                var typed_strings = $(".text-slider-items").text(); 
                 var typed = new Typed(".main-project-tagline", { 
                     strings: typed_strings.split(" | "), 
                     typeSpeed: 40, 
                     loop: true, 
-                    backDelay: 1200, 
-                    backSpeed: 50,
+                    backDelay: 2000, 
+                    // backSpeed: 50,
+                    fadeOut: true,
+                    fadeOutClass: 'typed-fade-out',
+                    fadeOutDelay: 500,
+                    cursorChar: '_'
                 }); 
             } 
         </script>
