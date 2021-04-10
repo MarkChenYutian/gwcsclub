@@ -26,14 +26,17 @@ Author: Anonymous
         onclick="window.history.back();"
     />
 </div>
-
-<p class="meta">By: {{ page.Author }},  {{ page.date | date_to_string }}</p>
+<p class="meta">  {{ page.date | date_to_string }}, By {{ page.Author }}</p>
 <div style="clear:right"></div>
-
 {{ content }}
 
+{% if page.comments != false %}
 <hr/>
-<div class="warn-button" onclick="showErrorReport()">⚠</div>
+{% endif %}
+
+<div class="warn-button" onclick="showErrorReport()">
+    <img src="{{ site.baseurl }}\assets\warning.svg" style="display: inline; height: 35px; width: 35px"></img>
+</div>
 {% if page.comments != false %}
     <!-- Script Header for valine comment area -->
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
@@ -44,7 +47,7 @@ Author: Anonymous
                 el: '#vcomments',
                 appId: '8fKQHmL2KKgtJSxGo7d3SfGV-gzGzoHsz',
                 appKey: 'YWf5Di35XGX8gboR1cSLKafj',
-                placeholder: '欢迎在这里分享自己的独到见解 : )'
+                placeholder: '欢迎在这里分享自己的独到见解 : ) 评论区支持 Markdown 语法'
             })
     </script>
 {% endif %}

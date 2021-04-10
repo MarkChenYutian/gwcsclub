@@ -243,26 +243,34 @@
 /* Table Of Content on the left sider */
 @media (max-width: 1650px) and (min-width: 1500px){
   #category{
+    /* 绝对定位 */
+    position: sticky;
+    /* 目录显示的位置 */
+    float: left;
+    left: 0px;
+    top: 80px;
+    margin-top: 32px;
+    margin-left: 24px;
     margin-right: 4px;
     max-width: 15%;
   }
 }
-@media (max-width: 1500px){
+@media (min-width: 1650px){
   #category{
-    display: none;
+    /* 绝对定位 */
+    position: sticky;
+    /* 目录显示的位置 */
+    float: left;
+    left: 0px;
+    top: 80px;
+    margin-top: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 20%;
   }
 }
 #category {
-  /* 绝对定位 */
-  position: sticky;
-  /* 目录显示的位置 */
-  float: left;
-  left: 0px;
-  top: 80px;
-  margin-top: 32px;
-  margin-left: 24px;
-  margin-right: 24px;
-  height: 20rem;
+  max-height: 20rem;
   /* 开启垂直滚动条 */
   overflow-y: auto;
 }
