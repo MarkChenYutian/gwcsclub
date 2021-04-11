@@ -3,6 +3,7 @@ layout: page
 title: To Beginners
 categories: secondary-pages
 tags: Page
+useTOC: false
 ---
 
 如果你是刚刚接触CS的新人，可以在这样页面找到很多我们曾经碰到过的问题和对应的解决方法。这里还推荐了许多非常有用的网站。

@@ -28,7 +28,7 @@ Author: Mark
     </p>
 </div>
 
-GW Computer Science 的网站是使用 Jekyll 自动构建的**静态页面**网站。网站由 Gitee Pages 提供托管服务。网站的源代码存储在码云(Gitee) 的远程 Git 代码仓库（链接：https://gitee.com/gwcompsci/gwcompsci）中。每次更新完源代码，push 到远程仓库并且与 `algoNote` 分支合并后，点击 “服务 > Gitee Pages > 更新” 网站就会自动更新并部署在 http://gwcompsci.gitee.io 上。
+GW Computer Science 的网站是使用 Jekyll 自动构建的**静态页面**网站。网站由 Gitee Pages 提供托管服务。网站的源代码存储在码云(Gitee) 的远程 Git 代码仓库（链接：https://gitee.com/gwcompsci/gwcompsci）中。每次更新完源代码，push 到远程仓库并且与 `gh-pages` 分支合并后，点击 “服务 > Gitee Pages > 更新” 网站就会自动更新并部署在 http://gwcompsci.gitee.io 上。
 
 在进行结构与样式上的改动时，**强烈推荐**在自己本地安装 Jekyll 服务端，这样就可以在本地实时预览自己修改的样式结果。具体安装方法见以下链接：
 
@@ -111,13 +111,15 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 
 现在这个网站里面的 `_include` 组件有以下几个：
 
-| _include 组件    | 组件描述                                                  |
-| ---------------- | --------------------------------------------------------- |
-| head.html        | 统一所有页面引入的 CSS 样式表，引入 Javascript 文件       |
-| nav-bar.html     | 网页的顶部导航栏                                          |
-| page-footer.html | 网页的页脚（此网站由……维护）那一部分                      |
-| page-header.html | **除了首页以外** 网页的页眉（ GW Computer Science Club ） |
-| page-toc.html    | 使用 Javascript 自动生成的页面目录                        |
+| _include 组件      | 组件描述                                                  |
+| ------------------ | --------------------------------------------------------- |
+| head.html          | 统一所有页面引入的 CSS 样式表，引入 Javascript 文件        |
+| nav-bar.html       | 网页的顶部导航栏                                         |
+| page-footer.html   | 网页的页脚（此网站由……维护）那一部分                       |
+| page-header.html   | **除了首页以外** 网页的页眉（ GW Computer Science Club ） |
+| page-toc.html      | 使用 Javascript 自动生成的页面目录                        |
+| report-problem.html| 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口                |
+| comment.html       | 基于 valine + leancloud 的评论区                         |
 
 #### _layouts
 

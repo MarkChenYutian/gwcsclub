@@ -26,13 +26,13 @@ nim 是一种典型的零和游戏
 如果现在游戏轮到 $A$ 进行操作，那么在所有 $A$ 可以到达的状态中，只要有一个状态可以继续让 $A$ 必胜则将当前的状态节点记作 $A$ 的必胜节点。（因为$A$可以自己选择自己的行为，从而选择自己接下来到达的游戏状态）也就是说：
 
 $$
-T[x][0] = T[x+1][1] \;\or\; T[x+2][1] \;\or\; T[x+3][1]
+T[x][0] = T[x+1][1] \;\vee\; T[x+2][1] \;\vee\; T[x+3][1]
 $$
 
 如果游戏轮到 $B$ 进行操作，则必须在所有当前可达状态都可以让 $A$ 必胜。只有这种情况可以确保 $A$ 必胜，因为 $A$ 无法确定 $B$ 的行动。也就是说：
 
 $$
-T[x][1] = T[x+1][0]\;\and\; T[x+2][0] \;\and\; T[x+3][0]
+T[x][1] = T[x+1][0]\;\wedge\; T[x+2][0] \;\wedge\; T[x+3][0]
 $$
 
 ### 代码实现
@@ -53,9 +53,9 @@ def query(stoneNum, turn, dpTable):
 		# If the value is already calculated, return it directly.
 		return dpTable[turn][stoneNum]
 	elif turn == 0:
-		return False	# Base case. If there are more than FINALNUM stones and it's A's turn, then A must lose.
+		return False    # Base case. If there are more than FINALNUM stones and it's A's turn, then A must lose.
 	else:
-		return True		# Base case. If there are more than FINALNUM stones and it's B's turn, then B must lose (A must win).
+		return True     # Base case. If there are more than FINALNUM stones and it's B's turn, then B must lose (A must win).
 
 def getValue(stoneNum, turn, dpTable):
 	# Calculate the Value on DP Table Recursively.
