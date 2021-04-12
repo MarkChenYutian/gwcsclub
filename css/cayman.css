@@ -221,11 +221,12 @@ a:hover { text-decoration: underline; }
                     font-size: 1.7rem;
                     border-bottom:solid 1px #eff0f1;
                  }
-.main-content h3 { font-size: 1.4rem;}
-.main-content h4 { font-size: 1.2rem;}
-.main-content h5 { font-size: 1.1rem;}
+.main-content h3 { font-size: 1.5rem;}
+.main-content h4 { font-size: 1.3rem;}
+.main-content h5 { font-size: 1.2rem;}
 /* Header Size Overload Finish */
 .main-content p { margin-bottom: 1em; }
+.main-content mark { background-color: rgb(248, 255, 146); }
 .main-content code { padding: 2px 4px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: #567482; background-color: #f3f6fa; border-radius: 0.3rem; }
 .main-content pre { 
   padding: 0.8rem; 

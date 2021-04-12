@@ -77,8 +77,8 @@ Author: Mark
         <li><offline></offline><a href="">算法：拓扑排序 Topological Sort</a></li>
         <li><offline></offline><a href="">算法：贪心算法 Greedy Algorithm</a></li>
         <li><offline></offline><a href="">算法：水漫金山 Flood Fill</a></li>
-        <li><offline></offline><a href="">算法：深度优先算法 Depth First Search</a></li>
-        <li><offline></offline><a href="">算法：广度优先算法 Breadth First Search</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/04/12/Breadth-First-Search.html">算法：广度优先算法 Breadth First Search</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/04/12/Depth-First-Search.html">算法：深度优先算法 Depth First Search</a></li>
         <li><offline></offline><a href="">算法：统一代价搜索算法 Uniform Cost Search</a></li>
         <li><offline></offline><a href="">算法：最小生成树 Min Span Tree</a></li>
         <li><offline></offline><a href="">算法：动态规划 Dynamic Programming</a></li>
@@ -118,3 +118,12 @@ Author: Mark
 **练习相关**：自己找点好玩的东西做或者去[这里]({{ site.baseurl }}/secondary-pages/2021/01/26/Computer-Science+.html)看看学长学姐们自己做的东西玩owo
 
 <!--恭喜你，你被放养了，其他的我们也不知道了你自己玩去吧-->
+
+<div class="notification">
+<p>下面这些内容<b>一般不能</b>在竞赛中使用，但是在写自己的 Project 的时候会很有用。</p>
+</div>
+<ul class="time-vertical" style="margin-left: 32px;">
+        <li><offline></offline><a href="">多进程: Multiprocessing</a></li>
+        <li><offline></offline><a href="">向量化: Vectorization</a></li>
+        <li><offline></offline><a href="">协程：Coroutine</a></li>
+</ul>
