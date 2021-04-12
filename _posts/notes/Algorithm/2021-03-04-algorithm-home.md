@@ -77,8 +77,8 @@ Author: Mark
         <li><offline></offline><a href="">算法：拓扑排序 Topological Sort</a></li>
         <li><offline></offline><a href="">算法：贪心算法 Greedy Algorithm</a></li>
         <li><offline></offline><a href="">算法：水漫金山 Flood Fill</a></li>
-        <li><offline></offline><a href="">算法：深度优先算法 Depth First Search</a></li>
-        <li><offline></offline><a href="">算法：广度优先算法 Breadth First Search</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/04/12/Breadth-First-Search.html">算法：广度优先算法 Breadth First Search</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/04/12/Depth-First-Search.html">算法：深度优先算法 Depth First Search</a></li>
         <li><offline></offline><a href="">算法：统一代价搜索算法 Uniform Cost Search</a></li>
         <li><offline></offline><a href="">算法：最小生成树 Min Span Tree</a></li>
         <li><offline></offline><a href="">算法：动态规划 Dynamic Programming</a></li>
