@@ -201,6 +201,8 @@
   margin: 16px;
   transition: 0.5s;
   max-width: fit-content;
+  border-style: none;
+  outline: none;
 }
 .main-button:hover{
   transition: 0.5s;
