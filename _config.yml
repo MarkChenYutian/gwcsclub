@@ -3,7 +3,8 @@ title:        GW Computer Science Club
 tagline:      We Learn &emsp; We Create &emsp; We Share
 baseurl:      ""
 paginate:     1
-locale:       "en"
+locale:       "ch"
+google_analytics: G-PG2BP9ZVD5
 
 # About/contact
 author:

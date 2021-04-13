@@ -213,7 +213,7 @@ a:hover { text-decoration: underline; }
    .main-content { padding: 2rem 1rem; font-size: 1rem; }
    #category{ float: none; position: inherit; display: block; margin: 0 10% 0 10%; padding: 2rem 1rem; }
   }
-.main-content img { max-width: 100%; }
+.main-content img { max-width: 100%; display:block; margin: 0 auto;}
 /*.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: #154a99; }*/
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: #205bb3; }
 /* Header Size Overload */

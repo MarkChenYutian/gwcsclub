@@ -306,3 +306,9 @@
   height: 80%;
   width: 80%;
 }
+
+/* <details> tag improvement */
+details summary { cursor: pointer; }
+details summary > * { display: inline; }
+details { background-color: #f8f8f8; padding: 1.2rem; outline: none; border-radius: 1.25rem;}
+summary { outline: none;}
