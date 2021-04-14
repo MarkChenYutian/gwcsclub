@@ -146,13 +146,11 @@
 /* A Flex Container for Top Nav Box */
 
 .top-nav-box{
-  /*background-color: rgb(224, 240, 253);*/
-  background-color: hsl(0deg 0% 100% / 90%);
+  backdrop-filter: blur(4px);
+  background-color: #ffffffaa;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  /*padding-left: 30px;
-  padding-right: 30px;*/
   width: 100%;
   z-index: 999;
   display: flex;
