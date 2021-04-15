@@ -47,7 +47,7 @@ Author: Mark
         <li><offline></offline><a href="">算法：质因数分解 Prime Factorization</a></li>
         <li><offline></offline><a href="">数据结构：链表 Linked List</a></li>
         <li><offline></offline><a href="">数据结构：队列 Queue</a></li>
-        <li><offline></offline><a href="">数据结构：栈 Stack</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/04/15/Stack.html">数据结构：栈 Stack</a></li>
         <li><offline></offline><a href="">数据结构：前缀和 Prefix Sum</a></li>
         <li><offline></offline><a href="">算法：递归 Recursion</a></li>
         <li><offline></offline><a href="">练习：模拟题 Simulation</a></li>

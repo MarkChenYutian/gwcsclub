@@ -12,7 +12,7 @@ Author: Mark
 <ul class="time-vertical" style="margin-left: 32px;">
     <li><online></online><a href="{{ site.baseurl }}/2021/03/02/Time-Complexity.html">理论基础：时间复杂度 Time Complexity</a></li>
     <li><offline></offline><a href="">数据结构：队列 Queue</a></li>
-    <li><offline></offline><a href="">数据结构：栈 Stack</a></li>
+    <li><online></online><a href="{{ site.baseurl }}/2021/04/15/Stack.html">数据结构：栈 Stack</a></li>
     <li><offline></offline><a href="">理论知识：图的表达 How to Represent a Graph</a></li>
 </ul>
 

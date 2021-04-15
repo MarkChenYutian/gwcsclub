@@ -310,3 +310,7 @@ details summary { cursor: pointer; }
 details summary > * { display: inline; }
 details { background-color: #f8f8f8; padding: 1.2rem; outline: none; border-radius: 1.25rem;}
 summary { outline: none;}
+
+/* image card */
+.image-card{ width: 12rem; height: 15rem; margin-right: 1rem; margin-bottom: 1rem; transition: 0.5s; cursor: pointer; }
+.image-card:hover{ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); transition: 0.5s; }
