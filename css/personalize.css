@@ -303,6 +303,7 @@
   border-radius: 10px;
   height: 80%;
   width: 80%;
+  display: inline;
 }
 
 /* <details> tag improvement */
