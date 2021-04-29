@@ -46,29 +46,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
+  align-items: stretch;
 }
 
-.round-card{
-    /* Add shadows to create the "card" effect */
-    transition: 0.3s;
-    padding: 10px;
-    cursor:pointer;
-    text-align: center;
-    transition: 0.5s;
-    color: #13227a;
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    /* flex properties */
-    flex-grow: 0;
-    flex-basis: 250px;
-}
+.round-card{ cursor:pointer; text-align: center; transition: 0.5s; color: #222222; border-radius: 10px; margin-right: 2rem; flex-grow: 0; flex-basis: 250px; box-shadow: 0 0 36px rgb(0 0 0 / 10%); }
 
-.round-card:hover {
-  transition: 0.5s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-}
+.round-card p { padding: 8px; }
 
 /* A Flex Container */
 .card-box{
@@ -106,28 +89,16 @@
 @media screen and (min-width: 700px){.nav-button{ padding:15px 45px; }}
 
 /* Image Style with Padding */
-.mainPage-img{
-  padding: 16px;
-}
+.mainPage-img{ padding: 16px; }
 
 /* Main Button */
-.main-button{
-  cursor:pointer;
-  background-color: rgb(243, 247, 255);
-  color: black;
-  border-radius: 24px;
-  padding: 12px 24px;
-  margin: 16px;
-  max-width: fit-content;
-  border-style: none;
-  outline: none;
-}
+.main-button{ cursor:pointer; background-color: rgb(243, 247, 255); color: black; border-radius: 24px; padding: 12px 24px; margin: 16px; max-width: fit-content; border-style: none; outline: none; }
 .main-button:hover{
   color: ghostwhite;
   text-decoration: none; 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: linear-gradient(to right, #185792, #3277b8);
+  background: linear-gradient(to right, #1c63a5, #3a88d1);
   box-shadow: 0 0 12px rgb(0 0 0 / 10%);
   position: relative;
   -webkit-transform: translate3d(0, 0, 0);
@@ -139,7 +110,7 @@
   cursor:pointer;
   position: fixed;
   bottom: 0px;
-  left: 0px;
+  right: 0px;
   background-color: rgba(255, 163, 43, 0.459);
   color: black;
   border-radius: 24px;
@@ -167,44 +138,21 @@
 }
 
 /* Table Of Content on the left sider */
+@media (max-width: 1500px){
+  #category{ max-height: 20rem; }
+}
 @media (max-width: 1650px) and (min-width: 1500px){
-  #category{
-    /* 绝对定位 */
-    position: sticky;
-    /* 目录显示的位置 */
-    float: left;
-    left: 0px;
-    top: 80px;
-    margin-top: 32px;
-    margin-left: 24px;
-    margin-right: 4px;
-    max-width: 15%;
-  }
+  #category{ max-height: 90vh; position: sticky; float: left; left: 0px; top: 80px; margin-top: 32px; margin-left: 24px; margin-right: 4px; max-width: 15%; }
 }
 @media (min-width: 1650px){
-  #category{
-    /* 绝对定位 */
-    position: sticky;
-    /* 目录显示的位置 */
-    float: left;
-    left: 0px;
-    top: 80px;
-    margin-top: 32px;
-    margin-left: 24px;
-    margin-right: 24px;
-    width: 20%;
-  }
+  #category{ max-height: 90vh; position: sticky; float: left; left: 0px; top: 80px; margin-top: 32px; margin-left: 24px; margin-right: 24px; width: 20%; }
 }
-#category {
-  max-height: 20rem;
-  /* 开启垂直滚动条 */
-  overflow-y: auto;
-}
+#category { overflow-y: auto; }
 
 /* Chage Scroll Bar Style*/
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #6b7280;
+  background-color: #666666;
   border: 2px solid #e5e7eb;
 }
 
@@ -220,16 +168,8 @@
   border-radius: 5px;
 }
 
-.image-horizontal-box{
-  overflow-y: auto;
-  white-space: nowrap;
-}
-
-.image-horizontal-box img{
-  border-radius: 10px;
-  height: 80%;
-  width: 80%;
-}
+.image-horizontal-box{ overflow-y: auto; white-space: nowrap; }
+.image-horizontal-box img{ border-radius: 10px; height: 80%; width: 80%; display: inline-block;}
 
 /* <details> tag improvement */
 details summary { cursor: pointer; }
