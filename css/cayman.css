@@ -98,8 +98,12 @@
 
 body { padding: 0; margin: 0; font-family: "Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #1E1E1E; }
 
-a { color: #2b2f31; text-decoration: #BBC8CB underline; background-color: #EAFAFE; padding: 2px;}
-a:hover { background-color: #BBEFFD; }
+a { color: #1e6bb8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.main-content a { color: #2b2f31; text-decoration: #BBC8CB underline; background-color: #EAFAFE; padding: 2px;}
+.main-content a:hover { background-color: #BBEFFD; }
+.main-content a::before { background: url(../assets/link.svg); background-size: 1.2rem 1.2rem; content: " "; width: 1.2rem; height: 1.2rem; padding: 0 1.3rem 0 0; background-repeat: no-repeat;}
 
 .btn { display: inline-block; margin-bottom: 1rem; color: #444444; background-color: rgba(255, 255, 255, 0.08); border-color: #aaaaaa; border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
 .btn:hover { color: #777777; text-decoration: none; background-color: rgba(255, 255, 255, 0.2); border-color: #eeeeee; }

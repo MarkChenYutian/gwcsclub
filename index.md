@@ -51,6 +51,8 @@ useTOC: false
     </div>
 </div>
 
+---
+
 <h1>最近更新</h1>
 
 <img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
