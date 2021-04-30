@@ -57,9 +57,6 @@ useTOC: false
 
 > Jekyll 动态生成的网页最新页面汇总，点击卡片查看原文
 
-<!--<img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
-<center><p class="note">空空如也</p></center>-->
-
 <div class="horizontal-flex-box">
 {% assign new_posts = site.posts | slice: 0, 6 %}
 {% for p in new_posts %}
@@ -75,3 +72,10 @@ useTOC: false
     </div>
 {% endfor %}
 </div>
+
+---
+
+<h1>日程安排</h1>
+
+<img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
+<center><p class="note">最近没有 CS 竞赛和相关活动，放假喽！</p></center>

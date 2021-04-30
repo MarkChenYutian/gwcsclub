@@ -117,12 +117,20 @@ a:hover { text-decoration: underline; }
 .main-btn:hover { color: #777777; text-decoration: none; background-color: rgba(255, 255, 255, 0.2); border-color: #eeeeee; }
 .main-btn + .main-btn { margin-left: 1rem; }
 
-.page-header { color: #000; text-align: center; background-color: #fff; }
+.page-header { color: #000; text-align: center; 
+  /*background-color: #fff; */
+  background-image: url(diamond.svg);
+  background-size: cover;
+}
 @media screen and (min-width: 64em) { .page-header { padding: 4rem 6rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 2rem 4rem; } }
 @media screen and (max-width: 42em) { .page-header { padding: 1rem 1rem; } }
 
-.main-page-header { color: #000; height: 100vh; text-align: center; background-color: #fff; }
+.main-page-header { color: #000; height: 100vh; text-align: center; 
+  /*background-color: #fff; */
+  background-image: url(diamond.svg);
+  background-size: cover;
+}
 
 .main-header-container{ position: absolute; top: 50%; margin: 0 auto 0 auto; transform: translate(0%,-50%); display: block; }
 
