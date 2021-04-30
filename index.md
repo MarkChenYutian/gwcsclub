@@ -4,7 +4,7 @@ title: {{ site.name }}
 useTOC: false
 ---
 
-<h1>主要页面</h1>
+<h1>快速链接</h1>
 <div class="horizontal-flex-box">
     <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/31/To-Beginners.html'">
         <h2>初学者指南</h2>
@@ -55,5 +55,23 @@ useTOC: false
 
 <h1>最近更新</h1>
 
-<img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
-<center><p class="note">空空如也</p></center>
+> Jekyll 动态生成的网页最新页面汇总，点击卡片查看原文
+
+<!--<img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
+<center><p class="note">空空如也</p></center>-->
+
+<div class="horizontal-flex-box">
+{% assign new_posts = site.posts | slice: 0, 6 %}
+{% for p in new_posts %}
+    {% if p.Author %}
+        {% assign author = p.Author %}
+    {% else %}
+        {% assign author = "undefined" %}
+    {% endif %}
+    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'">
+        <h3>{{p.title}}</h3>
+        <blockquote>作者：{{author}}, {{p.date | date: "%Y/%m/%d"}}</blockquote>
+        <p>{{ p.content | strip_html | escape | slice: 0, 100}} ...</p>
+    </div>
+{% endfor %}
+</div>

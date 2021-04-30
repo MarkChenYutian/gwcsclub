@@ -194,7 +194,7 @@ a:hover { text-decoration: underline; }
 
 .main-content p { margin-bottom: 1em; }
 .main-content mark { background-color: #FFE564; color: #2b2f31; padding: 2px;}
-.main-content code { padding: 2px 4px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; background-color: #FFFAE0; border-radius: 0.3rem; }
+.main-content code { padding: 2px 4px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; background-color: #FFFAE0; border-radius: 0.3rem; color: #1E1E1E;}
 .main-content pre { padding: 0.8rem; margin-top: 0; margin-bottom: 1rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: #d9e7eb; word-wrap: normal; background-color: #222222; border-radius: 0.3rem; }
 .main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: #d9e7eb; word-break: normal; white-space: pre; background: transparent; border: 0; }
 .main-content .highlight { margin-bottom: 1rem; border-radius: 0.3rem;}
