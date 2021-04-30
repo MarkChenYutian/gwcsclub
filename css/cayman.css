@@ -242,11 +242,18 @@ a:hover { text-decoration: underline; }
   margin-right: auto;
 }
 
-.site-footer { padding-top: 2rem; margin-top: 2rem; border-top: solid 1px #eff0f1; }
+.site-footer { margin-top: 6rem; border-top: solid 1px #eff0f1;
+  background-image: url(diamond.svg);
+  background-size: 150%;
+  background-position-y: 90%;
+  padding: 10rem 10% 8rem 10%;
+}
 @media screen and (min-width: 64em) { .site-footer { font-size: 1rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .site-footer { font-size: 1rem; } }
 @media screen and (max-width: 42em) { .site-footer { font-size: 0.9rem; } }
 
-.site-footer-owner { display: block; font-weight: bold; }
+.site-footer-owner { display: block; font-weight: bold; color:rgb(219, 219, 226);}
 
-.site-footer-credits { color: #819198; }
+.site-footer-credits { color: #b4c2c9; }
+
+.site-footer-credits a, .site-footer-owner a {color: rgb(67, 149, 221); }
