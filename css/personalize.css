@@ -180,3 +180,8 @@ summary { outline: none;}
 /* image card */
 .image-card{ width: 12rem; height: 15rem; margin-right: 1rem; margin-bottom: 1rem; transition: 0.5s; cursor: pointer; }
 .image-card:hover{ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); transition: 0.5s; }
+
+.MathJax_Display{ 
+  overflow-x: auto;
+  overflow-y: hidden;
+}
