@@ -1,18 +1,40 @@
----
-layout: default
----
-<div>
-    <h2><strong>{{ page.title }}</strong></h2>
-    <img src="{{ site.baseurl }}/assets/home.svg" 
-        height="30px" 
-        style="float: right; margin: 10px; cursor:pointer;"
-        onclick="window.location.href='{{ site.baseurl }}/'"
-    />
-    <img src="{{ site.baseurl }}/assets/back.svg"
-        height="30px"
-        style="float: right; margin: 10px; cursor:pointer;"
-        onclick="window.history.back();"
-    />
-</div>
-<p class="meta">  {{ page.date | date_to_string }}</p>
-{{ content }}
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+  
+  {% include head.html %}
+
+  <body>
+    {% include page-header.html %}
+    {% include nav-bar.html %}
+    {% if page.useTOC != false %}
+      {% include page-toc.html %}
+    {% endif %}
+
+    {% if page.useTOC != false %}
+    <section class="main-content">
+    {% else %}
+    <section class="main-content" style="max-width: max-content;">
+    {% endif %}
+          
+        <div>
+            <h2><strong>{{ page.title }}</strong></h2>
+            <img src="{{ site.baseurl }}/assets/home.svg" 
+                height="30px" 
+                style="float: right; margin: 10px; cursor:pointer;"
+                onclick="window.location.href='{{ site.baseurl }}/'"
+            />
+            <img src="{{ site.baseurl }}/assets/back.svg"
+                height="30px"
+                style="float: right; margin: 10px; cursor:pointer;"
+                onclick="window.history.back();"
+            />
+        </div>
+        <p class="meta">  {{ page.date | date_to_string }}</p>
+        {{ content }}
+
+    </section>
+
+    {% include page-footer.html %}
+    
+  </body>
+</html>
