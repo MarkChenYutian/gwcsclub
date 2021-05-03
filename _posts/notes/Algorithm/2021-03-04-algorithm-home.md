@@ -23,6 +23,7 @@ Author: 温昱宁
 <ul class="time-vertical" style="margin-left: 32px;">
         <li><offline></offline><a href="">数据结构：字符串 String</a></li>
         <li><offline></offline><a href="">数据结构：列表 Array (List) and ArrayList</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/05/03/Online-Judge-IO.html">语言基础：竞赛中 Online Judge 的输入输出</a></li>
         <li><online></online><a href="{{ site.baseurl }}/2021/03/09/Sort-List.html">语言基础：列表的自定义排序</a></li>
 </ul>
 

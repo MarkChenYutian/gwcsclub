@@ -26,6 +26,9 @@ useTOC: false
     <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/27/Languages-Compare.html'">
         <h3>各种编程语言的比较</h3>
     </div>
+    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/05/03/Online-Judge-IO.html'">
+        <h3>在线测评 (Online Judge) 的输入输出</h3>
+    </div>
 </div>
 
 

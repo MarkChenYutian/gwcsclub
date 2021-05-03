@@ -2,7 +2,7 @@
 layout: post
 title: USACO 备赛指南
 tags: Notes
-Author: Jing, Mark
+Author: Jing
 comments: false
 useTOC: false
 ---

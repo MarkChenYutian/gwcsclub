@@ -6,18 +6,12 @@ Author: Mark
 comments: false
 ---
 
-### 2020 - 2021
-
-#### Intermediate Team
+## 2020
 
 | 姓名   |      | 姓名   | DMOJ ID |
 | ------ | ---- | ------ | ------- |
 | 李若谷 |      | 吴小满 |         |
-
-#### Junior Team
-
-| 姓名   | DMOJ ID                                           | 姓名   | DMOJ ID                                     |
-| ------ | ------------------------------------------------- | ------ | ------------------------------------------- |
+|       |       |       |         |
 | 邢子恬 | [刘雨昕的黑粉](https://dmoj.ca/user/刘雨昕的黑粉) | 董靖雯 | [dongRyan](https://dmoj.ca/user/dongRyan)   |
 | 梁宇轩 | [KO04](https://dmoj.ca/user/KO04)                 | 唐家轩 | [aquiles](https://dmoj.ca/user/aquiles)     |
 | 陈泓宇 | [corr](https://dmoj.ca/user/corr)                 | 毕云天 | [benyuange](https://dmoj.ca/user/benyuange) |
@@ -26,15 +20,10 @@ comments: false
 | 谢安   |                                                   | 柯廷勋 |                                             |
 | 谭禹舟 |                                                   | 宋欣芮 |                                             |
 |        |                                                   |        |                                             |
-
-#### 预备队
-
-| 姓名   | DMOJ ID                               | 姓名   | DMOJ ID                                       |
-| ------ | ------------------------------------- | ------ | --------------------------------------------- |
 | 史笑源 | [史笑源](https://dmoj.ca/user/史笑源) | 卢曦蕾 | [Lisa的妈妈](https://dmoj.ca/user/Lisa的妈妈) |
 | 陈卓然 |                                       |        |                                               |
 
-### 2019 - 2020
+## 2019
 
 | 姓名   | ID   | 姓名   | ID   |
 | ------ | ---- | ------ | ---- |
@@ -48,7 +37,7 @@ comments: false
 | 是清子 |      | 杨菲凡 |      |
 | 周钰棠 |      | 李若谷 |      |
 
-### 2018 - 2019
+## 2018
 
 |  姓名  |   wcipeg ID    |   vjudge ID    |  姓名  |  wcipeg ID  |  vjudge ID  |
 | :----: | :------------: | :------------: | :----: | :---------: | :---------: |
@@ -89,7 +78,7 @@ comments: false
 | 楊尚坤 |  Bruceyang   |    Bruceyang     |        |             |                 |
 
 
-### 2017 - 2018
+## 2017
 
 |  姓名  |   wcipeg ID    |
 | :----: | :------------: |
