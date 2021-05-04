@@ -81,7 +81,7 @@ Author: 温昱宁
         <li><online></online><a href="{{ site.baseurl }}/2021/04/12/Breadth-First-Search.html">算法：广度优先算法 Breadth First Search</a></li>
         <li><online></online><a href="{{ site.baseurl }}/2021/04/12/Depth-First-Search.html">算法：深度优先算法 Depth First Search</a></li>
         <li><online></online><a href="{{ site.baseurl }}/2021/04/29/Uniform-Cost-Search.html">算法：统一代价搜索算法 Uniform Cost Search</a></li>
-        <li><offline></offline><a href="">算法：最小生成树 Min Span Tree</a></li>
+        <li><online></online><a href="{{ site.baseurl }}/2021/05/03/Min-Span-Tree.html">算法：最小生成树 Min Span Tree</a></li>
         <li><offline></offline><a href="">算法：动态规划 Dynamic Programming</a></li>
 </ul>
 

@@ -5,10 +5,8 @@ categories: secondary-pages
 tags: Page Miscellaneous
 ---
 
-网站的贡献者（排名不分先后）：
-
 {% assign allAuthor = site.posts | map: "Author" %}
-{% assign grouped_elements = site.posts | group_by: "Author" %}
+{% assign grouped_elements = site.posts | group_by: "Author" | sort: "items" | reverse %}
 
 <table style="width: max-content;">
     <thead><tr><th style="width: 25rem;">作者</th><th style="width: 25rem;">页面数量</th></tr></thead>
