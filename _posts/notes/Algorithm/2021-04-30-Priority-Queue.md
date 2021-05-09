@@ -26,12 +26,64 @@ Author: Mark
 
 ### 代码实现
 
+<pre>
+	<code class="python">
+# Suppose we have the minHeap class already
+class PriorityQueueItem:
+	def __init__(self, priority, value):
+		self.priority = priority
+		self.val = value
+
+	def __lt__(self, other):
+		return self.priority < other.priority
+
+	def __eq__(self, other):
+		return self.priority == other.priority
+
+	def __gt__(self, other):
+		return self.priority > other.priority
 
 
-### 库调用
+class PriorityQueue:
+	def __init__(self):
+		self.heap = minHeap()
 
-在 Python 中，我们可以用 `heapq` 库实现 `Priority Queue`。`heapq` 对于优先队列的实现与大部分数据结构不同 - `heapq` 会使用一个 list 来存放优先队列的内容，每次用
+	def pushItem(value, priority=0):
+		"""
+		put Priority Queue Item into the Priority Queue, with default priority 0.
+		"""
+		self.heap.push(PriorityQueueItem(priority, value))
+
+	def popItem():
+		"""
+		get item from Priority Queue
+		"""
+		return self.heap.pop().val
+
+	def isEmpty():
+		return self.heap.isEmpty()
+	</code>
+	<code class="java">
+Not Implemented Yet. See Python Version.
+	</code>
+</pre>
+
+### 实际使用
+
+在实际的竞赛中，我们出于对速度和 debug 方面的考虑一般不会使用自己实现的 `Priority Queue`，而是会使用官方实现好的内置 `Priority Queue` 实现。 下面我们会介绍一下各个语言中 Priority Queue 的实际用法。
+
+#### Python - heapq 内置库
+
+在 Python 中，我们可以用 `heapq` 库实现 `Priority Queue`。`heapq` 对于优先队列的实现与大部分数据结构不同 - 一般我们实现一个数据类型的时候，我们都会单独定义一个 class 来实现我们的数据结构，每次需要的时候对数据结构进行实例化。
+
+然而，在 heapq 中，Priority Queue 的实现使用了一种类似于函数式编程的思想 - 这个库并没有实现`class PriorityQueue`，而是设计了三个函数来对 `list` 进行操作来“模拟”一个 Priority Queue。
+
+下面是三个非常常用的函数：
 
 * `heapq.heappush(arr: list, element: Comparable) -> None` 来向优先队列 `arr` 添加元素
 * `heapq.heappop(arr: list) -> element` 从优先队列`arr`中取出元素
 * `heapq.heapify(arr: list) -> None` 对 `list arr` 中的元素重新排序，使 `arr` 中的元素排序符合最小二分堆的要求
+
+#### Java - `java.util.PriorityQueue<E>`
+
+(Oracle Java.util.PriorityQueue 官方文档)[https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html]。 

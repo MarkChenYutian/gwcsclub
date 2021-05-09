@@ -7,7 +7,7 @@
     align-items: stretch;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 2rem;
+    margin-right: -2rem;
   }
   
 .flex-page-card{
@@ -15,8 +15,8 @@
     width: calc(100% / 3 - 2rem);
     min-height: 200px;
     min-width: 250px;
-    /*margin-bottom: 2rem;*/
-    /*margin-right: 2rem;*/
+    margin-bottom: 2rem;*/
+    margin-right: 2rem;*/
     border-radius: 10px;
     padding: 20px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.541));
