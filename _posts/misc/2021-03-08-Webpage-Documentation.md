@@ -4,13 +4,9 @@ comment: true
 title: 广州外国语学校计算机科学社团官网维护指南与文档
 tags: Miscellaneous
 Author: Mark
-useTOC: true
 ---
 
-<div class="error">
-    <h4>尚未编写完成的页面……</h4>
-    <p>这个页面内容正在编写中，可能会随时更新</p>
-</div>
+> 最近一次 update - 2021/5/10
 
 <div class="notification">
     <h4>如果你只是想在这个网站上添加页面……</h4>
@@ -41,18 +37,24 @@ https://jekyllrb.com/docs/installation/
 $ bundle exec jekyll serve
 ```
 
+或
+
+```bash
+$ jekyll serve
+```
+
 如果 jekyll 安装成功，应该出现以下内容
 
 ```
-Configuration file: D:/GZFLS CS Club/gwcompsci/_config.yml
+Configuration file: D:/.../gwcompsci/_config.yml
        Deprecation: You appear to have pagination turned on, but you haven't included the `jekyll-paginate` gem. Ensure you have `plugins: [jekyll-paginate]` in your 
 configuration file.
-            Source: D:/GZFLS CS Club/gwcompsci
-       Destination: D:/GZFLS CS Club/gwcompsci/_site
+            Source: D:/.../gwcompsci
+       Destination: D:/.../gwcompsci/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
                     done in 1.28 seconds.
- Auto-regeneration: enabled for 'D:/GZFLS CS Club/gwcompsci'
+ Auto-regeneration: enabled for '...'
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 ```
@@ -76,7 +78,7 @@ root
 
 这个文件夹中可以定义一些 `html` 代码模块。这些模块可以在不同的 `layout` 中复用。通过这样的设定，我们可以最大程度的提取模板之间的相同模块，从而达到 “改一处” 模块，所有相同的模块都同步变化。
 
-例子：在 `_include/nav-bar.html" 中，我们定义了网站的顶部导航栏。其中的代码如下：
+例子：在 `_include/nav-bar.html` 中，我们定义了网站的顶部导航栏。其中的代码如下：
 
 ```html
 <section class="top-nav-box">
@@ -121,6 +123,7 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 | page-toc.html      | 使用 Javascript 自动生成的页面目录                        |
 | report-problem.html| 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口                |
 | comment.html       | 基于 valine + leancloud 的评论区                         |
+| article-head.html  | 页面的标题，tags，作者栏和返回/主页按钮                    |
 
 #### _layouts\*
 

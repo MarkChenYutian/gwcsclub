@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: GW CS Club 历届成员
 tags: Miscellaneous
-Author: Mark
-comments: false
 ---
 
 ## 2020

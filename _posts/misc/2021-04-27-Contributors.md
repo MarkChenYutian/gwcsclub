@@ -3,6 +3,7 @@ layout: page
 title: Contributors
 categories: secondary-pages
 tags: Page Miscellaneous
+useTOC: false
 ---
 
 {% assign allAuthor = site.posts | map: "Author" %}

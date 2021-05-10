@@ -67,7 +67,7 @@ useTOC: false
     {% endif %}
     <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'">
         <h3>{{p.title}}</h3>
-        <blockquote>作者：{{author}}, {{p.date | date: "%Y/%m/%d"}}</blockquote>
+        <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
         <p>{{ p.content | strip_html | escape | slice: 0, 150}} ...</p>
     </div>
 {% endfor %}
