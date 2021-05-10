@@ -32,7 +32,8 @@ T
 <pre>
 <code class="python">
 def prim(graph, start=0):
-  """ 生成 graph 的
+  """ 
+  生成 graph 的 prim
 
     参数:
       graph: 你要处理的图

@@ -9,7 +9,7 @@ Author: Mark
 
 <ul class="time-vertical" style="margin-left: 32px;">
     <li><online></online><a href="{{ site.baseurl }}/2021/03/02/Time-Complexity.html">理论基础：时间复杂度 Time Complexity</a></li>
-    <li><offline></offline><a href="">数据结构：队列 Queue</a></li>
+    <li><online></online><a href="{{ site.baseurl }}/2021/05/10/Queue.html">数据结构：队列 Queue</a></li>
     <li><offline></offline><a href="">数据结构：最大堆，最小堆 Min/Max Heap</a></li>
 </ul>
 
@@ -84,6 +84,21 @@ Not Implemented Yet. See Python Version.
 * `heapq.heappop(arr: list) -> element` 从优先队列`arr`中取出元素
 * `heapq.heapify(arr: list) -> None` 对 `list arr` 中的元素重新排序，使 `arr` 中的元素排序符合最小二分堆的要求
 
-#### Java - `java.util.PriorityQueue<E>`
+#### Java - java.util.PriorityQueue<E>
 
-(Oracle Java.util.PriorityQueue 官方文档)[https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html]。 
+[Oracle Java.util.PriorityQueue 官方文档](https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
+
+**Priority Queue 实例化方法**
+
+* `PriorityQueue<T> a = new PriorityQueue<>();` - 生成一个优先队列，其中的元素都是 `class T` 或者 `class T` 的子类。
+* `PriorityQueue<T> a = new PriorityQueue<>(ComparatorT)` - 实例化一个优先队列，使用 `ComparatorT` 对优先队列中的元素进行排序。
+
+<div class="info">
+	Java 中的 Priority Queue 默认是使用 <code>NaturalOrder</code> 对队列中的元素进行排序的，如果需要使用自定义的比较器，需要在实例化 Priority Queue 的时候将比较器实例作为参数传入构造函数。
+</div>
+
+**Priority Queue 常用函数**
+
+* `add(E object)` - 添加一个元素到 Priority Queue 中
+* `peek()` - 在**不将队列底部元素（下一个被 pop 出来的元素）移出** Priority Queue 的前提下查看队列底部。
+* `poll()` - 返回 Priority Queue 的底部元素并同时在 Priority Queue 内删除该元素
