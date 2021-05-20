@@ -1,5 +1,13 @@
 <div>
-    <h2><strong>{{ page.title }}</strong></h2>
+    <h2>
+        <strong>{{ page.title }}</strong>
+        {% for t in page.tags%}
+            <a 
+                href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}"
+                style="font-size: 16px; line-height: 1.5; color: #1E1E1E; font-weight: lighter; margin-right: 4px;"
+            >{{ t }}</a>
+        {% endfor %}
+    </h2>
     <img src="{{ site.baseurl }}/assets/home.svg" 
         height="30px" 
         style="float: right; margin: 10px; cursor:pointer;"
@@ -11,11 +19,6 @@
         onclick="window.history.back();"
     />
 </div>
-<p class="meta">
-    {{ page.date | date_to_string }}, By {{ page.Author }},
-    Tags: 
-    {% for t in page.tags%}
-        <a href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}"> {{ t }} </a>  
-    {% endfor %}
-</p>
+{{% assign authors = page.Author %}}
+<p class="meta">{{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}</p>
 <div style="clear:right"></div>

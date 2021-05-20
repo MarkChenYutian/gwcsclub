@@ -1,0 +1,7 @@
+---
+---
+[
+  {% for post in site.posts %}
+    "{{ post.tags | join: ',' }}"{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
