@@ -6,7 +6,10 @@ useTOC: false
 
 <h1>快速链接</h1>
 <div class="horizontal-flex-box">
-    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/31/To-Beginners.html'">
+    <div 
+        class="flex-page-card"
+        onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/31/To-Beginners.html'"
+    >
         <h2>初学者指南</h2>
         <div class="horizontal-flex-box">
             <p>如果你刚刚接触CS，看看这里吧！这里罗列了一些初学者常常遇到的问题 - 例如 “如何应对程序报错？” 等。</p>
