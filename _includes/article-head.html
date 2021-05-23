@@ -8,17 +8,23 @@
             >{{ t }}</a>
         {% endfor %}
     </h2>
-    <img src="{{ site.baseurl }}/assets/home.svg" 
-        height="30px" 
-        style="float: right; margin: 10px; cursor:pointer;"
-        onclick="window.location.href='{{ site.baseurl }}/'"
-    />
-    <img src="{{ site.baseurl }}/assets/back.svg"
-        height="30px"
-        style="float: right; margin: 10px; cursor:pointer;"
-        onclick="window.history.back();"
-    />
+    <div
+        style="display: flex; flex-direction: row-reverse; justify-content: space-between;"
+    >
+        <div style="display: flex;">
+        <img src="{{ site.baseurl }}/assets/home.svg" 
+            height="30px" 
+            style="margin: 1rem 1rem 0 1rem; cursor:pointer;"
+            onclick="window.location.href='{{ site.baseurl }}/'"
+        />
+        <img src="{{ site.baseurl }}/assets/back.svg"
+            height="30px"
+            style="margin: 1rem 1rem 0 1rem; cursor:pointer;"
+            onclick="window.history.back();"
+        />
+        </div>
+        {{% assign authors = page.Author %}}
+        <p class="meta">{{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}</p>
+    </div>
 </div>
-{{% assign authors = page.Author %}}
-<p class="meta">{{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}</p>
 <div style="clear:right"></div>

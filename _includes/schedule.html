@@ -1,0 +1,21 @@
+<div>
+{% assign schedules = site.data.schedule %}
+{% if 0 == schedules | size %}
+    <img src="/assets/empty-state.svg" width="20%" height="20%"/>
+    <center><p class="note">最近没有 CS 竞赛和相关活动，放假喽！</p></center>
+{% else %}
+    {% for schedule in schedules %}
+        {% if schedule.type == "competition" %}
+            {% assign presvg = "<img src='../assets/competitionTag.svg' style='display: inline-block; height: 1.3rem; width: 1.3rem;' />  Competition" %}
+        {% elsif schedule.type == "meeting" %}
+            {% assign presvg = "<img src='../assets/meeting.svg' style='display: inline-block; height: 1.3rem; width: 1.3rem;'/> Meeting" %}
+        {% elsif schedule.type == "lecture" %}
+            {% assign presvg = "<img src='../assets/lecture.svg' style='display: inline-block; height: 1.3rem; width: 1.3rem;'/> Lecture"%}
+        {% endif %}
+        <div class="info" style="display: flex; flex-direction: row; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+            <h3 style="margin-top: 0;">{{ presvg }} - {{ schedule.name }}</h3>
+            <h3 style="margin-top: 0;">{{ schedule.date }}</h3>
+        </div>
+    {% endfor %}
+{% endif %}
+</div>

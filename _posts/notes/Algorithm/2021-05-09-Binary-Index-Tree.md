@@ -183,3 +183,9 @@ public void updatePoint(int index, int newVal){
 
 （*上面的代码因为每个父节点更新都调用了一次`getBITval`函数，实际上的时间复杂度是$O((\log{n})^2)$， 通过修改实现方式，我们可以达到 $O(\log{n})$ 的时间复杂度*）
 
+## 练习
+
+<ul class="time-vertical" style="margin-left: 32px;">
+    <li><online></online><a href="http://usaco.org/index.php?page=viewproblem2&cpid=719">USACO 2017 Feb Problem 3. Why Did the Cow Cross the Road III</a></li>
+    <li><online></online><a href="http://usaco.org/index.php?page=viewproblem2&cpid=693">USACO 2017 Jan Problem 1. Balanced Photo</a></li>
+</ul>

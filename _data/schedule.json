@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Algorithm Course",
+        "date": "Every Monday & Wednesday 4:30 PM",
+        "type": "lecture"
+    },
+    {
+        "name": "ACSL Round 1",
+        "date": "2021/04/01",
+        "type": "competition"
+    },
+    {
+        "name": "ACSL Round 2",
+        "date": "2021/04/01",
+        "type": "competition"
+    }
+]

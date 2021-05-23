@@ -27,7 +27,8 @@
 .flex-page-card:hover{ background: linear-gradient(to right, #195893 0%, #2685DF 100%) no-repeat; color: white; }
 .flex-page-card:hover h1, .flex-page-card:hover h2, .flex-page-card:hover h3, .flex-page-card:hover h4, .flex-page-card:hover h5{ color: white; }
 
-.flex-page-card p {
-    flex-basis: 60%;
-    flex-grow: 1;
+.flex-page-card p { flex-basis: 60%; flex-grow: 1; }
+
+.full-page-div{
+    min-height: 90vh;
 }

@@ -61,7 +61,7 @@ useTOC: false
 > Jekyll 动态生成的网页最新页面汇总，点击卡片查看原文
 
 <div class="horizontal-flex-box">
-{% assign new_posts = site.posts | slice: 0, 6 %}
+{% assign new_posts = site.posts | slice: 0, 3 %}
 {% for p in new_posts %}
     {% if p.Author %}
         {% assign author = p.Author %}
@@ -80,5 +80,4 @@ useTOC: false
 
 <h1>日程安排</h1>
 
-<img src="/assets/empty-state.svg" width="20%" height="20%"/>
-<center><p class="note">最近没有 CS 竞赛和相关活动，放假喽！</p></center>
+{% include schedule.html %}

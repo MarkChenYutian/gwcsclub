@@ -1,0 +1,30 @@
+---
+permalink: /404.html
+useTOC: false
+title: 404 Error
+---
+
+{% include head.html %}
+<body>
+    {% include nav-bar.html %}
+    <div class="main-content">
+        <center><img src="{{ site.baseurl }}/assets/404.svg" style="zoom: 60%; margin: -110px auto 0px auto;"/></center>
+
+        你好像来到了奇怪的地方……
+
+        <div class="card-box">
+        <div class="card" onclick="window.location.href='{{ site.baseurl }}/'">
+            <img src="{{ site.baseurl }}/assets/home.svg" 
+                height="50px" 
+            />
+            <p>回到主页</p>
+        </div>
+        <div class="card" onclick="window.history.back();">
+            <img src="{{ site.baseurl }}/assets/back.svg"
+                height="50px"
+            />
+            <p>回到上一页</p>
+        </div>
+        </div>
+    </div>
+</body>
