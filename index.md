@@ -4,6 +4,11 @@ title: {{ site.name }}
 useTOC: false
 ---
 
+<!--Temporary Heading, Scheduled to remove in June 31th -->
+<img src="{{ site.baseurl }}/assets/Championship_VEX_2021.jpg" style="border-radius:10px"/>
+<!---->
+
+
 <h1>快速链接</h1>
 <div class="horizontal-flex-box">
     <div 
