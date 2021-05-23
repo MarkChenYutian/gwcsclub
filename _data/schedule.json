@@ -5,13 +5,8 @@
         "type": "lecture"
     },
     {
-        "name": "ACSL Round 1",
-        "date": "2021/04/01",
-        "type": "competition"
-    },
-    {
-        "name": "ACSL Round 2",
-        "date": "2021/04/01",
+        "name": "ACSL Final",
+        "date": "2021/05/30",
         "type": "competition"
     }
 ]
