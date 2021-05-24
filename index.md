@@ -65,19 +65,34 @@ useTOC: false
 
 > Jekyll 动态生成的网页最新页面汇总，点击卡片查看原文
 
-<div class="horizontal-flex-box">
-{% assign new_posts = site.posts | slice: 0, 3 %}
+<div class="horizontal-flex-box" style="flex-wrap:nowrap; padding: 2rem; overflow-x: auto">
+{% assign new_posts = site.posts | slice: 0, 5 %}
+{% assign c = 0 %}
 {% for p in new_posts %}
     {% if p.Author %}
         {% assign author = p.Author %}
     {% else %}
         {% assign author = "undefined" %}
     {% endif %}
-    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'">
-        <h3>{{p.title}}</h3>
-        <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
-        <p>{{ p.content | strip_html | escape | slice: 0, 150}} ...</p>
-    </div>
+    {% unless c == 0 %}
+        <div 
+            class="flex-page-card pop-card" 
+            onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" 
+            style="margin-left: -15rem;">
+            <h3>{{p.title}}</h3>
+            <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+            <p>{{ p.content | strip_html | escape | slice: 0, 150}} ...</p>
+        </div>
+    {% else %}
+        <div 
+            class="flex-page-card pop-card"
+            onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" >
+            <h3>{{p.title}}</h3>
+            <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+            <p>{{ p.content | strip_html | escape | slice: 0, 150}} ...</p>
+        </div>
+    {% endunless %}
+    {% assign c = c | plus: 1 %}
 {% endfor %}
 </div>
 

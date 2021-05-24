@@ -9,12 +9,12 @@ useTOC: false
 {% assign allAuthor = site.posts | map: "Author" %}
 {% assign grouped_elements = site.posts | group_by: "Author" | sort: "items" | reverse %}
 
-<table style="width: max-content;">
-    <thead><tr><th style="width: 25rem;">作者</th><th style="width: 25rem;">页面数量</th></tr></thead>
+<table>
+    <thead><tr><th>作者</th><th>页面数量</th></tr></thead>
     <tbody>
 {% for elem in grouped_elements %}
 {% unless elem.name == ""%}
-        <tr><td style="width: 25rem;">{{ elem.name }}</td><td style="width: 25rem;">{{ elem.size }}</td></tr>
+        <tr><td>{{ elem.name }}</td><td>{{ elem.size }}</td></tr>
 {% endunless %}
 {% endfor %}
     </tbody>

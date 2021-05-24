@@ -229,8 +229,7 @@ a:hover { text-decoration: underline; }
 .main-content .notification{ background-color: rgb(250, 247, 194); padding: 0 1rem; margin-left: 0; border-left: 0.4rem solid orange; padding: 1rem; margin: 1rem 0 1rem 0;}
 .notification h1,.notification h2,.notification h3,.notification h4,.notification h5{ color: rgb(184, 120, 3); }
 
-
-.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table { width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
 .main-content table th { font-weight: bold; }
 .main-content table th, .main-content table td { padding: 0.5rem 1rem; border: 1px solid #e9ebec; }
 .main-content dl { padding: 0; }

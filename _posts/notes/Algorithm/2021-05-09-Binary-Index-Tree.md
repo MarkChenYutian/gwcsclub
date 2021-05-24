@@ -189,3 +189,7 @@ public void updatePoint(int index, int newVal){
     <li><online></online><a href="http://usaco.org/index.php?page=viewproblem2&cpid=719">USACO 2017 Feb Problem 3. Why Did the Cow Cross the Road III</a></li>
     <li><online></online><a href="http://usaco.org/index.php?page=viewproblem2&cpid=693">USACO 2017 Jan Problem 1. Balanced Photo</a></li>
 </ul>
+
+## 更多
+
+<button class="main-button" onclick="window.location.href='https://www.geeksforgeeks.org/two-dimensional-binary-indexed-tree-or-fenwick-tree/'">二维 Binary Index Tree</button>
