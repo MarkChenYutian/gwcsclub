@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Home Page FLEX Box */
 .horizontal-flex-box{
     display: flex;
@@ -32,4 +33,3 @@
 .pop-card { transition: 0.2s; }
 .pop-card:hover { transform: translateY(-1rem); }
 .pop-card:hover ~.pop-card { transform: translateX(13.5rem); }
-
