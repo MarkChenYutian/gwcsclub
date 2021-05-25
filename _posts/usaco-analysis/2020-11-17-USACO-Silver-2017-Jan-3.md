@@ -3,9 +3,10 @@ layout: usaco-post
 title: USACO 2017 Jan 3
 status: OK
 Author: Marcus
-time: 2017
+year: 2017
 group: Silver
-question: Jan 3
+season: Jan
+question: 3
 tags: USACO-analysis
 ---
 
@@ -51,4 +52,5 @@ public class SecretCowCode1701s3{
     }
 }
 ```
+
 

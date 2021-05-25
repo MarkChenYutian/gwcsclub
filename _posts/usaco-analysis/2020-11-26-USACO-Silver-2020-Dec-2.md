@@ -4,9 +4,10 @@ title: USACO 2016 Dec Silver P2
 tags: USACO-analysis
 status: OK
 Author: 曾老城
-time: 2016
+year: 2016
 group: Silver
-question: Dec 2
+season: Dec
+question: 2
 ---
 
 ### *Problem 2. Cities and States*

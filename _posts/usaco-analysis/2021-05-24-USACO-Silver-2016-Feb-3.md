@@ -4,9 +4,10 @@ title: USACO 2016 Feb Silver 3
 tags: USACO-analysis
 status: OK
 Author: djw
-time: 2016
+year: 2016
 group: Silver
-question: Feb 3
+season: Feb
+question: 3
 ---
 
 题目大意
@@ -97,4 +98,5 @@ class Milk{
     //从Y倒到X
 }
 ~~~
+
 

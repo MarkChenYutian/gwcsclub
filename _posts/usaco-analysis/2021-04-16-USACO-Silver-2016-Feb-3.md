@@ -4,9 +4,10 @@ title: USACO 2016 Feb Silver 3
 tags: USACO-analysis
 status: OK
 Author: 吹风哥
-time: 2016
+year: 2016
 group: Silver
-question: Feb 3
+season: Feb
+question: 3
 ---
 
 ### 题目大意
@@ -154,4 +155,5 @@ public class S320162{
 	}
 }
 ```
+
 

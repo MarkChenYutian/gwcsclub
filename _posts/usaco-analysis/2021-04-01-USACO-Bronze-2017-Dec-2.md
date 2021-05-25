@@ -4,9 +4,10 @@ title: USACO 2017 Dec Bronze P2
 tags: USACO-analysis
 status: OK
 Author: djw
-time: 2017
+year: 2017
 group: Bronze
-question: Dec 2
+season: Dec
+question: 2
 ---
 
 ### Problem 2. The Bovine Shuffle
@@ -64,4 +65,5 @@ public class shuffle{
     }
 }
 ~~~
+
 

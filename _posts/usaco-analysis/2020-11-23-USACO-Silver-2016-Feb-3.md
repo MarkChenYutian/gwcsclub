@@ -4,9 +4,10 @@ title: USACO 2016 Feb Silver P3
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2016
+year: 2016
 group: Silver
-question: Feb 3
+season: Feb
+question: 3
 ---
 
 > 题目大意：有两个桶用于装牛奶，容量分别为x、y个单位，（x,y<=100）目标是尽量装m个单位的牛奶（m<=200）。每次可以执行如下操作：清空任一桶，倒满任一桶，将任一桶的牛奶倒到另一个桶（可能会装满这个桶，而使原桶剩一定量牛奶）。牛奶有足够多，但是最多只能执行k次操作（k<=100）。请求出k次操作内，两个桶的牛奶总和与要求的m个单位的牛奶的最小的差值（差值取绝对值）。
@@ -71,4 +72,5 @@ public class MilkPails{
     }
 }
 ```
+
 

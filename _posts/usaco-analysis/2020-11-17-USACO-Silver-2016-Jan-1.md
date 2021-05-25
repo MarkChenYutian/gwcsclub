@@ -3,9 +3,10 @@ title: USACO 2016 Jan Silver P1
 tags: USACO-analysis
 status: OK
 Author: 沈欣璇
-time: 2016
+year: 2016
 group: Silver
-question: Jan 1
+season: Jan
+question: 1
 ---
 
 ## 题目大意

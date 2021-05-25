@@ -4,9 +4,10 @@ title: USACO 2019 Dec Silver P3
 tags: USACO-analysis
 status: OK
 Author: wwddddnnn
-time: 2019
+year: 2019
 group: Silver
-question: Dec 3
+season: Dec
+question: 3
 ---
 ### 描述
 农场主有n个农场，每个农场有一只H牛或一只G牛，农场中间有n-1条路连接。农场主有m个朋友来拜访，每个朋友有自己偏好的奶牛（H或G的一种）。给出n，m，每个农场中的牛的种类，每两个相邻的农场，每个来拜访的朋友的拜访起点农场和终点农场和他偏好的奶牛，问能让哪些朋友来到自己偏好奶牛的农场？（来到了输出1，否则输出0）。
@@ -73,4 +74,5 @@ public class milkVisits{
   }
 }
 ```
+
 

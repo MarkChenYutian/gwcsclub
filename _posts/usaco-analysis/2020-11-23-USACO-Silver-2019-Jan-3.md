@@ -4,9 +4,10 @@ title: USACO Silver 2019 JAN 3
 tags: USACO-analysis
 status: OK
 Author: wwddddnnn
-time: 2019
+year: 2019
 group: Silver
-question: Jan 3
+season: Jan
+question: 3
 ---
 ### 题目描述
 贝西看山。每一座山都是底角为45°的等腰三角形，底边在x轴。当一座山的山峰在别的山的山体内或者边缘上，这座山的山峰就会被挡住给出山峰的总数量，每座山的山峰的坐标，求出贝西能看到的（未被遮挡的）山峰的个数。
@@ -74,4 +75,5 @@ class Base implements Comparable<Base>{
   }
 }
 ```
+
 

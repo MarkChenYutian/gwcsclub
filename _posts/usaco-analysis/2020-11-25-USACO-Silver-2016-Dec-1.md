@@ -4,9 +4,10 @@ title: USACO 2016 Dec Silver P1
 tags: USACO-analysis
 status: OK
 Author: wzy
-time: 2016
+year: 2016
 group: Silver
-question: Dec 1
+season: Dec
+question: 1
 ---
 
 ### 打卡#2016 December Contest Silver Problem 1
@@ -123,6 +124,7 @@ public static void sort(int arr[], int l, int r)
 }
 
 ```
+
 
 
 

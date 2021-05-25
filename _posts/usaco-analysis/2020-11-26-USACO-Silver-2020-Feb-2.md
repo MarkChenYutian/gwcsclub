@@ -4,9 +4,10 @@ title: USACO 2020 Feb Silver P2
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2020
+year: 2020
 group: Silver
-question: Feb 2
+season: Feb
+question: 2
 ---
 ### Rectangular Pasture
 

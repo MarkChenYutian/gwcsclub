@@ -4,9 +4,10 @@ title: USACO Silver 2019 JAN 2
 tags: USACO-analysis
 status: OK
 Author: 肖肖
-time: 2019
+year: 2019
 group: Silver
-question: Jan 2
+season: Jan
+question: 2
 ---
 ## Icy Perimeter
 

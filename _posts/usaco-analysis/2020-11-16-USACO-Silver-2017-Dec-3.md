@@ -4,9 +4,10 @@ title: USACO 2017 Dec Silver p3
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2017
+year: 2017
 group: Silver
-question: Dec 3
+season: Dec
+question: 3
 ---
 
 ## 1712s3 The Bovine Shuffle
@@ -67,4 +68,5 @@ public class TheBovineShuffle1712s3{
     }
 }
 ```
+
 

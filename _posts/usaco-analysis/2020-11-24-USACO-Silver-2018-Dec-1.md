@@ -4,9 +4,10 @@ title: USACO 2018 Dec Silver P2
 tags: USACO-analysis
 status: OK
 Author: yff
-time: 2018
+year: 2018
 group: Silver
-question: Dec 1
+season: Dec
+question: 1
 ---
 
 ## 题目

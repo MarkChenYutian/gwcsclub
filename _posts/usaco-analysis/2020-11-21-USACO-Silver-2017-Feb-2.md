@@ -4,9 +4,10 @@ title: USACO 2017 Feb Silver P2
 tags: USACO-analysis
 status: OK
 Author: 杨菲凡
-time: 2017
+year: 2017
 group: Silver
-question: Feb 2
+season: Feb
+question: 2
 ---
 
 ## 题目

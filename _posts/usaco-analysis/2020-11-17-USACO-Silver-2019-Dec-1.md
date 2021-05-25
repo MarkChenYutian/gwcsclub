@@ -4,9 +4,10 @@ title: USACO 2019 Dec Silver p1
 tags: USACO-analysis
 status: OK
 Author: Jczeng
-time: 2019
+year: 2019
 group: Silver
-question: Dec 1
+season: Dec
+question: 1
 ---
 ### *Problem 1. MooBuzz*
 

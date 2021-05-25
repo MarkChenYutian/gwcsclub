@@ -4,9 +4,10 @@ title: USACO 2017 Dec Silver P2
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2017
+year: 2017
 group: Silver
-question: Dec 2
+season: Dec
+question: 2
 ---
 
 ## 1712s2 Milk Measurement
@@ -128,4 +129,5 @@ out.write("%d\n"%count)
 out.close()
 l=[]
 ```
+
 

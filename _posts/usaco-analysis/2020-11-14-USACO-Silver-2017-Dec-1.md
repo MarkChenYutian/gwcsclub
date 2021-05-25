@@ -4,9 +4,10 @@ title: USACO 2017 Dec Silver P1
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2017
+year: 2017
 group: Silver
-question: Dec 1
+season: Dec
+question: 1
 ---
 
 ## 1712s1 My Cow Ate My Homework
@@ -61,4 +62,5 @@ for i in range(0,len(answers)):
     out.write(str(answers[i])+"\n")
 out.close()
 ```
+
 

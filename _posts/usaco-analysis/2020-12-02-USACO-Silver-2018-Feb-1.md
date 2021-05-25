@@ -4,9 +4,10 @@ title: USACO 2018 Feb Silver P1
 tags: USACO-analysis
 status: OK
 Author: bbl
-time: 2018
+year: 2018
 group: Silver
-question: Feb 1
+season: Feb
+question: 1
 ---
 
 
@@ -71,4 +72,5 @@ public class reststops{
   }
 }
 ```
+
 

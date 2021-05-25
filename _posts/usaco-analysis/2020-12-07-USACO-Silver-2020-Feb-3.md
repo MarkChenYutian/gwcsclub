@@ -4,9 +4,10 @@ title: USACO 2020 Feb Silver T3
 status: OK
 Author: 李若谷
 tags: USACO-analysis
-time: 2020
+year: 2020
 group: Silver
-question: Feb 3
+season: Feb
+question: 3
 ---
 ##### 题目大意：
 n个点n-1条边的联通图，每个点上都有一个时钟。每经过一个点，这个点的时间就会+1。求总共有多少个点能从此开始最终全部时间调为12。

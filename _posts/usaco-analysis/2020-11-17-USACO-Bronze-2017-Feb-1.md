@@ -4,9 +4,10 @@ title: USACO 2017 Bronze Feb 1
 tags: USACO-analysis
 status: OK
 Author: cm
-time: 2017
+year: 2017
 group: Bronze
-question: Feb 1
+season: Feb
+question: 1
 ---
 
 ## Question Summary
@@ -71,3 +72,4 @@ class cow implements Comparable<cow>{
   }
 }
 ```
+

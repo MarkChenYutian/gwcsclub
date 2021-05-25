@@ -222,12 +222,13 @@ example content
 
 ***usaco-post***
 
-| key      | value                                  | 解释                                                         |
-| -------- | -------------------------------------- | ------------------------------------------------------------ |
-| status   | OK / NA                                | **【必须】**当前页面是否可展示（如果是 NA 不会被展示到自动生成的 USACO Solution Page 上） |
-| time     | yyyy                                   | **【必须】**四位数的年份，用于自动分类题目的展示位置         |
-| group    | Bronze / Silver / Gold / Platnium      | **【必须】**USACO 题目组别                                   |
-| question | {Jan / Feb / Dec / Open} + {1 / 2 / 3} | **【必须】**USACO 题号，例如 `question: Jan 1` 表示一月月赛第一题，`question: Open 2` 表示 USACO Open 第二题 |
+| key      | value                             | 解释                                                         |
+| -------- | --------------------------------- | ------------------------------------------------------------ |
+| status   | OK / NA                           | **【必须】**当前页面是否可展示（如果是 NA 不会被展示到自动生成的 USACO Solution Page 上） |
+| year     | yyyy                              | **【必须】**四位数的年份，用于自动分类题目的展示位置         |
+| group    | Bronze / Silver / Gold / Platnium | **【必须】**USACO 题目组别                                   |
+| season   | {Jan  /Feb /  Dec / Open}         | **【必须】**USACO 赛季，例如 `season: Jan` 表示一月月赛的题目 |
+| question | {1 / 2 / 3}                       | **【必须】**USACO 题号，例如 `question: 1` 表示第一题        |
 
 ***algo-note***
 
