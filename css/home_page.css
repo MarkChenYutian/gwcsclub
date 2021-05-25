@@ -13,15 +13,15 @@
     flex-grow: 1;
     width: calc(100% / 3 - 2rem);
     min-height: 200px;
-    min-width: 250px;
+    min-width: 400px;
     margin-bottom: 2rem;
     margin-right: 2rem;
     border-radius: 10px;
     padding: 20px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.541));
     box-shadow: 0 0 36px rgb(0 0 0 / 10%);
-    z-index: 0;
     cursor: pointer;
+    background: white;
 }
 /*background: */
 .flex-page-card:hover{ background: linear-gradient(to right, #195893 0%, #2685DF 100%) no-repeat; color: white; }
@@ -29,6 +29,6 @@
 
 .flex-page-card p { flex-basis: 60%; flex-grow: 1; }
 
-.full-page-div{
-    min-height: 90vh;
-}
+.pop-card { transition: 0.2s; }
+.pop-card:hover { transform: translateY(-1rem); }
+.pop-card:hover ~.pop-card { transform: translateX(13.5rem); }

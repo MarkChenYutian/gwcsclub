@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "tite": "Jekyll Site Schedule Section JSON File",
+    "description": "Schedule Table Auto-generation JSON Data Source",
+    "type": "object",
+    "properties": {
+        "data": {
+            "description": "Schedule Data for Main Page Schedule Section",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "description": "One Single Row of schedule in main page",
+                "properties": {
+                    "name": {
+                        "description": "Type of Schedule Event",
+                        "type": "string"
+                    },
+                    "date": {
+                        "description": "Date / Time of Event",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Type of Event",
+                        "type": "string",
+                        "enum": ["lecture", "competition", "meeting"]
+                    },
+                    "priority": {
+                        "description": "Priority of Event, 0 the least, 2 the most",
+                        "type": "number",
+                        "enum": [0, 1, 2]
+                    }
+                }
+            }
+        }
+    }
+}
