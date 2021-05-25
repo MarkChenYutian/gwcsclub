@@ -19,7 +19,7 @@
         {% elsif schedule.priority == 2 %}
             {% assign divType = "error" %}
         {% endif %}
-        <div class={{divType}} style="display: flex; flex-direction: row; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+        <div class="{{divType}}" style="display: flex; flex-direction: row; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
             <h3 style="margin-top: 0;">{{ presvg }} - {{ schedule.name }}</h3>
             <h3 style="margin-top: 0;">{{ schedule.date }}</h3>
         </div>
