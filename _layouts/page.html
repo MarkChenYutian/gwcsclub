@@ -16,20 +16,7 @@
     <section class="main-content" style="max-width: none;">
     {% endif %}
           
-        <div>
-            <h2><strong>{{ page.title }}</strong></h2>
-            <img src="{{ site.baseurl }}/assets/home.svg" 
-                height="30px" 
-                style="float: right; margin: 10px; cursor:pointer;"
-                onclick="window.location.href='{{ site.baseurl }}/'"
-            />
-            <img src="{{ site.baseurl }}/assets/back.svg"
-                height="30px"
-                style="float: right; margin: 10px; cursor:pointer;"
-                onclick="window.history.back();"
-            />
-        </div>
-        <p class="meta">  {{ page.date | date_to_string }}</p>
+        {% include article-head.html %}
         {{ content }}
 
     </section>
