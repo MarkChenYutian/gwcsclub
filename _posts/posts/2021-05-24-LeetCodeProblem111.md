@@ -1,13 +1,9 @@
 ---
-layout: page
+layout: post
 title: LeetCode Problem 111. Minimum Depth of Binary Tree
-tag: Page
+tags: other-analysis
 Author: djw
 ---
-
-Author: djw
-
-
 
 题目大意
 

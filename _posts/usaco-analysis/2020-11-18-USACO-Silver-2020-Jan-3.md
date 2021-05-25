@@ -4,9 +4,10 @@ title: USACO-2020-Jan-Silver-3
 status: OK
 Author: 李若谷
 tags: USACO-analysis
-time: 2020
+year: 2020
 group: Silver
-question: Jan 3
+season: Jan
+question: 3
 ---
 ### USACO 2020 Jan Silver T3
 ##### Problem summary:
@@ -29,4 +30,5 @@ Binary search: $O(log$ $max(t$<sub>i</sub>$))$
 Union-find set: Almost $O(n)$
 
 Therefore the time complexity is $O(log$ $max(t$<sub>i</sub>$)*n)$
+
 

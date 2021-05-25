@@ -4,9 +4,10 @@ title: USACO Silver 2019 JAN 1
 tags: USACO-analysis
 status: OK
 Author: 肖肖
-time: 2019
+year: 2019
 group: Silver
-question: Jan 1
+season: Jan
+question: 1
 ---
 ## Grass Planting
 
@@ -52,3 +53,4 @@ int main(){
 	return 0;
 }
 ```
+

@@ -4,9 +4,10 @@ title: USACO 2019 Feb Silver P2
 tags: USACO-analysis
 status: OK
 Author: bbl
-time: 2019
+year: 2019
 group: Silver
-question: Feb 2
+season: Feb
+question: 2
 ---
 
 ### Problem2 [Painting the Barn](http://www.usaco.org/index.php?page=viewproblem2&cpid=919)
@@ -73,4 +74,5 @@ public class paintbarn{
     }
 }
 ```
+
 

@@ -4,9 +4,10 @@ title: USACO 2017 Bronze Dec 3
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2017
+year: 2017
 group: Bronze
-question: Dec 3
+season: Dec
+question: 3
 ---
 
 > 题目大意：有三头奶牛，农场主在某些日期（范围为(1,100)）记下某一头的产奶量变化（和上一次记录时比较），并表彰全部产奶量最高的奶牛（们），把它（们）的照片张贴起来。已知一些乱序的记录，请求出农场主需要改变张贴的照片的次数。

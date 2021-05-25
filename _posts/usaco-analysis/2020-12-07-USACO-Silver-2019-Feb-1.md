@@ -4,9 +4,10 @@ title: USACO 2019 Feb Silver P1
 tags: USACO-analysis
 status: OK
 Author: bbl
-time: 2019
+year: 2019
 group: Silver
-question: Feb 1
+season: Feb
+question: 1
 ---
 ### Problem1 [sleepy cow herding](http://www.usaco.org/index.php?page=viewproblem2&cpid=918)
 
@@ -61,4 +62,5 @@ public class herding{
     }
 }
 ```
+
 

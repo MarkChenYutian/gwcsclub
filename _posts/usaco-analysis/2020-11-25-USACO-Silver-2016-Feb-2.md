@@ -4,9 +4,10 @@ title: USACO 2016 Feb Silver P2
 tags: USACO-analysis
 status: OK
 Author: Marcus
-time: 2016
+year: 2016
 group: Silver
-question: Feb 2
+season: Feb
+question: 2
 ---
 
 ## 1602s2 Load Balancing
@@ -104,4 +105,5 @@ public class LoadBalancing1602s2{
     }
 }
 ```
+
 

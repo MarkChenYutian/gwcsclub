@@ -4,9 +4,10 @@ title: USACO 2020 Open Contest Silver 1
 tags: USACO-analysis
 status: OK
 Author: bbl
-time: 2020
+year: 2020
 group: Silver
-question: Open 1
+season: Open
+question: 1
 ---
 
 ### Problem1 [social distance](http://www.usaco.org/index.php?page=viewproblem2&cpid=1038)

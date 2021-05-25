@@ -4,9 +4,10 @@ title: USACO-Silver-2020-Jan-2
 status: OK
 Author: Jczeng
 tags: USACO-analysis
-time: 2020
+year: 2020
 group: Silver
-question: Jan 2
+season: Jan
+question: 2
 ---
 ### *Problem 2. Loan Repayment*
 

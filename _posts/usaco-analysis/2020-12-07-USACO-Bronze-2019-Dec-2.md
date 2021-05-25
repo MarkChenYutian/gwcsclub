@@ -4,9 +4,10 @@ title: USACO 2019 Bronze Dec 2
 tags: USACO-analysis
 status: OK
 Author: 杨菲凡
-time: 2019
+year: 2019
 group: Bronze
-question: Dec 2
+season: Dec
+question: 2
 ---
 ## 问题
 

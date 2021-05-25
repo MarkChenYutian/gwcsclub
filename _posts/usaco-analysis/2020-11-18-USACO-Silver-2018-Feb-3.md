@@ -4,9 +4,10 @@ title: USACO 2018 Feb 3
 tags: USACO-analysis
 status: OK
 Author: Jczeng
-time: 2018
+year: 2018
 group: Silver
-question: Feb 3
+season: Feb
+question: 3
 ---
 
 

@@ -4,9 +4,10 @@ title: USACO 2020 Jan Silver Problem 1
 tags: USACO-analysis
 status: OK
 Author: Jczeng
-time: 2020
+year: 2020
 group: Silver
-question: Jan 1
+season: Jan
+question: 1
 ---
 
 ## 2020 January Silver

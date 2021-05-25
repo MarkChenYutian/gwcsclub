@@ -4,9 +4,10 @@ title: USACO 2018 Open Bronze P2
 tags: USACO-analysis
 status: OK
 Author: yff
-time: 2018
+year: 2018
 group: Bronze
-question: Open 2
+season: Open
+question: 2
 ---
 
 

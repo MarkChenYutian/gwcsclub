@@ -4,9 +4,10 @@ title: USACO 2017 Dec Bronze P1
 tags: USACO-analysis
 status: OK
 Author: djw
-time: 2017
+year: 2017
 group: Bronze
-question: Dec 1
+season: Dec
+question: 1
 ---
 
 ### Problem 1. Blocked Billboard
@@ -61,4 +62,5 @@ public class  Blocked{
     }
 }
 ~~~
+
 

@@ -4,9 +4,10 @@ title: USACO 2018 Jan Silver P1
 tags: USACO-analysis
 status: OK
 Author: bbl
-time: 2018
+year: 2018
 group: Silver
-question: Jan 1
+season: Jan
+question: 1
 ---
 
 ### Problem1 [Lifeguards](http://www.usaco.org/index.php?page=viewproblem2&cpid=786)
@@ -75,4 +76,5 @@ public class lifeguards{
 	
 }
 ```
+
 

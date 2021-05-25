@@ -4,9 +4,10 @@ title: USACO 2017 Jan Silver P2
 tags: USACO-analysis
 status: OK
 Author: djw
-time: 2017
+year: 2017
 group: Silver
-question: Jan 2
+season: Jan
+question: 2
 ---
 
 ### Problem 2. Hoof, Paper, Scissors
@@ -78,4 +79,5 @@ public class hoofPaperScissors{
     }
 }
 ~~~
+
 

@@ -4,9 +4,10 @@ title: USACO 2020 Jan Bronze P2
 tags: USACO-analysis
 status: OK
 Author: yff
-time: 2020
+year: 2020
 group: Bronze
-question: Jan 2
+season: Jan
+question: 2
 ---
 
 
