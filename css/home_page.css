@@ -18,15 +18,14 @@
     margin-right: 2rem;
     border-radius: 10px;
     padding: 20px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.541));
     box-shadow: 0 0 36px rgb(0 0 0 / 10%);
+    background: no-repeat right/400% linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%);
     cursor: pointer;
-    background: white;
+    transition: 0.2s;
 }
 /*background: */
-.flex-page-card:hover{ background: linear-gradient(to right, #195893 0%, #2685DF 100%) no-repeat; color: white; }
+.flex-page-card:hover{ color: ghostwhite; background-position-x:left;}
 .flex-page-card:hover h1, .flex-page-card:hover h2, .flex-page-card:hover h3, .flex-page-card:hover h4, .flex-page-card:hover h5{ color: white; }
-
 .flex-page-card p { flex-basis: 60%; flex-grow: 1; }
 
 .pop-card { transition: 0.2s; }
