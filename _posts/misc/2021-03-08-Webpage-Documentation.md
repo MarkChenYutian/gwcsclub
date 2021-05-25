@@ -71,6 +71,8 @@ root
   |- _posts
   |- assets
   |- css
+  |- _data
+  |- _draft
 ```
 这些目录在自动构建网页时的作用各不相同，下面我会详细介绍每个目录的作用。
 
@@ -263,9 +265,26 @@ System.out.println("test");	// Some Java Code Here
     如果你不确定你在做什么，<b>不要</b>修改已有的 CSS 样式表，需要新的样式自己在 personalize.css 文件尾部添加样式文件。
 </div>
 
+<div class="notification">
+    有计划使用 `SCSS` 与 `SASS` 技术替代原有的 `CSS` 样式表，压缩样式文件体积的同时提高网站样式统一性。
+</div>
+
 #### js\*
 
 这里存放了网站的 Javascript 文件，用于网站动效，网页动画和页面控件（例如 algo-note 模板的语言选择器 和 页面搜索栏的搜索脚本）。
+
+
+#### _data\*
+
+在网页的首页，有一个section叫做“日程安排”。这里的内容由 `_data\shcedule.json` 中的内容决定。
+
+`schedule.json` 中的内容验证由 `scheduleSchema.json` 定义，当你使用 VS Code 等现代编辑器时，可以看到每个 field 的具体描述与 值域（如果存在）。
+
+<img src="http://markdown-img-1304853431.cosgz.myqcloud.com/20210525151049.png" alt="image-20210525151048950" style="zoom: 67%;" />
+
+#### _draft\*
+
+尚未完成的 Post 放在这个文件夹里面
 
 ### 页面样式
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Binary Index Tree (Fenwick Tree) 二叉索引树
-tags: [Algorithms, Notes]
+tags: [Algorithm, Notes]
 Author: Mark
 ---
 

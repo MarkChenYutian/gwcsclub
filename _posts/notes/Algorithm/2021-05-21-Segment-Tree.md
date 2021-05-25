@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segment Tree 线段树
-tags: [Algorithms, Notes]
+tags: [Algorithm, Notes]
 Author: Mark
 ---
 

@@ -1,13 +1,15 @@
 <div>
-    <h2>
-        <strong>{{ page.title }}</strong>
-        {% for t in page.tags%}
-            <a 
-                href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}"
-                style="font-size: 16px; line-height: 1.5; color: #1E1E1E; font-weight: lighter; margin-right: 4px;"
-            >{{ t }}</a>
-        {% endfor %}
-    </h2>
+    <div
+        style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;"
+    >
+        <h2 style="border-bottom: none; margin-bottom: 0;"><strong>{{ page.title }}</strong></h2>
+        <div>
+            {% for t in page.tags%}
+                <a class="tag" href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}">{{ t }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <hr style="margin:0;"/>
     <div
         style="display: flex; flex-direction: row-reverse; justify-content: space-between;"
     >
