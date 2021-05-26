@@ -1,27 +1,16 @@
 <!--侧栏目录生成代码-->
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{site.baseurl}}/js/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $("h1,h2,h3,h4,h5,h6").each(function (i, item) {
-            //给<H>类标签编号
-            renameHTag(item);
-            //获取标签的名字,h1,还是h2
-            var tag = $(item).get(0).localName;
-            if (tag !== "h1"&& !$(item).get(0).className.includes("toc_ignore")){
-              //为该标签设置id属性
-              $(item).attr("id", "h" + i);
+        $("h2,h3,h4,h5,h6").each(function (i, item) {
+          var tag = item.localName;
+            if (!item.className.includes("toc_ignore")){
               $("#category").append('<a class="new' + tag + '" href="#h' + i + '">' + $(item).text() + '</a></br>');
-              //为每一个标题超链接的class属性设置左边距
-              $(".newh2").css("margin-left", 0);
-              $(".newh3").css("margin-left", 10);
-              $(".newh4").css("margin-left", 20);
-              $(".newh5").css("margin-left", 30);
-              $(".newh6").css("margin-left", 40);
             }
         });
-        //设置class选择器为.book-body的html内容
-        $(".book-body").html($(".book-body").nextAll());
-        console.log(document);
+        for (let n = 2; n < 6; n++) {
+          $(".newh"+n).css("margin-left",(n-2)*10);
+        }
     });
 </script>
 <div class="book-summary" id="category">
