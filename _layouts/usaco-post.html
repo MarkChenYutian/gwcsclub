@@ -1,19 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
-Author: Anonymous
 ---
-{% include report-problem.html %}
-{% include article-head.html %}
-{{ content }}
-
-{% if page.comments != false %}
-<hr/>
-{% endif %}
-
-<div class="warn-button" onClick="window.location.href='#report-problem'">
-    <img src="{{ site.baseurl }}\assets\warning.svg" style="display: inline; height: 35px; width: 35px"></img>
-</div>
-{% if page.comments != false %}
-    {% include comment.html %}
-{% endif %}
+{{content}}

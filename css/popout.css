@@ -66,3 +66,6 @@
   cursor: pointer;
   text-decoration: none;
 }
+.popup__close :hover{
+  background-color: rgb(150, 149, 149);
+}

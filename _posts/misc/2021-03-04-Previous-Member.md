@@ -19,7 +19,7 @@ tags: Miscellaneous
 | 谭禹舟 |                                                   | 宋欣芮 |                                             |
 |        |                                                   |        |                                             |
 | 史笑源 | [史笑源](https://dmoj.ca/user/史笑源) | 卢曦蕾 | [Lisa的妈妈](https://dmoj.ca/user/Lisa的妈妈) |
-| 陈卓然 |                                       |        |                                               |
+| 陈卓然 |                                       | 陈彬瑞 |                                               |
 
 ## 2019
 

@@ -26,7 +26,11 @@
         />
         </div>
         {{% assign authors = page.Author %}}
-        <p class="meta">{{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}</p>
+        {%if page.Author!=nil%}
+            <p class="meta">{{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}</p>
+        {%else%}
+            <p class="meta">{{ page.date | date_to_string }}</p>
+        {%endif%}
     </div>
 </div>
 <div style="clear:right"></div>
