@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segment Tree 线段树
+title: 线段树 Segment Tree
 tags: [Algorithm, Notes]
 Author: Mark
 ---

@@ -105,7 +105,7 @@ a:hover { text-decoration: underline; }
 .main-content a:hover { background-color: #BBEFFD; }
 .main-content a::before { background: url(../assets/link.svg); background-size: 1rem 1rem; content: " "; width: 1.2rem; height: 1.2rem; padding: 0 1.3rem 0 0; background-repeat: no-repeat; text-decoration: none;}
 
-a.tag {color: white;font-size: 1rem;font-weight: normal;background-color: #039aff;border-radius: 10px;padding: 2px 5px;text-decoration: none;}
+a.tag {color: white;font-size: 1rem;font-weight: normal;background-color: #039aff;border-radius: 15px;padding: 4px 8px;text-decoration: none;}
 a.tag::before { display: none; }
 a.tag:hover { background-color: #015d9b; }
 

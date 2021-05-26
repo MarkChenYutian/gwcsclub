@@ -55,17 +55,15 @@
   top: 1rem;
   width: 3rem;
   height: 3rem;
-  font-size: 0.875rem;
-  font-weight: 300;
-  border-radius: 100%;
-  background-color: #0a0a0a;
   z-index: 1003;
   color: #fff;
   line-height: 3rem;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 .popup__close :hover{
-  background-color: rgb(150, 149, 149);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
