@@ -9,9 +9,9 @@
 
 <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ include.page.url }}'" style="flex-grow: 0;" id="{{ include.page.group }}" >
     <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
-        <h3>{{ include.page.group }}, Question {{ include.page.question }}</h3>
+        <h3>{{ include.page.group }} | Question {{ include.page.question }}</h3>
         <img src="{{ site.baseurl }}/assets/{{ include.page.group }}.svg" style="height: 3rem; width: 3rem; margin: 0;">
     </div>
     <blockquote>By: {{ include.page.Author }}, {{ include.page.date | date: "%Y/%m/%d"}}</blockquote>
-    <p>{{ include.page.content | strip_html | escape | slice: 0, 100}} ...</p>
+    <p>{{ include.page.content | strip_html | escape | slice: 0, 80}} ...</p>
 </div>

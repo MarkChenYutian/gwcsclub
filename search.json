@@ -2,7 +2,7 @@
 ---
 [
   {% for post in site.posts %}
-    {% unless post.title == "All Posts" %}
+    {% unless post.search_ignore %}
     {
 
       "title"    : "{{ post.title | escape }}",
