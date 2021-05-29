@@ -100,7 +100,7 @@ Author: 温昱宁
 
 <ul class="time-vertical" style="margin-left: 32px;">
         <li><online></online><a href="{{site.baseurl}}/2021/03/04/dp-with-nim.html">Case Study: nim 与动态规划</a></li>
-        <li><offline></offline><a href="">数据结构：二位前缀和 2D Prefix Sum</a></li>
+        <li><online></online><a href="{{site.baseurl}}/2021/05/26/2D-Prefix-Sum.html">数据结构：二位前缀和 2D Prefix Sum</a></li>
         <li><online></online><a href="{{ site.baseurl }}/2021/05/09/Binary-Index-Tree.html">数据结构：二叉索引树（树状数组）Binary Index Tree</a></li>
         <li><online></online><a href="{{ site.baseurl }}/2021/05/21/Segment-Tree.html">数据结构：线段树 Segment Tree</a></li>
         <li><offline></offline><a href="">数据结构：博弈树 Game Tree</a></li>

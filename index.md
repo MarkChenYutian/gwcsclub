@@ -53,7 +53,7 @@ useTOC: false
     <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/About-Us.html'">
         <h2>关于我们</h2>
         <div class="horizontal-flex-box">
-            <p>关于广外 CS 社的一切</p>
+            <p>关于广外 CS 社和这个网站的一切</p>
             <img class="mainPage-img" src="/assets/AboutUs.png" height="25%" width="25%"/>
         </div>
     </div>

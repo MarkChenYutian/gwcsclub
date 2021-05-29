@@ -27,9 +27,15 @@
         </div>
         {{% assign authors = page.Author %}}
         {%if page.Author!=nil%}
-            <p class="meta">{{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}</p>
+            <p class="meta">
+                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem;">
+                {{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}
+            </p>
         {%else%}
-            <p class="meta">{{ page.date | date_to_string }}</p>
+            <p class="meta">
+                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem;">
+                {{ page.date | date_to_string }}
+            </p>
         {%endif%}
     </div>
 </div>
