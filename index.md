@@ -79,16 +79,30 @@ useTOC: false
             class="flex-page-card pop-card" 
             onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" 
             style="margin-left: -15rem;">
-            <h3>{{p.title}}</h3>
-            <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+            <div style="min-height: 10rem;">
+                <h3>{{p.title}}</h3>
+                <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+                <div>
+                    {% for t in p.tags%}
+                        <a class="tag" href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}">{{ t }}</a>
+                    {% endfor %}
+                </div>
+            </div>
             <p>{{ p.content | strip_html | escape | slice: 0, 200}} ...</p>
         </div>
     {% else %}
         <div 
             class="flex-page-card pop-card"
             onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" >
-            <h3>{{p.title}}</h3>
-            <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+            <div style="min-height: 10rem;">
+                <h3>{{p.title}}</h3>
+                <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+                <div>
+                    {% for t in p.tags%}
+                        <a class="tag" href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}">{{ t }}</a>
+                    {% endfor %}
+                </div>
+            </div>
             <p>{{ p.content | strip_html | escape | slice: 0, 200}} ...</p>
         </div>
     {% endunless %}
