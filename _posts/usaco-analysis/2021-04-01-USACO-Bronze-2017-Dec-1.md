@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Dec Bronze P1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: djw
 year: 2017
@@ -62,5 +62,6 @@ public class  Blocked{
     }
 }
 ~~~
+
 
 

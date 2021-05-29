@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2019 Bronze Dec 2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 杨菲凡
 year: 2019
@@ -48,3 +48,4 @@ file = open('whereami.out', 'w')
 file.write(str(high))
 file.close()
 ```
+

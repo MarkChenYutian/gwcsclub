@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2018 Feb 3 
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Jczeng
 year: 2018
@@ -40,3 +40,4 @@ question: 3
 **复杂度分析：**
 
 * 每次总共有O(N*B)种情况，每种情况需要遍历O(N+B)次，所以总的复杂度是O(N^2^B+NB^2^)。
+

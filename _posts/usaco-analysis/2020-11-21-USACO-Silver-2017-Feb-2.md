@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Feb Silver P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 杨菲凡
 year: 2017
@@ -74,3 +74,4 @@ else:
 		
 		
 ```
+

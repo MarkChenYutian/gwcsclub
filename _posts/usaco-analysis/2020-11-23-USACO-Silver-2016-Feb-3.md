@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2016 Feb Silver P3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Marcus
 year: 2016
@@ -72,5 +72,6 @@ public class MilkPails{
     }
 }
 ```
+
 
 

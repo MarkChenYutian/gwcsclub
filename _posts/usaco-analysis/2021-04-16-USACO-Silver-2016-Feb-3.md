@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2016 Feb Silver 3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 吹风哥
 year: 2016
@@ -155,5 +155,6 @@ public class S320162{
 	}
 }
 ```
+
 
 

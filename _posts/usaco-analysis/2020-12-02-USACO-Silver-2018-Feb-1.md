@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2018 Feb Silver P1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: bbl
 year: 2018
@@ -72,5 +72,6 @@ public class reststops{
   }
 }
 ```
+
 
 

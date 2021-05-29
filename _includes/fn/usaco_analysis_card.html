@@ -6,8 +6,17 @@
         {% include fn/usaco_analysis_card.html page=post %}
     
 {% endcomment %}
-
-<div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ include.page.url }}'" style="flex-grow: 0;" id="{{ include.page.group }}" >
+{% if include.page.group == "Silver" %}
+    {% assign borderColor = "#E9E9D8" %}
+{% elsif include.page.group == "Bronze" %}
+    {% assign borderColor = "#BA6E40" %}
+{% elsif include.page.group == "Gold" %}
+    {% assign borderColor = "#EAC787"%}
+{% endif %}
+<div class="flex-page-card"
+    onClick="window.location.href='{{ site.baseurl }}{{ include.page.url }}'"
+    style="flex-grow: 0; border: {{ borderColor }} solid 4px;"
+    id="{{ include.page.group }}" >
     <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
         <h3>{{ include.page.group }} | Question {{ include.page.question }}</h3>
         <img src="{{ site.baseurl }}/assets/{{ include.page.group }}.svg" style="height: 3rem; width: 3rem; margin: 0;">

@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2018 Dec Silver P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: zys
 year: 2018
@@ -46,3 +46,4 @@ question: 2
 2. 因为循环内部只是 if 判断，而且 priority queue 每次也只是加一个数，或者弹出一个数，所以每次都是 O(log N)，循环 N 次，那么就是 O(NlogN)。
 
 因为排序是在循环外面，所以是 O(2NlogN)。因为系数可以忽略，总的复杂度为 **O(NlogN)**。
+

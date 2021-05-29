@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2019 Dec Silver P3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: wwddddnnn
 year: 2019
@@ -74,5 +74,6 @@ public class milkVisits{
   }
 }
 ```
+
 
 

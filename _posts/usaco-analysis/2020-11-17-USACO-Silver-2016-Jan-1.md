@@ -1,6 +1,6 @@
 ---
 title: USACO 2016 Jan Silver P1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 沈欣璇
 year: 2016
@@ -22,3 +22,4 @@ question: 1
 ## 复杂度分析
 
 是很典型的二分搜索题，复杂度为log n。
+

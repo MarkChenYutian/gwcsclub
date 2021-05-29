@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Bronze Dec 3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Marcus
 year: 2017
@@ -96,3 +96,4 @@ class change{
     }
 }
 ```
+

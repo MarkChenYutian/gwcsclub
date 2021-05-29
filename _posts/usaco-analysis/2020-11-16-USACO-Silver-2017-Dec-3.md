@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Dec Silver p3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Marcus
 year: 2017
@@ -68,5 +68,6 @@ public class TheBovineShuffle1712s3{
     }
 }
 ```
+
 
 

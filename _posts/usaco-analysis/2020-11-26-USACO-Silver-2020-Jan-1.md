@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2020 Jan Silver Problem 1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Jczeng
 year: 2020
@@ -41,3 +41,4 @@ question: 1
   * 之后每次对Trees排序的最糟时间复杂度是O(logN);
   * 下一步将每个桶尽量填满的最糟时间复杂度是O(N);
 * 所以总的复杂度是O(B*NlogN)=>20^6
+

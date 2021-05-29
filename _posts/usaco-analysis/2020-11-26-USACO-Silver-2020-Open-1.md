@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2020 Open Contest Silver 1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: bbl
 year: 2020
@@ -78,3 +78,4 @@ class interval implements Comparable<interval>{
     }
 }
 ```
+

@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2020 Jan Bronze P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: yff
 year: 2020
@@ -56,3 +56,4 @@ file = open('photo.out', 'w')
 file.write(result.strip())
 file.close()
 ```
+

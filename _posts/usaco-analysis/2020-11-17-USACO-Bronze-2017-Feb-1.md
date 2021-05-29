@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Bronze Feb 1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: cm
 year: 2017
@@ -72,4 +72,5 @@ class cow implements Comparable<cow>{
   }
 }
 ```
+
 

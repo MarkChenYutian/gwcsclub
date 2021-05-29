@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2019 Feb Silver P3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 肖肖
 year: 2019
@@ -25,5 +25,6 @@ question: 3
 ### 复杂度
 
 O(n)首先合并所有的点需要分别遍历每个UFDS,最后求出一共有多少个块数就是枚举有多少个点复杂度O(n)
+
 
 

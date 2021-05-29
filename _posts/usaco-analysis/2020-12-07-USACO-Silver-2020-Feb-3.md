@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO 2020 Feb Silver T3
 status: OK
 Author: 李若谷
-tags: USACO-analysis
+tags: [ USACO analysis ]
 year: 2020
 group: Silver
 season: Feb
@@ -77,3 +77,4 @@ int main()
  
 ##### 时间复杂度：
  $O(n^2)$
+

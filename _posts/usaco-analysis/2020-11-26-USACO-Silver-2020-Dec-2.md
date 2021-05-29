@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2016 Dec Silver P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 曾老城
 year: 2016
@@ -37,3 +37,4 @@ question: 2
 
 * 输入处理复杂度是O(N),遍历所有城市的复杂度也是O(1)；
 * 所以总的复杂度就是O(N).
+

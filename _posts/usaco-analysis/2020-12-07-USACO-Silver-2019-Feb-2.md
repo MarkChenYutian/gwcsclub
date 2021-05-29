@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2019 Feb Silver P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: bbl
 year: 2019
@@ -74,5 +74,6 @@ public class paintbarn{
     }
 }
 ```
+
 
 

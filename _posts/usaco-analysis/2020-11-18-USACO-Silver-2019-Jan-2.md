@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO Silver 2019 JAN 2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 肖肖
 year: 2019
@@ -129,3 +129,4 @@ int main(){
 	return 0;
 }
 ```
+

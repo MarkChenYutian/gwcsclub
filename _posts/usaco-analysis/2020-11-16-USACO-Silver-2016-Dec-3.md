@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2016 Dec Silver P3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: yff
 year: 2016
@@ -69,3 +69,4 @@ file = open('moocast.out', 'w')
 file.write(str(max_size))
 file.close()
 ```
+

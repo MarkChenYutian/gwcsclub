@@ -7,7 +7,7 @@ year: 2017
 group: Silver
 season: Jan
 question: 3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 ---
 
 ## 1703s3 Secret Cow Code
@@ -52,5 +52,6 @@ public class SecretCowCode1701s3{
     }
 }
 ```
+
 
 

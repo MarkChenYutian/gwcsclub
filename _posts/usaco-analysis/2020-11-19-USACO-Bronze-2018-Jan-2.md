@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2018 Bronze Jan 2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: 杨菲凡
 year: 2018
@@ -50,3 +50,4 @@ file = open('lifeguards.out', 'w')
 file.write(str(max_count))
 file.close()
 ```
+

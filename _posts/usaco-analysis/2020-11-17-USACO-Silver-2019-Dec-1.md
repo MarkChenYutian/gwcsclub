@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2019 Dec Silver p1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Jczeng
 year: 2019
@@ -38,3 +38,4 @@ question: 1
 #### 复杂度分析：
 
 * 此方法的最差时间复杂度为 (n%8) * [15 * (n//15+1)]
+

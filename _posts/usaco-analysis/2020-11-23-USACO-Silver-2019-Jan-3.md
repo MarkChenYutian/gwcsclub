@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO Silver 2019 JAN 3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: wwddddnnn
 year: 2019
@@ -75,5 +75,6 @@ class Base implements Comparable<Base>{
   }
 }
 ```
+
 
 

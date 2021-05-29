@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2016 Feb Silver 3
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: djw
 year: 2016
@@ -98,5 +98,6 @@ class Milk{
     //从Y倒到X
 }
 ~~~
+
 
 

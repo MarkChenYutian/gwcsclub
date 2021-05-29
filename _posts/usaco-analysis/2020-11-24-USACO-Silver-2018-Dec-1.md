@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2018 Dec Silver P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: yff
 year: 2018
@@ -61,3 +61,4 @@ file = open('convention.out', 'w')
 file.write(str(high))
 file.close()
 ```
+

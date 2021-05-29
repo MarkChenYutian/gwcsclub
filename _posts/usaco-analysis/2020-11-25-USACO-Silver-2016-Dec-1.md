@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2016 Dec Silver P1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: wzy
 year: 2016
@@ -124,6 +124,7 @@ public static void sort(int arr[], int l, int r)
 }
 
 ```
+
 
 
 

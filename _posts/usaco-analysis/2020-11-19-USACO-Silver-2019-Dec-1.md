@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2019 Dec Silver P1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: zys
 year: 2019
@@ -29,3 +29,4 @@ question: 1
 #### 复杂度
 
 每次找到第 N 头牛就是查找 N 的索引所对应的编号，然后对这个编号做加法。因为查找一个数组 index 位置的元素是 O(1)，所以复杂度是 **O(1)**。
+

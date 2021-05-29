@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Dec Silver P1
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: Marcus
 year: 2017
@@ -62,5 +62,6 @@ for i in range(0,len(answers)):
     out.write(str(answers[i])+"\n")
 out.close()
 ```
+
 
 

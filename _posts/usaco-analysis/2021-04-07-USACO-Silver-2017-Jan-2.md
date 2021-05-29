@@ -1,7 +1,7 @@
 ---
 layout: usaco-post
 title: USACO 2017 Jan Silver P2
-tags: USACO-analysis
+tags: [ USACO analysis ]
 status: OK
 Author: djw
 year: 2017
@@ -79,5 +79,6 @@ public class hoofPaperScissors{
     }
 }
 ~~~
+
 
 

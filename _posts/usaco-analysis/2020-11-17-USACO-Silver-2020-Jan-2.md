@@ -3,7 +3,7 @@ layout: usaco-post
 title: USACO-Silver-2020-Jan-2
 status: OK
 Author: Jczeng
-tags: USACO-analysis
+tags: [ USACO analysis ]
 year: 2020
 group: Silver
 season: Jan
@@ -39,3 +39,4 @@ question: 2
 * 第一次二分查找的复杂度是O(logN)
 * 因为一系列计算可以得到可行会跳过很多天，所以检查的复杂度是O(N^(1/2))
 * 所以解法的总体复杂度是O(N^(1/2)logN)
+
