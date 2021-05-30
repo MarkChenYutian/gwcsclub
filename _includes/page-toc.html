@@ -4,6 +4,7 @@
     $(document).ready(function () {
         $("h2,h3,h4,h5,h6").each(function (i, item) {
           var tag = item.localName;
+          $(item).attr("id","h"+i);
             if (!item.className.includes("toc_ignore")){
               $("#category").append('<a class="new' + tag + '" href="#h' + i + '">' + $(item).text() + '</a></br>');
             }
