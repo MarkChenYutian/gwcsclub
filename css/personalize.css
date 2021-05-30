@@ -146,10 +146,10 @@
   #category{ max-height: 20rem; }
 }
 @media (max-width: 1650px) and (min-width: 1500px){
-  #category{ max-height: 90vh; position: sticky; float: left; left: 0px; top: 80px; margin-top: 32px; margin-left: 24px; margin-right: 4px; max-width: 15%; }
+  #category{ max-height: 90vh; position: sticky; position: -webkit-sticky; float: left; left: 0px; top: 80px; margin-top: 32px; margin-left: 24px; margin-right: 4px; max-width: 15%; }
 }
 @media (min-width: 1650px){
-  #category{ max-height: 90vh; position: sticky; float: left; left: 0px; top: 80px; margin-top: 32px; margin-left: 24px; margin-right: 24px; width: 20%; }
+  #category{ max-height: 90vh; position: sticky; position: -webkit-sticky; float: left; left: 0px; top: 80px; margin-top: 32px; margin-left: 24px; margin-right: 24px; width: 20%; }
 }
 #category { overflow-y: auto; }
 

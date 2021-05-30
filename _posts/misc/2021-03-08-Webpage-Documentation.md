@@ -124,7 +124,7 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 | page-header.html   | **除了首页以外** 网页的页眉（ GW Computer Science Club ） |
 | page-toc.html      | 使用 Javascript 自动生成的页面目录                        |
 | report-problem.html| 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口                |
-| comment.html       | 基于 valine + leancloud 的评论区                         |
+| thirdParty/comment.html       | 基于 valine + leancloud 的评论区                         |
 | article-head.html  | 页面的标题，tags，作者栏和返回/主页按钮                    |
 
 #### _layouts\*
