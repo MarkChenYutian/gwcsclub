@@ -11,9 +11,9 @@ a:hover { text-decoration: underline; }
 .main-content a:hover { background-color: #BBEFFD; }
 .main-content a::before { background: url(../assets/link.svg); background-size: 1rem 1rem; content: " "; width: 1.2rem; height: 1.2rem; padding: 0 1.3rem 0 0; background-repeat: no-repeat; text-decoration: none;}
 
-a.tag {color: white;font-size: 1rem;font-weight: normal;background-color: #039aff;border-radius: 15px;padding: 4px 8px;text-decoration: none;}
+a.tag {color: white;font-size: 1rem;font-weight: normal; background: transparent; border: 3px solid #015d9b;border-radius: 5px;padding: 3px 10px;text-decoration: none; color: #015d9b;}
 a.tag::before { display: none; }
-a.tag:hover { background-color: #015d9b; }
+a.tag:hover { background-color: #015d9b; color: ghostwhite;}
 
 .clear{ background-color: transparent; padding: 0; margin: 0; text-decoration: none; border-color: transparent;}
 .clear::before { background: none; }
@@ -130,14 +130,14 @@ a.tag:hover { background-color: #015d9b; }
 .main-content blockquote > :last-child { margin-bottom: 0; }
 
 /* Info Block */
-.main-content .info{ background-color: rgb(224, 240, 253); padding: 0 1rem; margin-left: 0; border-left: 0.4rem solid #2c3c99; padding: 1rem; margin: 1rem 0 1rem 0;}
+.main-content .info{ background-color: rgb(224, 240, 253); padding: 0 1rem; margin-left: 0; border-left: 0.4rem solid #2c3c99; padding: 1rem; margin: 1rem 0 1rem 0; color: #1a2356;}
 
 /* Error Block */
 .main-content .error{ background-color: rgb(253, 230, 224); padding: 0 1rem; margin-left: 0; border-left: 0.4rem solid #c21a1a; padding: 1rem; margin: 1rem 0 1rem 0;}
 .error h1,.error h2,.error h3,.error h4,.error h5{ color: #901d1d; }
 
 /* Notification Block */
-.main-content .notification{ background-color: rgb(250, 247, 194); padding: 0 1rem; margin-left: 0; border-left: 0.4rem solid orange; padding: 1rem; margin: 1rem 0 1rem 0;}
+.main-content .notification{ background-color: rgb(250, 247, 194); padding: 0 1rem; margin-left: 0; border-left: 0.4rem solid orange; padding: 1rem; margin: 1rem 0 1rem 0; color: #7d602a;}
 .notification h1,.notification h2,.notification h3,.notification h4,.notification h5{ color: rgb(184, 120, 3); }
 
 .main-content table { width: 100%; overflow: auto; word-break: normal; word-break:normal; -webkit-overflow-scrolling: touch; }
