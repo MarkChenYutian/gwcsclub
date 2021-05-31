@@ -4,7 +4,7 @@ title: 算法笔记首页
 tags: Page
 Author: 温昱宁
 ---
-
+<link rel="stylesheet" href="{{ site.baseurl }}/css/algo_note.css">
 > Note:
 > 红色的圈表示暂无页面，蓝色的圈表示有页面
 
