@@ -16,11 +16,8 @@ gems:
   - jekyll-paginate
 
 #Others
-markdown: kramdown
 
-usaco-post:
-  -
-    scope:
-      path: ""
-      values:
-        comments: true
+sass:
+    style: compressed
+
+markdown: kramdown

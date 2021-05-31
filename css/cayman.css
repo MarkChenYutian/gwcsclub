@@ -32,7 +32,7 @@ a.tag:hover { background-color: #015d9b; color: ghostwhite;}
 
 .page-header { color: #000; text-align: center; 
   /*background-color: #fff; */
-  background-image: url(diamond.svg);
+  background-image: url("../assets/diamond.svg");
   background-size: cover;
 }
 @media screen and (min-width: 64em) { .page-header { padding: 4rem 6rem; } }
@@ -41,7 +41,7 @@ a.tag:hover { background-color: #015d9b; color: ghostwhite;}
 
 .main-page-header { color: #000; height: 100vh; text-align: center; 
   /*background-color: #fff; */
-  background-image: url(diamond.svg);
+  background-image: url("../assets/diamond.svg");
   background-size: cover;
 }
 
@@ -155,7 +155,7 @@ a.tag:hover { background-color: #015d9b; color: ghostwhite;}
 }
 
 .site-footer { margin-top: 6rem; border-top: solid 1px #eff0f1;
-  background-image: url(diamond.svg);
+  background-image: url("../assets/diamond.svg");
   background-size: 150%;
   background-position-y: 90%;
   padding: 10rem 10% 8rem 10%;
