@@ -7,7 +7,7 @@ useTOC: false
 
 网盘链接的提取码统一是 gwcs
 
-<div class="center-card-box">
+<div class="card-box">
     <a 
         class="image-card"
         style="background: url(https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210415113141.png); background-size: cover;"

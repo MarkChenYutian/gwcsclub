@@ -34,7 +34,7 @@ useTOC: false
 
 ### **好用的网站推荐**
 
-<div class="center-card-box">
+<div class="card-box">
     <div class="round-card">
         <img src="https://i.loli.net/2021/03/09/Zbsh7nXyEKrdiBa.png" width="250px" style="border-radius: 10px 10px 0 0">
         <p>Stack Overflow - 基本上所有你遇到的编程问题和报错都可以在这上面搜索到。回答质量很高。</p>
