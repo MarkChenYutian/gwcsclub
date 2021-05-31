@@ -1,0 +1,43 @@
+---
+---
+.horizontal-flex-box
+  display: flex
+  display: -webkit-flex
+  flex-wrap: wrap
+  align-content: stretch
+  align-items: stretch
+  flex-direction: row
+  justify-content: flex-start
+
+.flex-page-card
+  flex-grow: 1
+  width: calc(100% / 3 - 2rem)
+  min-height: 200px
+  min-width: 400px
+  margin-bottom: 2rem
+  margin-right: 2rem
+  border-radius: 10px
+  padding: 20px
+  box-shadow: 0 0 36px rgba(0, 0, 0 , 0.1)
+  background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
+  cursor: pointer
+  transition: 0.2s
+
+  &:hover
+    color: ghostwhite
+    background-position-x: left
+
+    h1, h2, h3, h4, h5
+      color: white
+
+  p
+    flex-basis: 60%
+    flex-grow: 1
+.pop-card
+  transition: 0.2s
+
+  &:hover
+    transform: translateY(-1rem)
+
+    ~ .pop-card
+      transform: translateX(13.5rem)
