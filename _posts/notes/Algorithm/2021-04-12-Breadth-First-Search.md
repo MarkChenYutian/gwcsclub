@@ -80,6 +80,8 @@ def breadthFirstSearch(initialState, getSuccessor, getValidActions):
         <li><online></online><a href="https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/">[Medium] LeetCode Problem 1161. Maximum Level Sum of a Binary Tree</a></li>
         <li><online></online><a href="https://leetcode.com/problems/number-of-islands/">[Medium] LeetCode Problem 200. Number of Islands</a></li>
         <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=620">[Medium] USACO 2016 Feb Silver P3 - Milk Pails</a></li>
+        <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=671">[Hard] USACO 2016 December Contest, Gold Problem 3. Lasers and Mirrors</a></li>
+        <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=695">[Hard] USACO 2017 January Contest, Gold Problem 3. Cow Navigation</a></li>
 </ul>
 
 ### 参考书目

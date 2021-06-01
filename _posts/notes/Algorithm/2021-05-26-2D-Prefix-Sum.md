@@ -120,3 +120,8 @@ public class PrefixSum2D<T extends Number> {
 {% endraw %}
 ```
 
+<ul class="time-vertical" style="margin-left: 32px;">
+	<li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=919">USACO 2019 Silver Feb #2, Painting The Barn</a></li>
+	<li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=1063">USACO 2020 Silver Dec #2, Rectangular Pasture</a></li>
+    <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=923">USACO 2019 Gold Feb #3, Painting The Barn</a></li>
+</ul>

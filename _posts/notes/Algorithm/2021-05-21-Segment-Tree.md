@@ -276,4 +276,8 @@ public class SegmentTree &lt;T extends Comparable&lt;T&gt;&gt;{
 	<li><online></online><a href="https://leetcode.com/problems/range-sum-query-mutable/">Leetcode 307. Range Sum Query - Mutable</a> 非常 straight-forward 的 Segment Tree 问题</li>
 	<li><online></online><a href="https://leetcode.com/problems/the-skyline-problem/">Leetcode 218. The Skyline Problem</a></li>
     <li><online></online><a href="https://leetcode.com/problems/count-of-smaller-numbers-after-self/">Leetcode 318. Count of Small Numbers After Self</a></li>
+    <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=1041">USACO 2020 US Open Contest, Gold Problem 1. Haircut</a></li>
+    <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=693">USACO 2017 January Contest, Gold Problem 1. Balanced Photo</a></li>
+    <li><online></online><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=719">USACO 2017 February Contest, Gold Problem 3. Why Did the Cow Cross the Road III</a></li>
+
 </ul>

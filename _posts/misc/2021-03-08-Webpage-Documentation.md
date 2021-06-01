@@ -6,7 +6,7 @@ tags: Miscellaneous
 Author: Mark
 ---
 
-> 最近一次 update - 2021/5/10
+> 最近一次 update - 2021/6/1
 
 <div class="notification">
     <h4>如果你只是想在这个网站上添加页面……</h4>
@@ -17,7 +17,7 @@ Author: Mark
 
 
 
-### 网站技术环境\*
+## 网站技术环境\*
 
 <div class="info">
     <p>
@@ -61,7 +61,7 @@ configuration file.
 
 这时候访问 localhost:4000 或 http://127.0.0.1:4000/ 就可以看见实时更新的网页了。
 
-### 自动构建原理
+## 自动构建原理
 
 在网站源代码目录下，可以看到以下几个目录：
 ```
@@ -69,14 +69,16 @@ root
   |- _includes
   |- _layouts
   |- _posts
-  |- assets
-  |- css
   |- _data
   |- _draft
+  |- _sass
+  |- assets
+  |- css
+  |- js
 ```
 这些目录在自动构建网页时的作用各不相同，下面我会详细介绍每个目录的作用。
 
-#### _includes\*
+### _includes\*
 
 这个文件夹中可以定义一些 `html` 代码模块。这些模块可以在不同的 `layout` 中复用。通过这样的设定，我们可以最大程度的提取模板之间的相同模块，从而达到 “改一处” 模块，所有相同的模块都同步变化。
 
@@ -122,12 +124,17 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 | nav-bar.html       | 网页的顶部导航栏                                         |
 | page-footer.html   | 网页的页脚（此网站由……维护）那一部分                       |
 | page-header.html   | **除了首页以外** 网页的页眉（ GW Computer Science Club ） |
-| page-toc.html      | 使用 Javascript 自动生成的页面目录                        |
-| report-problem.html| 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口                |
+| report-problem.html         | 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口              |
+| article-head.html           | 页面的标题，tags，作者栏和返回/主页按钮                   |
+|                             |                                                           |
+|                    |                                                          |
 | thirdParty/comment.html       | 基于 valine + leancloud 的评论区                         |
-| article-head.html  | 页面的标题，tags，作者栏和返回/主页按钮                    |
+| thirdParty/lazy-load.html | 【实验性功能】惰性加载网页图片 |
+| thirdParty/page-toc.html | 使用 Javascript 自动生成的页面目录 |
+|  |  |
+| fn/usaco_analysis_card.html | 自动生成 USACO Analysis Page 中卡片的**函数** |
 
-#### _layouts\*
+### _layouts\*
 
 `_layouts` 文件夹中定义了网站各个网页的“模板”，在自动构建的过程中，Jekyll 会将模板中的 `{% raw %}{{ content }}{% endraw %}` 这一行替换为 markdown 文件解析后产生的 html。
 
@@ -182,14 +189,21 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 | *usaco-post.html* | *现在与 post 没有区别，除了 usaco solution 以外的其他页面不建议（也不应该）使用。* | USACO 题目分析                                        |
 
 
-#### _posts
+### _posts
 
 **命名规则**
 
-`_posts` 中存储的都是 markdown 文件，也就是网站的内容页面了。所有 markdown 的命名**必须遵循以下规则**
+`_posts` 中存储的都是 markdown 文件或 html，也就是网站的内容页面了。所有 markdown 与 html 的命名**必须遵循以下规则**
+
 ```
 yyyy-mm-dd-name-of-file.md
 ```
+
+
+```
+yyyy-mm-dd-name-of-file.html
+```
+
 文件名中所有空格使用`-`替代，并且在最前面加上`yyyy-mm-dd`的前缀。<mark>没有前缀的文件可能无法被 jekyll 渲染</mark>。
 
 **Markdown文件 YAML 头**
@@ -253,28 +267,11 @@ System.out.println("test");	// Some Java Code Here
 
 当显式的时候，如果选择 python 就只会看到 `print("test") # Some Python Code Here`，选择 Java 的时候也只能看到 `System.out.println("test"); ...` 这一行。
 
-#### assets
+### assets
 
 这里存放了网站的图片资源，当然，你也可以将图片资源存放在其他在线存储，然后以链接的形式引用图片
 
-#### css\*
-
-这里存放了网站的层叠样式表 (CSS)
-
-<div class="error">
-    如果你不确定你在做什么，<b>不要</b>修改已有的 CSS 样式表，需要新的样式自己在 personalize.css 文件尾部添加样式文件。
-</div>
-
-<div class="notification">
-    有计划使用 `SCSS` 与 `SASS` 技术替代原有的 `CSS` 样式表，压缩样式文件体积的同时提高网站样式统一性。
-</div>
-
-#### js\*
-
-这里存放了网站的 Javascript 文件，用于网站动效，网页动画和页面控件（例如 algo-note 模板的语言选择器 和 页面搜索栏的搜索脚本）。
-
-
-#### _data\*
+### _data\*
 
 在网页的首页，有一个section叫做“日程安排”。这里的内容由 `_data\shcedule.json` 中的内容决定。
 
@@ -282,17 +279,50 @@ System.out.println("test");	// Some Java Code Here
 
 <img src="http://markdown-img-1304853431.cosgz.myqcloud.com/20210525151049.png" alt="image-20210525151048950" style="zoom: 67%;" />
 
-#### _draft\*
+### _draft\*
 
 尚未完成的 Post 放在这个文件夹里面
 
-### 页面样式
+### _sass\*
+
+这里面存放了网站的 `sass` 样式文件，当运行 `jekyll serve` 或 `jekyll build` 时，jekyll 会自动编译 `css/main.sass` 文件。`main.sass` 文件通过引用` @import` 的方式导入这里的 `sass` 样式文件。
+
+**这里的内容不会直接出现在生成的 _site 中**
+
+> 编译过程详解：
+>
+> ```
+> _sass
+> 	|-a.sass		   css										 css
+> 	|-b.sass	--> 	|- main.sass	-- jekyll compile --> 	   |- main.css
+> 	|-c.sass				"@import a							   |- main.css.map
+> 							 @import b
+> 							 @import c"
+> ```
+
+### css\*
+
+这里存放了网站的层叠样式表 (CSS)
+
+<div class="error">
+    如果你不确定你在做什么，<b>不要</b>修改已有的 CSS 样式表，需要新的样式自己在 personalize.css 文件尾部添加样式文件。
+</div>
+<div class="notification">
+    【正在推进】有计划使用 `SCSS` 与 `SASS` 技术替代原有的 `CSS` 样式表，压缩样式文件体积的同时提高网站样式统一性。
+</div>
+
+
+### js\*
+
+这里存放了网站的 Javascript 文件，用于网站动效，网页动画和页面控件（例如 algo-note 模板的语言选择器 和 页面搜索栏的搜索脚本）。
+
+## 页面样式
 
 在 markdown 中，你可以在任意位置插入 HTML 元素来达到你想要的效果。为了统一网站的设计风格，我们在 `personalize.css` 中定义了一些通用的样式。
 
-#### 强调文字
+### 强调文字
 
-##### 蓝色衬底文字样式
+#### 蓝色衬底文字样式
 
 效果：
 
@@ -311,7 +341,7 @@ System.out.println("test");	// Some Java Code Here
 </div>
 ```
 
-##### 黄色衬底文字样式
+#### 黄色衬底文字样式
 
 效果：
 
@@ -330,7 +360,7 @@ System.out.println("test");	// Some Java Code Here
 </div>
 ```
 
-##### 红色衬底文字样式
+#### 红色衬底文字样式
 
 效果：
 
@@ -349,7 +379,7 @@ System.out.println("test");	// Some Java Code Here
 </div>
 ```
 
-##### **荧光笔高亮**
+#### **荧光笔高亮**
 
 <div class="error">
 ⚠ 注意：这一部分包含可能出现实际表现与预期不符的情况。
@@ -365,11 +395,11 @@ System.out.println("test");	// Some Java Code Here
 <mark>如果想在网站中实现荧光笔高亮的效果，你需要将<code>==</code>替换为 HTML 元素。</mark>
 ```
 
-#### 数学公式
+### 数学公式
 
 网站使用 `MathJax`，全站支持 $\LaTeX$ 风格的数学公式。如果页面中有数学公式，尽量使用 $\LaTeX$ 数学公式以达到最好的显示效果。
 
-##### 行内公式
+#### 行内公式
 
 使用单个 `$` 将 LaTeX 内容括起来，在 Jekyll 渲染过程中，LaTeX内容会被识别并转换为公式的矢量图。
 
@@ -383,7 +413,7 @@ System.out.println("test");	// Some Java Code Here
 假设图 $G$ 中平均一个节点会连接到 $\alpha$ 个子节点，目标节点在第 $n$ 层，那么BFS的空间复杂度会是 $O(\alpha^n)$。
 ```
 
-##### **多行公式**
+#### **多行公式**
 
 <div class="error">
 ⚠ 注意：这一部分包含可能出现实际表现与预期不符的情况。
@@ -461,11 +491,11 @@ When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$
 </div>
 
 
-#### 按钮
+### 按钮
 
 在一些情况下你可能需要按钮控件来突出显示超链接等页面元素，我们提供了 `main-button` 元素 和 允许并排展示按钮的 flex 容器 `button-box` 元素，可以在页面中使用。
 
-##### 使用单个按钮
+#### 使用单个按钮
 
 效果：
 
@@ -489,7 +519,7 @@ When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$
 <a href="https://www.example.com"><button class="main-button">点我转到 example.com </button></a>
 ```
 
-##### 同时展现多个按钮
+#### 同时展现多个按钮
 
 同时展现多个按钮的时候，我们可以使用 `button-box` 元素将他们容纳在同一行。这样在手机等宽度较小的设备上显式效果也不会收到过多影响。
 
