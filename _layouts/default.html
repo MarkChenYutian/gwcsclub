@@ -10,7 +10,7 @@ useTOC: true
     {% include page-header.html %}
     {% include nav-bar.html %}
     {% if page.useTOC != false %}
-      {% include page-toc.html %}
+      {% include thirdParty/page-toc.html %}
     {% endif %}
     <section class="main-content">
           
@@ -19,6 +19,6 @@ useTOC: true
     </section>
 
     {% include page-footer.html %}
-    
+    {% include thirdParty/lazy-load.html %}
   </body>
 </html>

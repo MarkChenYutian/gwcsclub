@@ -7,7 +7,7 @@
     {% include page-header.html %}
     {% include nav-bar.html %}
     {% if page.useTOC != false %}
-      {% include page-toc.html %}
+      {% include thirdParty/page-toc.html %}
     {% endif %}
 
     {% if page.useTOC != false %}
@@ -22,6 +22,6 @@
     </section>
 
     {% include page-footer.html %}
-    
+    {% include thirdParty/lazy-load.html %}
   </body>
 </html>
