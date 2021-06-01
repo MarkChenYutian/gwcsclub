@@ -3,7 +3,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>{{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/cayman.css">
@@ -14,23 +13,7 @@
 
   <!-- Script Header for Table of Content Area -->
   <script src="{{ site.baseurl }}/js/toc_generator.js"></script>
-  <!-- Script Header Enable MathJax display -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-          tex2jax: {
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-          }
-      });
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?1d1abbfeb50113aa21bb45c09fd225fa";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+
+  {% include thirdParty/baidu-Statistics.html %}
+  {% include thirdParty/mathJax.html %}
+</head>

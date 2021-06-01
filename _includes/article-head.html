@@ -28,12 +28,12 @@
         {{% assign authors = page.Author %}}
         {%if page.Author!=nil%}
             <p class="meta">
-                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem;">
+                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem; margin-bottom: -0.3rem;">
                 {{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}
             </p>
         {%else%}
             <p class="meta">
-                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem;">
+                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem; margin-bottom: -0.3rem;">
                 {{ page.date | date_to_string }}
             </p>
         {%endif%}
