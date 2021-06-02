@@ -2,7 +2,6 @@
 title:        GW Computer Science Club
 tagline:      We Learn &emsp; We Create &emsp; We Share
 baseurl:      ""
-paginate:     1
 locale:       "ch"
 email:        "286988023@qq.com"
 
@@ -10,10 +9,6 @@ email:        "286988023@qq.com"
 author:
   name:       GZFLS Computer Science Club
   url:        http://yourhomepage.com 
-
-# Gems
-gems:
-  - jekyll-paginate
 
 #Others
 
