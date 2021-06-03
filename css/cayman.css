@@ -10,6 +10,8 @@ a:hover { text-decoration: underline; }
 .main-content a { color: #2b2f31; text-decoration: #BBC8CB underline; background-color: #EAFAFE; padding: 2px; text-underline-offset: 3px;}
 .main-content a:hover { background-color: #BBEFFD; }
 .main-content a::before { background: url(../assets/link.svg); background-size: 1rem 1rem; content: " "; width: 1.2rem; height: 1.2rem; padding: 0 1.3rem 0 0; background-repeat: no-repeat; text-decoration: none;}
+.no-decoration a{ background: transparent; }
+.no-decoration a::before { display: none; }
 
 a.tag {color: white;font-size: 1rem;font-weight: normal; background: transparent; border: 3px solid #015d9b;border-radius: 5px;padding: 3px 10px;text-decoration: none; color: #015d9b; white-space: nowrap; margin-bottom: 5px;}
 a.tag::before { display: none; }
