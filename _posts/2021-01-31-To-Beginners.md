@@ -29,6 +29,9 @@ useTOC: false
     <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/05/03/Online-Judge-IO.html'">
         <h3>在线测评 (Online Judge) 的输入输出</h3>
     </div>
+    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/06/03/Linux.html'">
+        <h3>Linux小常识</h3>
+    </div>
 </div>
 
 
