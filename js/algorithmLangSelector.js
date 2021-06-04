@@ -3,7 +3,7 @@ function selectPython() {
     let javaButton = document.getElementById("javaSelector");
 
     /* Python Button Selected */
-    pyButton.style.backgroundColor = "#2c3c99";
+    pyButton.style.backgroundColor = "#015d9b";
     pyButton.style.color = "ghostwhite";
 
     /* Java Button Deselected */
@@ -32,7 +32,7 @@ function selectJava(){
     pyButton.style.color = "black";
 
     /* Java Button Selected */
-    javaButton.style.backgroundColor = "#2c3c99";
+    javaButton.style.backgroundColor = "#015d9b";
     javaButton.style.color = "ghostwhite";
 
     /* Hide all the Python Code Block */

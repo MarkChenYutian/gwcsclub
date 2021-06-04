@@ -8,7 +8,5 @@
     :param type: a string value represents a string key ini ./_data/icon_db.json
     :param size: a string value represents a CSS3 size (recommand use rem as unit).
 {% endcomment %}
-
 {% assign src_path = site.data.icon_db[include.type] %}
-
 <img src="{{ src_path }}" style="display: inline-block; height: {{ include.size }}; width: {{ include.size }}; margin-bottom: -0.3rem;">
