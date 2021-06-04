@@ -5,3 +5,4 @@ Author: Mark
 tags: [Notes, CS188]
 ---
 
+{% include fn/icon.html type="star" size="1.5rem" %} Test Inline display icon.

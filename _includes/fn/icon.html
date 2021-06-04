@@ -1,0 +1,14 @@
+{% comment %}
+    This file describe a function icon that will automatically generate a set of HTML Code to 
+    add an icon into the document flow using in-line display.
+
+    The parameter "type" requires a string, which represent a key in ./_data/icon_db.json and will
+    be mapped to a svg icon in ./assets/icon_db
+
+    :param type: a string value represents a string key ini ./_data/icon_db.json
+    :param size: a string value represents a CSS3 size (recommand use rem as unit).
+{% endcomment %}
+
+{% assign src_path = site.data.icon_db[include.type] %}
+
+<img src="{{ src_path }}" style="display: inline-block; height: {{ include.size }}; width: {{ include.size }}; margin-bottom: -0.3rem;">
