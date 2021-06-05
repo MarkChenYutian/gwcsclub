@@ -2,7 +2,7 @@
 layout: algo_note
 title: 代价统一搜索 Uniform Cost Search
 tags: Algorithm Notes
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 前置条件

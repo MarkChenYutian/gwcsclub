@@ -2,7 +2,7 @@
 layout: algo_note
 title: 找质数
 tags: Algorithm Notes
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 前置要求

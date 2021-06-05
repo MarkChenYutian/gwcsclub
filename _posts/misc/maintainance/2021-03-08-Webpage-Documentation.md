@@ -3,7 +3,7 @@ layout: page
 comment: true
 title: 广州外国语学校计算机科学社团官网维护指南与文档
 tags: Miscellaneous
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 > 最近一次 update - 2021/6/1

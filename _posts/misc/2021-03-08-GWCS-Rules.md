@@ -3,7 +3,7 @@ layout: page
 comment: false
 title: 广州外国语学校计算机科学社团章程（草案）
 tags: Miscellaneous
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ## 第一章：总则

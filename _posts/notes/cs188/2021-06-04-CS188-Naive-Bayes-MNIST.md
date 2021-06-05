@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CS188 Ch13. Case Study - Recognize MNIST base on Naive Bayes"
-Author: Mark
+Author: ["Mark Chen"]
 tags: [Notes, CS188]
 ---
 

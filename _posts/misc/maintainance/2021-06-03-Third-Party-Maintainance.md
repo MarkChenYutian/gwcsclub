@@ -3,7 +3,7 @@ layout: page
 comment: true
 title: 第三方服务维护指南
 tags: [Page, Miscellaneous]
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ## 评论区

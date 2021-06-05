@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 网站贡献指南
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 > Deprecated Page.

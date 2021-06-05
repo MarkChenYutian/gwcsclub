@@ -2,7 +2,7 @@
 layout: algo_note
 title: 优先队列 Priority Queue
 tags: Algorithm Notes
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 前置条件

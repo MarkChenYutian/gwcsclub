@@ -3,7 +3,7 @@ layout: page
 comment: true
 title: 网站样式指南
 tags: [Page, Miscellaneous]
-Author: Mark
+Author: ["Mark Chen"]
 ---
 ## 图标系统
 

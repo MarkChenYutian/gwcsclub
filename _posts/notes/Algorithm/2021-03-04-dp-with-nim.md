@@ -2,7 +2,7 @@
 layout: algo_note
 title: 从 nim 看动态规划
 tags: Algorithm Notes
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 问题描述

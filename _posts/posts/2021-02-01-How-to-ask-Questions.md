@@ -2,7 +2,7 @@
 layout: post
 title: 提问的方法
 tags: For-Beginners
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 本文由GitHub上的文章“提问的智慧” [[Link](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)] 节选&改编而来

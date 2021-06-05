@@ -2,7 +2,7 @@
 layout: algo_note
 title: 深度优先搜索 Depth First Search
 tags: Algorithm Notes
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 前置条件

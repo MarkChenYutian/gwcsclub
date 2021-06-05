@@ -1,6 +1,6 @@
 ---
 layout: page
-Author: Mark
+Author: ["Mark Chen"]
 title: 网站版权信息
 tags: Miscellaneous
 useTOC: false

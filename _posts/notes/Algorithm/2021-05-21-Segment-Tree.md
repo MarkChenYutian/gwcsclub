@@ -2,7 +2,7 @@
 layout: post
 title: 线段树 Segment Tree
 tags: [Algorithm, Notes]
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 前提条件

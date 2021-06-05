@@ -2,7 +2,7 @@
 layout: algo_note
 title: 广度优先搜索 Breadth First Search
 tags: Algorithm Notes
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 前置条件

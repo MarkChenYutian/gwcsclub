@@ -2,7 +2,7 @@
 layout: post
 title: 如何阅读报错
 tags: For-Beginners
-Author: Mark
+Author: ["Mark Chen"]
 ---
 
 ### 简介
