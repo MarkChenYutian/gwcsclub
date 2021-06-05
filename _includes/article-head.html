@@ -5,7 +5,10 @@
         <h2 style="border-bottom: none; margin-bottom: 0;"><strong>{{ page.title }}</strong></h2>
         <div>
             {% for t in page.tags%}
-                <a class="tag" href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}">{{ t }}</a>
+                <a class="tag" href="{{ site.baseurl }}/secondary-pages/2021/01/26/All-Posts.html#{{ t }}">
+                    {% include fn/icon.html type="tag" size="1.2rem" %}
+                    {{ t }}
+                </a>
             {% endfor %}
         </div>
     </div>
@@ -28,12 +31,13 @@
         {{% assign authors = page.Author %}}
         {%if page.Author!=nil%}
             <p class="meta">
-                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem; margin-bottom: -0.3rem;">
-                {{ page.date | date_to_string }}, By {{ page.Author | join: ', '}}
+                {% include fn/icon.html type="people" size="1.5rem" %}
+                {{ page.Author | join: ', '}} | {% include fn/icon.html type="calander" size="1.5rem" %}
+                {{ page.date | date_to_string }}
             </p>
         {%else%}
             <p class="meta">
-                <img src="{{ site.baseurl }}/assets/calander.svg" style="display: inline-block; height: 1.5rem; width: 1.5rem; margin-bottom: -0.3rem;">
+                {% include fn/icon.html type="calander" size="1.5rem" %}
                 {{ page.date | date_to_string }}
             </p>
         {%endif%}

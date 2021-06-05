@@ -3,5 +3,8 @@
     "download": "/assets/icon_db/download.svg",
     "zipFile": "/assets/icon_db/zipFile.svg",
     "python": "/assets/icon_db/python.svg",
-    "java": "/assets/icon_db/java.svg"
+    "java": "/assets/icon_db/java.svg",
+    "people": "/assets/icon_db/author.svg",
+    "calander": "/assets/icon_db/calander.svg",
+    "tag": "/assets/icon_db/tag.svg"
 }

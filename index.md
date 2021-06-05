@@ -80,7 +80,11 @@ useTOC: false
             onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" 
             style="margin-left: -15rem;">
             <h3>{{p.title}}</h3>
-            <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+            <blockquote>
+                {% include fn/icon.html type="people" size="1.5rem" %}
+                {{ p.Author | join: ', '}} | {% include fn/icon.html type="calander" size="1.5rem" %}
+                {{ p.date | date_to_string }}
+            </blockquote>
             <p>{{ p.content | strip_html | escape | slice: 0, 200}} ...</p>
         </div>
     {% else %}
@@ -88,7 +92,11 @@ useTOC: false
             class="flex-page-card pop-card"
             onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" >
             <h3>{{p.title}}</h3>
-            <blockquote>作者：{{author}}, {{ p.date | date: "%Y/%m/%d"}}</blockquote>
+            <blockquote>
+                {% include fn/icon.html type="people" size="1.5rem" %}
+                {{ p.Author | join: ', '}} | {% include fn/icon.html type="calander" size="1.5rem" %}
+                {{ p.date | date_to_string }}
+            </blockquote>
             <p>{{ p.content | strip_html | escape | slice: 0, 200}} ...</p>
         </div>
     {% endunless %}
