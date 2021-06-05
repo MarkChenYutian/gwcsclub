@@ -25,6 +25,14 @@ Author: ["Mark Chen"]
     </pre>
 </blockquote>
 
+在正常的使用中，如果你希望图标大小与文字大小相匹配，我们也建议你使用 `size="1.5rem"`。
+
+{% include fn/icon.html type="star" size="1.5rem" %} 这是一个 1.5rem 大小的图标例子。
+
+```
+{% raw %}{% include fn/icon.html type="star" size="1.5rem" %} 这是一个 1.5rem 大小的图标例子。{% endraw %}
+```
+
 当前网页支持的图标类型
 
 <table>
