@@ -6,12 +6,6 @@
             "date": "Every Monday & Wednesday 4:30 PM",
             "type": "lecture",
             "priority": 0
-        },
-        {
-            "name": "ACSL Final",
-            "date": "2021/05/30",
-            "type": "competition",
-            "priority": 1
         }
     ]
 }
