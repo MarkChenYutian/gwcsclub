@@ -124,7 +124,7 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 | nav-bar.html       | 网页的顶部导航栏                                         |
 | page-footer.html   | 网页的页脚（此网站由……维护）那一部分                       |
 | page-header.html   | **除了首页以外** 网页的页眉（ GW Computer Science Club ） |
-| report-problem.html         | 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口              |
+| report_problem.html         | 页面左下角悬浮按钮，点击后弹出“汇报错误”窗口              |
 | article-head.html           | 页面的标题，tags，作者栏和返回/主页按钮                   |
 |                             |                                                           |
 |                    |                                                          |
