@@ -1,18 +1,25 @@
 <!--侧栏目录生成代码-->
-<script src="{{site.baseurl}}/js/jquery.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $("h2,h3,h4,h5,h6").each(function (i, item) {
-          var tag = item.localName;
-          $(item).attr("id","h"+i);
-            if (!item.className.includes("toc_ignore")){
-              $("#category").append('<a class="new' + tag + '" href="#h' + i + '">' + $(item).text() + '</a></br>');
-            }
-        });
-        for (let n = 2; n < 6; n++) {
-          $(".newh"+n).css("margin-left",(n-2)*10);
+    if (document.readyState !== 'loading') {
+      tocGenerating();
+    } else {
+      document.addEventListener('DOMContentLoaded', tocGenerating);
+    }
+    function tocGenerating(){
+      document.querySelectorAll("h2,h3,h4,h5,h6").forEach(function(item,i){
+        var tag=item.localName;
+        if (!item.className.includes("toc_ignore")){
+          item.setAttribute("id","h"+i);
+          document.getElementById("category").innerHTML+='<a class="new' + tag + '" href="#h' + i + '">' + item.textContent + '</a></br>';
         }
-    });
+      });
+      for (let n = 2; n < 6; n++) {
+        document.querySelectorAll(".newh"+n).forEach(function(item){
+          console.log(item.style);
+          item.style.cssText="margin-left: "+(n-2)*10+"px;";
+        });
+      }
+    }
 </script>
 <div class="book-summary" id="category">
   <strong>目录</strong><br/>
