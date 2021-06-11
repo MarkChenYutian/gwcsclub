@@ -1,0 +1,62 @@
+<!-- Language Selector -->
+<script>
+    if (document.readyState !== 'loading') {
+        selectPython();
+    } else {
+        document.addEventListener('DOMContentLoaded', selectPython);
+    }
+    function selectPython() {
+        /* Python Button Selected */
+        select(document.getElementById("pySelector"));
+
+        /* Java Button Deselected */
+        deselect(document.getElementById("javaSelector"));
+
+        /* Show all the Python Code Block */
+        document.querySelectorAll(".python").forEach(function(item) {
+            item.style.display="";
+        });
+
+        /* Hide all the Java Code Block */
+        document.querySelectorAll(".java").forEach(function(item) {
+            item.style.display="none";
+        });
+    }
+
+    function selectJava(){
+        /* Python Button Deselected */
+        deselect(document.getElementById("pySelector"));
+
+        /* Java Button Selected */
+        select(document.getElementById("javaSelector"));
+
+        /* Hide all the Python Code Block */
+        document.querySelectorAll(".python").forEach(function(item) {
+            item.style.display="none";
+        });
+
+        /* Show all the Java Code Block */
+        document.querySelectorAll(".java").forEach(function(item) {
+            item.style.display="";
+        });
+    }
+    function deselect(target){
+        target.style.backgroundColor = "rgb(243, 247, 255)";
+        target.style.color = "black";
+    }
+    function select(target){
+        target.style.backgroundColor = "#015d9b";
+        target.style.color = "ghostwhite";
+    }
+</script>
+<blockquote>
+    <p>你使用哪种语言？我们会根据你选择的语言显示对应的代码示例</p>
+    <div class="button-box" style="margin-top: -20px;">
+        <div class="main-button" id="pySelector" onclick="selectPython()" style="border-radius: 10px 0 0 10px; margin-right: 0px">
+            Python {% include fn/icon.html type="python" size="2rem" %}
+        </div>
+        <div class="main-button" id="javaSelector" onclick="selectJava()" style="border-radius: 0 10px 10px 0; margin-left: 0px">
+            Java {% include fn/icon.html type="java" size="2rem" %}
+        </div>
+    </div>
+</blockquote>

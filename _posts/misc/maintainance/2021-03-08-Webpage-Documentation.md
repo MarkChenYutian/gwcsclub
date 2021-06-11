@@ -207,7 +207,7 @@ yyyy-mm-dd-name-of-file.html
 文件名中所有空格使用`-`替代，并且在最前面加上`yyyy-mm-dd`的前缀。<mark>没有前缀的文件可能无法被 jekyll 渲染</mark>。
 
 **Markdown文件 YAML 头**
-
+<br><br><a herf="{{site.baseurl}}/2021-06-11-yml-generator.html"><b>yaml头生成器</b></a><br><br>
 <mark>每一个要被渲染的 markdown 文件都<b>必须</b>添加 yaml 文件头</mark>，这个文件头中会包括一些键值对，用来配置 markdown 的渲染过程。yaml 的格式如下:
 
 ```
