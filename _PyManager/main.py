@@ -56,11 +56,12 @@ def getLayout(out):
 def getTags(out):
     try:
         writeText("Reading Tags Information from ./Py-Manager/tags.json", out)
-        with open("./Py-Manager/tags.json", "r") as f: data = json.load(f)
+        with open("./_PyManager/tags.json", "r") as f: data = json.load(f)
         tags = {t for line in data for t in line.split(",")}
         writeText("Tags: {}".format(tags), out)
         return tags
     except Exception as e:
+        print(e)
         writeText(str(e), out, highlight=True)
 
 def mainWorker(out, bar):
