@@ -4,7 +4,7 @@ title: Stone Game
 tags: ["CodeForce", "Other-analysis"]
 division: 3
 number: 725
-Author: dJw
+Author: djw
 ---
 
 ### 题目大意
