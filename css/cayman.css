@@ -7,9 +7,9 @@ body { padding: 0; margin: 0; font-family: "Helvetica", "Helvetica Neue", Helvet
 a { color: #1e6bb8; text-decoration: none; margin-right: 4px; }
 a:hover { text-decoration: underline; }
 
-.main-content a { color: #2b2f31; text-decoration: #BBC8CB underline; background-color: #EAFAFE; padding: 2px; text-underline-offset: 3px;}
-.main-content a:hover { background-color: #BBEFFD; }
-.main-content a::before { background: url(../assets/link.svg); background-size: 1rem 1rem; content: " "; width: 1.2rem; height: 1.2rem; padding: 0 1.3rem 0 0; background-repeat: no-repeat; text-decoration: none;}
+.main-content a { color: #2b2f31; text-decoration: #BBC8CB underline; background-color: #ffffff; padding: 2px; text-underline-offset: 3px;}
+.main-content a:hover { background-color: #fff; }
+.main-content a::before {background-size: 1rem 1rem; content: " "; width: 1.2rem; height: 1.2rem; padding: 0 1.3rem 0 0; background-repeat: no-repeat; text-decoration: none;}
 .no-decoration a{ background: transparent; }
 .no-decoration a::before { display: none; }
 

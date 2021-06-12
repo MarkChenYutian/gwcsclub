@@ -4,3 +4,4 @@ gemspec
 gem 'jekyll'
 gem 'kramdown'
 gem 'pygments.rb'
+gem 'webrick'
