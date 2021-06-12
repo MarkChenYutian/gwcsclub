@@ -1,46 +1,60 @@
 ---
-title: yaml头部信息生成器
+title: YAML 头文件生成器
 layout: page
+tags: [Page, Tools, Miscellaneous]
 Author: [Marcus]
+useTOC: false
 ---
 <blockquote>
     <p>选择post类型</p>
     <div class="button-box">
-        <div class="main-button" id="usacoSelector" onclick="selectU()">
-            usaco
+        <div 
+            class="main-button" id="usacoSelector" onclick="selectU()"
+            style="margin-right: 0; border-radius: 24px 0 0 24px;"
+        >
+            USACO
         </div>
-        <div class="main-button" id="codeforceSelector" onclick="selectC()">
-            Codeforce
+        <div
+            class="main-button" id="codeforceSelector" onclick="selectC()"
+            style="margin-right: 0; margin-left: 0; border-radius: 0;"
+        >
+            CodeForce
         </div>
-        <div class="main-button" id="otherSelector" onclick="selectO()">
+        <div
+            class="main-button" id="otherSelector" onclick="selectO()"
+            style="margin-left: 0; border-radius: 0 24px 24px 0;"
+        >
             其他
         </div>
     </div>
 </blockquote>
 <div>
     <div id="usaco" class="input">
-        标题：<input type="text" name="firstname" value="" id="utitle" placeholder="标题" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        作者：<input type="text" name="firstname" value="" id="uauthor" placeholder="作者" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        年份：<input type="text" name="firstname" value="" id="uyear" placeholder="四位，纯数字（例：2020）" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        组别：<input type="text" name="firstname" value="" id="ugroup" placeholder="[ Platinum | Gold | Silver | Bronze ]" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        题号：<input type="text" name="firstname" value="" id="uquestion" placeholder="[ 1 | 2 | 3 ]" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        赛季：<input type="text" name="firstname" value="" id="useason" placeholder="[ Jan | Feb | Dec | Open ]" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
+        <input type="text" name="firstname" value="" id="utitle" placeholder="标题"><br>
+        <input type="text" name="firstname" value="" id="uauthor" placeholder="作者"><br>
+        <input type="text" name="firstname" value="" id="uyear" placeholder="年份：四位，纯数字（例：2020）"><br>
+        <input type="text" name="firstname" value="" id="ugroup" placeholder="组别：[ Platinum | Gold | Silver | Bronze ]" ><br>
+        <input type="text" name="firstname" value="" id="uquestion" placeholder="题号：[ 1 | 2 | 3 ]"><br>
+        <input type="text" name="firstname" value="" id="useason" placeholder="赛季：[ Jan | Feb | Dec | Open ]"><br>
         <button class="main-button" onclick="generateU()">生成</button>
     </div>
     <div id="codeforce" class="input">
-        标题：<input type="text" name="firstname" value="" id="ctitle" placeholder="标题" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        作者：<input type="text" name="firstname" value="" id="cauthor" placeholder="作者" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        组别：<input type="text" name="firstname" value="" id="cgroup" placeholder="[ 1 | 2 | 3 ]" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        题号：<input type="text" name="firstname" value="" id="cquestion" placeholder="纯数字" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
+        <input type="text" name="firstname" value="" id="ctitle" placeholder="标题" ><br>
+        <input type="text" name="firstname" value="" id="cauthor" placeholder="作者" ><br>
+        <input type="text" name="firstname" value="" id="cgroup" placeholder="组别：[ 1 | 2 | 3 ]" ><br>
+        <input type="text" name="firstname" value="" id="cquestion" placeholder="题号：纯数字" ><br>
         <button class="main-button" onclick="generateC()">生成</button>
     </div>
     <div id="other" class="input">
-        标题：<input type="text" name="firstname" value="" id="otitle" placeholder="标题" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
-        作者：<input type="text" name="firstname" value="" id="oauthor" placeholder="作者" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;"><br>
+        <input type="text" name="firstname" value="" id="otitle" placeholder="标题" ><br>
+        <input type="text" name="firstname" value="" id="oauthor" placeholder="作者" ><br>
         <button class="main-button" onclick="generateO()">生成</button>
     </div>
 </div>
 <br>
+
+## 生成结果
+
 <div>
 <p>把以下内容添加到markdown文件的最前面：</P>
 <pre>
