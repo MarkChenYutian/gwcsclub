@@ -75,13 +75,60 @@ useTOC: false
 
 <pre style="max-height: 15rem; overflow-y: auto;">
 <code id="outPreview">
+暂无内容
 </code>
 </pre>
+
+## STEP 6. 下载并发布
+
+<p>
+{% include fn/icon.html type="download" size="2rem" %} 下载 markdown 文件，然后将文件用 {% include fn/icon.html type="wechat" size="2rem" %} 微信发送给我们吧！我们会第一时间将它们更新在网站上！
+</p>
 
 <script>
     if (document.readyState !== 'loading') {
         chooseSelector("usaco");
     } else {
         document.addEventListener('DOMContentLoaded', chooseSelector("usaco"));
+    }
+    function generateU(){
+        let title=document.getElementById("utitle").value;
+        let author=document.getElementById("uauthor").value;
+        let year=document.getElementById("uyear").value;
+        let group=document.getElementById("ugroup").value;
+        let question=document.getElementById("uquestion").value;
+        let season=document.getElementById("useason").value;
+        return("---\nlayout: usaco-post\ntitle: " + title +"\ntags: [\"USACO analysis\"]\nAuthor: [\"" + author + "\"]\nyear: " + year + "\ngroup: " + group + "\nseason: " + season + "\nquestion: " + question + "\n---");
+    }
+    function generateC(){
+        let title=document.getElementById("ctitle").value;
+        let author=document.getElementById("cauthor").value;
+        let group=document.getElementById("cgroup").value;
+        let question=document.getElementById("cquestion").value;
+        return("---\nlayout: post\ntitle: " + title + "\ntags: [\"CodeForce\",\"Other-analysis\"]\nAuthor: [\""+ author + "\"]\ngroup: "+ group +"\nquestion: " + question + "\n---");
+    }
+    function generateO(){
+        let title=document.getElementById("otitle").value;
+        let author=document.getElementById("oauthor").value;
+        return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"Other-analysis\"]\nAuthor: [\""+ author +"\"]\n---");
+    }
+    function deselect(target){
+        target.style.backgroundColor = "rgb(243, 247, 255)";
+        target.style.color = "black";
+    }
+    function select(target){
+        target.style.backgroundColor = "#015d9b";
+        target.style.color = "ghostwhite";
+    }
+    function chooseSelector(target){
+        document.getElementById("selectors").childNodes.forEach(function(each){
+            try{deselect(each);}
+            catch{;}
+        });
+        select(document.getElementById(target+"Selector"));
+        document.querySelectorAll(".input").forEach(function(each){
+            each.style.display="none";
+        });
+        document.getElementById(target).style.display="";
     }
 </script>
