@@ -2,12 +2,6 @@
 
 [![Join the chat at https://gitter.im/gwcsclub/community](https://badges.gitter.im/gwcsclub/community.svg)](https://gitter.im/gwcsclub/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FMarkChenYutian%2Fgwcsclub%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/MarkChenYutian/gwcsclub/goto?ref=main) 
 
-<style>
-    a.tag {color: white;font-size: 1rem;font-weight: normal; background: transparent; border: 3px solid #015d9b;border-radius: 5px;padding: 3px 10px;text-decoration: none; color: #015d9b; white-space: nowrap; margin-bottom: 5px;}
-	a.tag:hover { background-color: #015d9b; color: ghostwhite;}
-</style>
-
-
 
 ## 我们是谁
 

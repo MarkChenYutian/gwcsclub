@@ -11,8 +11,8 @@ author:
   url:        http://yourhomepage.com 
 
 #Others
-plugins:
-  - jekyll-spaceship
+#plugins:
+#  - jekyll-spaceship
 
 sass:
     style: compressed

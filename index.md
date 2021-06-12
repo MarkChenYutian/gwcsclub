@@ -85,7 +85,7 @@ useTOC: false
                 {{ p.Author | join: ', '}} | {% include fn/icon.html type="calander" size="1.5rem" %}
                 {{ p.date | date_to_string }}
             </blockquote>
-            <p>{{ p.content | strip_html | escape | slice: 0, 200}} ...</p>
+            <p>{{ p.content | strip_html | escape | slice: 0, 200 }} ...</p>
         </div>
     {% else %}
         <div 

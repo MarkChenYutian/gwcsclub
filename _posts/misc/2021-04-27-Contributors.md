@@ -5,20 +5,25 @@ categories: secondary-pages
 tags: Page Miscellaneous
 useTOC: false
 ---
-
+<div style="display: flex; margin-bottom: 2rem; flex-wrap: wrap;">
 {% assign allAuthor = site.posts | map: "Author" %}
-{% assign grouped_elements = site.posts | group_by: "Author" | sort: "items" | reverse %}
-
-<table>
-    <thead><tr><th>作者</th><th>页面数量</th></tr></thead>
-    <tbody>
-{% for elem in grouped_elements %}
-{% unless elem.name == ""%}
-        <tr><td>{{ elem.name }}</td><td>{{ elem.size }}</td></tr>
-{% endunless %}
+{% assign authorList = "" | split: ","%}
+{% for postAuthor in allAuthor %}
+    {% for author in postAuthor %}
+        {% assign authorList = authorList | push: author %}
+    {% endfor %}
 {% endfor %}
-    </tbody>
-</table>
+{% assign uniqAuthor = authorList | uniq %}
+{% for author in uniqAuthor %}
+    {% assign count = 0 | to_integer %}
+    {% for postAuthor in authorList %}
+        {% if postAuthor == author %}
+            {%assign count = count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+<a class="tag" style="margin-top: 5px">{{ author }} ({{ count }})</a>
+{% endfor %}
+</div>
 
 > 以上列表由 Jekyll 收集该网站所有页面作者后自动生成，最近一次更新于 {{ "now" | date: "%Y-%m-%d %H:%M" }}。
 

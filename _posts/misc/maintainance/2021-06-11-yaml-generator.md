@@ -30,25 +30,25 @@ useTOC: false
 </blockquote>
 <div>
     <div id="usaco" class="input">
-        <input type="text" name="firstname" value="" id="utitle" placeholder="标题"><br>
-        <input type="text" name="firstname" value="" id="uauthor" placeholder="作者"><br>
-        <input type="text" name="firstname" value="" id="uyear" placeholder="年份：四位，纯数字（例：2020）"><br>
-        <input type="text" name="firstname" value="" id="ugroup" placeholder="组别：[ Platinum | Gold | Silver | Bronze ]" ><br>
-        <input type="text" name="firstname" value="" id="uquestion" placeholder="题号：[ 1 | 2 | 3 ]"><br>
-        <input type="text" name="firstname" value="" id="useason" placeholder="赛季：[ Jan | Feb | Dec | Open ]"><br>
-        <button class="main-button" onclick="generateU()">生成</button>
+<input type="text" name="firstname" value="" id="utitle" placeholder="标题"><br>
+<input type="text" name="firstname" value="" id="uauthor" placeholder="作者"><br>
+<input type="text" name="firstname" value="" id="uyear" placeholder="年份：四位，纯数字（例：2020）"><br>
+<input type="text" name="firstname" value="" id="ugroup" placeholder="组别：[ Platinum | Gold | Silver | Bronze ]" ><br>
+<input type="text" name="firstname" value="" id="uquestion" placeholder="题号：[ 1 | 2 | 3 ]"><br>
+<input type="text" name="firstname" value="" id="useason" placeholder="赛季：[ Jan | Feb | Dec | Open ]"><br>
+<button class="main-button" onclick="generateU()">生成</button>
     </div>
     <div id="codeforce" class="input">
-        <input type="text" name="firstname" value="" id="ctitle" placeholder="标题" ><br>
-        <input type="text" name="firstname" value="" id="cauthor" placeholder="作者" ><br>
-        <input type="text" name="firstname" value="" id="cgroup" placeholder="组别：[ 1 | 2 | 3 ]" ><br>
-        <input type="text" name="firstname" value="" id="cquestion" placeholder="题号：纯数字" ><br>
-        <button class="main-button" onclick="generateC()">生成</button>
+<input type="text" name="firstname" value="" id="ctitle" placeholder="标题" ><br>
+<input type="text" name="firstname" value="" id="cauthor" placeholder="作者" ><br>
+<input type="text" name="firstname" value="" id="cgroup" placeholder="组别：[ 1 | 2 | 3 ]" ><br>
+<input type="text" name="firstname" value="" id="cquestion" placeholder="题号：纯数字" ><br>
+<button class="main-button" onclick="generateC()">生成</button>
     </div>
     <div id="other" class="input">
-        <input type="text" name="firstname" value="" id="otitle" placeholder="标题" ><br>
-        <input type="text" name="firstname" value="" id="oauthor" placeholder="作者" ><br>
-        <button class="main-button" onclick="generateO()">生成</button>
+<input type="text" name="firstname" value="" id="otitle" placeholder="标题" ><br>
+<input type="text" name="firstname" value="" id="oauthor" placeholder="作者" ><br>
+<button class="main-button" onclick="generateO()">生成</button>
     </div>
 </div>
 <br>
