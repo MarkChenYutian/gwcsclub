@@ -7,21 +7,21 @@ useTOC: false
 ---
 <blockquote>
     <p>选择post类型</p>
-    <div class="button-box">
+    <div class="button-box" id="selectors">
         <div 
-            class="main-button" id="usacoSelector" onclick="selectU()"
+            class="main-button" id="usacoSelector" onclick="chooseSelector('usaco')"
             style="margin-right: 0; border-radius: 24px 0 0 24px;"
         >
             USACO
         </div>
         <div
-            class="main-button" id="codeforceSelector" onclick="selectC()"
+            class="main-button" id="codeforceSelector" onclick="chooseSelector('codeforce')"
             style="margin-right: 0; margin-left: 0; border-radius: 0;"
         >
             CodeForce
         </div>
         <div
-            class="main-button" id="otherSelector" onclick="selectO()"
+            class="main-button" id="otherSelector" onclick="chooseSelector('other')"
             style="margin-left: 0; border-radius: 0 24px 24px 0;"
         >
             其他
@@ -63,9 +63,9 @@ useTOC: false
 </div>
 <script>
     if (document.readyState !== 'loading') {
-        selectU();
+        chooseSelector("usaco");
     } else {
-        document.addEventListener('DOMContentLoaded', selectU);
+        document.addEventListener('DOMContentLoaded', chooseSelector("usaco"));
     }
     function generateU(){
         var title=document.getElementById("utitle").value;
@@ -96,34 +96,16 @@ useTOC: false
         target.style.backgroundColor = "#015d9b";
         target.style.color = "ghostwhite";
     }
-    function selectU(){
-        select(document.getElementById("usacoSelector"));
-        deselect(document.getElementById("codeforceSelector"));
-        deselect(document.getElementById("otherSelector"));
+    function chooseSelector(target){
+        document.getElementById("selectors").childNodes.forEach(function(each){
+            try{deselect(each);}
+            catch{;}
+        });
+        select(document.getElementById(target+"Selector"));
         document.querySelectorAll(".input").forEach(function(each){
             each.style.display="none";
         });
-        document.getElementById("usaco").style.display=""
-        document.getElementById("output").innerHTML="还没有输入";
-    }
-    function selectC(){
-        deselect(document.getElementById("usacoSelector"));
-        select(document.getElementById("codeforceSelector"));
-        deselect(document.getElementById("otherSelector"));
-        document.querySelectorAll(".input").forEach(function(each){
-            each.style.display="none";
-        });
-        document.getElementById("codeforce").style.display=""
-        document.getElementById("output").innerHTML="还没有输入";
-    }
-    function selectO(){
-        deselect(document.getElementById("usacoSelector"));
-        deselect(document.getElementById("codeforceSelector"));
-        select(document.getElementById("otherSelector"));
-        document.querySelectorAll(".input").forEach(function(each){
-            each.style.display="none";
-        });
-        document.getElementById("other").style.display=""
-        document.getElementById("output").innerHTML="还没有输入";
+        document.getElementById(target).style.display="";
+        document.getElementById("output").innerHTML="还没有生成";
     }
 </script>
