@@ -86,12 +86,12 @@ useTOC: false
             <option value="Open"> Open Contest </option>
         </select>
         <h2>STEP 4. 生成！</h2>
-        <button class="main-button" onclick="generateFile(generateU)">生成</button>
+        <button class="main-button" onclick="downloadClockInFile(generateU)">生成</button>
     </div>
     <div id="codeforce" class="input">
         <input type="text" value="" id="ctitle" placeholder="标题" >
         <input type="text" value="" id="cauthor" placeholder="作者" list="siteAuthor">
-        <select id="uquestion">
+        <select id="cgroup">
             <option value=""> 选择组别 </option>
             <option value="1"> Division 1 </option>
             <option value="2"> Division 2 </option>
@@ -99,13 +99,13 @@ useTOC: false
         </select>
         <input type="text" value="" id="cquestion" placeholder="题号：纯数字" >
         <h2>STEP 4. 生成！</h2>
-        <button class="main-button" onclick="generateFile(generateC)">生成</button>
+        <button class="main-button" onclick="downloadClockInFile(generateC)">生成</button>
     </div>
     <div id="other" class="input">
 <input type="text" name="firstname" value="" id="otitle" placeholder="标题" >
 <input type="text" name="firstname" value="" id="oauthor" placeholder="作者" list="siteAuthor">
 <h2>STEP 4. 生成！</h2>
-<button class="main-button" onclick="generateFile(generateO)">生成</button>
+<button class="main-button" onclick="downloadClockInFile(generateO)">生成</button>
     </div>
 </div>
 
@@ -124,13 +124,14 @@ useTOC: false
 </p>
 
 <script>
+    var title="";
     if (document.readyState !== 'loading') {
         chooseSelector("usaco");
     } else {
         document.addEventListener('DOMContentLoaded', chooseSelector("usaco"));
     }
     function generateU(){
-        let title=document.getElementById("utitle").value;
+        title=document.getElementById("utitle").value;
         let author=document.getElementById("uauthor").value;
         let year=document.getElementById("uyear").value;
         let group=document.getElementById("ugroup").value;
@@ -139,14 +140,14 @@ useTOC: false
         return("---\nlayout: usaco-post\ntitle: " + title +"\ntags: [\"USACO analysis\"]\nAuthor: [\"" + author + "\"]\nyear: " + year + "\ngroup: " + group + "\nseason: " + season + "\nquestion: " + question + "\n---");
     }
     function generateC(){
-        let title=document.getElementById("ctitle").value;
+        title=document.getElementById("ctitle").value;
         let author=document.getElementById("cauthor").value;
         let group=document.getElementById("cgroup").value;
         let question=document.getElementById("cquestion").value;
         return("---\nlayout: post\ntitle: " + title + "\ntags: [\"CodeForce\",\"Other-analysis\"]\nAuthor: [\""+ author + "\"]\ngroup: "+ group +"\nquestion: " + question + "\n---");
     }
     function generateO(){
-        let title=document.getElementById("otitle").value;
+        title=document.getElementById("otitle").value;
         let author=document.getElementById("oauthor").value;
         return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"Other-analysis\"]\nAuthor: [\""+ author +"\"]\n---");
     }
@@ -168,5 +169,15 @@ useTOC: false
             each.style.display="none";
         });
         document.getElementById(target).style.display="";
+    }
+    function downloadClockInFile(yamlGenerator){
+        let yamlHead = yamlGenerator();
+        let date = new Date();
+        let dateString = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+        let content = document.getElementById("inFileContent").innerText;
+        let result = yamlHead + "\n" + content;
+        title = title.replaceAll("_", "-").replaceAll(" ", "-");
+        document.getElementById("outPreview").innerText = result;
+        if(content!="\n暂无内容\n") download(dateString + "-" + title + ".md", result);
     }
 </script>
