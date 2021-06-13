@@ -7,8 +7,24 @@ useTOC: false
 ---
 <script src="{{ site.baseurl }}/js/file-generator.js"></script>
 
+{% assign allAuthor = site.posts | map: "Author" %}
+{% assign authorList = "" | split: ","%}
+{% for postAuthor in allAuthor %}
+    {% for author in postAuthor %}
+        {% assign authorList = authorList | push: author %}
+    {% endfor %}
+{% endfor %}
+{% assign uniqAuthor = authorList | uniq %}
+
+<datalist style="display: none;" id="siteAuthor">
+    {% for author in uniqAuthor %}
+    <option>{{author}}</option>
+    {% endfor %}
+</datalist>
 
 ## STEP 1. 选择打卡文件
+
+{% include fn/icon.html type="upload" size="2rem" %}上传你想发布的打卡文件（格式支持 `markdown`, `md`）
 
 <input type='file' accept=".md,.markdown" onchange='openFile(event)'><br>
 
@@ -46,26 +62,48 @@ useTOC: false
 
 <div>
     <div id="usaco" class="input">
-<input type="text" name="firstname" value="" id="utitle" placeholder="标题">
-<input type="text" name="firstname" value="" id="uauthor" placeholder="作者">
-<input type="text" name="firstname" value="" id="uyear" placeholder="年份：四位，纯数字（例：2020）">
-<input type="text" name="firstname" value="" id="ugroup" placeholder="组别：[ Platinum | Gold | Silver | Bronze ]" >
-<input type="text" name="firstname" value="" id="uquestion" placeholder="题号：[ 1 | 2 | 3 ]">
-<input type="text" name="firstname" value="" id="useason" placeholder="赛季：[ Jan | Feb | Dec | Open ]">
-<h2>STEP 4. 生成！</h2>
-<button class="main-button" onclick="generateFile(generateU)">生成</button>
+        <input type="text" value="" id="utitle" placeholder="标题">
+        <input type="text" value="" id="uauthor" placeholder="作者" list="siteAuthor">
+        <input type="text" value="" id="uyear" placeholder="年份：四位，纯数字（例：2020）">
+        <select id="ugroup">
+            <option value=""> 选择组别 </option>
+            <option value="Platinum"> Platinum </option>
+            <option value="Gold"> Gold </option>
+            <option value="Silver"> Silver </option>
+            <option value="Bronze"> Bronze </option>
+        </select>
+        <select id="uquestion">
+            <option value=""> 选择题号 </option>
+            <option value="1"> Question 1 </option>
+            <option value="2"> Question 2 </option>
+            <option value="3"> Question 3 </option>
+        </select>
+        <select id="useason">
+            <option value=""> 选择赛季 </option>
+            <option value="Jan"> January </option>
+            <option value="Feb"> February </option>
+            <option value="Dec"> December </option>
+            <option value="Open"> Open Contest </option>
+        </select>
+        <h2>STEP 4. 生成！</h2>
+        <button class="main-button" onclick="generateFile(generateU)">生成</button>
     </div>
     <div id="codeforce" class="input">
-<input type="text" name="firstname" value="" id="ctitle" placeholder="标题" >
-<input type="text" name="firstname" value="" id="cauthor" placeholder="作者" >
-<input type="text" name="firstname" value="" id="cgroup" placeholder="组别：[ 1 | 2 | 3 ]" >
-<input type="text" name="firstname" value="" id="cquestion" placeholder="题号：纯数字" >
-<h2>STEP 4. 生成！</h2>
-<button class="main-button" onclick="generateFile(generateC)">生成</button>
+        <input type="text" value="" id="ctitle" placeholder="标题" >
+        <input type="text" value="" id="cauthor" placeholder="作者" list="siteAuthor">
+        <select id="uquestion">
+            <option value=""> 选择组别 </option>
+            <option value="1"> Division 1 </option>
+            <option value="2"> Division 2 </option>
+            <option value="3"> Division 3 </option>
+        </select>
+        <input type="text" value="" id="cquestion" placeholder="题号：纯数字" >
+        <h2>STEP 4. 生成！</h2>
+        <button class="main-button" onclick="generateFile(generateC)">生成</button>
     </div>
     <div id="other" class="input">
 <input type="text" name="firstname" value="" id="otitle" placeholder="标题" >
-<input type="text" name="firstname" value="" id="oauthor" placeholder="作者" >
+<input type="text" name="firstname" value="" id="oauthor" placeholder="作者" list="siteAuthor">
 <h2>STEP 4. 生成！</h2>
 <button class="main-button" onclick="generateFile(generateO)">生成</button>
     </div>

@@ -7,5 +7,7 @@
     "people": "/assets/icon_db/author.svg",
     "calander": "/assets/icon_db/calander.svg",
     "tag": "/assets/icon_db/tag.svg",
-    "wechat": "/assets/icon_db/wechat.svg"
+    "wechat": "/assets/icon_db/wechat.svg",
+    "upload": "/assets/icon_db/upload.svg",
+    "warning": "/assets/icon_db/warning.svg"
 }
