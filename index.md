@@ -4,12 +4,7 @@ title: {{ site.name }}
 useTOC: false
 ---
 
-<!--Temporary Heading, Scheduled to remove in June 31th -->
-<img src="{{ site.baseurl }}/assets/Championship_VEX_2021.jpg" style="border-radius:10px"/>
-<!---->
-
-
-<h1>快速链接</h1>
+<h1>主要页面</h1>
 <div class="horizontal-flex-box">
     <div 
         class="flex-page-card"
@@ -61,9 +56,17 @@ useTOC: false
 
 ---
 
-<h1>最近更新</h1>
+<h1>快速链接</h1>
 
-> Jekyll 动态生成的网页最新页面汇总，点击卡片查看原文
+<div class="button-box">
+    <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/tertiary-pages/2021/01/26/USACO.html'"> USACO 解析 </button>
+    <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/06/11/yaml-generator.html'"> 打卡文件生成器 </button>
+    <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/03/04/algorithm-home.html'"> 算法笔记 </button>
+</div>
+
+---
+
+<h1>最近更新</h1>
 
 <div class="horizontal-flex-box" style="flex-wrap:nowrap; padding: 2rem; overflow-x: auto">
 {% assign new_posts = site.posts | slice: 0, 5 %}

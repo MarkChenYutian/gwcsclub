@@ -6,6 +6,12 @@
             "date": "Every Monday & Wednesday 4:30 PM",
             "type": "lecture",
             "priority": 0
+        },
+        {
+            "name": "AtCoder Week Contest",
+            "date": "Every Sunday 20:00 - 21:40",
+            "type": "competition",
+            "priority": 1
         }
     ]
 }
