@@ -4,7 +4,8 @@ title: Computer Science +
 categories: secondary-pages
 tags: Page
 ---
-<img src="{{ site.baseurl }}/assets/notImplement.svg" style="zoom: 70%; margin: 0px auto 0px auto; display:block">
-<div class="error">
-我们正在建设这个页面
+<div class="horizontal-flex-box">
+    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/06/13/Linux-index.html'">
+        <h3>Linux知识</h3>
+    </div>
 </div>
