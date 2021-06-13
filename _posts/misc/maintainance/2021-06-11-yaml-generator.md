@@ -38,22 +38,16 @@ useTOC: false
 
 ## STEP 2. 选择打卡类型
 <div class="button-box" id="selectors">
-    <div 
-        class="main-button" id="usacoSelector" onclick="chooseSelector('usaco')"
-        style="margin-right: 0; border-radius: 24px 0 0 24px;"
-    >
+    <div class="main-button" id="usacoSelector" onclick="chooseSelector('usaco')" style="margin-right: 0; border-radius: 24px 0 0 24px;">
         USACO
     </div>
-    <div
-        class="main-button" id="codeforceSelector" onclick="chooseSelector('codeforce')"
-        style="margin-right: 0; margin-left: 0; border-radius: 0;"
-    >
+    <div class="main-button" id="codeforceSelector" onclick="chooseSelector('codeforce')" style="margin-right: 0; margin-left: 0;border-radius: 0;">
         CodeForce
     </div>
-    <div
-        class="main-button" id="otherSelector" onclick="chooseSelector('other')"
-        style="margin-left: 0; border-radius: 0 24px 24px 0;"
-    >
+    <div class="main-button" id="atcoderSelector" onclick="chooseSelector('atcoder')" style="margin-right: 0; margin-left: 0;border-radius: 0;">
+        AtCoder
+    </div>
+    <div class="main-button" id="otherSelector" onclick="chooseSelector('other')" style="margin-left: 0; border-radius: 0 24px 24px 0;">
         其他
     </div>
 </div>
@@ -101,11 +95,26 @@ useTOC: false
         <h2>STEP 4. 生成！</h2>
         <button class="main-button" onclick="downloadClockInFile(generateC)">生成</button>
     </div>
+    <div id="atcoder" class="input">
+        <input type="text" value="" id="atitle" placeholder="标题" >
+        <input type="text" value="" id="aauthor" placeholder="作者" list="siteAuthor">
+        <input type="text" value="" id="anumber" placeholder="Contest Number：三位数字 （例：240）">
+        <select id="aquestion">
+            <option value=""> 选择 Task </option>
+            <option value="A"> Task A </option>
+            <option value="B"> Task B </option>
+            <option value="C"> Task C </option>
+            <option value="D"> Task D </option>
+            <option value="E"> Task E </option>
+        </select>
+        <h2>STEP 4. 生成！</h2>
+        <button class="main-button" onclick="downloadClockInFile(generateA)">生成</button>
+    </div>
     <div id="other" class="input">
-<input type="text" name="firstname" value="" id="otitle" placeholder="标题" >
-<input type="text" name="firstname" value="" id="oauthor" placeholder="作者" list="siteAuthor">
-<h2>STEP 4. 生成！</h2>
-<button class="main-button" onclick="downloadClockInFile(generateO)">生成</button>
+        <input type="text" value="" id="otitle" placeholder="标题" >
+        <input type="text" value="" id="oauthor" placeholder="作者" list="siteAuthor">
+        <h2>STEP 4. 生成！</h2>
+        <button class="main-button" onclick="downloadClockInFile(generateO)">生成</button>
     </div>
 </div>
 
@@ -145,6 +154,13 @@ useTOC: false
         let group=document.getElementById("cgroup").value;
         let question=document.getElementById("cquestion").value;
         return("---\nlayout: post\ntitle: " + title + "\ntags: [\"CodeForce\",\"Other-analysis\"]\nAuthor: [\""+ author + "\"]\ngroup: "+ group +"\nquestion: " + question + "\n---");
+    }
+    function generateA(){
+        title=document.getElementById("atitle").value;
+        let author=document.getElementById("aauthor").value;
+        let contestID = document.getElementById("anumber").value;
+        let task = document.getElementById("aquestion").value;
+        return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"AtCoder\", \"Other-analysis\"]\nAuthor: [\""+ author +"\"]\ntestID: "+ contestID + "\ntask: " + task + "\n---");
     }
     function generateO(){
         title=document.getElementById("otitle").value;
