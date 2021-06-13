@@ -12,7 +12,7 @@ useTOC: false
 
 <div class="horizontal-flex-box">
     <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/2021/02/01/How-to-ask-Questions.html'">
-        <h3>我有不懂的地方该怎么办？</h3>
+        <h3>如何向其他人提问？</h3>
     </div>
     <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/21/How-to-read-Exceptions.html'">
         <h3>我的程序报错了，我可以做什么？</h3>
