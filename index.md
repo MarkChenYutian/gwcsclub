@@ -72,7 +72,7 @@ useTOC: false
 {% assign new_posts = site.posts | slice: 0, 5 %}
 {% assign c = 0 %}
 {% for p in new_posts %}
-    {% if p.Author %}
+    {% if p.Author == empty %}
         {% assign author = p.Author %}
     {% else %}
         {% assign author = "undefined" %}
