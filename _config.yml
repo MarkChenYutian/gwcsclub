@@ -11,7 +11,8 @@ author:
   url:        http://yourhomepage.com 
 
 #Others
-#plugins:
+plugins:
+  - jekyll-loading-lazy
 #  - jekyll-spaceship
 
 sass:
