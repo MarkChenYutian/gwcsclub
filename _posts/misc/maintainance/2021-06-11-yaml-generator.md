@@ -29,7 +29,7 @@ useTOC: false
 
 <input type='file' accept=".md,.markdown" onchange='openFile(event)'><br>
 
-文件预览：
+文件预览（检查编码是否正确，文件内容显示是否正常）：
 
 <pre style="max-height: 15rem; overflow-y: auto;">
 <code id="inFileContent">
@@ -90,7 +90,17 @@ useTOC: false
             <option value="2"> Division 2 </option>
             <option value="3"> Division 3 </option>
         </select>
-        <input type="text" value="" id="cquestion" placeholder="题号：纯数字" >
+        <select id="cquestion">
+            <option value=""> 选择 Task </option>
+            <option value="A"> Task A </option>
+            <option value="B"> Task B </option>
+            <option value="C"> Task C </option>
+            <option value="D"> Task D </option>
+            <option value="E"> Task E </option>
+            <option value="F"> Task F </option>
+            <option value="G"> Task G </option>
+        </select>
+        <input type="text" value="" id="cnumber" placeholder="比赛编号（三位数字）" >
         <h2>STEP 4. 生成！</h2>
         <button class="main-button" onclick="downloadClockInFile(generateC)">生成</button>
     </div>
@@ -143,26 +153,38 @@ useTOC: false
         document.addEventListener('DOMContentLoaded', chooseSelector("usaco"));
     }
     function generateU(){
-        let title=document.getElementById("title").value;
         let author=document.getElementById("author").value;
         let year=document.getElementById("uyear").value;
         let group=document.getElementById("ugroup").value;
         let question=document.getElementById("uquestion").value;
         let season=document.getElementById("useason").value;
+        let title = "USACO "+group+" "+year+" "+season+" "+question;
+        document.getElementById("title").value = title;
         return("---\nlayout: usaco-post\ntitle: " + title +"\ntags: [\"USACO analysis\"]\nAuthor: [\"" + author + "\"]\nyear: " + year + "\ngroup: " + group + "\nseason: " + season + "\nquestion: " + question + "\n---");
     }
     function generateC(){
-        let title=document.getElementById("title").value;
         let author=document.getElementById("author").value;
         let group=document.getElementById("cgroup").value;
         let question=document.getElementById("cquestion").value;
-        return("---\nlayout: post\ntitle: " + title + "\ntags: [\"CodeForce\",\"Other-analysis\"]\nAuthor: [\""+ author + "\"]\ngroup: "+ group +"\nquestion: " + question + "\n---");
+        let number=document.getElementById("cnumber").value;
+        let title = "CodeForce Div "+group+" Contest "+number+" Q-"+question;
+        document.getElementById("title").value = title;
+        return(`---
+layout: post
+title: ` + title + `
+tags: ["CodeForce","Other-analysis"]
+Author: ["`+ author + `"]
+group: `+ group +`
+question: ` + question + `
+number: ` + number + `
+---`);
     }
     function generateA(){
-        let title=document.getElementById("title").value;
         let author=document.getElementById("author").value;
         let contestID = document.getElementById("anumber").value;
         let task = document.getElementById("aquestion").value;
+        let title="AtCoder Contest "+contestID+" Task "+task;
+        document.getElementById("title").value = title;
         return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"AtCoder\", \"Other-analysis\"]\nAuthor: [\""+ author +"\"]\ntestID: "+ contestID + "\ntask: " + task + "\n---");
     }
     function generateO(){

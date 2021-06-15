@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Stone Game
-tags: ["CodeForce", "Other-analysis"]
-division: 3
+title: CodeForce Div 3 Contest 725 Q-A
+tags: ["CodeForce","Other-analysis"]
+Author: ["djw"]
+group: 3
+question: A
 number: 725
-Author: djw
 ---
-
 ### 题目大意
 
 有一堆石头（每个石头上有一个数字），然后只能从最左，或最右拿走。让你计算拿走这一堆石头里最大 和最小的那一颗的最简步数
