@@ -84,8 +84,11 @@ useTOC: false
             style="margin-left: -15rem;">
             <h3>{{p.title}}</h3>
             <blockquote>
+                {% if p.Author != nil %}
                 {% include fn/icon.html type="people" size="1.5rem" %}
-                {{ p.Author | join: ', '}} | {% include fn/icon.html type="calander" size="1.5rem" %}
+                {{ p.Author | join: ', '}} | 
+                {% endif %}
+                {% include fn/icon.html type="calander" size="1.5rem" %}
                 {{ p.date | date_to_string }}
             </blockquote>
             <p>{{ p.content | strip_html | escape | slice: 0, 200 }} ...</p>
@@ -96,8 +99,11 @@ useTOC: false
             onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" >
             <h3>{{p.title}}</h3>
             <blockquote>
+                {% if p.Author != nil %}
                 {% include fn/icon.html type="people" size="1.5rem" %}
-                {{ p.Author | join: ', '}} | {% include fn/icon.html type="calander" size="1.5rem" %}
+                {{ p.Author | join: ', '}} | 
+                {% endif %}
+                {% include fn/icon.html type="calander" size="1.5rem" %}
                 {{ p.date | date_to_string }}
             </blockquote>
             <p>{{ p.content | strip_html | escape | slice: 0, 200}} ...</p>
@@ -106,9 +112,3 @@ useTOC: false
     {% assign c = c | plus: 1 %}
 {% endfor %}
 </div>
-
----
-
-<h1>日程安排</h1>
-
-{% include schedule.html %}

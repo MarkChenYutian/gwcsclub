@@ -1,11 +1,11 @@
 ---
 title: 打卡文件生成器
 layout: page
-tags: [Page, Tools, Miscellaneous]
+tags: [Tools, Miscellaneous]
 Author: [Marcus, Mark Chen]
 useTOC: false
 ---
-<script src="{{ site.baseurl }}/js/file-generator.js"></script>
+<script src="{{ site.baseurl }}/js/util.js"></script>
 <script src="{{ site.baseurl }}/js/markdown-parse.js"></script>
 
 {% assign allAuthor = site.posts | map: "Author" %}
@@ -18,7 +18,7 @@ useTOC: false
 {% assign uniqAuthor = authorList | uniq %}
 
 <datalist style="display: none;" id="siteAuthor">
-    {% for author in uniqAuthor %}
+    {% for author in data.uniqAuthor %}
     <option>{{author}}</option>
     {% endfor %}
 </datalist>
@@ -135,7 +135,7 @@ useTOC: false
 * MathJax 数学公式渲染
 * 代码高亮渲染
 </div>
-    <div class="main-content" id="outPreview" style="max-height: 34rem; overflow-y: auto; max-width: none; margin-left: 2rem; margin-right: 2rem; flex-grow: 2;">
+    <div class="main-content" id="outPreview" style="max-height: 35rem; overflow-y: auto; max-width: none; margin-left: 2rem; margin-right: 2rem; flex-grow: 2;">
     暂无内容
     </div>
 </div>
@@ -191,14 +191,6 @@ number: ` + number + `
         let title=document.getElementById("title").value;
         let author=document.getElementById("author").value;
         return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"Other-analysis\"]\nAuthor: [\""+ author +"\"]\n---");
-    }
-    function deselect(target){
-        target.style.backgroundColor = "rgb(243, 247, 255)";
-        target.style.color = "black";
-    }
-    function select(target){
-        target.style.backgroundColor = "#015d9b";
-        target.style.color = "ghostwhite";
     }
     function chooseSelector(target){
         document.getElementById("selectors").childNodes.forEach(function(each){

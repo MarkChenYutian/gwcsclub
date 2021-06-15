@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Index of Linux
+Author: 
 ---
 ### 我会在这里介绍一些跟linux有关的知识给用兴趣的同学们
 
