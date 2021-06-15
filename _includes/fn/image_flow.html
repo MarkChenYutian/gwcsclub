@@ -1,0 +1,37 @@
+{% comment %}
+    This file describe a function image_flow that will automatically generate a set of HTML Code to 
+    create 4 columns of flex display images.
+
+    :param year: a 4-digit year number
+{% endcomment %}
+
+{% assign col1 = "" | split: "," %} {% assign col2 = "" | split: "," %} {% assign col3 = "" | split: "," %} {% assign col4 = "" | split: "," %}
+{% assign img_flow = site.data.image_flow[include.year] %}
+{% assign flow_size = img_flow | size | minus: 1 %}
+{% for new_img in img_flow %}    
+	{% assign mod = forloop.index | modulo: 4 | to_integer %}
+	{% if mod == 1 %}
+		{% assign col1 = col1 | push: new_img %}
+	{% elsif mod == 2 %}
+		{% assign col2 = col2 | push: new_img %}
+	{% elsif mod == 3 %}
+		{% assign col3 = col3 | push: new_img %}
+	{% else %}
+		{% assign col4 = col4 | push: new_img %}
+	{% endif %}
+{% endfor %}
+<h1>{{include.year}}</h1>
+<div class="row">
+	<div class="column">
+		{{ col1 | join: " "}}
+	</div>
+	<div class="column">
+		{{ col2 | join: " " }}
+	</div>
+	<div class="column">
+		{{ col3 | join: " " }}
+	</div>
+	<div class="column">
+		{{ col4 | join: " " }}
+	</div>
+</div>

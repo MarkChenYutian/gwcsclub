@@ -4,33 +4,29 @@ title: Image Archive
 tags: Page Miscellaneous
 useTOC: false
 ---
+<style>
+.row { display: flex; flex-wrap: wrap; padding: 0 4px; }
 
-<p>黑照之墙 （逃</p>
+/* Create four equal columns that sits next to each other */
+.column { flex: 25%; max-width: 25%; padding: 0 4px; }
 
-## 2021
+.column img { margin: 1rem; vertical-align: middle; width: 100%; }
 
-<div class="image-horizontal-box">
-	<img src="{{ site.baseurl }}/assets/2021Members.png" style="margin: 10px;"/>
-</div>
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column { flex: 50%; max-width: 50%; }
+}
 
-## 2020
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column { flex: 100%; max-width: 100%;}
+}
+</style>
 
-<div class="image-horizontal-box">
-	<img src="{{ site.baseurl }}/assets/2020Members.jpg" style="margin: 10px;"/>
-	<img src="{{ site.baseurl }}/assets/2020AlgoCamp.jpg" style="margin: 10px;"/>
-</div>
+{% include fn/image_flow.html year="2021" %}
 
-## 2019
+{% include fn/image_flow.html year="2020" %}
 
-<div class="image-horizontal-box">
-	<img src="{{ site.baseurl }}/assets/2019Members.jpg" style="margin: 10px;"/>
-	<img src="{{ site.baseurl }}/assets/2019AlgoCamp1.jpg" style="margin: 10px;"/>
-	<img src="{{ site.baseurl }}/assets/2019AlgoCamp2.jpg" style="margin: 10px;"/>
-</div>
+{% include fn/image_flow.html year="2019" %}
 
-## 2018
-
-<div class="image-horizontal-box">
-	<img src="{{ site.baseurl }}/assets/2018VEXWorld.jpg" style="margin: 10px;"/>
-	<img src="{{ site.baseurl }}/assets/2018RoboCup.jpg" style="margin: 10px;"/>
-</div>
+{% include fn/image_flow.html year="2018" %}
