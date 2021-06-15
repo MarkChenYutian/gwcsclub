@@ -6,6 +6,7 @@ Author: [Marcus, Mark Chen]
 useTOC: false
 ---
 <script src="{{ site.baseurl }}/js/file-generator.js"></script>
+<script src="{{ site.baseurl }}/js/markdown-parse.js"></script>
 
 {% assign allAuthor = site.posts | map: "Author" %}
 {% assign authorList = "" | split: ","%}
@@ -55,9 +56,9 @@ useTOC: false
 ## STEP 3. 填入相关信息
 
 <div>
+    <input type="text" value="" id="title" placeholder="标题">
+    <input type="text" value="" id="author" placeholder="作者" list="siteAuthor">
     <div id="usaco" class="input">
-        <input type="text" value="" id="utitle" placeholder="标题">
-        <input type="text" value="" id="uauthor" placeholder="作者" list="siteAuthor">
         <input type="text" value="" id="uyear" placeholder="年份：四位，纯数字（例：2020）">
         <select id="ugroup">
             <option value=""> 选择组别 </option>
@@ -83,8 +84,6 @@ useTOC: false
         <button class="main-button" onclick="downloadClockInFile(generateU)">生成</button>
     </div>
     <div id="codeforce" class="input">
-        <input type="text" value="" id="ctitle" placeholder="标题" >
-        <input type="text" value="" id="cauthor" placeholder="作者" list="siteAuthor">
         <select id="cgroup">
             <option value=""> 选择组别 </option>
             <option value="1"> Division 1 </option>
@@ -96,8 +95,6 @@ useTOC: false
         <button class="main-button" onclick="downloadClockInFile(generateC)">生成</button>
     </div>
     <div id="atcoder" class="input">
-        <input type="text" value="" id="atitle" placeholder="标题" >
-        <input type="text" value="" id="aauthor" placeholder="作者" list="siteAuthor">
         <input type="text" value="" id="anumber" placeholder="Contest Number：三位数字 （例：240）">
         <select id="aquestion">
             <option value=""> 选择 Task </option>
@@ -111,8 +108,6 @@ useTOC: false
         <button class="main-button" onclick="downloadClockInFile(generateA)">生成</button>
     </div>
     <div id="other" class="input">
-        <input type="text" value="" id="otitle" placeholder="标题" >
-        <input type="text" value="" id="oauthor" placeholder="作者" list="siteAuthor">
         <h2>STEP 4. 生成！</h2>
         <button class="main-button" onclick="downloadClockInFile(generateO)">生成</button>
     </div>
@@ -120,11 +115,20 @@ useTOC: false
 
 ## STEP 5. 结果预览
 
-<pre style="max-height: 15rem; overflow-y: auto;">
-<code id="outPreview">
-暂无内容
-</code>
-</pre>
+<div class="horizontal-flex-box" style="height: 35rem; flex-wrap: nowrap;">
+<div markdown="1" style="padding: 0 1rem; margin-right: 0; border-right: 0.4rem solid #dce6f0; ">
+#### 说明
+
+渲染预览可能与实际渲染结果有细微偏差
+
+当前预览界面暂不支持:
+* MathJax 数学公式渲染
+* 代码高亮渲染
+</div>
+    <div class="main-content" id="outPreview" style="max-height: 34rem; overflow-y: auto; max-width: none; margin-left: 2rem; margin-right: 2rem; flex-grow: 2;">
+    暂无内容
+    </div>
+</div>
 
 ## STEP 6. 下载并发布
 
@@ -133,15 +137,14 @@ useTOC: false
 </p>
 
 <script>
-    var title="";
     if (document.readyState !== 'loading') {
         chooseSelector("usaco");
     } else {
         document.addEventListener('DOMContentLoaded', chooseSelector("usaco"));
     }
     function generateU(){
-        title=document.getElementById("utitle").value;
-        let author=document.getElementById("uauthor").value;
+        let title=document.getElementById("title").value;
+        let author=document.getElementById("author").value;
         let year=document.getElementById("uyear").value;
         let group=document.getElementById("ugroup").value;
         let question=document.getElementById("uquestion").value;
@@ -149,22 +152,22 @@ useTOC: false
         return("---\nlayout: usaco-post\ntitle: " + title +"\ntags: [\"USACO analysis\"]\nAuthor: [\"" + author + "\"]\nyear: " + year + "\ngroup: " + group + "\nseason: " + season + "\nquestion: " + question + "\n---");
     }
     function generateC(){
-        title=document.getElementById("ctitle").value;
-        let author=document.getElementById("cauthor").value;
+        let title=document.getElementById("title").value;
+        let author=document.getElementById("author").value;
         let group=document.getElementById("cgroup").value;
         let question=document.getElementById("cquestion").value;
         return("---\nlayout: post\ntitle: " + title + "\ntags: [\"CodeForce\",\"Other-analysis\"]\nAuthor: [\""+ author + "\"]\ngroup: "+ group +"\nquestion: " + question + "\n---");
     }
     function generateA(){
-        title=document.getElementById("atitle").value;
-        let author=document.getElementById("aauthor").value;
+        let title=document.getElementById("title").value;
+        let author=document.getElementById("author").value;
         let contestID = document.getElementById("anumber").value;
         let task = document.getElementById("aquestion").value;
         return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"AtCoder\", \"Other-analysis\"]\nAuthor: [\""+ author +"\"]\ntestID: "+ contestID + "\ntask: " + task + "\n---");
     }
     function generateO(){
-        title=document.getElementById("otitle").value;
-        let author=document.getElementById("oauthor").value;
+        let title=document.getElementById("title").value;
+        let author=document.getElementById("author").value;
         return("---\nlayout: post\ntitle: "+ title +"\ntags: [\"Other-analysis\"]\nAuthor: [\""+ author +"\"]\n---");
     }
     function deselect(target){
@@ -192,8 +195,9 @@ useTOC: false
         let dateString = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
         let content = document.getElementById("inFileContent").innerText;
         let result = yamlHead + "\n" + content;
+        let title = document.getElementById("title").value
         title = title.replaceAll("_", "-").replaceAll(" ", "-");
-        document.getElementById("outPreview").innerText = result;
+        document.getElementById("outPreview").innerHTML = marked(content);
         if(content!="\n暂无内容\n") download(dateString + "-" + title + ".md", result);
     }
 </script>
