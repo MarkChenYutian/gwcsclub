@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Image Archive
+title: 照片墙
 tags: Page Miscellaneous
 useTOC: false
 ---
@@ -22,6 +22,8 @@ useTOC: false
   .column { flex: 100%; max-width: 100%;}
 }
 </style>
+
+<!-- This Page is generated automatically using Liquid Template, the path of images is defined in _data/image_flow.json -->
 
 {% include fn/image_flow.html year="2021" %}
 
