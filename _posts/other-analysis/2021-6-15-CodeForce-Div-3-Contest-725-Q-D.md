@@ -2,7 +2,7 @@
 layout: post
 title: CodeForce Div 3 Contest 725 Q-D
 tags: ["CodeForce","Other-analysis"]
-Author: ["leon"]
+Author: ["Leon"]
 group: 3
 question: D
 number: 725
