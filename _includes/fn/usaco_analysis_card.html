@@ -13,14 +13,9 @@
 {% elsif include.page.group == "Gold" %}
     {% assign borderColor = "#EAC787"%}
 {% endif %}
-<div class="flex-page-card"
-    onClick="window.location.href='{{ site.baseurl }}{{ include.page.url }}'"
-    style="flex-grow: 0; border: {{ borderColor }} solid 4px;"
-    id="{{ include.page.group }}" >
-    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
-        <h3>{{ include.page.group }} | Question {{ include.page.question }}</h3>
-        <img src="{{ site.baseurl }}/assets/{{ include.page.group }}.svg" style="height: 3rem; width: 3rem; margin: 0;">
-    </div>
-    <blockquote>By: {{ include.page.Author }}, {{ include.page.date | date: "%Y/%m/%d"}}</blockquote>
-    <p>{{ include.page.content | strip_html | escape | slice: 0, 80}} ...</p>
+<div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
+    <h3>{{ include.page.year }} {{include.page.season }} {{ include.page.group }} Question {{ include.page.question }}</h3>
+    <img src="{{ site.baseurl }}/assets/{{ include.page.group }}.svg" style="height: 3rem; width: 3rem; margin: 0;">
 </div>
+<blockquote>By: {{ include.page.Author }}, {{ include.page.date | date: "%Y/%m/%d"}}</blockquote>
+<p>{{ include.page.content | strip_html | escape | slice: 0, 80}} ...</p>

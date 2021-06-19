@@ -1,0 +1,126 @@
+[
+    {
+        "ShowName": "USACO",
+        "ValueName": "usaco",
+        "TagName": "USACO analysis",
+        "CardGenerator": "fn/usaco_analysis_card.html",
+        "RewriteTitle": true,
+        "Fields":{
+            "year":{
+                "Type": "Input",
+                "Label": "年份",
+                "Placeholder": "四位数字年份（例：2019）"
+            },
+            "group":{
+                "Type": "Option",
+                "Label": "组别",
+                "Options":{
+                    "选择组别"   : "undefined",
+                    "Bronze"    : "Bronze",
+                    "Silver"    : "Silver",
+                    "Gold"      : "Gold",
+                    "Platnium"  : "Platnium"
+                }
+            },
+            "season":{
+                "Type": "Option",
+                "Label": "赛季",
+                "Options":{
+                    "选择赛季"       : "undefined",
+                    "January"       : "Jan",
+                    "February"      : "Feb",
+                    "December"      : "Dec",
+                    "Open Contest"  : "Open"
+                }
+            },
+            "question": {
+                "Type": "Option",
+                "Label": "题号",
+                "Options": {
+                    "选择题号"    : "undefined",
+                    "Question 1" : 1,
+                    "Question 2" : 2,
+                    "Question 3" : 3
+                }
+            }
+        }
+    },
+    {
+        "ShowName": "CodeForce",
+        "ValueName": "codeforce",
+        "TagName": "CodeForce",
+        "CardGenerator": "fn/general_card_generator.html",
+        "RewriteTitle": true,
+        "Fields":{
+            "group":{
+                "Label": "组别",
+                "Type":"Option",
+                "Options": {
+                    "选择组别": "undefined",
+                    "Division 1": "1",
+                    "Division 2": "2",
+                    "Division 3": "3"
+                }
+            },
+            "question":{
+                "Label":"题号",
+                "Type" :"Option",
+                "Options": {
+                    "选择题号": "undefined",
+                    " Task A ": "A",
+                    " Task B ": "B",
+                    " Task C ": "C",
+                    " Task D ": "D",
+                    " Task E ": "E",
+                    " Task F ": "F",
+                    " Task G ": "G"
+                }
+            },
+            "number":{
+                "Label": "比赛编号",
+                "Type" :"Input",
+                "Placeholder": "比赛编号（三位数字）"
+            }
+        }
+    },
+    {
+        "ShowName": "AtCoder",
+        "ValueName": "atcoder",
+        "TagName": "AtCoder",
+        "CardGenerator": "fn/general_card_generator.html",
+        "RewriteTitle": true,
+        "Fields":{
+            "question": {
+                "Label": "题号",
+                "Type" : "Option",
+                "Options": {
+                    "选择题号": "undefined",
+                    " Task A ": "A",
+                    " Task B ": "B",
+                    " Task C ": "C",
+                    " Task D ": "D",
+                    " Task E ": "E"
+                }
+            },
+            "number": {
+                "Label": "比赛编号",
+                "Type" : "Input",
+                "Placeholder": "比赛编号（三位数字）"
+            }
+        }
+    },
+    {
+        "ShowName": "LeetCode",
+        "ValueName": "leetcode",
+        "TagName": "Leetcode",
+        "CardGenerator": "fn/general_card_generator.html",
+        "RewriteTitle":true,
+        "Fields":{
+            "number":{
+                "Type": "Input",
+                "Label": "题号",
+                "Placeholder": "题目编号（三位数字）"
+            }
+        }
+    }
+]

@@ -1,0 +1,115 @@
+---
+layout: page
+title: "竞赛解析汇总页面"
+tags: ["Page"]
+comments: false
+useTOC: false
+---
+
+<script src="{{ site.baseurl }}/js/util.js"></script>
+
+<div class="button-box" id="selectors">
+{% for contest in site.data.analysis-setup %}
+<button class="main-button" id="{{ contest.ValueName }}-selector" onclick="chooseSearcher('{{ contest.ValueName }}')">
+{{ contest.ShowName }}
+</button>
+{% endfor %}
+</div>
+
+<div id="search-box-container">
+{% for contest in site.data.analysis-setup %}
+<div class="horizontal-flex-box" id="{{ contest.ValueName }}-input" style="justify-content: space-between;">
+    {% for field in contest.Fields %}
+        {% if field[1].Type == "Input" %}
+            <input type="text" value="" id="{{ contest.ValueName }}-{{ field[0] }}" placeholder="{{ field[1].Placeholder }}" style="width: calc(90% / {{ contest.Fields | size }});">
+        {% elsif field[1].Type == "Option" %}
+            <select id="{{ contest.ValueName }}-{{ field[0] }}" style="width: calc(90% / {{ contest.Fields | size }});">
+                {% for option in field[1].Options %}
+                <option value={{option[1]}}> {{option[0]}} </option>
+                {% endfor %}
+            </select>
+        {% else %}
+            <div class="error">
+Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please check the setup file.
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
+</div>
+
+<div id="search-button-container" class="horizontal-flex-box" style="flex-direction: row-reverse;">
+    {% for contest in site.data.analysis-setup %}
+    <button class="main-button" id="{{ contest.ValueName }}-search-btn" onclick="search('{{ contest.ValueName }}')"> Search </button>
+    {% endfor %}
+</div>
+
+
+
+<hr></hr>
+
+<div class="horizontal-flex-box" id="result-box">
+<div id="EmptyState" style="flex-grow: 1;">
+    <img src="{{ site.baseurl }}/assets/empty-state.svg" width="50%" height="50%"/>
+    <center><h1>No Result</h1></center>
+    <center><p style="font-size: x-large;"> We are looking forward to your Contribution! </p></center>
+</div>
+{% for contest in site.data.analysis-setup %}
+{% assign valid_posts = site.posts | where: "tags", contest.TagName | sort %}
+{% for p in valid_posts %}
+<div
+    class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" type={{ contest.ValueName }}
+    {% for field in contest.Fields %}{% assign field_name = field[0] %}{{field_name}}={{p[field_name]}} {% endfor %}
+>
+    {% include {{contest.CardGenerator}} page=p %}
+</div>
+{% endfor %}
+{% endfor %}
+</div>
+
+<script>
+    if (document.readyState !== 'loading') {
+        chooseSearcher("usaco");
+    } else {
+        document.addEventListener('DOMContentLoaded', ()=>{chooseSearcher("usaco"); });
+    }
+    function chooseSearcher(contestValueName){
+        document.getElementById("search-box-container").childNodes.forEach((each) => {
+            try { each.style.display = "none";} catch (error) {;}
+        })
+        document.getElementById("selectors").childNodes.forEach((each) => {
+            try { deselect(each); } catch (error) {;}
+        })
+        document.getElementById("search-button-container").childNodes.forEach((each) => {
+            try { each.style.display = "none"; } catch (error) {;}
+        })
+        document.getElementById(contestValueName + "-search-btn").style.display = "block";
+        document.getElementById(contestValueName + "-input").style.display = "flex";
+        select(document.getElementById(contestValueName + "-selector"));
+        search(contestValueName);
+    }
+    function clearResults(){
+        document.querySelectorAll("div.flex-page-card").forEach((each) => {each.style.display = "none";})
+    }
+    function queryBuilder(contestValueName){
+        let queryString = "div.flex-page-card[type='" + contestValueName + "']";
+        document.getElementById(contestValueName + "-input").childNodes.forEach((each)=>{
+            if (each.nodeType == 1 && each.value != "" && each.value != "undefined"){
+                let fieldName = each.getAttribute("id").split("-")[1];
+                queryString += "[" + fieldName + "='" + each.value + "']";
+            }
+        })
+        return queryString;
+    }
+    function search(contestValueName){
+        clearResults();
+        let result = document.querySelectorAll(queryBuilder(contestValueName));
+        if (result.length == 0){
+            document.getElementById("EmptyState").style.display = "block";
+        }
+        else{
+            document.getElementById("EmptyState").style.display = "none";
+            result.forEach((each)=>{ each.style.display = "block"; })
+        }
+    }
+</script>
