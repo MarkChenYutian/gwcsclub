@@ -7,11 +7,14 @@ useTOC: false
 ---
 
 <div class="horizontal-flex-box">
+    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/2021/06/17/General-Solution-Index.html'">
+        <h2>竞赛解析汇总</h2>
+        <p>这里记录了{% for contest in site.data.analysis-setup %}{{contest.ShowName}} {% endfor %} 的打卡文件，如果你有题目不会做可以参考一些之前同学的打卡哦！我们也欢迎你将自己的打卡分享给我们，成为网站的贡献者之一😊</p>
+    </div>
     <div class="flex-page-card" onClick="window.location.href='#popup1'">
         <h2>USA Computing Olympia (USACO)</h2>
         <div class="button-box">
             <div class="main-button" onClick="window.location.href='http://usaco.org/'">官网链接</div>
-            <div class="main-button" onClick="window.location.href='{{ site.baseurl }}/tertiary-pages/2021/01/26/USACO.html'">USACO 解析</div>
             <div class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/02/25/USACO-Prep.html'">USACO 备赛指南</div>
         </div>
     </div>
@@ -27,7 +30,6 @@ useTOC: false
         <div class="button-box">
             <div class="main-button" onClick="window.location.href='https://www.acsl.org/'">官网链接</div>
             <div class="main-button" onClick="window.location.href='{{ site.baseurl }}/tertiary-pages/2021/01/26/ACSL.html'">ACSL 讲义</div>
-            <div class="main-button" onClick="window.location.href=''">ACSL 备赛指南</div>
         </div>
     </div>
     <div class="flex-page-card" onClick="window.location.href='#popup4'">
