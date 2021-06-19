@@ -119,7 +119,7 @@
             "number":{
                 "Type": "Input",
                 "Label": "题号",
-                "Placeholder": "题目编号（三位数字）"
+                "Placeholder": "题目编号（纯数字）"
             }
         }
     }

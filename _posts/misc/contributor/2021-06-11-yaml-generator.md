@@ -71,7 +71,7 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
         {% endif %}
     {% endfor %}
     <h2> STEP 4. 生成！</h2>
-    <button class="main-button" onclick="downloadClockInFile(generate{{ contest.ValueName }})">生成</button>
+    <button class="button-base gradient-button" onclick="downloadClockInFile(generate{{ contest.ValueName }})">开始自动生成</button>
 </div>
 {% endfor %}
 </div>
