@@ -85,7 +85,6 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
 渲染预览可能与实际渲染结果有细微偏差
 
 当前预览界面暂不支持:
-* MathJax 数学公式渲染
 * 代码高亮渲染
 </div>
     <div class="main-content" id="outPreview" style="max-height: 35rem; overflow-y: auto; max-width: none; margin-left: 2rem; margin-right: 2rem; flex-grow: 2;">
@@ -148,6 +147,7 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
         let title = document.getElementById("title").value
         title = title.replaceAll("_", "-").replaceAll(" ", "-");
         document.getElementById("outPreview").innerHTML = marked(content);
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]); // Rerender MathJax in Page
         if(content!="\n暂无内容\n"){download(dateString + "-" + title + ".md", result)};
     }
 </script>

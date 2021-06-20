@@ -8,6 +8,8 @@ useTOC: false
 
 <script src="{{ site.baseurl }}/js/util.js"></script>
 
+<h3>选择你想查找的竞赛</h3> 
+
 <div class="button-box" id="selectors">
 {% for contest in site.data.analysis-setup %}
 <button class="main-button" id="{{ contest.ValueName }}-selector" onclick="chooseSearcher('{{ contest.ValueName }}')">
@@ -16,6 +18,7 @@ useTOC: false
 {% endfor %}
 </div>
 
+<h3>在筛选器中填入内容</h3>
 <div id="search-box-container">
 {% for contest in site.data.analysis-setup %}
 <div class="horizontal-flex-box" id="{{ contest.ValueName }}-input" style="justify-content: space-between;">
@@ -38,7 +41,7 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
 {% endfor %}
 </div>
 
-<div id="search-button-container" class="horizontal-flex-box" style="flex-direction: row-reverse;">
+<div id="search-button-container" class="horizontal-flex-box" style="flex-direction: row-reverse; margin-top: 2rem;">
     {% for contest in site.data.analysis-setup %}
     <div class="button-base gradient-button" id="{{ contest.ValueName }}-search-btn" onclick="search('{{ contest.ValueName }}')"> 搜索打卡文件 </div>
     {% endfor %}
@@ -49,7 +52,7 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
 <hr></hr>
 
 <div class="horizontal-flex-box" id="result-box">
-<div id="EmptyState" style="flex-grow: 1;">
+<div id="EmptyState" style="margin: auto;">
     <img src="{{ site.baseurl }}/assets/empty-state.svg" width="50%" height="50%"/>
     <center><h1>No Result</h1></center>
     <center><p style="font-size: x-large;"> We are looking forward to your Contribution! </p></center>

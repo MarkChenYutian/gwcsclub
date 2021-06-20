@@ -528,7 +528,7 @@ tr{
   transition: 0.5s;
 }
 tr:hover{
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
   transition: 0.5s;
 }
 
