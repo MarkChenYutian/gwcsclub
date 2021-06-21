@@ -13,7 +13,7 @@ a:hover { text-decoration: underline; }
 .no-decoration a{ background: transparent; }
 .no-decoration a::before { display: none; }
 
-a.tag {color: white;font-size: 1rem;font-weight: normal; background: transparent; border: 3px solid #015d9b;border-radius: 5px;padding: 3px 10px;text-decoration: none; color: #015d9b; white-space: nowrap; margin-bottom: 5px;}
+a.tag {color: white;font-size: 1rem;font-weight: normal; background: transparent; border: 1px solid #015d9b;border-radius: 5px;padding: 3px 10px;text-decoration: none; color: #015d9b; white-space: nowrap; margin-bottom: 5px;}
 a.tag::before { display: none; }
 a.tag:hover { background-color: #015d9b; color: ghostwhite; }
 

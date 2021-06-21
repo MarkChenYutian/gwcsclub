@@ -3,7 +3,6 @@ layout: post
 title: Linux小常识
 tags: Linux
 Author: sqz
-
 ---
 
 ## What is Linux

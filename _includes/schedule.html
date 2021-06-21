@@ -1,16 +1,16 @@
 <div>
 {% assign schedules = site.data.schedule.data %}
 {% if schedules == empty %}
-    <img src="/assets/empty-state.svg" width="20%" height="20%"/>
+    <img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
     <center><p class="note">最近没有 CS 竞赛和相关活动，放假喽！</p></center>
 {% else %}
     {% for schedule in schedules %}
         {% if schedule.type == "competition" %}
-            {% assign presvg = "<img src='../assets/competitionTag.svg' style='display: inline-block; height: 1.5rem; width: 1.5rem;' />  Competition" %}
+            {% assign presvg = "<img src='../../../../assets/competitionTag.svg' style='display: inline-block; height: 1.5rem; width: 1.5rem;' />  Competition" %}
         {% elsif schedule.type == "meeting" %}
-            {% assign presvg = "<img src='../assets/meeting.svg' style='display: inline-block; height: 1.5rem; width: 1.5rem;'/> Meeting" %}
+            {% assign presvg = "<img src='../../../../assets/meeting.svg' style='display: inline-block; height: 1.5rem; width: 1.5rem;'/> Meeting" %}
         {% elsif schedule.type == "lecture" %}
-            {% assign presvg = "<img src='../assets/lecture.svg' style='display: inline-block; height: 1.5rem; width: 1.5rem;'/> Lecture"%}
+            {% assign presvg = "<img src='../../../../assets/lecture.svg' style='display: inline-block; height: 1.5rem; width: 1.5rem;'/> Lecture"%}
         {% endif %}
         {% if schedule.priority == 0 %}
             {% assign divType = "info" %}

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: LeetCode Problem 1161. Maximum level sum of Binary Tree
-tags: Other-analysis
+tags: ["Leetcode", "Other-analysis"]
 Author: djw
+number: 1161
 ---
 
 题目大意

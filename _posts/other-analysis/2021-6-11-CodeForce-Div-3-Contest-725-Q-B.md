@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Friends and Candies
-tags: ["CodeForce", "Other-analysis"]
-division: 3
+title: CodeForce Div 3 Contest 725 Q-B
+tags: ["CodeForce","Other-analysis"]
+Author: ["djw"]
+group: 3
+question: B
 number: 725
-Author: djw
 ---
-
 ### 题目大意
 
 要平均的分配糖果的数量，可以选择K个朋友 把他们的糖果重新分配，求K的最小值

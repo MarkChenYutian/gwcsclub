@@ -28,13 +28,11 @@ function download(filename, text) {
     element.click();
     document.body.removeChild(element);
   }
-function generateFile(yamlGenerator){
-    let yamlHead = yamlGenerator();
-    let date = new Date();
-    let dateString = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-    let content = document.getElementById("inFileContent").innerText;
-    let result = yamlHead + "\n" + content;
-    title = title.replaceAll("_", "-").replaceAll(" ", "-");
-    document.getElementById("outPreview").innerText = result;
-    if(content!="\n暂无内容\n") download(dateString + "-" + title + ".md", result);
+function deselect(target){
+  target.style.background = "rgb(243, 247, 255)";
+  target.style.color = "black";
+}
+function select(target){
+    target.style.background = "linear-gradient(to right, #1c63a5, #3a88d1)";
+    target.style.color = "ghostwhite";
 }
