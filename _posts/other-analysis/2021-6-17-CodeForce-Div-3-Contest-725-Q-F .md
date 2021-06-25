@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CodeForce Div 3 Contest 725 Q-F
-tags: ["CodeForce","Other-analysis"]
+tags: ["CodeForce"]
 Author: ["Leon"]
 group: 3
 question: F

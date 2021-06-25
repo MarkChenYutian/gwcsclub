@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode Problem 111. Minimum Depth of Binary Tree
-tags: ["Leetcode", "Other-analysis"]
+tags: ["Leetcode"]
 Author: djw
 number: 111
 ---
