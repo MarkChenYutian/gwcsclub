@@ -38,7 +38,7 @@ useTOC: false
             <img class="mainPage-img" src="/assets/schedule.png" height="25%" width="25%"/>
         </div>
     </div>
-    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Computer-Science+.html'">
+    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/secondary-pages/2021/01/26/Computer-Science-Plus.html'">
         <h2>Computer Science +</h2>
         <div class="horizontal-flex-box">
             <p>CS当然不止有竞赛！这里罗列了一些学长学姐们自己做的一些project，例如小游戏，小工具和科研结果，有空的时候可以在这里看看，拓宽一下视野。这里还有学长学姐们博客的链接🔗，有空可以来串串门哦 ：）</p>

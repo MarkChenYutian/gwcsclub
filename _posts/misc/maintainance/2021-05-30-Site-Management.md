@@ -24,7 +24,10 @@ title: 网页维护与建设中心
         <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/06/03/Third-Party-Maintainance.html'">
             <h2>网站技术文档 - 第三方服务篇</h2>
         </div>
-        <div class="flex-page-card" onclick="window.location.href='https://stats.uptimerobot.com/q8nOZiOBNM'">
+        <div class="flex-page-card" onclick="window.location.href='http://caibaojian.com/scb/jekyll.html'">
+            <h2>Jekyll 指令速查表</h2>
+        </div>
+        <div class="flex-page-card" onclick="window.location.href='https://stats.uptimerobot.com/KEyPQSqngp'">
             <h2>网站运行状态统计</h2>
         </div>
     </div>
