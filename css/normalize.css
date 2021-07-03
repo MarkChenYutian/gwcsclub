@@ -517,6 +517,7 @@ table {
   width: 100%;
   margin-left: auto; margin-right: auto;
   overflow-x: auto;
+  margin-bottom: 2rem;
 }
 
 td,
