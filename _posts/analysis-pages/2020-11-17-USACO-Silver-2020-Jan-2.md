@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO-Silver-2020-Jan-2
 status: OK
 Author: Jczeng

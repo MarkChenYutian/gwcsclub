@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2020 Jan Silver Problem 1
 tags: [ USACO analysis ]
 status: OK

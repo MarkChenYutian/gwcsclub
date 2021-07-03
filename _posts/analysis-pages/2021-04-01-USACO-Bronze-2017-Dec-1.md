@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2017 Dec Bronze P1
 tags: [ USACO analysis ]
 status: OK

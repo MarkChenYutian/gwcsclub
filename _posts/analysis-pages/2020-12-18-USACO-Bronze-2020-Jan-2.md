@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2020 Jan Bronze P2
 tags: [ USACO analysis ]
 status: OK

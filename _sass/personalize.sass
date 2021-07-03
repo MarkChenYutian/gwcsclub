@@ -120,40 +120,6 @@
   justify-content: start
   align-items: baseline
 
-/* Table Of Content on the left sider
-@media (max-width: 1500px)
-  #category
-    max-height: 20rem
-
-@media (max-width: 1650px) and (min-width: 1500px)
-  #category
-    max-height: 90vh
-    position: sticky
-    position: -webkit-sticky
-    float: left
-    left: 0px
-    top: 80px
-    margin-top: 32px
-    margin-left: 24px
-    margin-right: 4px
-    max-width: 15%
-
-@media (min-width: 1650px)
-  #category
-    max-height: 90vh
-    position: sticky
-    position: -webkit-sticky
-    float: left
-    left: 0px
-    top: 80px
-    margin-top: 32px
-    margin-left: 24px
-    margin-right: 24px
-    max-width: 15%
-
-#category
-  overflow-y: auto
-
 /* Chage Scroll Bar Style
 
 \::-webkit-scrollbar-thumb
@@ -170,16 +136,6 @@
   height: 12px
   background-color: #f3f3f3
   border-radius: 5px
-
-.image-horizontal-box
-  overflow-y: auto
-  white-space: nowrap
-
-  img
-    border-radius: 10px
-    height: 80%
-    width: 80%
-    display: inline-block
 
 /* <details> tag improvement
 
@@ -215,3 +171,10 @@ summary
 .MathJax_Display
   overflow-x: auto
   overflow-y: hidden
+
+  *
+    z-index: 1
+
+.main-container
+  display: grid
+  grid-template-columns: [l-border] 80% [mid-border] 20% [r-border]

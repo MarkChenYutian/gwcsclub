@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2018 Bronze Jan 2
 tags: [ USACO analysis ]
 status: OK

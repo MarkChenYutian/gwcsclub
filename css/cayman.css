@@ -69,23 +69,9 @@ a.tag:hover { background-color: #015d9b; color: ghostwhite; }
 @media screen and (min-width: 42em) and (max-width: 64em) { .main-project-tagline { font-size: 1.5rem; } }
 @media screen and (max-width: 42em) { .main-project-tagline { font-size: 1.25rem; } }
 
-.top-nav-box{ backdrop-filter: blur(4px); background-color: #ffffffaa; position: sticky; position: -webkit-sticky; top: 0; width: 100%; z-index: 999; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: left; align-items: stretch; align-content: flex-start; }
-.nav-button {
-  background: transparent;
-  margin-bottom: 5px;
-  text-align:center;
-  cursor:pointer;
-  flex-grow: 1;
-  flex-basis: calc(100% / 5 - 5px);
-  font-weight: bold;
-  font-family: 'Microsoft YaHei','微软雅黑';
-}
-.nav-button:hover { 
-  /*border-bottom: #185792 solid 5px;*/
-  background: linear-gradient(to right, transparent 30%, #185792 30%, #3277b8 70%, transparent 70%) 0 100% / 100% 5px no-repeat;
-  color: #3277b8;
-  margin-bottom: 0;
-}
+.top-nav-box{ backdrop-filter: blur(4px); background-color: #ffffffaa; position: sticky; position: -webkit-sticky; top: 0; z-index: 2; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: left; align-items: stretch; align-content: flex-start; }
+.nav-button { background: transparent; margin-bottom: 5px; text-align:center; cursor:pointer; flex-grow: 1; flex-basis: calc(100% / 5 - 5px); font-weight: bold; font-family: 'Microsoft YaHei','微软雅黑'; }
+.nav-button:hover { background: linear-gradient(to right, transparent 30%, #185792 30%, #3277b8 70%, transparent 70%) 0 100% / 100% 5px no-repeat; color: #3277b8; margin-bottom: 0; }
 
 .main-content { word-wrap: break-word; }
 .main-content :first-child { margin-top: 0; }
@@ -93,17 +79,12 @@ a.tag:hover { background-color: #015d9b; color: ghostwhite; }
    .main-content { max-width: 72rem; padding: 2rem 6rem; margin: 10px auto 20px auto; font-size: 1.1rem; }
    .nav-button {font-size: 1.2rem; padding: 1.1rem 0;}
   }
-@media screen and (min-width: 72em) and (max-width: 1500px){
-   #category{ float: none; position: inherit; display: block; margin: 0 10% 0 10%; padding: 2rem 6rem; }
-}
 @media screen and (min-width: 48em) and (max-width: 72em) {
    .main-content { padding: 2rem 4rem; font-size: 1.1rem; }
-   #category{ float: none; position: inherit; display: block; margin: 0 10% 0 10%; padding: 2rem 4rem; }
    .nav-button {font-size: 1.1rem; padding: 1rem 0;}
   }
 @media screen and (max-width: 48em) {
    .main-content { padding: 2rem 1rem; font-size: 1rem; }
-   #category{ float: none; position: inherit; display: block; margin: 0 10% 0 10%; padding: 2rem 1rem; }
    .nav-button {font-size: 1rem; padding: 0.8rem 0;}
   }
 .main-content img { max-width: 100%; display:block; margin: 0 auto;}
