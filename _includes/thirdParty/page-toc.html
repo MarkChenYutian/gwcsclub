@@ -10,7 +10,7 @@
         var tag=item.localName;
         if (!item.className.includes("toc_ignore")){
           item.setAttribute("id","h"+i);
-          document.getElementById("category").innerHTML+='<a class="new' + tag + '" href="#h' + i + '">' + item.textContent + '</a></br>';
+          document.getElementById("toc").innerHTML+='<a class="new' + tag + '" href="#h' + i + '">' + item.textContent + '</a></br>';
         }
       });
       for (let n = 2; n < 6; n++) {
@@ -20,6 +20,6 @@
       }
     }
 </script>
-<div class="book-summary" id="category">
-  <strong>目录</strong><br/>
+<div class="page-toc" id="toc">
+  <h3 class="toc_ignore">目录</h3>
 </div>

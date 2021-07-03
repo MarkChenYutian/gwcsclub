@@ -3,6 +3,7 @@ layout: page
 title: Neural Network Posts
 Author: 
 tags: ["Page"]
+useTOC: false
 ---
 
 这里会不定期的更新一些神经网络模型的论文笔记，如果对这个方向感兴趣的可以看看。

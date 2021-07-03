@@ -9,8 +9,8 @@ useTOC: true
   <body>
     {% include page-header.html %}
     {% include nav-bar.html %}
-    <div class="main-container">
       {% if page.useTOC != false %}
+      <div class="main-container">
         <section class="main-content">
       {% else %}
         <section class="main-content" style="max-width: none; width: 95vw;">
@@ -20,8 +20,8 @@ useTOC: true
         </section>
       {% if page.useTOC != false %}
         {% include thirdParty/page-toc.html %}
+      </div>
       {% endif %}
-    </div>
     {% include page-footer.html %}
   </body>
 </html>
