@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Neural Network Posts
-Author: 
 tags: ["Page"]
 useTOC: false
 ---

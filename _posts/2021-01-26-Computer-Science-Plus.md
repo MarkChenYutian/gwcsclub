@@ -6,6 +6,10 @@ tags: Page
 useTOC: false
 ---
 <div class="horizontal-flex-box">
+    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/07/04/Arduino-Index.html'">
+        <h3>Arduino</h3>
+        <div style="background: url('../../../../assets/arduino-board.png') no-repeat right bottom; height: 10rem; background-size: contain;"/>
+    </div>
     <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/06/13/Linux-index.html'">
         <h3>Linux知识</h3>
         <div style="background: url('../../../../assets/Linux.svg') no-repeat right bottom; height: 10rem; background-size: contain;"/>
