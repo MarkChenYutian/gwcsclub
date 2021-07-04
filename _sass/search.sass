@@ -1,37 +1,38 @@
+@import variables
+
 input
-  font-size: 1.3rem
-  padding: 0.6rem 0.6rem 0.2rem 0
+  font-size: $font-m
+  padding: $padding-s $padding-s $padding-xxs 0
   width: 100%
   outline-style: none
-  margin-bottom: 1rem
+  margin-bottom: $padding-ms
   border-bottom: solid 2px grey
   border-top: none
   border-left: none
   border-right: none
-  min-width: 300px
+  min-width: 20rem
 
 select
-  font-size: 1.3rem
-  padding: 0.6rem 0.6rem 0.2rem 0
+  font-size: $font-m
+  padding: $padding-s $padding-s $padding-xxs 0
   width: 100%
   outline-style: none
-  margin-bottom: 1rem
+  margin-bottom: $padding-ms
   border-bottom: solid 2px grey
   border-top: none
   border-left: none
   border-right: none
-  min-width: 300px
+  min-width: 20rem
 
 ul[id="results-container"]
   li
     list-style: none
-    padding: 0.7rem 0 0 0
+    padding: $padding-s 0 0 0
     animation: 0.3s ease-in 0s 1 slideFromRight
-
-  font-size: 1.2rem
+  font-size: $font-ms
   color: #901d1d
   min-height: 25rem
-  padding: 0.7rem 0 0 0
+  padding: $padding-s 0 0 0
 
 @keyframes slideFromRight
   0%

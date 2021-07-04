@@ -11,7 +11,7 @@ useTOC: false
         <div style="background: url('../../../../assets/arduino-board.png') no-repeat right bottom; height: 10rem; background-size: contain;"/>
     </div>
     <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/06/13/Linux-index.html'">
-        <h3>Linux知识</h3>
+        <h3>Linux</h3>
         <div style="background: url('../../../../assets/Linux.svg') no-repeat right bottom; height: 10rem; background-size: contain;"/>
     </div>
     <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/06/14/Neural-Network.html'">

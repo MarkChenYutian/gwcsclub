@@ -3,10 +3,10 @@
 */
 
 .highlighttable,
-.post-content > .highlight {
+.main-content > .highlight {
   background: #282C34;
   border-radius: 6px;
-  font-size: 0.675em;
+  font-size: 0.7rem;
    -webkit-font-smoothing: subpixel-antialiased;
    width: 100%;
  }
@@ -75,7 +75,7 @@
    .il    { color: #4FB6C3 } 
  }
  
- .post-content > .highlight {
+ .main-content > .highlight {
    line-height: 1;
    overflow-x: scroll;
    padding: 10px;

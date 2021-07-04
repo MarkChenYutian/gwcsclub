@@ -27,8 +27,6 @@ a.tag:hover { background-color: #015d9b; color: ghostwhite; }
 .page-header { color: #000; text-align: center; background-image: url("../assets/diamond.svg"); background-size: cover;}
 .main-page-header { color: #000; height: 100vh; text-align: center; background-image: url("../assets/diamond.svg"); background-size: cover;}
 .main-header-container{ position: absolute; top: 50%; margin: 0 auto 0 auto; transform: translate(0%,-50%); display: block; }
-.project-name { margin-top: 0; margin-bottom: 0.1rem; font-weight: 300;}
-.main-project-name { margin-top: 0; margin-bottom: 1.5rem; font-weight: 300;}
 .project-tagline { margin-bottom: 2rem; font-weight: normal; opacity: 0.7; color:#333333}
 .main-project-tagline { margin-bottom: 25vh; font-weight: normal; opacity: 0.85; color:#333333}
 

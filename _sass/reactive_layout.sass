@@ -1,67 +1,62 @@
-@media screen and (min-width: 72em)
-    .page-header 
-        padding: 4rem 6rem
-    .project-name
-        font-size: 3.25rem
-    .main-project-name
-        font-size: 4rem
-    .project-tagline
-        font-size: 1.5rem
-    .main-project-tagline
-        font-size: 2rem
-    .main-content
-        padding: 2rem 6rem
-        font-size: 1.1rem
-    .nav-button
-        font-size: 1.2rem
-        padding: 1.1rem 0
-    .page-toc
-        top: 4.5rem
-    .site-footer
-        font-size: 1rem
+@import variables
 
-@media screen and (min-width: 56em) and (max-width: 72em)
+@media screen and (min-width: $screen-l)
     .page-header 
-        padding: 2rem 4rem
-    .project-name
-        font-size: 2.25rem
-    .main-project-name
-        font-size: 3rem
+        padding: $padding-xl $padding-xxl
     .project-tagline
-        font-size: 1.4rem
+        font-size: $font-ml
     .main-project-tagline
-        font-size: 1.5rem
+        font-size: $font-l
     .main-content
-        padding: 2rem 4rem
-        font-size: 1.1rem
+        padding: $padding-l $padding-xxl
+        font-size: $font-s
     .nav-button
-        font-size: 1.1rem
-        padding: 1rem 0
+        font-size: $font-s
+        padding: $padding-ms 0
     .page-toc
-        background-color: red
-        top: 4.5rem
+        font-size: $font-s
+        top: calc(#{$padding-ms} * 2 + #{$font-s})
     .site-footer
-        font-size: 1rem
+        font-size: $font-xs
+    .main-container
+        grid-template-columns: [l-border] 80% [mid-border] 20% [r-border]
 
-@media screen and (max-width: 56em)
+@media screen and (min-width: $screen-s) and (max-width: $screen-l)
+    .page-header 
+        padding: $padding-l $padding-xl
+    .project-tagline
+        font-size: $font-ml
+    .main-project-tagline
+        font-size: $font-ml
+    .main-content
+        padding: $padding-l $padding-xl
+        font-size: $font-s
+    .nav-button
+        padding: $padding-ms 0
+        font-size: $font-s
+    .page-toc
+        font-size: $font-xs
+        top: calc(#{$padding-ms} * 2 + #{$font-s})
+    .site-footer
+        font-size: $font-xs
+    .main-container
+        grid-template-columns: [l-border] 70% [mid-border] 30% [r-border]
+
+@media screen and (max-width: $screen-s)
     .page-header
-        padding: 1rem 1rem
-    .project-name
-        font-size: 1.25rem
-    .main-project-name
-        font-size: 2rem
+        padding: $padding-ms $padding-ms
     .project-tagline
-        font-size: 1.25rem
+        font-size: $font-m
     .main-project-tagline
-        font-size: 1.25rem
+        font-size: $font-m
     .main-content
-        padding: 2rem 1rem
-        font-size: 1rem
+        padding: $padding-l $padding-ms
+        font-size: $font-xs
         width: 99vw
     .nav-button
-        font-size: 1rem
-        padding: 0.8rem 0
+        font-size: $font-xs
+        padding: $padding-s 0
     .page-toc
         display: none;
     .site-footer
-        font-size: 0.9rem
+        font-size: $font-xxs
