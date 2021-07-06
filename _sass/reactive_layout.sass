@@ -20,6 +20,10 @@
         font-size: $font-xs
     .main-container
         grid-template-columns: [l-border] 80% [mid-border] 20% [r-border]
+    .horizontal-grid-box
+        grid-template-columns: [l-border] 33% [mid-left] 33% [mid-right] 33% [r-border]
+    .display-at-full-size
+        display: block
 
 @media screen and (min-width: $screen-s) and (max-width: $screen-l)
     .page-header 
@@ -41,6 +45,10 @@
         font-size: $font-xs
     .main-container
         grid-template-columns: [l-border] 70% [mid-border] 30% [r-border]
+    .horizontal-grid-box
+        grid-template-columns: [l-border] 50% [mid-border] 50% [r-border]
+    .display-at-full-size
+        display: none
 
 @media screen and (max-width: $screen-s)
     .page-header
@@ -60,3 +68,7 @@
         display: none;
     .site-footer
         font-size: $font-xxs
+    .horizontal-grid-box
+        grid-template-columns: [l-border] 100% [r-border]
+    .display-at-full-size
+        display: none
