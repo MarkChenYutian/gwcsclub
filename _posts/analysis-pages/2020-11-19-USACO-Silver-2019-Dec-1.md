@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2019 Dec Silver P1
 tags: [ USACO analysis ]
 status: OK

@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2017 Jan Silver P2
 tags: [ USACO analysis ]
 status: OK

@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2018 Open Bronze P2
 tags: [ USACO analysis ]
 status: OK

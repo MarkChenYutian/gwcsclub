@@ -1,0 +1,65 @@
+@import Variables
+
+.horizontal-flex-box
+  display: flex
+  display: -webkit-flex
+  flex-wrap: wrap
+  align-content: stretch
+  align-items: stretch
+  flex-direction: row
+  justify-content: flex-start
+  p
+    flex-basis: 60%
+    flex-grow: 1
+
+.horizontal-grid-box
+  display: grid
+  /* Reactive template columns are defined in reactive_layout.sass */
+
+.grid-page-card
+  justify-self: stretch
+  min-height: 10rem
+  margin: $padding-ms
+  margin-top: $padding-ms !important
+  border-radius: $padding-xs
+  padding: $padding-m
+  box-shadow: 0 0 $padding-l rgba(0, 0, 0 , 0.1)
+  background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
+  cursor: pointer
+  transition: 0.2s
+  &:hover
+    color: ghostwhite
+    background-position-x: left
+    box-shadow: 0 0 36px rgba(0, 0, 0 , 0.4)
+    h1, h2, h3, h4, h5
+      color: white
+
+.flex-page-card
+  flex-grow: 1
+  width: calc(100% / 3 - 2rem)
+  min-height: 10rem
+  min-width: 400px
+  margin: $padding-ms
+  margin-top: $padding-ms !important
+  border-radius: $padding-xs
+  padding: $padding-m
+  box-shadow: 0 0 $padding-l rgba(0, 0, 0 , 0.1)
+  background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
+  cursor: pointer
+  transition: 0.2s
+  &:hover
+    color: ghostwhite
+    background-position-x: left
+    box-shadow: 0 0 36px rgba(0, 0, 0 , 0.4)
+    h1, h2, h3, h4, h5
+      color: white
+  p
+    flex-basis: 60%
+    flex-grow: 1
+
+.pop-card
+  transition: 0.2s
+  &:hover
+    transform: translateY(-$padding-ms)
+    ~ .pop-card
+      transform: translateX(13.5rem)

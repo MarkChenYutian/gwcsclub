@@ -51,7 +51,7 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
 
 <hr></hr>
 
-<div class="horizontal-flex-box" id="result-box">
+<div class="horizontal-grid-box" id="result-box">
 <div id="EmptyState" style="margin: auto;">
     <img src="{{ site.baseurl }}/assets/empty-state.svg" width="50%" height="50%"/>
     <center><h1>No Result</h1></center>
@@ -61,7 +61,7 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
 {% assign valid_posts = site.posts | where: "tags", contest.TagName | sort %}
 {% for p in valid_posts %}
 <div
-    class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" type={{ contest.ValueName }}
+    class="grid-page-card" onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" type={{ contest.ValueName }}
     {% for field in contest.Fields %}{% assign field_name = field[0] %}{{field_name}}={{p[field_name]}} {% endfor %}
 >
     {% include {{contest.CardGenerator}} page=p %}
@@ -92,10 +92,10 @@ Unrecognized `field.Type` {{ field[1].Type }} in `analysis-setup.json`. Please c
         search(contestValueName);
     }
     function clearResults(){
-        document.querySelectorAll("div.flex-page-card").forEach((each) => {each.style.display = "none";})
+        document.querySelectorAll("div.grid-page-card").forEach((each) => {each.style.display = "none";})
     }
     function queryBuilder(contestValueName){
-        let queryString = "div.flex-page-card[type='" + contestValueName + "']";
+        let queryString = "div.grid-page-card[type='" + contestValueName + "']";
         document.getElementById(contestValueName + "-input").childNodes.forEach((each)=>{
             if (each.nodeType == 1 && each.value != "" && each.value != "undefined"){
                 let fieldName = each.getAttribute("id").split("-")[1];

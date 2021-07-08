@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO-2020-Jan-Silver-3
 status: OK
 Author: 李若谷

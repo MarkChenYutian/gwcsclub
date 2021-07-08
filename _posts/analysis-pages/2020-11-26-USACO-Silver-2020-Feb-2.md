@@ -1,5 +1,5 @@
 ---
-layout: usaco-post
+layout: post
 title: USACO 2020 Feb Silver P2
 tags: [ USACO analysis ]
 status: OK

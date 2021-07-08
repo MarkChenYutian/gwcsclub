@@ -1,69 +1,12 @@
-.round-card
-  cursor: pointer
-  text-align: center
-  transition: 0.5s
-  color: #222222
-  border-radius: 10px
-  margin-right: 2rem
-  flex-grow: 0
-  flex-basis: 250px
-  box-shadow: 0 0 36px rgba(0, 0, 0, 0.1)
-  margin-bottom: 2rem
-
-  p
-    padding: 8px
-
-/* A Flex Container
-
-.card-box
-  margin-bottom: 25px
-  margin-top: 25px
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: center
-  align-items: flex-start
-  align-content: flex-start
-
-.simple-card
-  /* Add shadows to create the "card" effect
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1)
-  transition: 0.3s
-  padding: 10px
-  margin: 20px 0
-  border-radius: 3px
-  cursor: pointer
-  animation: fadeIn 1s ease
-
-  &:hover
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3)
-    text-decoration: none
-
-/* Below Define the style for top Navigation Bar
-/* A Flex Container for Top Nav Box
-
-@media screen and (max-width: 700px)
-  .nav-button
-    padding: 5px 15px
-
-@media screen and (min-width: 700px)
-  .nav-button
-    padding: 15px 45px
-
-/* Image Style with Padding
-
-.mainPage-img
-  padding: 16px
-
-/* Main Button
+@import variables
 
 .main-button
   cursor: pointer
   background-color: rgb(243, 247, 255)
   color: black
-  border-radius: 24px
-  padding: 12px 24px
-  margin: 16px
+  border-radius: $padding-ml
+  padding: $padding-s $padding-ml
+  margin: $padding-ms
   max-width: fit-content
   border-style: none
   outline: none
@@ -74,21 +17,9 @@
     -webkit-backface-visibility: hidden
     backface-visibility: hidden
     background: linear-gradient(to right, #1c63a5, #3a88d1)
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 0 $padding-s rgba(0, 0, 0, 0.1)
     position: relative
     transition: box-shadow .2s linear,opacity .2s linear
-
-.main-button-disable
-  cursor: pointer
-  background-color: rgb(218, 218, 218)
-  color: black
-  border-radius: 24px
-  padding: 12px 24px
-  margin: 16px
-  max-width: fit-content
-  border-style: none
-  outline: none
-  color: rgb(167, 167, 167)
 
 .warn-button
   cursor: pointer
@@ -97,18 +28,17 @@
   right: 0px
   background-color: rgb(255, 163, 43)
   color: black
-  border-radius: 24px
-  padding: 3px 5px
-  margin: 3%
+  border-radius: $padding-ml
+  padding: $padding-xxs $padding-xs
+  margin: $padding-s
   max-width: fit-content
   transition: 0.5s
   font-weight: bold
 
   &:hover
     transition: 0.5s
-    background-color: #ff643d93
+    background-color: #ff643d
     color: ghostwhite
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3)
 
 /* Button Box Using Flex
 
@@ -120,66 +50,22 @@
   justify-content: start
   align-items: baseline
 
-/* Table Of Content on the left sider
-@media (max-width: 1500px)
-  #category
-    max-height: 20rem
-
-@media (max-width: 1650px) and (min-width: 1500px)
-  #category
-    max-height: 90vh
-    position: sticky
-    position: -webkit-sticky
-    float: left
-    left: 0px
-    top: 80px
-    margin-top: 32px
-    margin-left: 24px
-    margin-right: 4px
-    max-width: 15%
-
-@media (min-width: 1650px)
-  #category
-    max-height: 90vh
-    position: sticky
-    position: -webkit-sticky
-    float: left
-    left: 0px
-    top: 80px
-    margin-top: 32px
-    margin-left: 24px
-    margin-right: 24px
-    max-width: 15%
-
-#category
-  overflow-y: auto
-
 /* Chage Scroll Bar Style
 
 \::-webkit-scrollbar-thumb
-  border-radius: 5px
+  border-radius: $padding-xs
   background-color: #666666
-  border: 2px solid #e5e7eb
+  border: $padding-xxs solid #e5e7eb
 
 \::-webkit-scrollbar-track
-  border-radius: 5px
+  border-radius: $padding-xs
   background-color: transparent
 
 \::-webkit-scrollbar
-  width: 12px
-  height: 12px
+  width: $padding-s
+  height: $padding-s
   background-color: #f3f3f3
-  border-radius: 5px
-
-.image-horizontal-box
-  overflow-y: auto
-  white-space: nowrap
-
-  img
-    border-radius: 10px
-    height: 80%
-    width: 80%
-    display: inline-block
+  border-radius: $padding-xs
 
 /* <details> tag improvement
 
@@ -191,9 +77,9 @@ details
       display: inline
 
   background-color: #f8f8f8
-  padding: 1.2rem
+  padding: $padding-m
   outline: none
-  border-radius: 1.25rem
+  border-radius: $padding-xs
 
 summary
   outline: none
@@ -203,15 +89,46 @@ summary
 .image-card
   width: 12rem
   height: 15rem
-  margin-right: 1rem
-  margin-bottom: 1rem
+  margin-right: $padding-ms
+  margin-bottom: $padding-ms
   transition: 0.5s
   cursor: pointer
 
   &:hover
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4)
+    box-shadow: 0 $padding-xs $padding-ms 0 rgba(0, 0, 0, 0.4)
     transition: 0.5s
 
 .MathJax_Display
   overflow-x: auto
   overflow-y: hidden
+  *
+    z-index: 1
+
+.main-container
+  display: grid
+
+.page-toc
+  position: sticky
+  align-self: start
+  overflow-x: hidden
+  overflow-y: auto
+  max-height: 90vh
+  a
+    color: #777777
+    padding-bottom: $padding-xxs
+    margin-left: $padding-xxs
+    display: block
+  
+  a:hover
+    color: #333333
+    margin-left: 0
+    text-decoration: none
+    font-weight: bold
+    border-left: grey solid $padding-xxs
+
+.active-toc
+  color: #333333 !important
+  margin-left: 0 !important
+  text-decoration: none
+  font-weight: bold
+  border-left: grey solid $padding-xxs

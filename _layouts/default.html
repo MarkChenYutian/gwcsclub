@@ -9,15 +9,19 @@ useTOC: true
   <body>
     {% include page-header.html %}
     {% include nav-bar.html %}
-    {% if page.useTOC != false %}
-      {% include thirdParty/page-toc.html %}
-    {% endif %}
-    <section class="main-content">
-          
-      {{ content }}
-
-    </section>
-
+      {% if page.useTOC != false %}
+      <div class="main-container">
+        <section class="main-content">
+      {% else %}
+        <section class="main-content" style="max-width: none; width: 95vw;">
+      {% endif %}
+          {% include article-head.html %}
+          {{ content }}
+        </section>
+      {% if page.useTOC != false %}
+        {% include thirdParty/page-toc.html %}
+      </div>
+      {% endif %}
     {% include page-footer.html %}
   </body>
 </html>

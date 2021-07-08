@@ -1,0 +1,74 @@
+@import variables
+
+@media screen and (min-width: $screen-l)
+    .page-header 
+        padding: $padding-xl $padding-xxl
+    .project-tagline
+        font-size: $font-ml
+    .main-project-tagline
+        font-size: $font-l
+    .main-content
+        padding: $padding-l $padding-xxl
+        font-size: $font-s
+    .nav-button
+        font-size: $font-s
+        padding: $padding-ms 0
+    .page-toc
+        font-size: $font-s
+        top: calc(#{$padding-ms} * 2 + #{$font-s})
+    .site-footer
+        font-size: $font-xs
+    .main-container
+        grid-template-columns: [l-border] 80% [mid-border] 20% [r-border]
+    .horizontal-grid-box
+        grid-template-columns: [l-border] 33% [mid-left] 34% [mid-right] 33% [r-border]
+    .only-display-at-large
+        display: block
+
+@media screen and (min-width: $screen-s) and (max-width: $screen-l)
+    .page-header 
+        padding: $padding-l $padding-xl
+    .project-tagline
+        font-size: $font-ml
+    .main-project-tagline
+        font-size: $font-ml
+    .main-content
+        padding: $padding-l $padding-xl
+        font-size: $font-s
+    .nav-button
+        padding: $padding-ms 0
+        font-size: $font-s
+    .page-toc
+        font-size: $font-xs
+        top: calc(#{$padding-ms} * 2 + #{$font-s})
+    .site-footer
+        font-size: $font-xs
+    .main-container
+        grid-template-columns: [l-border] 70% [mid-border] 30% [r-border]
+    .horizontal-grid-box
+        grid-template-columns: [l-border] 50% [mid-border] 50% [r-border]
+    .only-display-at-large
+        display: none
+
+@media screen and (max-width: $screen-s)
+    .page-header
+        padding: $padding-ms $padding-ms
+    .project-tagline
+        font-size: $font-m
+    .main-project-tagline
+        font-size: $font-m
+    .main-content
+        padding: $padding-l $padding-ms
+        font-size: $font-xs
+        width: 99vw
+    .nav-button
+        font-size: $font-xs
+        padding: $padding-s 0
+    .page-toc
+        display: none;
+    .site-footer
+        font-size: $font-xxs
+    .horizontal-grid-box
+        grid-template-columns: [l-border] 100% [r-border]
+    .only-display-at-large
+        display: none
