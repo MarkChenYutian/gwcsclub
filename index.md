@@ -79,7 +79,7 @@ useTOC: false
     {% endif %}
     {% unless c == 0 %}
         <div 
-            class="flex-page-card pop-card" 
+            class="flex-page-card pop-card {% if c > 2 %}only-display-at-large{% endif %}" 
             onClick="window.location.href='{{ site.baseurl }}{{ p.url }}'" 
             style="margin-left: -15rem;">
             <h3>{{p.title}}</h3>

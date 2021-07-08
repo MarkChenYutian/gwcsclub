@@ -22,7 +22,7 @@
         grid-template-columns: [l-border] 80% [mid-border] 20% [r-border]
     .horizontal-grid-box
         grid-template-columns: [l-border] 33% [mid-left] 34% [mid-right] 33% [r-border]
-    .display-at-full-size
+    .only-display-at-large
         display: block
 
 @media screen and (min-width: $screen-s) and (max-width: $screen-l)
@@ -47,7 +47,7 @@
         grid-template-columns: [l-border] 70% [mid-border] 30% [r-border]
     .horizontal-grid-box
         grid-template-columns: [l-border] 50% [mid-border] 50% [r-border]
-    .display-at-full-size
+    .only-display-at-large
         display: none
 
 @media screen and (max-width: $screen-s)
@@ -70,5 +70,5 @@
         font-size: $font-xxs
     .horizontal-grid-box
         grid-template-columns: [l-border] 100% [r-border]
-    .display-at-full-size
+    .only-display-at-large
         display: none

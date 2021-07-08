@@ -5,6 +5,7 @@
     } else {
       document.addEventListener('DOMContentLoaded', tocGenerating);
     }
+    document.addEventListener('scroll', debounce(reactiveTOC, 5));
     function tocGenerating(){
       document.querySelectorAll("h2,h3,h4,h5,h6").forEach(function(item,i){
         var tag=item.localName;
@@ -15,9 +16,39 @@
       });
       for (let n = 2; n < 6; n++) {
         document.querySelectorAll(".newh"+n).forEach(function(item){
-          item.style.cssText="padding-left: "+(n-2)*20+"px;";
+          item.style.cssText="padding-left: "+ (((n-2)*15) + 5) +"px;";
         });
       }
+    }
+    function isElementInViewport(el) {
+      let rect = el.getBoundingClientRect();
+      return rect.bottom > 0 &&
+          rect.right > 0 &&
+          rect.left < (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */ &&
+          rect.top < (window.innerHeight || document.documentElement.clientHeight) /* or $(window).height() */;
+    }
+    function debounce(fn,wait){
+      let timer = null;
+      return function(){
+          if(timer !== null){ clearTimeout(timer); }
+          timer = setTimeout(fn,wait);
+      }
+    }
+    function reactiveTOC() {
+      let arr = Array();
+      let i = 1;
+      while(document.getElementById("h"+i) != null){
+        arr.push(document.getElementById("h"+i));
+        i += 1;
+      }
+      arr.forEach(elem => {
+        if (isElementInViewport(elem)) {
+          document.querySelector("[href='#" + elem.id + "']").className += " active-toc";
+        }
+        else {
+          document.querySelector("[href='#" + elem.id + "']").className = document.querySelector("[href='#" + elem.id + "']").className.split(" ")[0];
+        }
+      });
     }
 </script>
 <div class="page-toc" id="toc">
