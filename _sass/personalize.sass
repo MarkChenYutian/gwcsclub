@@ -12,26 +12,6 @@
     @include shadow($padding-s, $thick-shadow)
     text-decoration: none
 
-.main-button
-  cursor: pointer
-  background-color: rgb(243, 247, 255)
-  color: black
-  border-radius: $padding-ml
-  padding: $padding-s $padding-ml
-  margin: $padding-ms
-  max-width: fit-content
-  border-style: none
-  outline: none
-
-  &:hover
-    @include shadow($padding-s, $thin-shadow)
-    color: ghostwhite
-    text-decoration: none
-    -webkit-backface-visibility: hidden
-    backface-visibility: hidden
-    background: linear-gradient(to right, #1c63a5, #3a88d1)
-    position: relative
-
 .warn-button
   cursor: pointer
   position: fixed
@@ -108,11 +88,11 @@ summary
     padding-bottom: $padding-xxs
     margin-left: $padding-xxs
     display: block
+    text-decoration: none
   
   a:hover
     color: #333333
     margin-left: 0
-    text-decoration: none
     font-weight: bold
     border-left: grey solid $padding-xxs
 

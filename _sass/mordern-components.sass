@@ -1,5 +1,5 @@
 @import variables
-
+// Parameterization Finished @ 2021, Jul 10th | By Mark
 .horizontal-flex-box
   display: flex
   display: -webkit-flex
@@ -19,25 +19,20 @@
 .grid-page-card
   @include remove-first-last-margin
   @include shadow($padding-l, $thin-shadow)
+  @include main-theme-responsive-gradient
   justify-self: stretch
   min-height: 10rem
   margin: $padding-ms
   margin-top: $padding-ms !important
   border-radius: $padding-xs
   padding: $padding-m
-  background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
-  cursor: pointer
-  transition: 0.2s
   &:hover
-    color: ghostwhite
-    background-position-x: left
     @include shadow($padding-ml, $thick-shadow)
-    h1, h2, h3, h4, h5
-      color: white
 
 .flex-page-card
   @include remove-first-last-margin
   @include shadow($padding-l, $thin-shadow)
+  @include main-theme-responsive-gradient
   flex-grow: 1
   width: calc(100% / 3 - 2rem)
   min-height: 10rem
@@ -46,15 +41,9 @@
   margin-top: $padding-ms !important
   border-radius: $padding-xs
   padding: $padding-m
-  background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
-  cursor: pointer
-  transition: 0.2s
   &:hover
-    color: ghostwhite
-    background-position-x: left
     @include shadow($padding-ml, $thick-shadow)
-    h1, h2, h3, h4, h5
-      color: white
+
   p
     flex-basis: 60%
     flex-grow: 1
@@ -65,3 +54,20 @@
     transform: translateY(-$padding-ms)
     ~ .pop-card
       transform: translateX(13.5rem)
+
+.main-button
+  @include shadow($padding-ms, $thin-shadow)
+  @include main-theme-responsive-gradient
+  color: black
+  border-radius: $padding-ml
+  padding: $padding-s $padding-ml
+  margin: $padding-ms
+  max-width: fit-content
+  border-style: none
+  outline: none
+
+  &:hover
+    @include shadow($padding-s, $thick-shadow)
+    text-decoration: none
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden

@@ -30,9 +30,23 @@ $padding-xxs: 0.2rem    // ~= 3px
 $padding-min: 0.0625rem // = 1px
 
 //Part 2: Color Pallet
+$light-bg-0: white
+$light-bg-1: ghostwhite
 $thin-shadow: rgba(0, 0, 0, 0.1)
 $thick-shadow: rgba(0, 0, 0, 0.4)
-
+$grey-0: #333c3d
+$grey-1: #abb9ba
+$grey-2: #d1e2e3
+$grey-3: #daeced
+$theme-1: #005766
+$theme-2: #00798f
+$theme-3: #3398aa
+$theme-4: #95ecf0
+$error-0: #bd0055
+$error-1: #ffd4e7
+$notification-0: #c5b100
+$notification-1: #fff7d2
+$marker-yellow: #ffe564
 
 //Part 3: SASS Mixins
 @mixin shadow($size, $color)
@@ -42,3 +56,13 @@ $thick-shadow: rgba(0, 0, 0, 0.4)
       margin-top: 0
     & > :last-child 
       margin-bottom: 0
+@mixin main-theme-responsive-gradient
+    background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, $theme-3 75%, $theme-1 100%)
+    cursor: pointer
+    transition: 0.2s
+    &:hover
+        color: $grey-3
+        background-position-x: left
+        h1, h2, h3, h4, h5, blockquote
+            color: $grey-3
+

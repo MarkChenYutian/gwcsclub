@@ -1,8 +1,8 @@
 @import variables
-
+// Parameterization Finish @ 2021 Jul, 9th | By Mark
 .time-vertical
   list-style-type: none
-  border-left: 4px solid rgb(197, 227, 251)
+  border-left: $padding-xxs solid $theme-4
   padding: $padding-xs 0 $padding-xs 0
 
   li
@@ -10,36 +10,36 @@
 
     a
       display: inline-block
-      margin-left: 20px
-      margin-top: 15px
-      margin-bottom: 15px
+      margin-left: $padding-m
+      margin-top: $padding-xs
+      margin-bottom: $padding-ms
       text-decoration: none
-      color: #000
+      color: $grey-0
 
     online:before
       content: ''
       position: absolute
-      top: 18px
-      left: -12px
-      width: 10px
-      height: 10px
-      border: 4px solid rgb(83, 177, 253)
-      border-radius: 10px
-      background: #fff
+      top: $padding-ms
+      left: -$padding-s
+      width: $padding-s
+      height: $padding-s
+      border: $padding-xxs solid $theme-3
+      border-radius: $padding-s
+      background: $light-bg-0
 
     offline:before
       content: ''
       position: absolute
-      top: 18px
-      left: -12px
-      width: 10px
-      height: 10px
-      border: 4px solid rgb(255, 102, 102)
-      border-radius: 10px
-      background: #fff
+      top: $padding-ms
+      left: -$padding-s
+      width: $padding-s
+      height: $padding-s
+      border: $padding-xxs solid $error-0
+      border-radius: $padding-s
+      background: $light-bg-0
 
     span
       position: absolute
-      color: #000
-      top: 12px
-      left: -6px
+      color: $grey-0
+      top: $padding-s
+      left: -$padding-xs

@@ -29,10 +29,10 @@ function download(filename, text) {
     document.body.removeChild(element);
   }
 function deselect(target){
-  target.style.background = "rgb(243, 247, 255)";
-  target.style.color = "black";
+  target.style.background = "white";
+  target.style.color = "#333c3d";
 }
 function select(target){
-    target.style.background = "linear-gradient(to right, #1c63a5, #3a88d1)";
+    target.style.background = "no-repeat linear-gradient(to left, #3398aa 0%, #005766 100%)";
     target.style.color = "ghostwhite";
 }

@@ -1,4 +1,5 @@
 @import variables
+// Parameterization Finished @ 2021, Jul 10th | By Mark
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -169,7 +170,7 @@ kbd,
 pre,
 samp
     font-family: monospace, monospace
-    font-size: 1em
+    font-size: $font-xs
 
 /* Forms
  ========================================================================== */
@@ -325,22 +326,22 @@ table
     margin-left: auto
     margin-right: auto
     overflow-x: auto
-    margin-bottom: 2rem
+    margin-bottom: $padding-l
 
 td,
 th
     padding: 0
-
+thead
+    tr
+        background-color: transparent !important
 tr
     background-color: transparent
-    transition: 0.5s
+    transition: 0.2s
     &:hover
-        background-color: #f2f2f2 !important
-        transition: 0.5s
+        background-color: $grey-2   !important
 
-    &:nth-child(even)
-        background-color: #f2f2f2
-        background-color: rgba(238, 238, 238, 0.4)
+    &:nth-child(odd)
+        background-color: transparentize($grey-2, 0.5)
 
 // Scroll-bar behavior and style
 \::-webkit-scrollbar-thumb

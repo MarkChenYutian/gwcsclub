@@ -2,7 +2,7 @@
 {% assign schedules = site.data.schedule.data %}
 {% if schedules == empty %}
     <img src="{{ site.baseurl }}/assets/empty-state.svg" width="20%" height="20%"/>
-    <center><p class="note">最近没有 CS 竞赛和相关活动，放假喽！</p></center>
+    <center><p style="color: rgb(178, 178, 182);margin-left: auto;margin-right: auto;">最近没有 CS 竞赛和相关活动，放假喽！</p></center>
 {% else %}
     {% for schedule in schedules %}
         {% if schedule.type == "competition" %}

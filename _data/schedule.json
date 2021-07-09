@@ -12,6 +12,12 @@
             "date": "Every Sunday 20:00 - 21:40",
             "type": "competition",
             "priority": 1
+        },
+        {
+            "name": "Test Schedule Item",
+            "date": "Every Sunday 20:00 - 21:40",
+            "type": "competition",
+            "priority": 2
         }
     ]
 }
