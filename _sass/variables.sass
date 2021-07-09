@@ -1,6 +1,6 @@
 // Reactive Layout Breakpoints
 $screen-l: 72rem
-$screen-s: 56rem
+$screen-s: 54rem
 
 //Size Variables 
 //Part 0: Font-size Variable
@@ -8,6 +8,7 @@ $screen-s: 56rem
 $font-xxl: 4rem
 $font-xl: 3rem
 $font-l: 2rem
+$font-mxl: 1.7rem
 $font-ml: 1.5rem
 $font-m: 1.3rem
 $font-ms: 1.2rem
@@ -17,12 +18,27 @@ $font-xxs: 0.9rem
 
 //Part 1: Padding-size Variable
 
-$padding-xxl: 6rem
-$padding-xl: 4rem
-$padding-l: 2rem
-$padding-ml: 1.5rem
-$padding-m: 1.25rem
-$padding-ms: 1rem
-$padding-s: 0.8rem
-$padding-xs: 0.4rem
-$padding-xxs: 0.2rem
+$padding-xxl: 6rem      // = 96px
+$padding-xl: 4rem       // = 64px
+$padding-l: 2rem        // = 32px
+$padding-ml: 1.5rem     // = 24px
+$padding-m: 1.25rem     // = 20px
+$padding-ms: 1rem       // = 16px
+$padding-s: 0.8rem      // = 12px
+$padding-xs: 0.4rem     // ~= 6px
+$padding-xxs: 0.2rem    // ~= 3px
+$padding-min: 0.0625rem // = 1px
+
+//Part 2: Color Pallet
+$thin-shadow: rgba(0, 0, 0, 0.1)
+$thick-shadow: rgba(0, 0, 0, 0.4)
+
+
+//Part 3: SASS Mixins
+@mixin shadow($size, $color)
+    box-shadow: 0 0 $size $color
+@mixin remove-first-last-margin
+    & > :first-child 
+      margin-top: 0
+    & > :last-child 
+      margin-bottom: 0

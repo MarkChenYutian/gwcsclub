@@ -17,40 +17,42 @@
   /* Reactive template columns are defined in reactive_layout.sass */
 
 .grid-page-card
+  @include remove-first-last-margin
+  @include shadow($padding-l, $thin-shadow)
   justify-self: stretch
   min-height: 10rem
   margin: $padding-ms
   margin-top: $padding-ms !important
   border-radius: $padding-xs
   padding: $padding-m
-  box-shadow: 0 0 $padding-l rgba(0, 0, 0 , 0.1)
   background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
   cursor: pointer
   transition: 0.2s
   &:hover
     color: ghostwhite
     background-position-x: left
-    box-shadow: 0 0 36px rgba(0, 0, 0 , 0.4)
+    @include shadow($padding-ml, $thick-shadow)
     h1, h2, h3, h4, h5
       color: white
 
 .flex-page-card
+  @include remove-first-last-margin
+  @include shadow($padding-l, $thin-shadow)
   flex-grow: 1
   width: calc(100% / 3 - 2rem)
   min-height: 10rem
-  min-width: 400px
+  min-width: 300px
   margin: $padding-ms
   margin-top: $padding-ms !important
   border-radius: $padding-xs
   padding: $padding-m
-  box-shadow: 0 0 $padding-l rgba(0, 0, 0 , 0.1)
   background: no-repeat (right / 400%) linear-gradient(to left, white 0%, white 25%, #2685DF 75%, #195893 100%)
   cursor: pointer
   transition: 0.2s
   &:hover
     color: ghostwhite
     background-position-x: left
-    box-shadow: 0 0 36px rgba(0, 0, 0 , 0.4)
+    @include shadow($padding-ml, $thick-shadow)
     h1, h2, h3, h4, h5
       color: white
   p

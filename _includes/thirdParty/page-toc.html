@@ -7,15 +7,13 @@
     }
     document.addEventListener('scroll', debounce(reactiveTOC, 5));
     function tocGenerating(){
-      document.querySelectorAll("h2,h3,h4,h5,h6").forEach(function(item,i){
+      document.querySelectorAll("h2:not(.toc_ignore),h3:not(.toc_ignore),h4:not(.toc_ignore),h5:not(.toc_ignore)").forEach(function(item,i){
         var tag=item.localName;
-        if (!item.className.includes("toc_ignore")){
-          item.setAttribute("id","h"+i);
-          document.getElementById("toc").innerHTML+='<a class="new' + tag + '" href="#h' + i + '">' + item.textContent + '</a>';
-        }
+        item.setAttribute("id","h" + i);
+        document.getElementById("toc").innerHTML+='<a class="new' + tag + '" href="#h' + i + '">' + item.textContent + '</a>';
       });
       for (let n = 2; n < 6; n++) {
-        document.querySelectorAll(".newh"+n).forEach(function(item){
+        document.querySelectorAll(".newh" + n).forEach(function(item){
           item.style.cssText="padding-left: "+ (((n-2)*15) + 5) +"px;";
         });
       }

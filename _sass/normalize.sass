@@ -1,37 +1,30 @@
+@import variables
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
- @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
- /* imported url for link animations */
-html {
-  scroll-behavior: smooth;
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+html
+    scroll-behavior: smooth
+    font-family: sans-serif
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
 
 /**
  * Remove default margin.
  */
-
-body {
-  margin: 0;
-}
+body
+    margin: 0
 
 /* HTML5 display definitions
-   ========================================================================== */
-
+ ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
  * Correct `block` display not defined for `details` or `summary` in IE 10/11
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-
 article,
 aside,
 details,
@@ -44,326 +37,166 @@ main,
 menu,
 nav,
 section,
-summary {
-  display: block;
-}
+summary
+    display: block
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-
 audio,
 canvas,
 progress,
-video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
-}
+video
+    display: inline-block
+    vertical-align: baseline
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
+audio
+    &:not([controls])
+        display: none
+        height: 0
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-
 [hidden],
-template {
-  display: none;
-}
+template
+    display: none
 
 /* Links
-   ========================================================================== */
-
+ ========================================================================== */
 /**
  * Remove the gray background color from active links in IE 10.
  */
-
-a {
-  background-color: transparent;
-}
+a
+    background-color: transparent
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-
 a:active,
-a:hover {
-  outline: 0;
-}
-/* new animations for link starts here */
-.link {
-  position: absolute;
-  right: 1rem;
-  top: 0.8rem;
-  height: 32px;
-  align-items: center;
-  color: #000;
-  text-decoration: none;
-  display: flex;
-}
-
-/* Hide extra text */
-.mask {
-  position: relative;
-  padding: 0;
-  height: 16px;
-
-  /*  Remove overflow to see how it works　:) */
-  overflow: hidden;
-}
-
-.link-container {
-  transition: transform 0.4s ease;
-}
-
-.title {
-  display: block;
-
-  /*  Set same font-size and line height  */
-  font-size: 20px;
-  line-height: 20px;
-
-  transition: transform 0.4s ease;
-}
-
-.link-title1 {
-  transform-origin: right center;
-}
-
-.link-title2 {
-  transform-origin: left center;
-  transform: rotate(20deg);
-}
-
-.link-icon {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  background:#ffffff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-
-  /*  Remove overflow to see how it works　:) */
-  overflow: hidden;
-}
-
-.icon {
-  display: block;
-  position: absolute;
-  transition: transform 0.4s ease;
-}
-
-.icon:nth-child(2) {
-  transform: translate(-40px);
-  margin-top:2px;
-  width: 26px;
-  height:26px;
-}
+a:hover
+    outline: 0
 
 /* Hover Action*/
-
 /* Move up two texts (20px = font-size) */
-.link:hover .link-container {
-  transform: translateY(-20px);
-}
-
 /* Rotate texts a little bit */
-.link:hover .link-title1 {
-  transform: rotate(20deg);
-}
-
-.link:hover .link-title2 {
-  transform: rotate(0);
-}
-
 /* Move arrows to right */
-.link:hover .icon:first-child {
-  transform: translate(40px);
-}
-
-.link:hover .icon:nth-child(2) {
-  transform: translate(0px);
-}
 /* annimation for link  */
 /* Text-level semantics
-   ========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
+ ========================================================================== */
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-
 b,
-strong {
-  font-weight: bold;
-}
+strong
+    font-weight: bold
 
 /**
  * Address styling not present in Safari and Chrome.
  */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-
-mark {
-  background: #ff0;
-  color: #000;
-}
+dfn
+    font-style: italic
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-
-small {
-  font-size: 80%;
-}
+small
+    font-size: 80%
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-
 sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
+sup
+    font-size: 75%
+    line-height: 0
+    position: relative
+    vertical-align: baseline
 
-sup {
-  top: -0.5em;
-}
+sup
+    top: -0.5em
 
-sub {
-  bottom: -0.25em;
-}
+sub
+    bottom: -0.25em
 
 /* Embedded content
-   ========================================================================== */
-
+ ========================================================================== */
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-
-img {
-  border: 0;
-}
+img
+    border: 0
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-
-svg:not(:root) {
-  overflow: hidden;
-}
+svg
+    &:not(:root)
+        overflow: hidden
 
 /* Grouping content
-   ========================================================================== */
-
+ ========================================================================== */
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-
-figure {
-  margin: 1em 40px;
-}
+figure
+    margin: 1em 40px
 
 /**
  * Address differences between Firefox and other browsers.
  */
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
+hr
+    box-sizing: content-box
+    height: 0
 
 /**
  * Contain overflow in all browsers.
  */
-
-pre {
-  overflow: auto;
-}
+pre
+    overflow: auto
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-
 code,
 kbd,
 pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
+samp
+    font-family: monospace, monospace
+    font-size: 1em
 
 /* Forms
-   ========================================================================== */
-
+ ========================================================================== */
 /**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
  * styling of `select`, unless a `border` property is set.
  */
-
 /**
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-
 button,
 input,
 optgroup,
 select,
-textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
-}
+textarea
+    color: inherit
+    font: inherit
+    margin: 0
 
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-
-button {
-  overflow: visible;
-}
+button
+    overflow: visible
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -371,11 +204,9 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-
 button,
-select {
-  text-transform: none;
-}
+select
+    text-transform: none
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -384,42 +215,36 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-
 button,
-html input[type="button"], /* 1 */
+html input[type="button"],     .__comment__-54
+    index: 54
+
 input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
+input[type="submit"]
+    -webkit-appearance: button
+    cursor: pointer
 
 /**
  * Re-set default cursor for disabled elements.
  */
-
 button[disabled],
-html input[disabled] {
-  cursor: default;
-}
+html input[disabled]
+    cursor: default
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+input::-moz-focus-inner
+    border: 0
+    padding: 0
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-
-input {
-  line-height: normal;
-}
+input
+    line-height: normal
 
 /**
  * It's recommended that you don't attempt to style these elements.
@@ -428,113 +253,107 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-
 input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+input[type="radio"]
+    box-sizing: border-box
+    padding: 0
 
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-
 input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+input[type="number"]::-webkit-outer-spin-button
+    height: auto
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */ /* 2 */
-  box-sizing: content-box;
-}
+input[type="search"]
+    -webkit-appearance: textfield
+    box-sizing: content-box
 
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+input[type="search"]::-webkit-search-decoration
+    -webkit-appearance: none
 
 /**
  * Define consistent border, margin, and padding.
  */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+fieldset
+    border: 1px solid #c0c0c0
+    margin: 0 2px
+    padding: 0.35em 0.625em 0.75em
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-
-legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
-}
+legend
+    border: 0
+    padding: 0
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-
-textarea {
-  overflow: auto;
-}
+textarea
+    overflow: auto
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-
-optgroup {
-  font-weight: bold;
-}
+optgroup
+    font-weight: bold
 
 /* Tables
-   ========================================================================== */
-
+ ========================================================================== */
 /**
  * Remove most spacing between table cells.
  */
-
-table {
-  border-spacing: 0;
-  width: 100%;
-  margin-left: auto; margin-right: auto;
-  overflow-x: auto;
-  margin-bottom: 2rem;
-}
+table
+    border-spacing: 0
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    overflow-x: auto
+    margin-bottom: 2rem
 
 td,
-th {
-  padding: 0;
-}
+th
+    padding: 0
 
-tr{
-  background-color: transparent;
-  transition: 0.5s;
-}
-tr:hover{
-  background-color: #f2f2f2 !important;
-  transition: 0.5s;
-}
+tr
+    background-color: transparent
+    transition: 0.5s
+    &:hover
+        background-color: #f2f2f2 !important
+        transition: 0.5s
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-  background-color: rgba(238, 238, 238, 0.4);
-}
+    &:nth-child(even)
+        background-color: #f2f2f2
+        background-color: rgba(238, 238, 238, 0.4)
+
+// Scroll-bar behavior and style
+\::-webkit-scrollbar-thumb
+    border-radius: $padding-xs
+    background-color: #666666
+    border: $padding-xxs solid #e5e7eb
+
+\::-webkit-scrollbar-track
+    border-radius: $padding-xs
+    background-color: transparent
+
+\::-webkit-scrollbar
+    width: $padding-s
+    height: $padding-s
+    background-color: #f3f3f3
+    border-radius: $padding-xs

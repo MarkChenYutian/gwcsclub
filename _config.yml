@@ -13,7 +13,6 @@ author:
 #Others
 plugins:
   - jekyll-loading-lazy
-#  - jekyll-spaceship
 
 sass:
     style: compressed

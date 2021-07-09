@@ -1,7 +1,7 @@
 @import variables
 
 .simple-card
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1)
+  @include shadow($padding-ms, $thin-shadow)
   transition: 0.3s
   padding: 10px
   margin: 20px 0
@@ -9,7 +9,7 @@
   cursor: pointer
   animation: fadeIn 1s ease
   &:hover
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3)
+    @include shadow($padding-s, $thick-shadow)
     text-decoration: none
 
 .main-button
@@ -24,14 +24,13 @@
   outline: none
 
   &:hover
+    @include shadow($padding-s, $thin-shadow)
     color: ghostwhite
     text-decoration: none
     -webkit-backface-visibility: hidden
     backface-visibility: hidden
     background: linear-gradient(to right, #1c63a5, #3a88d1)
-    box-shadow: 0 0 $padding-s rgba(0, 0, 0, 0.1)
     position: relative
-    transition: box-shadow .2s linear,opacity .2s linear
 
 .warn-button
   cursor: pointer
@@ -52,8 +51,6 @@
     background-color: #ff643d
     color: ghostwhite
 
-/* Button Box Using Flex
-
 .button-box
   display: flex
   display: -webkit-flex
@@ -61,23 +58,6 @@
   flex-wrap: wrap
   justify-content: start
   align-items: baseline
-
-/* Chage Scroll Bar Style
-
-\::-webkit-scrollbar-thumb
-  border-radius: $padding-xs
-  background-color: #666666
-  border: $padding-xxs solid #e5e7eb
-
-\::-webkit-scrollbar-track
-  border-radius: $padding-xs
-  background-color: transparent
-
-\::-webkit-scrollbar
-  width: $padding-s
-  height: $padding-s
-  background-color: #f3f3f3
-  border-radius: $padding-xs
 
 /* <details> tag improvement
 
@@ -96,8 +76,6 @@ details
 summary
   outline: none
 
-/* image card
-
 .image-card
   width: 12rem
   height: 15rem
@@ -107,7 +85,7 @@ summary
   cursor: pointer
 
   &:hover
-    box-shadow: 0 $padding-xs $padding-ms 0 rgba(0, 0, 0, 0.4)
+    @include shadow($padding-ms, $thick-shadow)
     transition: 0.5s
 
 .MathJax_Display
@@ -144,3 +122,75 @@ summary
   text-decoration: none
   font-weight: bold
   border-left: grey solid $padding-xxs
+
+// new animations for link starts here
+.link 
+    position: absolute
+    right: 1rem
+    top: 0.8rem
+    height: 32px
+    align-items: center
+    color: #000
+    text-decoration: none
+    display: flex
+    &:hover 
+        .link-container 
+            transform: translateY(-20px)
+        
+        .link-title1 
+            transform: rotate(20deg)
+        
+        .link-title2 
+            transform: rotate(0)
+        
+        .icon 
+            &:first-child 
+                transform: translate(40px)
+            
+            &:nth-child(2) 
+                transform: translate(0px)
+
+// Hide Extra text
+.mask 
+    position: relative
+    padding: 0
+    height: 16px
+    overflow: hidden
+
+.link-container 
+    transition: transform 0.4s ease
+
+.title 
+    display: block
+    font-size: 20px
+    line-height: 20px
+    transition: transform 0.4s ease
+
+.link-title1 
+    transform-origin: right center
+
+.link-title2 
+    transform-origin: left center
+    transform: rotate(20deg)
+
+.link-icon 
+    position: relative
+    width: 26px
+    height: 26px
+    background: #ffffff
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 10px
+    overflow: hidden
+
+.icon 
+    display: block
+    position: absolute
+    transition: transform 0.4s ease
+    &:nth-child(2) 
+        transform: translate(-40px)
+        margin-top: 2px
+        width: 26px
+        height: 26px
