@@ -5,6 +5,29 @@ title: 网站样式指南
 tags: [Page, Miscellaneous]
 Author: ["Mark Chen"]
 ---
+## 网站色卡
+
+<div class="horizontal-grid-box">
+    <div style="background-color: #333c3d; height: 6rem; color: ghostwhite; text-align: center;"><p>#333C3D</p></div>
+    <div style="background-color: #abb9ba; height: 6rem; color: ghostwhite; text-align: center;"><p>#ABB9BA</p></div>
+    <div style="background-color: #d1e2e3; height: 6rem; color: #333c3d; text-align: center;"><p>#D1E2E3</p></div>
+    <div style="background-color: #daeced; height: 6rem; color: #333c3d; text-align: center;"><p>#DAECED</p></div>
+    <div class="only-display-at-large"></div>
+    <div class="only-display-at-large"></div>
+    <div style="background-color: #005766; height: 6rem; color: ghostwhite; text-align: center;"><p>#005766</p></div>
+    <div style="background-color: #00798f; height: 6rem; color: ghostwhite; text-align: center;"><p>#00798F</p></div>
+    <div style="background-color: #3398aa; height: 6rem; color: ghostwhite; text-align: center;"><p>#3398AA</p></div>
+    <div style="background-color: #95ecf0; height: 6rem; color: #333c3d; text-align: center;"><p>#95ECF0</p></div>
+    <div class="only-display-at-large"></div>
+    <div class="only-display-at-large"></div>
+    <div style="background-color: #bd0055; height: 6rem; color: ghostwhite; text-align: center;"><p>#BD0055</p></div>
+    <div style="background-color: #ffd4e7; height: 6rem; color: #333c3d; text-align: center;"><p>#FFD4E7</p></div>
+    <div class="only-display-at-large"></div>
+    <div style="background-color: #c5b100; height: 6rem; color: ghostwhite; text-align: center;"><p>#C5B100</p></div>
+    <div style="background-color: #ffe564; height: 6rem; color: #333c3d; text-align: center;"><p>#FFE564</p></div>
+    <div style="background-color: #fff7d2; height: 6rem; color: #333c3d; text-align: center;"><p>#FFF7D2</p></div>
+</div>
+
 ## HTML + Markdown Hybrid
 
 当你想在一个 HTML 元素中使用 Markdown 语法时，在 HTML 标签上添加 `markdown=1` 即可。
@@ -75,7 +98,8 @@ This is an HTML Tag **WITH** Markdown *Hybrid* Support
 
 > 所有图标的 svg 代码来源与[这里](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=9402)
 
-## `no-decoration` 取消超链接装饰
+## Tricks of Beautiful Layout
+### `no-decoration` 取消超链接装饰
 
 在网站的正文中，所有的超链接都会像 [这样](example.com) 有一个🔗的标志和下划线。在大部分情况中，这样的样式可以丰富文章内容的视觉效果。然而，在个别情况中，我们并不希望这样的装饰出现，因为这会破坏原有的样式。
 
@@ -104,6 +128,19 @@ This is an HTML Tag **WITH** Markdown *Hybrid* Support
 </div>
 ```
 
+### `toc_ignore` 取消侧边目录收录
+
+有的时候我们不希望一个 heading （如`h2`, `h3`, `h4`, etc.）被自动添加到页面左侧的目录中。通过在不想被收录的标题 HTML Tag 中添加 `class="toc_ignore"` 即可防止自动生成目录收录这个标题。
+
+> 例子：注意观察左侧 TOC
+
+<h4>被 TOC 收录的例子</h4>
+<h4 class="toc_ignore">不被 TOC 收录的例子</h4>
+
+```html
+<h4>被 TOC 收录的例子</h4>
+<h4 class="toc_ignore">不被 TOC 收录的例子</h4>
+```
 ## 页面样式
 
 在 markdown 中，你可以在任意位置插入 HTML 元素来达到你想要的效果。为了统一网站的设计风格，我们在 `personalize.css` 中定义了一些通用的样式。
@@ -114,8 +151,13 @@ This is an HTML Tag **WITH** Markdown *Hybrid* Support
 
 效果：
 
-![image-20210413090028577](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210413090028.png)
-
+<div class="info">
+    <h2 class="toc_ignore">二级标题</h2>
+    <h3 class="toc_ignore">三级标题</h3>
+    <h4 class="toc_ignore">四级标题</h4>
+    <h5 class="toc_ignore">五级标题</h5>
+    <p>正文，注意在 markdown 中嵌入的 HTML 元素内部时<b>不能</b>使用 markdown 语法的，例如 **这个** 就不会变成加粗效果，要使用`<b></b>` 标签达到加粗的效果。</p>
+</div>
 
 代码:
 
@@ -133,8 +175,13 @@ This is an HTML Tag **WITH** Markdown *Hybrid* Support
 
 效果：
 
-![image-20210413090010340](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210413090010.png)
-
+<div class="notification">
+    <h2 class="toc_ignore">二级标题</h2>
+    <h3 class="toc_ignore">三级标题</h3>
+    <h4 class="toc_ignore">四级标题</h4>
+    <h5 class="toc_ignore">五级标题</h5>
+    <p>正文，注意在 markdown 中嵌入的 HTML 元素内部时<b>不能</b>使用 markdown 语法的，例如 **这个** 就不会变成加粗效果，要使用`<b></b>` 标签达到加粗的效果。</p>
+</div>
 
 代码:
 
@@ -152,8 +199,13 @@ This is an HTML Tag **WITH** Markdown *Hybrid* Support
 
 效果：
 
-![image-20210413085948892](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210413085948.png)
-
+<div class="error">
+    <h2 class="toc_ignore">二级标题</h2>
+    <h3 class="toc_ignore">三级标题</h3>
+    <h4 class="toc_ignore">四级标题</h4>
+    <h5 class="toc_ignore">五级标题</h5>
+    <p>正文，注意在 markdown 中嵌入的 HTML 元素内部时<b>不能</b>使用 markdown 语法的，例如 **这个** 就不会变成加粗效果，要使用`<b></b>` 标签达到加粗的效果。</p>
+</div>
 
 代码:
 
@@ -243,13 +295,24 @@ If either $n$ or $k$ is out of bound (not in 3D array $T$, return 0.
 <h5>⚠Typora 换行规则导致的样式异常</h5>
 <p>在 Typora 中，你可以通过按 `ctrl + shift + m` 快速创建代码块（也就是这里的多行公式）。然而，Typora默认只会在多行公式前进行*一次换行*。在 Typora 中，这样做是没有问题的，但是在 Jekyll 渲染的过程中，这回让 Jekyll 将多行公式和前文识别为同一段内容并放入同一个 `&lt;p&gt;` 标签中并渲染到同一行。</p>
 <p><b>例子</b></p>
+<div markdown=1>
+<h2 class="toc_ignore">Example Text</h2>
+We can solve this problem recursively. Let $f(n, c)$ represent the number of possible valid solutions of painting on a subtree with root $n$ and color $c$ on root, we can represent this function recursively.
+$$
+\begin{aligned}
+&U = \left\{n' \mid n' \text{ is child of }n\right\}\\
+&f(n, c) = \prod_{u\in U}\left({\sum_{c'\in C}{f(u, c')}}\right)
+\end{aligned}
+$$
+When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$ is not the color that is painted.
+</div>
 <p>
-    <img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210413094119.png"/>
     可以很明显的看到这里的多行公式被挤在一堆文字之间了。
 </p>
 <p>
     源代码:
     <pre>
+<h2 class="toc_ignore">Example Text</h2>
 We can solve this problem recursively. Let $f(n, c)$ represent the number of possible valid solutions of painting on a subtree with root $n$ and color $c$ on root, we can represent this function recursively.
 $$
 \begin{aligned}
@@ -260,9 +323,11 @@ $$
 When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$ is not the color that is painted.
     </pre>
 </p>
-<p>
-    像这种情况我们就需要手动在 <code>$$</code> 前多加一个回车即可。
-    <pre>
+
+<p><u>像这种情况我们只需要手动在 <code>$$</code> 前后多加一个回车即可。</u></p>
+
+<div markdown=1>
+<h2 class="toc_ignore">Example Text</h2>
 We can solve this problem recursively. Let $f(n, c)$ represent the number of possible valid solutions of painting on a subtree with root $n$ and color $c$ on root, we can represent this function recursively.
 
 $$
@@ -273,9 +338,21 @@ $$
 $$
 
 When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$ is not the color that is painted.
-    </pre>
-    <img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210413094534.png"/>
-</p>
+</div>
+
+<pre>
+<h2 class="toc_ignore">Example Text</h2>
+We can solve this problem recursively. Let $f(n, c)$ represent the number of possible valid solutions of painting on a subtree with root $n$ and color $c$ on root, we can represent this function recursively.
+
+$$
+\begin{aligned}
+&U = \left\{n' \mid n' \text{ is child of }n\right\}\\
+&f(n, c) = \prod_{u\in U}\left({\sum_{c'\in C}{f(u, c')}}\right)
+\end{aligned}
+$$
+
+When we meet a node that is already been painted, we let $f(node, c) = 0$ if $c$ is not the color that is painted.
+</pre>
 </div>
 
 

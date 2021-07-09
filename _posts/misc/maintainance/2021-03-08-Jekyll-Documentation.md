@@ -13,7 +13,7 @@ Author: ["Mark Chen", "Marcus"]
 </div>
 
 <div class="notification">
-    <h4>如果你只是想在这个网站上添加页面……</h4>
+    <h4 class="toc_ignore">如果你只是想在这个网站上添加页面……</h4>
     <p>
         这篇文章中涉及很多技术细节，如果你只是希望能够将自己写的页面添加到该网站，而不进行具体的样式，结构修改，你可以选择跳过所有标题末尾是*号的部分。
     </p>
@@ -31,7 +31,7 @@ GW Computer Science 的网站是使用 Jekyll 自动构建的**静态页面**网
 
 在进行结构与样式上的改动时，**强烈推荐**在自己本地安装 Jekyll 服务端，这样就可以在本地实时预览自己修改的样式结果。具体安装方法见以下链接：
 
-https://jekyllrb.com/docs/installation/
+[Jekyll Installation](https://jekyllrb.com/docs/installation/)
 
 安装成功后，在命令行中 `cd` 到网页源代码的根目录上，输入
 
