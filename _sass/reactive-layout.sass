@@ -24,6 +24,17 @@
         grid-template-columns: [l-border] 33% [mid-left] 34% [mid-right] 33% [r-border]
     .only-display-at-large
         display: block
+    // Reactive Heading Size
+    h1
+        font-size: $font-l
+    h2
+        font-size: $font-mxl
+    h3
+        font-size: $font-ml
+    h4
+        font-size: $font-m
+    h5
+        font-size: $font-ms
 
 @media screen and (min-width: $screen-s) and (max-width: $screen-l)
     .page-header 
@@ -49,6 +60,17 @@
         grid-template-columns: [l-border] 50% [mid-border] 50% [r-border]
     .only-display-at-large
         display: none
+    // Reactive Heading Size
+    h1
+        font-size: $font-mxl
+    h2
+        font-size: $font-ml
+    h3
+        font-size: $font-m
+    h4
+        font-size: $font-ms
+    h5
+        font-size: $font-ms
 
 @media screen and (max-width: $screen-s)
     .page-header
@@ -72,3 +94,14 @@
         grid-template-columns: [l-border] 100% [r-border]
     .only-display-at-large
         display: none
+    // Reactive Heading Size
+    h1
+        font-size: $font-ml
+    h2
+        font-size: $font-m
+    h3
+        font-size: $font-ms
+    h4
+        font-size: $font-s
+    h5
+        font-size: $font-s
