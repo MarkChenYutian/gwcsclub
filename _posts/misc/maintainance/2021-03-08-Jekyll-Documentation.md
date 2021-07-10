@@ -6,7 +6,7 @@ tags: Miscellaneous
 Author: ["Mark Chen", "Marcus"]
 ---
 
-> 最近一次 update - 2021/6/25
+> 最近一次 update - 2021/7/10
 
 <div class="info" markdown=1>
 如果你想提交自己的打卡记录，建议使用一站式自动工具 - [打卡文件自动生成器]({{ site.baseurl }}/2021/06/11/yaml-generator.html)
@@ -301,13 +301,30 @@ System.out.println("test");	// Some Java Code Here
 >
 > ![image-20210606004700075](http://markdown-img-1304853431.cosgz.myqcloud.com/20210606004707.png)
 
-## css\*
+关于 Sass 本身的更多信息：[Sass 中文网](https://www.sass.hk/)
 
-这里存放了网站的层叠样式表 (CSS)
+### Sass 编写指北
 
-<div class="error">
-    如果你不确定你在做什么，<b>不要</b>修改已有的 CSS 样式表，需要新的样式自己在 personalize.css 文件尾部添加样式文件。
+为了统一网站显示样式，编写 Sass 时请遵守这里的规则
+
+**1. 所有的颜色和尺寸都在 `variables.sass` 中有定义，如果需要使用，请直接调用这里的变量名**
+
+例子 1：如果要使用一个比较淡的主题色 - `#3398aa`，那么可以直接在 Sass 文件中写 `$theme-3` （因为 `variables.sass` 中声明了变量 `$theme-3 = #3398aa`）
+
+例子 2：如果要让自己定义的一个 HTML 元素有一个 *大的* padding，那么可以在 Sass 中这样写：`padding: $padding-l`，因为在 `variables.sass` 中声明了变量 `$padding-l = 2rem`
+
+**2. 如果你想让自己的 HTML 元素随着页面尺寸的变化而变化（例如适配移动端的页面），请在 `reactive-layout.sass` 中添加相应规则**
+
+`reactive-layout.sass` 中有三种尺寸 - `screen width > $screen-l`，`\$screen-l > width > \$screen-s` 和 `\$screen-s > screen width`
+
+## css\* （Deprecated）
+
+这里只有 `main.sass` 一个文件，所有 `_sass` 中的文件都会被编译到 `css/main.css` 中。
+
+<div class="notification" markdown=1>
+注意！网站的 `main.css` 是自动生成的编译结果，如果需要增加 CSS 规则，请到 `_sass/personalize.sass` 中添加
 </div>
+
 
 ## js\*
 
