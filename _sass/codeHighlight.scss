@@ -16,6 +16,7 @@
    .c     { color: #5B6370; font-style: italic } 
    .err   { color: #960050; background-color: #1e0010; }
    .k     { color: #C776DF; font-weight: bold; }
+   .kn     { color: #C776DF; font-weight: bold; }
    .o     { font-weight: bold } 
    .cm    { color: #5B6370; font-style: italic } 
    .cp    { color: #5B6370; font-weight: bold } 
@@ -48,9 +49,9 @@
    .ni    { color: #E2964A }
    .ne    { color: #900; font-weight: bold }
    .nf    { color: #52A5EB; font-weight: bold } 
-   .nn    { color: #555 }
+   .nn    { color: #E2964A }
    .nt    { color: #DE5442 } 
-   .nv    { color: #DE5442 }
+   .nv    { color: #DE5442 }  
    .ow    { font-weight: bold } 
    .w     { color: #bbb } 
    .mf    { color: #4FB6C3 } 
