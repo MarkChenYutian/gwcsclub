@@ -10,23 +10,26 @@ useTOC: false
 
 ### **常见问题 Q&A**
 
-<div class="horizontal-flex-box">
-    <div class="flex-page-card" onClick="window.location.href='{{ site.baseurl }}/2021/02/01/How-to-ask-Questions.html'">
+<div class="horizontal-grid-box">
+    <div class="grid-page-card" onClick="window.location.href='{{ site.baseurl }}/2021/02/01/How-to-ask-Questions.html'">
         <h3>如何向其他人提问？</h3>
     </div>
-    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/21/How-to-read-Exceptions.html'">
+    <div class="grid-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/21/How-to-read-Exceptions.html'">
         <h3>我的程序报错了，我可以做什么？</h3>
     </div>
-    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/03/01/How-to-find-info.html'">
-        <h3>如何用互联网高效的查找信息？</h3>
+    <div class="grid-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/03/01/How-to-find-info.html'">
+        <h3>如何用互联网解决问题？</h3>
     </div>
-    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/03/01/Where-to-exercise.html'">
+    <div class="grid-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/07/01/Use-search-engine-wisely.html'">
+        <h3>高效使用搜索引擎</h3>
+    </div>
+    <div class="grid-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/03/01/Where-to-exercise.html'">
         <h3>我想做些练习，我可以在哪里做练习？</h3>
     </div>
-    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/27/Languages-Compare.html'">
+    <div class="grid-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/02/27/Languages-Compare.html'">
         <h3>各种编程语言的比较</h3>
     </div>
-    <div class="flex-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/05/03/Online-Judge-IO.html'">
+    <div class="grid-page-card" onclick="window.location.href='{{ site.baseurl }}/2021/05/03/Online-Judge-IO.html'">
         <h3>在线测评 (Online Judge) 的输入输出</h3>
     </div>
 </div>
