@@ -18,7 +18,7 @@ useTOC: false
         <h1 style="margin-top: 0"> Arduino 声呐 | Arduino Sonar </h1>
         <blockquote>By Mark Chen, 2021/07/25</blockquote>
         <p> 只用4个小时时间 + 100元以内的预算就可以快速搭建一个真实可用的声呐探测器！</p>
-        <button class="main-button" style="float: right;"> 详细教程 </button>
+        <button class="main-button" style="float: right;" onclick="window.location.href='/2021/07/25/Arduino-Sonar.html'"> 详细教程 </button>
         <div style="clear: both"></div>
     </div>
 </div>
