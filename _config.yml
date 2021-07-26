@@ -10,8 +10,11 @@ author:
   name:       GZFLS Computer Science Club
   url:        http://yourhomepage.com 
 
+url: "https://gwcs.xyz" # the base hostname & protocol for your site
+
 #Others
 plugins:
+  - jekyll-sitemap
   - jekyll-loading-lazy
 
 sass:
