@@ -60,8 +60,9 @@ useTOC: false
 
 <div class="button-box">
     <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/06/17/General-Solution-Index.html'"> 打卡文件汇总 </button>
-    <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/06/11/yaml-generator.html'"> 打卡文件生成器 </button>
     <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/03/04/algorithm-home.html'"> 算法笔记 </button>
+    <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/06/11/yaml-generator.html'"> 打卡文件生成器 </button>
+    <button class="main-button" onClick="window.location.href='{{ site.baseurl }}/2021/07/30/online-editor.html'"> 即时预览编辑器 </button>
 </div>
 
 ---
