@@ -11,38 +11,30 @@ useTOC: false
     检测到较小的屏幕尺寸，这个网页适合在屏幕宽度大于 1080 像素的设备上运行（当前屏幕下功能性依然正常，但是显示样式可能不佳）
 </div>
 <div class="notification">
-    注意：网站没有保存功能，请勿在编辑时刷新/关闭网页，如需保存请使用“下载”按钮下载至电脑。
+    <p>注意：网站没有保存功能，请勿在编辑时刷新/关闭网页，如需保存请使用“下载”按钮下载至电脑。</p>
+    <p>在发布 markdown 文件前记得加上 YAML 文件头！</p>
 </div>
-
+<hr></hr>
+<div class="button-box">
+    <div><input type="text" placeholder="default.md" id="fileName"></input></div>
+    <button class="main-button" onclick="getDownload()">保存</button>
+    <button class="main-button" onclick="document.getElementById('input').value=''">清空</button>
+    <div>
+        <select id="mathSetting" name="数学模式" style="background: transparent;">
+            <option value="manual">手动MathJax</option>
+            <option value="auto">自动MathJax（实验性）</option>
+        </select>
+    </div>
+    <button class="main-button" onclick="rerenderMath()"> 渲染数学公式 </button>
+</div>
 <div style="display: grid; grid-template-columns: [l] 45% [m] 55% [r];">
     <textarea
-        style="height: 70vh; border: none !important; background-color: #eeeeee; resize: none; padding: 1rem;"
+        style="height: 80vh; border: none !important; background-color: #eeeeee; resize: none; padding: 1rem;"
         id="input"
         oninput="getPreview()"
         placeholder="Place Markdown text HERE..."
     >{% include component/textarea_placeholder.html %}</textarea>
-    <div style="height: 70vh; padding: 1rem; margin-right: 0; border-left: 0.4rem solid #dce6f0; overflow-y: auto;" id="preview"></div>
-</div>
-
-<div class="info">
-    <h3>设置</h3>
-    <div class="button-box">
-        <div>
-            <select id="mathSetting" name="数学模式" style="background: transparent;">
-                <option value="manual">手动渲染数学公式</option>
-                <option value="auto">自动渲染数学公式（实验性，可能导致性能下降）</option>
-            </select>
-        </div>
-        <button class="main-button" onclick="rerenderMath()"> 手动渲染数学公式 </button>
-    </div>
-    <div class="button-box">
-        <div><input id="fileName" placeholder="default.md" style="background: transparent;"></input></div>
-        <button class="main-button" onclick="getDownload()">&nbsp;&nbsp;下载&nbsp;&nbsp;</button>
-    </div>
-</div>
-
-<div class="notification">
-在发布 markdown 文件前记得加上 YAML 文件头！
+    <div style="height: 80vh; padding: 1rem; margin-right: 0; border-left: 0.4rem solid #dce6f0; overflow-y: auto;" id="preview"></div>
 </div>
 
 <script>
@@ -85,5 +77,8 @@ function getDownload(){
     let fn = document.getElementById("fileName").value
     fn = fn==""? "default.md" : fn
     download(fn, content)
+}
+function clearText(){
+    
 }
 </script>
