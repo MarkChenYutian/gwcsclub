@@ -21,3 +21,5 @@ sass:
     style: compressed
 
 markdown: kramdown
+name: GZFLS Computer Science
+description: Computer Science club @ GZFLS，提供算法竞赛培训，机器人竞赛等，我们也会不定期更新论文精读和有趣的 Arduino Project
