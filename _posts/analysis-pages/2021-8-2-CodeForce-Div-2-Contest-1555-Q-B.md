@@ -1,6 +1,6 @@
 ---
 layout: post
-title: twoTables
+title: CodeForce Div 2 Contest 1555 Q-B
 tags: ["CodeForce", "Other-analysis"]
 division: 2
 number: 112

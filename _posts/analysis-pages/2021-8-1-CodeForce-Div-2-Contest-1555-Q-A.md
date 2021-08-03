@@ -1,6 +1,6 @@
 ---
 layout: post
-title: pizzaForces
+title: CodeForce Div 2 Contest 1555 Q-A
 tags: ["CodeForce", "Other-analysis"]
 division: 2
 number: 112
