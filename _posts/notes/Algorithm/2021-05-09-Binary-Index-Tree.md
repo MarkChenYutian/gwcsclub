@@ -3,6 +3,7 @@ layout: post
 title: Binary Index Tree (Fenwick Tree) 二叉索引树
 tags: [Algorithm, Notes]
 Author: ["Mark Chen"]
+onRSS: true
 ---
 
 ### 前置技能

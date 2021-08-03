@@ -3,6 +3,7 @@ layout: algo_note
 title: 时间复杂度
 tags: Algorithm Notes
 Author: ["Mark Chen"]
+onRSS: true
 ---
 
 在编程竞赛中，你提交的代码一般会有运行时间限制 - 程序只有在规定的时间内运行完毕并返回正确的结果才能得到对应的分数。如果程序不能在规定时间内运行完毕则会触发超时错误 (TLE, Time Limit Exceed)。

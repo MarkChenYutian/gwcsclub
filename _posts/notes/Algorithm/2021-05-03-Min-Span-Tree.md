@@ -3,6 +3,7 @@ layout: algo_note
 title: 最小生成树 Min-Span Tree
 tags: Algorithm Notes
 Author: J
+onRSS: true
 ---
 
 
