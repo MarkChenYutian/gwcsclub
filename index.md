@@ -1,7 +1,6 @@
 ---
 layout: home_page
 title: {{ site.name }}
-useTOC: false
 ---
 
 <h1>主要页面</h1>

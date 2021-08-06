@@ -3,6 +3,7 @@ layout: algo_note
 title: 代价统一搜索 Uniform Cost Search
 tags: Algorithm Notes
 Author: ["Mark Chen"]
+onRSS: true
 ---
 
 ### 前置条件
