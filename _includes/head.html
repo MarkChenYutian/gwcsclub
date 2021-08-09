@@ -1,13 +1,19 @@
 <!DOCTYPE HTML5>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>{{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-
-  <!-- Script Header for Table of Content Area -->
+  {% if page.title == empty %}
+  <title>GZFLS Computer Science Club</title>
+  {% else %}
+  <title>{{ page.title }} | GWCS</title>
+  {% endif %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+  <link rel="shortcut icon" href="https://gwcs.xyz/favicon.ico" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
+  <meta name="description" content="{{ page.content | strip_html | strip | slice: 0, 200 }}"/>
+  <meta name="author" content="{{ page.Author }}"/>
+  <!-- Microsoft Clarity, Page analysis third-party -->
   {% include thirdParty/microsoft-clarity.html %}
-  <!--{% include thirdParty/baidu-Statistics.html %}-->
+  <!-- Math Formula display support -->
   {% include thirdParty/mathJax.html %}
 </head>

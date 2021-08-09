@@ -8,7 +8,8 @@
 		<description>{{ site.description }}</description>
 		<link>{{ site.baseurl }}{{ site.url }}</link>
 		<atom:link href="{{ site.baseurl }}{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		{% assign rss_post = site.posts | where: "onRSS", true %}
+		{% for post in rss_post limit: 15 %}
 			<item>
 				<title>{{ post.title }}</title>
 				<description>{{ post.content | xml_escape }}</description>

@@ -3,6 +3,7 @@ layout: post
 title: 线段树 Segment Tree
 tags: [Algorithm, Notes]
 Author: ["Mark Chen"]
+onRSS: true
 ---
 
 ### 前提条件

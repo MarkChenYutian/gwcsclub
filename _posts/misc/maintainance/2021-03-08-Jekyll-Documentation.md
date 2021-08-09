@@ -6,7 +6,7 @@ tags: Miscellaneous
 Author: ["Mark Chen", "Marcus"]
 ---
 
-> 最近一次 update - 2021/7/10
+> 最近一次 update - 2021/8/4
 
 <div class="info" markdown=1>
 如果你想提交自己的打卡记录，建议使用一站式自动工具 - [打卡文件自动生成器]({{ site.baseurl }}/2021/06/11/yaml-generator.html)
@@ -129,6 +129,7 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 | thirdParty/baidu-Statistics.html | 【已停用】百度网站统计服务 *停用原因：严重影响网站加载速度* |
 | thirdParty/comment.html       | 基于 valine + leancloud 的评论区                         |
 | thirdParty/page-toc.html | 使用 Javascript 自动生成的页面目录 |
+| thirdParty/microsoft-clarity.html | 微软的 Clarity 服务，可以统计网站访问和页面热力图 |
 |  |  |
 | fn/usaco_analysis_card.html | 自动生成 USACO Analysis Page 中卡片内容的**函数** |
 | fn/icon.html | 自动生成行内图标，具体描述见 [网站图标系统](/2021/06/05/Webpage-Feature.html#h1) |
@@ -137,6 +138,7 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 |  |  |
 | component/fancy-back.html | [Andd54 (github.com)](https://github.com/Andd54) 创建的动态 "back" 按钮特效 |
 | component/report-problem.html | 页面中右下角“报告错误”按钮按下后的弹窗 |
+| component/textarea_placeholder.html | [在线编辑器](https://gwcs.xyz/2021/07/30/online-editor.html) 的初始内容 |
 
 ## _layouts\*
 
@@ -194,7 +196,7 @@ Jekyll 构建网站的时候就会自动帮我们把上面的代码转化为这�
 
 ## _posts
 
-#### 命名规则
+### 命名规则
 
 `_posts` 中存储的都是 markdown 文件或 html，也就是网站的内容页面了。所有 markdown 与 html 的命名**必须遵循以下规则**
 
@@ -211,7 +213,7 @@ yyyy-mm-dd-name-of-file.html
 
 文件名中所有空格使用`-`替代，并且在最前面加上`yyyy-mm-dd`的前缀。<mark>没有前缀的文件可能无法被 jekyll 渲染</mark>。
 
-#### Markdown文件 YAML 头
+### YAML 头文件
 
 <mark>每一个要被渲染的 markdown 文件都<b>必须</b>添加 yaml 文件头</mark>，这个文件头中会包括一些键值对，用来配置 markdown 的渲染过程。yaml 的格式如下:
 
@@ -225,7 +227,7 @@ key3: value3
 
 example content
 ```
-其中 `---` 之间的三个键值对就是 yaml 文件头的内容，通过这些键值对我们可以控制渲染的页面结果，具体的 key-value 见下表：
+其中 `---` 之间的三个键值对就是 yaml 文件头的内容，通过这些键值对我们可以控制渲染的页面结果，具体的 key-value 见下表
 
 | Key           | Value                                      | 解释                                                         |
 | ------------- | ------------------------------------------ | ------------------------------------------------------------ |
@@ -234,27 +236,16 @@ example content
 | tags          | 一个或多个字符串，多个字符串用空格隔开     | **【必须】**文章的 tag，用来搜索/整理文件，一些自动生成的页面（如USACO解析）依靠 tag 进行链接，如果页面没有 tag 则不会被加入页面汇总中 |
 | Author        | 字符串                                     | **【必须】**文章的作者，在 post, usaco-post, algo-note 模板中会被显式在标题下方，网站贡献者自动更新的时候依赖这里的信息 |
 |               |                                            |                                                              |
+| onRSS         | true / false                               | **【可选】**当前页面是否出现在 RSS 推送上 - 默认为 false，如果是笔记等内容可以手动设置为 true |
 | useTOC        | true / false                               | **【可选】**当前页面是否开启自动生成目录 - 默认为 true，如果要禁用需要显式声明 `useTOC: false` |
 | comment       | true / false                               | **【可选】**当前页面是否开启底部评论区 - 默认为 true，如果需要禁用需要显式声明`comment: false`<br />注意：评论区 feature 只在`algo-note`, `page`, `post` 三个模板中开启了 |
 |               |                                            |                                                              |
 | search_ignore | true / false                               | **【可选】**当前页面是否会被站内搜索收录。设置为 False 则该页面不会被站内搜索数据库收录。（注意：页面依然可以在所有页面中看到）*（一般不用设置）* |
 | category      | 字符串                                     | **【可选】** *一般不会用到，不用设置这个 key-value pair，用默认值（空）即可* |
 
-还有一些在特定模板中才会用到的 yaml 文件头 或 特性……
+### algo-note 的语言选择器
 
-***usaco-post***
-
-| key      | value                             | 解释                                                         |
-| -------- | --------------------------------- | ------------------------------------------------------------ |
-| status   | OK / NA                           | **【必须】**当前页面是否可展示（如果是 NA 不会被展示到自动生成的 USACO Solution Page 上） |
-| year     | yyyy                              | **【必须】**四位数的年份，用于自动分类题目的展示位置         |
-| group    | Bronze / Silver / Gold / Platnium | **【必须】**USACO 题目组别                                   |
-| season   | {Jan  /Feb /  Dec / Open}         | **【必须】**USACO 赛季，例如 `season: Jan` 表示一月月赛的题目 |
-| question | {1 / 2 / 3}                       | **【必须】**USACO 题号，例如 `question: 1` 表示第一题        |
-
-***algo-note***
-
-这个模板可以用来展示同时有 `Java` 代码 和 相同意思的 `Python` 代码 的页面。页面最上方会生成一个语言选择器（默认选择 Python，如下图）。
+`algo-note` layout 可以用来展示同时有 `Java` 代码 和 相同意思的 `Python` 代码 的页面。页面最上方会生成一个语言选择器（默认选择 Python，如下图）。
 
 ![image-20210625233249784](http://markdown-img-1304853431.cosgz.myqcloud.com/20210625233249.png)
 
@@ -275,19 +266,84 @@ System.out.println("test");	// Some Java Code Here
 
 ## assets
 
-这里存放了网站的图片资源，当然，你也可以将图片资源存放在其他在线存储，然后以链接的形式引用图片
+这里存放了网站常用的矢量图标(svg)资源，png 或 jpg 图片**不要存储在这里**
+
+png 或 jpg 图片请使用第三方图床，以链接形式引入到网站内容中
 
 <div class="notification" markdown=1>
 我们非常强烈的建议使用第三方服务，除了 svg 图标以外其他内容**不要**放在 assets 文件夹中。因为这会显著的增加网站运营成本。
 </div>
-
 ## _data\*
+
+<div class="info" markdown=1>
+Jekyll 可以接收 `json`, `csv`, `yaml` 等类型的数据并在 liquid 模板语言中调用这些数据文件的内容（只要数据文件在 `_data` 中）    
+</div>
+
+这个特性让我们可以做到真正意义上的 “不写代码，修改页面”
+
+目前，`_data` 中的内容只用在了四个方面：
+
+### 日程安排
 
 在网页的首页，有一个section叫做“日程安排”。这里的内容由 `_data\shcedule.json` 中的内容决定。
 
-`schedule.json` 中的内容验证由 `scheduleSchema.json` 定义，当你使用 VS Code 等现代编辑器时，可以看到每个 field 的具体描述与 值域（如果存在）。
-
 <img src="http://markdown-img-1304853431.cosgz.myqcloud.com/20210525151049.png" alt="image-20210525151048950" style="zoom: 67%;" />
+
+在 `schedule.json` 中输入新日程的名字，时间，类型 和 重要性，网页 “日程安排”页面中的对应部分就会自动修改。
+
+*这个 json 文件的格式在 scheduleSchema.json 中规定，现代编辑器（如 VS Code）在修改时会提示各个属性的值域 / 类型* 
+
+### 照片墙
+
+照片墙由四列照片构成，如果不适用 liquid 模板语言必须手动分配照片到每一列。为了解决这个问题，我们使用 liquid 模板语言。想添加照片到照片墙只需要在 `_data/image_flow.json` 中输入对应的 HTML 图片标签即可，jekyll 会自动将这些照片尽可能平均的分配到四个 column 上。
+
+### 图标系统
+
+图标系统通过 `icon_db.json` 来对应图标 svg 文件的实际路径与图标的“名称”
+
+详见[网站图标系统]({{ site.baseurl }}/2021/06/05/Webpage-Style.html#h2)
+
+### 竞赛打卡系统
+
+竞赛打卡系统通过 `analysis-setup.json` 来控制以下两个部分：
+
+* 打卡文件在“打卡文件生成器”中自动生成的 YAML 头和所有的信息输入框
+* 打卡文件搜索汇总中所有文件的搜索框和竞赛类型
+
+通过设置 `analysis-setup.json`，可以做到 0 代码修改为网站添加新的竞赛类型。
+
+每个竞赛的信息由以下格式的 JSON 定义：
+
+```json
+{
+    "ShowName": "CodeForce",	// 比赛的显示名称，显示在搜索选择器，打卡生成器的按钮上
+    "ValueName": "codeforce",	// 比赛的程序内名称，使用在函数头命名等位置
+    "TagName": "CodeForce",		// 比赛打卡的 tag，所有这个比赛的打卡文件一定要由这个 tag 才能被识别到
+    "CardGenerator": "fn/general_card_generator.html",	// 在搜索时显示打卡的卡片模板，具体模板在 _include 里面
+    "RewriteTitle": true,		// 自动生成打卡时是否重写用自动生成的标题覆盖原标题
+    "Fields":{					// 竞赛的属性
+        "group":{				// 第一个属性：group
+            "Label": "组别",		// 显示名称：组别
+            "Type":"Option",	// 类型：选项（不是文本输入框）
+            "Options": {
+                "选择组别": "undefined",	// 选项，'显示的选项'：'实际的 option value'
+                "Division 1": "1",
+                "Division 2": "2",
+                "Division 3": "3"
+            }
+        },
+        {
+        	...		// 省略
+	    }
+        ,
+        "number":{				// 最后一个属性：比赛编号
+            "Label": "比赛编号",	// 显示名称：“比赛编号”
+            "Type" :"Input",	// 类型：文本框（支持任意输入）
+            "Placeholder": "比赛编号（三位数字）"	// 文本框空时的占位符
+        }
+    }
+}
+```
 
 ## _sass\*
 
@@ -317,15 +373,39 @@ System.out.println("test");	// Some Java Code Here
 
 `reactive-layout.sass` 中有三种尺寸 - `screen width > $screen-l`，`\$screen-l > width > \$screen-s` 和 `\$screen-s > screen width`
 
-## css\* （Deprecated）
+## css\* 
 
 这里只有 `main.sass` 一个文件，所有 `_sass` 中的文件都会被编译到 `css/main.css` 中。
 
 <div class="notification" markdown=1>
 注意！网站的 `main.css` 是自动生成的编译结果，如果需要增加 CSS 规则，请到 `_sass/personalize.sass` 中添加
 </div>
-
-
 ## js\*
 
-这里存放了网站的 Javascript 文件，用于网站动效，网页动画和页面控件（例如 algo-note 模板的语言选择器 和 页面搜索栏的搜索脚本）。
+这里存放了网站的 Javascript 文件，用于网站动效，网页动画和页面控件（例如 algo-note 模板的语言选择器 和 页面搜索栏的搜索脚本）。具体文件和作用见下表：
+
+| 文件                    | 作用                                                         |
+| ----------------------- | ------------------------------------------------------------ |
+| jekyll-search.js        | 网站搜索脚本                                                 |
+| jquery.min.js           | 首页动态文字使用的第三方依赖                                 |
+| markdown-parse.js       | 网页实时渲染 markdown，用于打卡文件生成预览和实时编辑        |
+| search-style-control.js | 网站搜索栏动画                                               |
+| util.js                 | 网站的通用函数库，包括 `select` 与 `deselect` 按钮的效果，下载内容，打开本地文件 |
+
+## 其它零散的文件…
+
+| 文件                        | 作用                                                         |
+| --------------------------- | ------------------------------------------------------------ |
+| _config.yml                 | 网站的 Jekyll 设置项                                         |
+| .gitignore                  | 描述被 Git 忽略的本地临时文件，这些文件不在 Git 版本控制的范围内 |
+| 404.html                    | 网站 404 时显示的页面                                        |
+| favicon.ico                 | 网站标签页图标                                               |
+| feed.xml                    | 网站 RSS Feed 生成                                           |
+| Gemfile                     | Jekyll 依赖项（插件，第三方库）描述文件                      |
+| google0431ac67849d2ad1.html | 向 Google 验证网站管理员身份的文件，用于搜索优化（SEO），不要删除 |
+| index.md                    | 网站首页                                                     |
+| jekyll-cayman-theme.gemspec | 是的，这个网站是 GitHub Cayman 主题魔改而来的（你可以看看原来的 Cayman 主题就知道这个魔改的程度有多大了……） |
+| LICENSE                     | 网站的版权©描述                                              |
+| README.md                   | 显示在 Github Repo 上的网页描述                              |
+| robots.txt                  | 用于搜索引擎爬取优化的文件，规定爬虫爬取范围                 |
+| search.json                 | 网站搜索的数据库                                             |
