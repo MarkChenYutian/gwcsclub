@@ -22,6 +22,10 @@
         grid-template-columns: [l-border] 20% [mid-border] 80% [r-border]
     .horizontal-grid-box
         grid-template-columns: [l-border] 33% [mid-left] 34% [mid-right] 33% [r-border]
+    .top-nav-box
+        position: sticky
+        position: -webkit-sticky
+    // reactive Hidden element
     .only-display-at-large
         display: block
     .hidden-at-large
@@ -60,6 +64,9 @@
         grid-template-columns: [l-border] 30% [mid-border] 70% [r-border]
     .horizontal-grid-box
         grid-template-columns: [l-border] 50% [mid-border] 50% [r-border]
+    .top-nav-box
+        position: sticky
+        position: -webkit-sticky
     .only-display-at-large
         display: none
     .hidden-at-large
@@ -96,6 +103,8 @@
         font-size: $font-xxs
     .horizontal-grid-box
         grid-template-columns: [l-border] 100% [r-border]
+    .top-nav-box
+        position: static
     .only-display-at-large
         display: none
     .hidden-at-large
