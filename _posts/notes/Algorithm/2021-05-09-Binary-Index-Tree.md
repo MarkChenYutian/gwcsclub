@@ -102,7 +102,7 @@ private int getBITVal(int i){
         if (power == 0){sum += this.val[i];}
         else{sum += this.tree[i];}
         i = pos;
-        i -= （int) Math.pow(2, power);
+        i -= (int) Math.pow(2, power);
         power ++;
     }
     return sum;
