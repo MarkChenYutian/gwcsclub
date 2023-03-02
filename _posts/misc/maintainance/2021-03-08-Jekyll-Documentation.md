@@ -232,7 +232,7 @@ example content
 | Key           | Value                                      | 解释                                                         |
 | ------------- | ------------------------------------------ | ------------------------------------------------------------ |
 | layout        | page, post, usaco-post, algo-note, default | **【必须】** markdown 的渲染模板，模板间的具体区别见上一部分`_layout`末尾的表格 |
-| title         | 字符串（直接输入即可，不需要引号）         | **【必须】**页面的标题 - 下图中框出的地方<br /><img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210413080321.png" alt="image-20210413080321816" style="zoom: 25%;" /> |
+| title         | 字符串（直接输入即可，不需要引号）         | **【必须】**页面的标题 - 下图中框出的地方<br /><img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210413080321.png" alt="image-20210413080321816" style="zoom: 25%;" /> |
 | tags          | 一个或多个字符串，多个字符串用空格隔开     | **【必须】**文章的 tag，用来搜索/整理文件，一些自动生成的页面（如USACO解析）依靠 tag 进行链接，如果页面没有 tag 则不会被加入页面汇总中 |
 | Author        | 字符串                                     | **【必须】**文章的作者，在 post, usaco-post, algo-note 模板中会被显式在标题下方，网站贡献者自动更新的时候依赖这里的信息 |
 |               |                                            |                                                              |

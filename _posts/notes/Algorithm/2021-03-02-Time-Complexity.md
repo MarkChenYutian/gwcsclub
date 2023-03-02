@@ -26,7 +26,7 @@ onRSS: true
 
 如果我们说 $f(n)\in O(n^2)$，我们的意思是一定存在一个函数 $g(n) = cn^2$，使得对于任意常数$x$ 与 $c$，只要 $n\gt x$ ， $f(n) < g(n)$ 一定成立。
 
-<img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/image-20210302143535217.png" alt="image-20210302143535217" style="zoom:50%; margin:10px auto 10px auto; display:block;" />
+<img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/image-20210302143535217.png" alt="image-20210302143535217" style="zoom:50%; margin:10px auto 10px auto; display:block;" />
 
 如上图所示，如果我们说函数 $f(n)$ 是 $O(g(n))$ 时，并不意味着对于所有 $n$ 都有 $cg(n) > f(n)$。这只意味着对于一个特定的常数 $n_0$，只要 $n > n_0$，我们都有 $cg(n) > f(n)$。
 

@@ -31,7 +31,7 @@ $$
 
 神经网络由许多神经元相互连接而组成，每个神经元都有自己的参数$\theta$ 。我们可以将神经元描绘为一个函数 $f(\theta_i, x) = y$。那么对于下面一个模型（$F(\Theta, x), \quad \Theta=\lbrace \theta_1, \theta_2, \dots, \theta_n\rbrace$），我们可以写出它的数学表达式：
 
-<img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502163035.png" alt="image-20200731214204525" style="zoom:30%;" />
+<img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502163035.png" alt="image-20200731214204525" style="zoom:30%;" />
 
 $$
 F(\Theta, x) = f(\theta_5, (f(\theta_3, f(\theta_2, x_2) + f(\theta_1, x_1)), f(\theta_4, f(\theta_2, x_2))))
@@ -44,7 +44,7 @@ $$
 
 首先，我们可以用5个使用sigmoid函数的神经元来构建一个“高台”函数。(代码是具体的实现)
 
-<img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502163037.png" alt="3" style="zoom:25%;" />
+<img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502163037.png" alt="3" style="zoom:25%;" />
 
 ```python
 import matplotlib.pyplot as plt
@@ -79,7 +79,7 @@ ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.viridis)
 plt.show()
 ```
 
-![1](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502163039.png)
+![1](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502163039.png)
 
 如果我们把这样的一个高台记作$Tower(x_1, x_2，\Theta)$，那么通过组合足够多这些高台，我们可以得到任何一个连续二元函数的任意小精度拟合（缩小每个高台的面积），例如下图（左：原函数，右：四个$Tower(x_1, x_2,\Theta)$的组合
 
@@ -102,7 +102,7 @@ ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.viridis)
 plt.show()
 ```
 
-![1](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502163042.png)
+![1](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502163042.png)
 
 ## 3. 如何让电脑自动调参？
 

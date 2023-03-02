@@ -22,13 +22,13 @@ onRSS: true
 在之前的[深度优先搜索]({{ site.baseurl }}/2021/04/12/Depth-First-Search.html)和[广度优先搜索]({{ site.baseurl }}/2021/04/12/Breadth-First-Search.html)中，我们一般都只考虑目标节点与出发节点之间的**图上距离**[^1]而非**真实距离**[^2] - 这在一些简单的场景下没有什么问题，但是在一些情况下图上的距离与真实距离并不一致。例如下图：
 
 
-<img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210319224716.jpg" alt="6e5f63b38286cc81fc07f61886fabb9" style="zoom:33%; display: block; margin: 0 auto" />
+<img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210319224716.jpg" alt="6e5f63b38286cc81fc07f61886fabb9" style="zoom:33%; display: block; margin: 0 auto" />
 
 在下面这张图中， $G$ 与 $S$ 之间的图上距离最小路径应该是直线 $A$。但是，如果我们要看 $G$ 和 $S$ 之间的路径权重之和最小的话我们会发现最优路径并不是 $A$ 而是 $A*$，因为 $A$ 的路径权重之和为 $10 + 5 = 15$ 而 $A\*$ 的路径权重之和为 $1 + 2 + 1 + 1 = 5$。
 
 为了找到实际距离最短的路径而不是图上距离最短的路径，人们在 BFS 的基础上做出了改动，产生了更加准确的 **UCS 代价统一搜索策略**。在 BFS 中，`Queue` 的性质距离初始节点图上距离最小的节点会优先被展开，而在 UCS 中，<mark>我们用 <code>Priority Queue</code> 实现 Fringe，这个优先队列对待探索节点的排序是基于初始节点到待探索节点的实际距离决定的</mark>。
 
-<img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210430075002.png" style="zoom:50%;" />
+<img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210430075002.png" style="zoom:50%;" />
 
 > 一张图的 “等 Cost 线“
 

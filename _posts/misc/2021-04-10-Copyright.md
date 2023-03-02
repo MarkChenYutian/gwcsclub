@@ -6,7 +6,7 @@ tags: Miscellaneous
 useTOC: false
 ---
 
-<img src="https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210410233444.png" style="display:block; margin: 0 auto;"/>
+<img src="https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210410233444.png" style="display:block; margin: 0 auto;"/>
 
 本网站内容采用 **署名-非商业性使用 4.0 国际许可协议** 进行许可，这意味着……
 

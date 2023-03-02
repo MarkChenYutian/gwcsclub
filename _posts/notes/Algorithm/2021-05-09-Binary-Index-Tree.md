@@ -87,7 +87,7 @@ public int findLastBinaryOne(int index){
 
 如果`findLastBinaryOne(index)`的返回是`n` 且$n > 1$，在BIT中，这个位置的值等于`x`中这个位置的值加上`BIT[index - 2**0]`， `BIT[index - 2 ** 1]` ... `BIT[index - 2 ** (n - 2)]`
 
-![image-20201113173944215](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502162737.png)
+![image-20201113173944215](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502162737.png)
 
 假设我们计算BIT中一个位置的值（假设BIT树中前面的值都是正确的），我们可以这样写：
 

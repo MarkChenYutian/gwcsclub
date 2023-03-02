@@ -29,7 +29,7 @@ Author: ["Mark Chen"]
 
 像下图表示的一样，深度残差网络本质上是通过在卷积层之间插入短路连接来达到传播梯度的效果。
 
-![短路链接越过了中间的两层卷积](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502162856.png)
+![短路链接越过了中间的两层卷积](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502162856.png)
 
 短路链接在越过了卷积层后会直接与卷积层的输出结果进行对位相加(pointwise addition)。当反向传播执行时，一半的梯度会通过短路链接直接被传导到靠后的卷积层，另一半则会加上被短路链接越过的两个卷积层的参数梯度后再传播到靠后的卷积层。
 
@@ -39,7 +39,7 @@ Author: ["Mark Chen"]
 
 在深度残差网络提出前，所有超过50层的深度学习模型都会或多或少的受到梯度消失与梯度爆炸的影响。这两个问题对模型表现的影响具体表现为模型的准确率非常不稳定，有的时候模型准确率会因为梯度过小而几乎不改变，有的时候模型准确率会由于梯度过大而急剧降低。这使得大部分的网络只能拥有较少的层数。因为每一层卷积层相当于提取一次输入的特征，层数的限制也限制了模型提取复杂特征的能力。从下图中我们可以发现，虽然理论上更深的网络可以提取更加复杂的信息，实际实验中过深的网络一般会表现的比浅网络差。
 
-![短路链接越过了中间的两层卷积](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502162859.png)
+![短路链接越过了中间的两层卷积](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502162859.png)
 
 虽然一些神经网络模型通过在模型中间添加额外的损失函数进行反向传播来减少梯度消失与梯度爆炸的影响，但这并没有从本质上解决问题。
 
@@ -57,11 +57,11 @@ Author: ["Mark Chen"]
 
 在论文中，作者分别使用了两种 Residual Block 来构建深度残差网络。一种被称作“building block”，这种block包含两个连续的$3\times 3$ 卷积核，拥有较多的参数；而另一种被称作"bottleneck building block"，这种block包含三个卷积核，其中第一个和第三个是 $1\times 1$卷积核，中间的是 $3\times 3$ 卷积核，这样的block相对于基本的basic block来说拥有更小的参数量。
 
-![Building Blocks of ResNet](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502162901.png)
+![Building Blocks of ResNet](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502162901.png)
 
 通过重复使用这两种block，搭配上合适的池化函数，作者构建了若干个深度不同的深度残差网络。这些网络分别有18, 34,  50, 101, 和 152层，一般被大家简称为 ResNet18, ResNet34, ..., ResNet152。同时，为了验证模型的短接通路对梯度传播的改善效果，作者还测试了非常极端的，拥有1202层的ResNet1202在CIFAR-10数据集上的表现。
 
-![ResNet 在 CIFAR-10数据集上的表现与前馈卷积网络的表现对比](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502162904.png)
+![ResNet 在 CIFAR-10数据集上的表现与前馈卷积网络的表现对比](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502162904.png)
 
 上图左侧表现了不同深度的简单卷积神经网络在数据集上的表现，我们可以发现简单的卷积神经网络随着深度的增加，错误率不降反增，表现最佳的Plain20神经网络在测试集上达到了10%的错误率。普通网络相比，在一般的深度范围内，深度残差网络的表现会随着深度的加深而提高。在中间的图中，我们可以看到深度残差网络达到了5%的错误率，比平常的前馈神经网络低了一半。
 
@@ -71,7 +71,7 @@ Author: ["Mark Chen"]
 
 深度残差网络也启发了一些类似的网络类型，其中较为经典的包括 DenseNet， 在DenseNet中，短接链接的数量被增加了，每一个卷积层都会有一条专门的短接链接将自己的输出直接传播给较前的卷积层。
 
-![Dense Net Illustration](https://gitee.com/MarkYutianChen/mark-markdown-imagebed/raw/master/20210502162907.jpeg)
+![Dense Net Illustration](https://markdown-img-1304853431.file.myqcloud.com/mark-markdown-imagebed-master/20210502162907.jpeg)
 
 因为DenseNet本质上包含了一个前馈神经网络的所有可能链接，所有的前馈神经网络都可以看作是DenseNet的一种特例来处理。这么多的链接也最大化了DenseNet本身进行特征提取和梯度传播的能力。
 
